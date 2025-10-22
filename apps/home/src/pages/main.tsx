@@ -5,6 +5,8 @@ import Section4 from './section4';
 import Section5 from './section5';
 import Section6 from './section6';
 import Section7 from './section7';
+import WhereCreators from './where-creators';
+import WhyCreators from './why-creators';
 
 export default function Main() {
   return (
@@ -12,6 +14,8 @@ export default function Main() {
       <Section1 />
       <Section2 />
       <Section3 />
+      <WhyCreators />
+      <WhereCreators />
       <Section4 />
       <Section5 />
       <Section6 />

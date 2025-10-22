@@ -13,12 +13,18 @@ const Section1 = () => {
   return (
     <section class='container mx-auto px-4 py-16 text-center'>
       <h1 class='font-inter mx-auto max-w-4xl text-5xl font-bold leading-tight tracking-tight md:text-7xl'>
-        Video Creation,
-        <span class='text-brand'> Automated.</span>
+        Launch Product Stories,
+        <span class='text-brand'> Automatically.</span>
       </h1>
       <p class='font-inter mx-auto mt-6 max-w-2xl text-xl text-gray-600'>
-        The first autonomous AI agent that turns any idea into publish-ready videos with AI visuals,
-        avatars, dubbing, and smart editing.
+        Reela 2.0 turns product catalogs, spokespeople, and campaign concepts into monetizable videos
+        in minutes — with avatar, product, and scene consistency that stays true to every reference
+        you provide.
+      </p>
+      <p class='font-inter mx-auto mt-4 max-w-2xl text-lg text-gray-500'>
+        Showcase launches, tutorials, and social promos with multi-reference alignment and
+        multimodal mixes spanning virtual humans, AI footage, and brand footage — all orchestrated by
+        one autonomous director.
       </p>
       <div class='mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row'>
         <a href='/workspace'>
@@ -44,7 +50,7 @@ const Section1 = () => {
       <div class='mt-10 flex items-center justify-center px-4'>
         <div class='flex flex-wrap items-center justify-center gap-6'>
           <p class='shrink-0 whitespace-nowrap font-medium text-gray-700'>
-            Trusted by Leading Brands
+            Trusted by Teams Automating Video Workflows
           </p>
           <div class='hidden h-6 border-l border-gray-300 md:block'></div>
           <div class='relative max-w-[90vw] overflow-x-hidden md:max-w-2xl'>

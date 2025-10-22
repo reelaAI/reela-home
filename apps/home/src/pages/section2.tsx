@@ -10,23 +10,24 @@ const Section2 = () => {
           Reela Is Built for <span className='text-brand'>Speed & Results</span>
         </h2>
         <p className='text-xl text-gray-600 text-center mb-20 max-w-4xl mx-auto'>
-          Unlock fully-automated video creation — zero editing, zero timelines, zero hassle.
+          Ship channel-specific videos from a single brief — with the speed of automation and the
+          fidelity brands demand.
         </p>
 
         <div className='grid md:grid-cols-3 gap-10 max-w-6xl mx-auto'>
           <FeatureCard
-            title='5-Minute Video Creation'
-            description='Just input your script or idea, and Reela delivers a publish-ready video in 5 minutes flat.'
+            title='5-Minute Go-Live Videos'
+            description='Upload product references, campaign talking points, and avatar preferences — Reela assembles a publish-ready cut with perfect SKU and talent alignment.'
             icon='zap'
           />
           <FeatureCard
-            title='No Editing, No Timeline'
-            description='Forget the timeline. No trimming, cutting, or stitching required. Reela assembles your entire video, automatically.'
+            title='Hands-Off, Brand-Perfect Consistency'
+            description='No timelines, no reshoots. Multi-reference identity tracking keeps every avatar, product, and storyline locked to your brief across scenes and versions.'
             icon='scissors'
           />
           <FeatureCard
-            title='All-in-One, Ready-to-Share Videos'
-            description='From avatars and voiceovers to scenes, subtitles, pacing, and B-roll — Reela handles it all, delivering a complete, polished video.'
+            title='All-in-One Multimodal Storytelling'
+            description='Blend virtual humans, AI-crafted scenes, product B-roll, and remix clips in a single workflow — ready to export for ads, ecommerce, and social.'
             icon='brain'
           />
         </div>
