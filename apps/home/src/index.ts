@@ -4,7 +4,6 @@ import layout from "./pages/layout";
 import Main from "./pages/main";
 import { logger } from "hono/logger";
 import { serveStatic } from "@hono/node-server/serve-static";
-import { serve } from "@hono/node-server";
 import { etag } from "hono/etag";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -34,12 +33,14 @@ app.get("/", (c) => {
   `);
 });
 
-serve(
-  {
-    fetch: app.fetch,
-    port: process.env.PORT ? Number(process.env.PORT) : 3000,
-  },
-  (info) => {
-    console.log(`Server is running at http://localhost:${info.port}`);
-  }
-);
+export default app;
+
+// serve(
+//   {
+//     fetch: app.fetch,
+//     port: process.env.PORT ? Number(process.env.PORT) : 3000,
+//   },
+//   (info) => {
+//     console.log(`Server is running at http://localhost:${info.port}`);
+//   }
+// );
