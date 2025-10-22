@@ -65,25 +65,25 @@ const WhyCreators = () => {
                 </a>
               </div>
               <div class='relative overflow-hidden rounded-2xl bg-white shadow-lg' data-video-card>
-                <div class='relative aspect-video w-full md:mx-auto md:max-w-[520px]'>
+                <div class='relative aspect-video w-full overflow-hidden md:mx-auto md:max-w-[520px]'>
                   <video
                     src={card.video}
-                    class='h-full w-full rounded-2xl object-cover'
+                    class='absolute inset-0 h-full w-full object-cover'
                     playsinline
                     controls
                     preload='metadata'
-                    onplay="var overlay=this.parentElement.querySelector('[data-overlay]');if(overlay){overlay.classList.add('opacity-0','pointer-events-none');}"
-                    onpause="var overlay=this.parentElement.querySelector('[data-overlay]');if(overlay){overlay.classList.remove('opacity-0','pointer-events-none');}"
-                    onended="var overlay=this.parentElement.querySelector('[data-overlay]');if(overlay){overlay.classList.remove('opacity-0','pointer-events-none');}"
+                    onplay='handleVideoPlay(this)'
+                    onpause='handleVideoPause(this)'
+                    onended='handleVideoEnded(this)'
                   ></video>
                   <div
-                    class='absolute inset-0 flex items-center justify-center bg-black/40 transition-opacity duration-200'
+                    class='absolute inset-0 flex items-center justify-center bg-black/40 opacity-100 transition-opacity duration-200'
                     data-overlay
                   >
                     <button
                       type='button'
                       class='flex h-16 w-16 items-center justify-center rounded-full bg-white/90 text-slate-950 shadow-lg transition-transform duration-200 hover:scale-105'
-                      onclick="var video=this.closest('[data-video-card]').querySelector('video');if(video){video.play();}"
+                      onclick='playVideoFromOverlay(this)'
                     >
                       <svg
                         xmlns='http://www.w3.org/2000/svg'

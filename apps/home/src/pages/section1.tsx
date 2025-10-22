@@ -118,7 +118,7 @@ const Section1 = () => {
           Turn Products, Ideas &amp; Avatars into Profitable Videos — Instantly.
         </h1>
         <p class='font-inter mt-6 max-w-4xl text-[18px] text-gray-600 md:text-[24px]'>
-          Reela 2.0 combines AI avatars, product references, and smart scene generation to create
+          Reela combines AI avatars, product references, and smart scene generation to create
           monetizable videos in minutes — for creators, sellers, and brands who want growth without
           production limits.
         </p>

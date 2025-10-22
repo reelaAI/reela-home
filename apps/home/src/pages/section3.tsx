@@ -28,7 +28,7 @@ const Section3 = () => {
               New · Sora Model Integration
             </span>
             <h2 class='font-inter text-[28px] font-bold md:text-[36px] lg:text-[44px]'>
-              Generate Long-Form Sora Videos with Reela 2.0 Pro
+              Generate Long-Form Sora Videos with Reela
             </h2>
             <p class='text-base text-white/80 md:text-lg'>
               Combine Reela&apos;s autonomous directing with OpenAI&apos;s Sora model to produce cinematic videos over one minute long.
@@ -91,7 +91,7 @@ const Section3 = () => {
         <div class='container mx-auto px-4 pb-16'>
           <div class='grid gap-6 rounded-3xl border border-white/10 bg-white/5 px-6 py-10 backdrop-blur lg:grid-cols-[1.1fr_0.9fr] lg:px-10'>
             <div>
-              <h3 class='font-inter text-2xl font-semibold text-white md:text-3xl'>Reela 2.0 Pro Workflow Highlights</h3>
+              <h3 class='font-inter text-2xl font-semibold text-white md:text-3xl'>Reela Workflow Highlights</h3>
               <ul class='mt-6 grid gap-4 text-sm text-white/70 md:grid-cols-2 md:text-base lg:grid-cols-1'>
                 {highlights.map((item) => (
                   <li class='flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-5' key={item}>
@@ -104,7 +104,7 @@ const Section3 = () => {
               </ul>
             </div>
             <div class='rounded-3xl border border-white/15 bg-white/5 p-6 text-white shadow-[0_20px_60px_rgba(15,23,42,0.35)] lg:p-7'>
-              <h3 class='font-inter text-2xl font-semibold text-white md:text-3xl'>Reela 2.0 Pro vs. Sora</h3>
+              <h3 class='font-inter text-2xl font-semibold text-white md:text-3xl'>Reela vs. Sora</h3>
               <div class='mt-4 space-y-3 text-sm text-white/70 md:text-base'>
                 {comparison.map((item) => (
                   <div class='rounded-2xl border border-white/10 bg-white/5 p-5' key={item.feature}>
@@ -117,7 +117,7 @@ const Section3 = () => {
                         <p class='text-base font-medium text-white'>{item.sora}</p>
                       </div>
                       <div>
-                        <p class='text-xs font-semibold text-white/60'>Reela 2.0 Pro</p>
+                        <p class='text-xs font-semibold text-white/60'>Reela</p>
                         <p class='text-base font-medium text-white'>{item.reela}</p>
                       </div>
                     </div>

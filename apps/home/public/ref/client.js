@@ -47,13 +47,48 @@ function toggleMute(element) {
 }
 
 function horizontalScroll(element, direction) {
-  // has checked
-  const scrollContainer = element.querySelector('.scroll-container:has(:checked)');
+  const scrollContainer = element.querySelector('.scroll-container');
   if (!scrollContainer) return;
+  const scrollAmount = scrollContainer.clientWidth;
   scrollContainer.scrollBy({
-    left: direction === 'left' ? -scrollContainer.offsetWidth : scrollContainer.offsetWidth,
+    left: direction === 'left' ? -scrollAmount : scrollAmount,
     behavior: 'smooth',
   });
+}
+
+function playVideoFromOverlay(button) {
+  const video = button.closest('[data-video-card]')?.querySelector('video');
+  if (video) {
+    video.play();
+  }
+}
+
+function handleVideoPlay(video) {
+  const overlay = video.parentElement.querySelector('[data-overlay]');
+  if (!overlay) return;
+  if (overlay.__reactivateTimeout) {
+    clearTimeout(overlay.__reactivateTimeout);
+    overlay.__reactivateTimeout = null;
+  }
+  overlay.classList.add('opacity-0', 'pointer-events-none');
+}
+
+function handleVideoPause(video) {
+  const overlay = video.parentElement.querySelector('[data-overlay]');
+  if (!overlay) return;
+  if (overlay.__reactivateTimeout) {
+    clearTimeout(overlay.__reactivateTimeout);
+  }
+  overlay.__reactivateTimeout = window.setTimeout(() => {
+    overlay.classList.remove('opacity-0', 'pointer-events-none');
+    overlay.__reactivateTimeout = null;
+  }, 150);
+}
+
+function handleVideoEnded(video) {
+  video.pause();
+  video.currentTime = 0;
+  handleVideoPause(video);
 }
 
 function activateLabel(element) {
@@ -87,5 +122,52 @@ function pauseAllVideos() {
     if (video.paused) return; // Skip if already paused
     video.pause();
     video.currentTime = 0; // Reset video to start
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initAutoScrollSections();
+});
+
+function initAutoScrollSections() {
+  const sections = document.querySelectorAll('[data-auto-scroll]');
+  sections.forEach((section) => {
+    const scrollContainer = section.querySelector('.scroll-container');
+    if (!scrollContainer) return;
+    if (scrollContainer.scrollWidth <= scrollContainer.clientWidth) return;
+
+    const scrollStep = () => {
+      const atEnd = scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth - 2;
+      if (atEnd) {
+        scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        scrollContainer.scrollBy({ left: scrollContainer.clientWidth, behavior: 'smooth' });
+      }
+    };
+
+    let intervalId = window.setInterval(scrollStep, 6000);
+
+    const restartInterval = () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+      intervalId = window.setInterval(scrollStep, 6000);
+    };
+
+    section.addEventListener('mouseenter', () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+    });
+
+    section.addEventListener('mouseleave', restartInterval);
+
+    window.addEventListener('blur', () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+    });
+
+    window.addEventListener('focus', restartInterval);
   });
 }

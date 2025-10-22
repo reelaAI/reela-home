@@ -45,7 +45,7 @@ const testimonials = [
     category: 'RETAIL',
     avatar: '/user-6.png',
     quote:
-      'Reela 2.0 Pro maps every product angle and character note into the script, so our catalog videos feel shot on location.',
+      'Reela maps every product angle and character note into the script, so our catalog videos feel shot on location.',
     highlight: 'Multi-reference alignment keeps 40+ SKUs pixel-perfect across variants.',
     role: 'Head of Content @ Retail Marketplace',
   },
@@ -69,7 +69,7 @@ const Section6 = () => {
         </h2>
       </div>
       <div class='mx-auto mb-20 max-w-[1200px] px-4'>
-        <div class='relative'>
+        <div class='relative' data-auto-scroll>
           <div
             class='hide-scrollbar scroll-container flex snap-x snap-mandatory gap-6 overflow-x-auto py-8'
             style='scrollbar-width: none; -ms-overflow-style: none'
@@ -117,6 +117,7 @@ const Section6 = () => {
 
           <button
             class='absolute left-0 top-1/2 z-10 -ml-5 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg transition-colors hover:bg-gray-100'
+            type='button'
             aria-label='Scroll left'
             onclick="horizontalScroll(this.parentElement, 'left')"
           >
