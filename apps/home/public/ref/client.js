@@ -29,23 +29,6 @@ function pauseOnLeave(element) {
   }
 }
 
-function toggleMute(element) {
-  // get peer video element
-  const video = element.parentElement.querySelector('video');
-  if (video) {
-    video.muted = !video.muted;
-  }
-  const volumeOnIcon = element.querySelector('.lucide-volume-2');
-  const volumeOffIcon = element.querySelector('.lucide-volume-x');
-  if (video.muted) {
-    volumeOnIcon.classList.add('hidden');
-    volumeOffIcon.classList.remove('hidden');
-  } else {
-    volumeOnIcon.classList.remove('hidden');
-    volumeOffIcon.classList.add('hidden');
-  }
-}
-
 function horizontalScroll(element, direction) {
   const scrollContainer = element.querySelector('.scroll-container');
   if (!scrollContainer) return;
@@ -57,8 +40,13 @@ function horizontalScroll(element, direction) {
 }
 
 function playVideoFromOverlay(button) {
-  const video = button.closest('[data-video-card]')?.querySelector('video');
+  const card = button.closest('[data-video-card]');
+  const video = card?.querySelector('[data-video-element]');
   if (video) {
+    if (card) {
+      delete card.dataset.videoUserPaused;
+    }
+    pauseOtherVideos(video);
     video.play();
   }
 }
@@ -73,12 +61,23 @@ function handleVideoPlay(video) {
   overlay.classList.add('opacity-0', 'pointer-events-none');
 }
 
-function handleVideoPause(video) {
+function handleVideoPause(video, options) {
   const overlay = video.parentElement.querySelector('[data-overlay]');
   if (!overlay) return;
   if (overlay.__reactivateTimeout) {
     clearTimeout(overlay.__reactivateTimeout);
   }
+  const card = video.closest('[data-video-card]');
+  const userPaused = card?.dataset.videoUserPaused === 'true';
+  const force = options?.force === true;
+  const shouldShowOverlay = force || userPaused;
+
+  if (!shouldShowOverlay) {
+    overlay.classList.add('opacity-0', 'pointer-events-none');
+    overlay.__reactivateTimeout = null;
+    return;
+  }
+
   overlay.__reactivateTimeout = window.setTimeout(() => {
     overlay.classList.remove('opacity-0', 'pointer-events-none');
     overlay.__reactivateTimeout = null;
@@ -88,7 +87,37 @@ function handleVideoPause(video) {
 function handleVideoEnded(video) {
   video.pause();
   video.currentTime = 0;
-  handleVideoPause(video);
+  handleVideoPause(video, { force: true });
+}
+
+function pauseVideoOnClick(video) {
+  if (video.paused) return;
+  const card = video.closest('[data-video-card]');
+  if (card) {
+    card.dataset.videoUserPaused = 'true';
+  }
+  video.pause();
+}
+
+function toggleVideoSound(button) {
+  const card = button.closest('[data-video-card]');
+  const video = card?.querySelector('[data-video-element]');
+  if (!video) return;
+  video.muted = !video.muted;
+  syncSoundIcon(button, video.muted);
+}
+
+function syncSoundIcon(button, muted) {
+  const onIcon = button.querySelector('.icon-sound-on');
+  const offIcon = button.querySelector('.icon-sound-off');
+  if (!onIcon || !offIcon) return;
+  if (muted) {
+    onIcon.classList.add('hidden');
+    offIcon.classList.remove('hidden');
+  } else {
+    onIcon.classList.remove('hidden');
+    offIcon.classList.add('hidden');
+  }
 }
 
 function activateLabel(element) {
@@ -125,8 +154,18 @@ function pauseAllVideos() {
   });
 }
 
+function pauseOtherVideos(currentVideo) {
+  const videos = document.querySelectorAll('[data-video-element]');
+  videos.forEach((video) => {
+    if (video === currentVideo) return;
+    if (video.paused) return;
+    video.pause();
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initAutoScrollSections();
+  initVideoAutoplay();
 });
 
 function initAutoScrollSections() {
@@ -169,5 +208,49 @@ function initAutoScrollSections() {
     });
 
     window.addEventListener('focus', restartInterval);
+  });
+}
+
+function initVideoAutoplay() {
+  const cards = document.querySelectorAll('[data-video-card]');
+  if (!cards.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const container = entry.target;
+        const video = container.querySelector('[data-video-element]');
+        if (!video) return;
+        const card = container.closest('[data-video-card]');
+        const userPaused = card?.dataset.videoUserPaused === 'true';
+
+        if (entry.isIntersecting) {
+          if (!userPaused) {
+            pauseOtherVideos(video);
+            video.play().catch(() => {
+              /* Ignore play errors triggered by browser policies */
+            });
+          }
+        } else {
+          video.pause();
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  cards.forEach((card) => {
+    const container = card.querySelector('[data-video-autoplay]');
+    const video = card.querySelector('[data-video-element]');
+    const soundToggle = card.querySelector('[aria-label="Toggle sound"]');
+
+    if (!container || !video) return;
+
+    video.muted = true;
+    if (soundToggle) {
+      syncSoundIcon(soundToggle, true);
+    }
+
+    observer.observe(container);
   });
 }
