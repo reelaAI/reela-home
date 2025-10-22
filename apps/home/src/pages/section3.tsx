@@ -6,37 +6,31 @@ const comparison = [
   },
   {
     feature: 'Talent & product options',
-    reela: 'Hundreds of avatar identities plus your own uploads for product-perfect scenes.',
-    sora: 'Limited to custom uploads and single-character control.',
-  },
-  {
-    feature: 'Pricing',
-    reela: 'Usage-based plans optimized for frequent publishing.',
-    sora: 'High experimental costs per render.',
+    reela: 'Hundreds of virtual humans plus your licensed talent for product-perfect scenes.',
+    sora: 'Only supports characters you personally upload and authorize.',
   },
   {
     feature: 'Multi-reference stability',
     reela: 'Locks multi-personas, props, and SKUs across every scene.',
-    sora: 'Struggles with multi-reference continuity.',
+    sora: 'Needs extra touch-ups to stay aligned with multiple references.',
   },
 ];
 
 const Section3 = () => {
   return (
     <section class='bg-slate-950 text-white'>
-      <div class='container mx-auto grid gap-16 px-4 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center'>
-        <div class='space-y-6'>
+      <div class='container mx-auto grid gap-10 px-4 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-start'>
+        <div class='space-y-5'>
           <span class='inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-pink-100'>
             New · Sora Model Integration
           </span>
-          <h2 class='font-inter text-4xl font-bold md:text-5xl lg:text-6xl'>
+          <h2 class='font-inter text-3xl font-bold md:text-4xl lg:text-5xl'>
             Generate Long-Form Sora Videos with Reela 2.0
           </h2>
-          <p class='text-lg text-white/80 md:text-xl'>
-            Combine Reela&apos;s autonomous directing with OpenAI&apos;s Sora model to produce cinematic videos
-            over one minute long. Start with brand guidelines, product references, or storyboards, and
-            our multi-agent workflow choreographs avatars, Sora footage, and AI edits into a single
-            output.
+          <p class='text-base text-white/80 md:text-lg'>
+            Combine Reela&apos;s autonomous directing with OpenAI&apos;s Sora model to produce cinematic videos over one minute long.
+            Start with brand guidelines, product references, or storyboards, and our multi-agent workflow choreographs avatars,
+            Sora footage, and AI edits into a single output.
           </p>
           <ul class='space-y-3 text-base text-white/80'>
             <li class='flex items-start gap-3'>
@@ -68,7 +62,7 @@ const Section3 = () => {
             </li>
           </ul>
           <a href='https://app.reela.com/workspace' target='_blank' rel='noopener noreferrer'>
-            <button class='mt-6 inline-flex items-center rounded-full bg-brand px-8 py-3 text-base font-semibold text-white transition-transform hover:scale-105'>
+            <button class='mt-4 inline-flex items-center rounded-full bg-brand px-7 py-3 text-sm font-semibold text-white transition-transform hover:scale-105'>
               Launch a Sora Project
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -88,12 +82,12 @@ const Section3 = () => {
             </button>
           </a>
         </div>
-        <div class='space-y-6 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur'>
-          <h3 class='text-2xl font-semibold text-white md:text-3xl'>Reela 2.0 vs. Sora</h3>
-          <p class='text-white/70'>
-            Tap into Sora&apos;s hype while proving why creators scale with Reela.
+        <div class='space-y-5 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur lg:p-7'>
+          <h3 class='font-inter text-2xl font-semibold text-white md:text-3xl'>Reela 2.0 vs. Sora</h3>
+          <p class='text-sm text-white/70 md:text-base'>
+            Show how Reela 2.0 extends every Sora workflow — from run time to avatar variety.
           </p>
-          <div class='space-y-4'>
+          <div class='space-y-3'>
             {comparison.map((item) => (
               <div class='rounded-2xl border border-white/10 bg-white/5 p-5' key={item.feature}>
                 <p class='text-sm font-semibold uppercase tracking-wide text-pink-100'>

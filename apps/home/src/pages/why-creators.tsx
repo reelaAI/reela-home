@@ -4,6 +4,7 @@ const cards = [
     description:
       'Design a spokesperson that stays on-brand forever. Reela keeps faces, voices, and wardrobe consistent across every scene.',
     video: 'https://files.reela.com/workspace/uploads/202509/15/d992af1b-0721-4ece-aa6e-f04af3e59f80.mp4',
+    poster: '/thumbnails/build-avatar-ip.svg',
     cta: 'Start Building Your Avatar IP',
   },
   {
@@ -11,6 +12,7 @@ const cards = [
     description:
       'Turn product shots and SKU references into persuasive explainers. Reela blends AI avatars, Sora clips, and motion graphics automatically.',
     video: 'https://files.reela.com/workspace/uploads/202509/15/4cad780e-2cc6-485f-bd24-3359bbd5a3c1.mp4',
+    poster: '/thumbnails/drive-product-sales.svg',
     cta: 'Create Product Videos',
   },
   {
@@ -18,6 +20,7 @@ const cards = [
     description:
       'Publish platform-ready stories every day. Remix multi-modal footage, auto-caption, and localize for new audiences with one click.',
     video: 'https://files.reela.com/workspace/uploads/202509/15/1431a1ef-7d5f-41a3-97ca-f966b71011c8.mp4',
+    poster: '/thumbnails/earn-social.svg',
     cta: 'Launch Social Campaigns',
   },
 ];
@@ -27,7 +30,9 @@ const WhyCreators = () => {
     <section class='bg-[#FFF6F8] py-20'>
       <div class='container mx-auto px-4'>
         <div class='mx-auto mb-14 max-w-3xl text-center'>
-          <h2 class='font-inter text-4xl font-bold md:text-5xl'>Why Creators Choose <span class='text-brand'>Reela</span></h2>
+          <h2 class='font-inter text-4xl font-bold md:text-6xl'>
+            Why Creators Choose <span class='text-brand'>Reela</span>
+          </h2>
           <p class='mt-4 text-lg text-gray-600'>
             Transform ideas into income streams with multi-reference accuracy, Sora-powered visuals, and ready-to-publish edits.
           </p>
@@ -63,14 +68,30 @@ const WhyCreators = () => {
                 </a>
               </div>
               <div class='relative overflow-hidden rounded-2xl bg-black shadow-lg'>
-                <video
-                  src={card.video}
-                  class='h-full w-full object-cover'
-                  poster='/video-placeholder.png'
-                  playsinline
-                  controls
-                  preload='metadata'
-                ></video>
+                <div class='relative aspect-video w-full'>
+                  <video
+                    src={card.video}
+                    class='h-full w-full object-cover'
+                    poster={card.poster}
+                    playsinline
+                    controls
+                    preload='metadata'
+                  ></video>
+                  <div class='pointer-events-none absolute inset-0 flex items-center justify-center'>
+                    <div class='flex h-16 w-16 items-center justify-center rounded-full bg-white/90 text-slate-950 shadow-lg'>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='32'
+                        height='32'
+                        viewBox='0 0 24 24'
+                        fill='currentColor'
+                        class='ml-1'
+                      >
+                        <path d='m9 7 8 5-8 5V7z'></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           ))}

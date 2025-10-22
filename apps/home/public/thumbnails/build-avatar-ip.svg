@@ -1,0 +1,20 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A9F" />
+      <stop offset="100%" stop-color="#642B73" />
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" rx="48" fill="url(#grad1)" />
+  <g fill="white" fill-opacity="0.9">
+    <circle cx="300" cy="320" r="110" />
+    <rect x="250" y="430" width="100" height="16" rx="8" />
+    <rect x="240" y="460" width="120" height="12" rx="6" fill-opacity="0.7" />
+  </g>
+  <text x="560" y="320" fill="white" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="60" font-weight="700">
+    Avatar IP Studio
+  </text>
+  <text x="560" y="400" fill="white" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="500">
+    Multi-character, multi-reference shoots in minutes
+  </text>
+</svg>

@@ -4,14 +4,13 @@ import { cn } from '../utils/cn';
 
 const Section2 = () => {
   return (
-    <section className='w-full bg-gradient-to-b from-gray-50 to-white py-24 px-4'>
+    <section className='w-full bg-gradient-to-b from-gray-50 to-white px-4 py-24'>
       <div className='max-w-7xl mx-auto'>
-        <h2 className='text-4xl md:text-5xl font-bold text-center mb-4'>
-          Reela Is Built for <span className='text-brand'>Speed & Results</span>
+        <h2 className='font-inter text-4xl font-bold md:text-6xl text-center mb-4'>
+          Reela Is Built for <span className='text-brand'>Speed &amp; Results</span>
         </h2>
-        <p className='text-xl text-gray-600 text-center mb-20 max-w-4xl mx-auto'>
-          Ship channel-specific videos from a single brief — with the speed of automation and the
-          fidelity brands demand.
+        <p className='mx-auto mb-20 max-w-4xl text-center text-xl text-gray-600'>
+          Ship channel-specific videos from a single brief — with the speed of automation and the fidelity brands demand.
         </p>
 
         <div className='grid md:grid-cols-3 gap-10 max-w-6xl mx-auto'>

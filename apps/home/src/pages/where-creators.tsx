@@ -94,7 +94,9 @@ const WhereCreators = () => {
     <section class='bg-white py-20'>
       <div class='container mx-auto px-4'>
         <div class='mx-auto mb-12 max-w-3xl text-center'>
-          <h2 class='font-inter text-4xl font-bold md:text-5xl'>Where Creators Monetize with <span class='text-brand'>Reela</span></h2>
+          <h2 class='font-inter text-4xl font-bold md:text-6xl'>
+            Where Creators Monetize with <span class='text-brand'>Reela</span>
+          </h2>
           <p class='mt-4 text-lg text-gray-600'>
             Reela adapts to every creator journey — from selling products to building audiences. Choose your path to revenue.
           </p>
