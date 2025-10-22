@@ -64,38 +64,40 @@ const WhyCreators = () => {
                   </button>
                 </a>
               </div>
-              <div class='relative overflow-hidden rounded-2xl bg-white shadow-lg' data-video-card>
-                <div class='relative aspect-video w-full overflow-hidden md:mx-auto md:max-w-[520px]'>
-                  <video
-                    src={card.video}
-                    class='absolute inset-0 h-full w-full object-cover'
-                    playsinline
-                    controls
-                    preload='metadata'
-                    onplay='handleVideoPlay(this)'
-                    onpause='handleVideoPause(this)'
-                    onended='handleVideoEnded(this)'
-                  ></video>
-                  <div
-                    class='absolute inset-0 flex items-center justify-center bg-black/40 opacity-100 transition-opacity duration-200'
-                    data-overlay
-                  >
-                    <button
-                      type='button'
-                      class='flex h-16 w-16 items-center justify-center rounded-full bg-white/90 text-slate-950 shadow-lg transition-transform duration-200 hover:scale-105'
-                      onclick='playVideoFromOverlay(this)'
+              <div class='relative md:mx-auto md:max-w-[520px]' data-video-card>
+                <div class='relative w-full overflow-hidden rounded-3xl shadow-lg'>
+                  <div class='relative w-full pb-[56.25%]'>
+                    <video
+                      src={card.video}
+                      class='absolute inset-0 h-full w-full rounded-3xl object-cover'
+                      playsinline
+                      controls
+                      preload='auto'
+                      onplay='handleVideoPlay(this)'
+                      onpause='handleVideoPause(this)'
+                      onended='handleVideoEnded(this)'
+                    ></video>
+                    <div
+                      class='absolute inset-0 flex items-center justify-center rounded-3xl bg-black/40 opacity-100 transition-opacity duration-200'
+                      data-overlay
                     >
-                      <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        width='32'
-                        height='32'
-                        viewBox='0 0 24 24'
-                        fill='currentColor'
-                        class='ml-1'
+                      <button
+                        type='button'
+                        class='flex h-16 w-16 items-center justify-center rounded-full bg-white/90 text-slate-950 shadow-lg transition-transform duration-200 hover:scale-105'
+                        onclick='playVideoFromOverlay(this)'
                       >
-                        <path d='m9 7 8 5-8 5V7z'></path>
-                      </svg>
-                    </button>
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          width='32'
+                          height='32'
+                          viewBox='0 0 24 24'
+                          fill='currentColor'
+                          class='ml-1'
+                        >
+                          <path d='m9 7 8 5-8 5V7z'></path>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

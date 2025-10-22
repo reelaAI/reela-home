@@ -125,10 +125,6 @@ function pauseAllVideos() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  initAutoScrollSections();
-});
-
 function initAutoScrollSections() {
   const sections = document.querySelectorAll('[data-auto-scroll]');
   sections.forEach((section) => {
@@ -171,3 +167,23 @@ function initAutoScrollSections() {
     window.addEventListener('focus', restartInterval);
   });
 }
+
+if (typeof window !== 'undefined') {
+  Object.assign(window, {
+    playOnHover,
+    pauseOnLeave,
+    toggleMute,
+    horizontalScroll,
+    playVideoFromOverlay,
+    handleVideoPlay,
+    handleVideoPause,
+    handleVideoEnded,
+    activateLabel,
+    videoTabClick,
+    pauseAllVideos,
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initAutoScrollSections();
+});
