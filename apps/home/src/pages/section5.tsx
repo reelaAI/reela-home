@@ -40,7 +40,7 @@ const Section5 = () => {
             <div class='p-6 lg:w-1/2 lg:p-12 lg:pl-0'>
               <div class='relative overflow-hidden rounded-xl shadow-lg'>
                 <img
-                  src='/editor.png'
+                  src='https://files.reela.com/assets/images/edit.png'
                   alt='Reela Editor interface showing video editing timeline and preview'
                   class='h-auto w-full object-cover'
                   style='max-height: none'

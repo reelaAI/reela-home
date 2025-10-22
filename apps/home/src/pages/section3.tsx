@@ -1,31 +1,33 @@
 const comparison = [
   {
     feature: 'Max video length',
-    reela: 'Up to 10 min per video with orchestrated Sora clips 1+ minutes long.',
+    reela: 'Generates 60-second-plus Sora scenes and stitches up to 10-minute narratives.',
     sora: 'Up to 25 seconds per generation.',
   },
   {
     feature: 'Talent & product options',
-    reela: 'Hundreds of virtual humans plus your licensed talent for product-perfect scenes.',
+    reela:
+      'Choose from hundreds of Reela virtual humans or bring your licensed actors for SKU-perfect storytelling.',
     sora: 'Only supports characters you personally upload and authorize.',
   },
-  {
-    feature: 'Multi-reference stability',
-    reela: 'Locks multi-personas, props, and SKUs across every scene.',
-    sora: 'Needs extra touch-ups to stay aligned with multiple references.',
-  },
+];
+
+const highlights = [
+  'Multi-reference continuity stays locked, so multi-product sequences stay true to your brief.',
+  'Blend virtual humans, AI-generated footage, and live assets in one adaptive timeline.',
+  'Deliver long-form videos and vertical cutdowns simultaneously without rebuilding edits.',
 ];
 
 const Section3 = () => {
   return (
     <section class='bg-slate-950 text-white'>
-      <div class='container mx-auto grid gap-10 px-4 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-start'>
-        <div class='space-y-5'>
+      <div class='container mx-auto grid gap-10 px-4 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-start'>
+        <div class='space-y-4'>
           <span class='inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-pink-100'>
             New · Sora Model Integration
           </span>
-          <h2 class='font-inter text-3xl font-bold md:text-4xl lg:text-5xl'>
-            Generate Long-Form Sora Videos with Reela 2.0
+          <h2 class='font-inter text-[28px] font-bold md:text-[36px] lg:text-[44px]'>
+            Generate Long-Form Sora Videos with Reela 2.0 Pro
           </h2>
           <p class='text-base text-white/80 md:text-lg'>
             Combine Reela&apos;s autonomous directing with OpenAI&apos;s Sora model to produce cinematic videos over one minute long.
@@ -61,6 +63,16 @@ const Section3 = () => {
               </span>
             </li>
           </ul>
+          <ul class='space-y-2 text-sm text-white/70 md:text-base'>
+            {highlights.map((item) => (
+              <li class='flex items-start gap-3' key={item}>
+                <span class='mt-1 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border border-white/30 text-xs font-semibold text-white'>
+                  •
+                </span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
           <a href='https://app.reela.com/workspace' target='_blank' rel='noopener noreferrer'>
             <button class='mt-4 inline-flex items-center rounded-full bg-brand px-7 py-3 text-sm font-semibold text-white transition-transform hover:scale-105'>
               Launch a Sora Project
@@ -83,10 +95,7 @@ const Section3 = () => {
           </a>
         </div>
         <div class='space-y-5 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur lg:p-7'>
-          <h3 class='font-inter text-2xl font-semibold text-white md:text-3xl'>Reela 2.0 vs. Sora</h3>
-          <p class='text-sm text-white/70 md:text-base'>
-            Show how Reela 2.0 extends every Sora workflow — from run time to avatar variety.
-          </p>
+          <h3 class='font-inter text-2xl font-semibold text-white md:text-3xl'>Reela 2.0 Pro vs. Sora</h3>
           <div class='space-y-3'>
             {comparison.map((item) => (
               <div class='rounded-2xl border border-white/10 bg-white/5 p-5' key={item.feature}>
@@ -99,7 +108,7 @@ const Section3 = () => {
                     <p class='text-base font-medium text-white'>{item.sora}</p>
                   </div>
                   <div>
-                    <p class='text-xs font-semibold text-white/60'>Reela 2.0</p>
+                    <p class='text-xs font-semibold text-white/60'>Reela 2.0 Pro</p>
                     <p class='text-base font-medium text-white'>{item.reela}</p>
                   </div>
                 </div>

@@ -10,7 +10,7 @@ const cards = [
   {
     title: 'Drive More Sales with Product Videos',
     description:
-      'Turn product shots and SKU references into persuasive explainers. Reela blends AI avatars, Sora clips, and motion graphics automatically.',
+      'Turn product shots and SKU references into persuasive explainers. Reela blends AI avatars, branded motion graphics, and auto-generated B-roll automatically.',
     video: 'https://files.reela.com/workspace/uploads/202509/15/4cad780e-2cc6-485f-bd24-3359bbd5a3c1.mp4',
     poster: '/thumbnails/drive-product-sales.svg',
     cta: 'Create Product Videos',
@@ -34,7 +34,7 @@ const WhyCreators = () => {
             Why Creators Choose <span class='text-brand'>Reela</span>
           </h2>
           <p class='mt-4 text-lg text-gray-600'>
-            Transform ideas into income streams with multi-reference accuracy, Sora-powered visuals, and ready-to-publish edits.
+            Transform ideas into income streams with multi-reference accuracy, multimodal storytelling, and ready-to-publish edits.
           </p>
         </div>
         <div class='space-y-8'>
@@ -67,17 +67,25 @@ const WhyCreators = () => {
                   </button>
                 </a>
               </div>
-              <div class='relative overflow-hidden rounded-2xl bg-black shadow-lg'>
+              <div class='relative overflow-hidden rounded-2xl bg-white shadow-lg' data-video-card>
                 <div class='relative aspect-video w-full'>
                   <video
                     src={card.video}
-                    class='h-full w-full object-cover'
+                    class='h-full w-full rounded-2xl object-cover'
                     poster={card.poster}
                     playsinline
                     controls
                     preload='metadata'
+                    onclick="if(this.paused){this.play();}else{this.pause();}"
+                    onplay="var overlay=this.parentElement.querySelector('[data-overlay]');if(overlay){overlay.classList.add('opacity-0','pointer-events-none');}"
+                    onpause="var overlay=this.parentElement.querySelector('[data-overlay]');if(overlay){overlay.classList.remove('opacity-0','pointer-events-none');}"
+                    onended="var overlay=this.parentElement.querySelector('[data-overlay]');if(overlay){overlay.classList.remove('opacity-0','pointer-events-none');}"
                   ></video>
-                  <div class='pointer-events-none absolute inset-0 flex items-center justify-center'>
+                  <div
+                    class='absolute inset-0 flex cursor-pointer items-center justify-center bg-black/40 transition-opacity duration-200'
+                    data-overlay
+                    onclick="var video=this.parentElement.querySelector('video');if(video.paused){video.play();}else{video.pause();}"
+                  >
                     <div class='flex h-16 w-16 items-center justify-center rounded-full bg-white/90 text-slate-950 shadow-lg'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'

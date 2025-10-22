@@ -5,44 +5,57 @@ const testimonials = [
     category: 'E-COMMERCE',
     avatar: '/user-1.png',
     quote:
-      "Reela 2.0 keeps every SKU and spokesmodel identical across our 12-market launches — that's impossible with manual shoots.",
+      'Reela lets us produce localized product videos for 10+ markets weekly — no agency needed.',
     highlight: 'Time-to-market is 70% faster and ad CTR is up by 35%.',
     role: 'Digital Marketing Manager @ E-commerce Brand',
   },
   {
     category: 'EDUCATION',
     avatar: '/user-2.png',
-    quote: "Multilingual avatars and AI scene swaps let me teach in three languages without re-recording once.",
-    highlight: 'Enrollment doubled after adding localized video lessons.',
+    quote:
+      'With AI avatars and multilingual support, I now teach students in three languages without recording anything.',
+    highlight: 'Reela became my full production team — and my class went global.',
     role: 'Online Course Creator',
   },
   {
     category: 'SOCIAL MEDIA',
     avatar: '/user-3.png',
-    quote: 'I paste a product link, pick a Reela host, and the platform remixes Sora clips + B-roll for daily drops.',
-    highlight: 'Now I schedule a week of content in under an hour.',
+    quote:
+      "I paste a link, remix it, and drop — that's how I post daily with AI B-roll magic.",
+    highlight: 'Reela keeps my content flow fast, fresh, and monetizable.',
     role: 'TikTok Content Creator',
   },
   {
     category: 'CREATIVE',
     avatar: '/user-4.png',
-    quote: "Reela's multi-reference storyboard locks every costume and prop before Sora renders a single frame.",
-    highlight: 'We prototype campaigns without touching a camera.',
+    quote:
+      "Reela's AI storyboard and scene builder turns rough ideas into full visual drafts in 10 minutes.",
+    highlight: 'We now prototype campaigns without touching a camera.',
     role: 'Creative Director @ Media Studio',
   },
   {
-    category: 'INFLUENCER',
+    category: 'CONTENT CREATOR',
     avatar: '/user-5.png',
-    quote: 'Voice cloning plus illustration mode turns my blogs into animated explainers overnight.',
+    quote:
+      "I turned my blogs into videos with Reela's voiceover and illustration modes — my channel exploded.",
     highlight: 'It saved me 15+ hours per week and tripled my views.',
     role: 'Health & Wellness Influencer',
   },
   {
-    category: 'PRODUCTION',
+    category: 'RETAIL',
     avatar: '/user-6.png',
-    quote: 'Long-form Sora sequences stitched in Reela cover 8-minute brand documentaries without reshoots.',
-    highlight: 'Clients love that we deliver 1-minute Sora cuts and 10-minute edits from one brief.',
-    role: 'Producer @ Boutique Studio',
+    quote:
+      'Reela 2.0 Pro maps every product angle and character note into the script, so our catalog videos feel shot on location.',
+    highlight: 'Multi-reference alignment keeps 40+ SKUs pixel-perfect across variants.',
+    role: 'Head of Content @ Retail Marketplace',
+  },
+  {
+    category: 'AGENCY',
+    avatar: '/user-7.png',
+    quote:
+      'We storyboard hero shots, drop in AI B-roll, and Reela blends avatars with graphics without leaving the timeline.',
+    highlight: 'Mixed-media sequences now take hours, not days.',
+    role: 'Executive Producer @ Creative Agency',
   },
 ];
 
