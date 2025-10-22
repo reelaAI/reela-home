@@ -157,18 +157,18 @@ const Section1 = () => {
               <div class='animate-infinite-scroll mt-10 flex w-[1000%] md:mt-0'>
                 {[brands, brands, brands].flat().map((brand, index) => (
                   <div
-                    class='mx-8 flex flex-shrink-0 flex-col items-center justify-center gap-2 text-[#C2C2C1]'
+                    class='mx-8 flex flex-shrink-0 flex-col items-center justify-center gap-2 text-[#AAAAAA]'
                     key={`${brand.name}-${index}`}
                   >
                     <img
                       alt={`${brand.name} logo`}
-                      class='h-10 w-24 object-contain'
+                      class='h-8 w-20 object-contain'
                       decoding='async'
-                      height='40'
+                      height='32'
                       loading='lazy'
                       src={brand.src}
-                      style='color: transparent; filter: brightness(0) saturate(100%) invert(78%) sepia(6%) saturate(209%) hue-rotate(169deg) brightness(95%) contrast(89%);'
-                      width='120'
+                      style='color: transparent; filter: brightness(0) saturate(100%) invert(67%) sepia(0%) saturate(0%) hue-rotate(179deg) brightness(94%) contrast(86%);'
+                      width='80'
                     />
                     <span class='text-xs font-medium'>{brand.name}</span>
                   </div>
