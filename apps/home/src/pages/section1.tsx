@@ -1,76 +1,73 @@
 const Section1 = () => {
   const brands = [
+    '/brands/netflix.png',
+    '/brands/google.png',
+    '/brands/byteplus.svg',
     '/brands/meta.png',
     '/brands/amazon.png',
-    '/brands/google.png',
-    '/brands/netflix.png',
-    '/brands/opt.svg',
-    '/brands/pias.png',
-    '/brands/microsoft.png',
-    '/brands/byteplus.svg',
   ];
 
   return (
-    <section class='container mx-auto px-4 py-16 text-center'>
-      <h1 class='font-inter mx-auto max-w-4xl text-5xl font-bold leading-tight tracking-tight md:text-7xl'>
-        Launch Product Stories,
-        <span class='text-brand'> Automatically.</span>
-      </h1>
-      <p class='font-inter mx-auto mt-6 max-w-2xl text-xl text-gray-600'>
-        Reela 2.0 turns product catalogs, spokespeople, and campaign concepts into monetizable videos
-        in minutes — with avatar, product, and scene consistency that stays true to every reference
-        you provide.
-      </p>
-      <p class='font-inter mx-auto mt-4 max-w-2xl text-lg text-gray-500'>
-        Showcase launches, tutorials, and social promos with multi-reference alignment and
-        multimodal mixes spanning virtual humans, AI footage, and brand footage — all orchestrated by
-        one autonomous director.
-      </p>
-      <div class='mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row'>
-        <a href='/workspace'>
-          <div class='bg-brand ring-offset-background focus-visible:ring-ring inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-full px-8 py-6 text-base font-medium text-white transition-transform hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50'>
+    <section class='fade-in-up container mx-auto px-4 py-20 text-center'>
+      <div class='mx-auto flex max-w-5xl flex-col items-center text-center'>
+        <h1 class='font-inter font-bold leading-tight tracking-tight text-[44px] md:text-[70px]'>
+          Turn Products, Ideas &amp; Avatars into Profitable Videos — Instantly.
+        </h1>
+        <p class='font-inter mt-6 max-w-3xl text-[18px] text-gray-600 md:text-[24px]'>
+          Reela 2.0 combines AI avatars, product references, and smart scene generation to create
+          monetizable videos in minutes — for creators, sellers, and brands who want growth without
+          production limits.
+        </p>
+        <ul class='mt-8 grid w-full max-w-3xl gap-3 text-left text-base text-gray-600 md:text-lg'>
+          <li class='flex items-start gap-3'>
+            <span class='mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#F7265B]'></span>
+            <span>AI Avatars that speak, sell, and scale your content</span>
+          </li>
+          <li class='flex items-start gap-3'>
+            <span class='mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#F7265B]'></span>
+            <span>Product-consistent video generation that keeps every detail accurate</span>
+          </li>
+          <li class='flex items-start gap-3'>
+            <span class='mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#F7265B]'></span>
+            <span>Multi-reference &amp; multimodal support for avatars, scenes, and footage</span>
+          </li>
+          <li class='flex items-start gap-3'>
+            <span class='mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-[#F7265B]'></span>
+            <span>Publish-ready exports for TikTok, YouTube, and Instagram</span>
+          </li>
+        </ul>
+        <div class='mt-10 flex w-full max-w-md flex-col items-center gap-6'>
+          <a
+            class='w-full rounded-full bg-[#F7265B] px-8 py-4 text-base font-semibold text-white shadow-sm transition-all duration-200 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F7265B] focus-visible:ring-offset-2'
+            href='https://app.reela.com/workspace'
+          >
             Create with Reela AI
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='24'
-              height='24'
-              viewBox='0 0 24 24'
-              fill='none'
-              stroke='currentColor'
-              stroke-width='2'
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              class='lucide lucide-chevron-right ml-1 h-4 w-4 shrink-0'
-            >
-              <path d='m9 18 6-6-6-6'></path>
-            </svg>
-          </div>
-        </a>
-      </div>
-      <div class='mt-10 flex items-center justify-center px-4'>
-        <div class='flex flex-wrap items-center justify-center gap-6'>
-          <p class='shrink-0 whitespace-nowrap font-medium text-gray-700'>
-            Trusted by Teams Automating Video Workflows
+          </a>
+          <a
+            class='w-full rounded-full border border-[#F7265B] px-8 py-4 text-base font-semibold text-[#F7265B] transition-all duration-200 hover:bg-[#F7265B] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F7265B] focus-visible:ring-offset-2'
+            href='https://files.reela.com/workspace/uploads/202509/15/4cad780e-2cc6-485f-bd24-3359bbd5a3c1.mp4'
+            rel='noreferrer'
+            target='_blank'
+          >
+            Watch Demo
+          </a>
+        </div>
+        <div class='mt-12 flex w-full flex-col items-center gap-6'>
+          <p class='font-inter text-sm font-medium uppercase tracking-[0.2em] text-gray-500'>
+            Trusted by 10,000+ creators and teams worldwide
           </p>
-          <div class='hidden h-6 border-l border-gray-300 md:block'></div>
-          <div class='relative max-w-[90vw] overflow-x-hidden md:max-w-2xl'>
-            <div class='animate-infinite-scroll mt-10 flex w-[1000%] md:mt-0'>
-              {[brands, brands, brands].flat().map((b, index) => (
-                <div class='mx-8 flex flex-shrink-0 items-center justify-center' key={index}>
-                  <img
-                    alt='logo'
-                    loading='lazy'
-                    width='120'
-                    height='40'
-                    decoding='async'
-                    data-nimg='1'
-                    class='h-6 object-contain opacity-70 grayscale filter transition-opacity hover:opacity-100'
-                    style='color: transparent'
-                    src={b}
-                  />
-                </div>
-              ))}
-            </div>
+          <div class='flex flex-wrap items-center justify-center gap-8 md:gap-12'>
+            {brands.map((b) => (
+              <img
+                key={b}
+                alt='brand logo'
+                class='h-8 w-auto opacity-70 grayscale transition-opacity hover:opacity-100'
+                height='40'
+                loading='lazy'
+                src={b}
+                width='120'
+              />
+            ))}
           </div>
         </div>
       </div>
