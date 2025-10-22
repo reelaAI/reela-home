@@ -2,21 +2,21 @@ const cards = [
   {
     title: 'Build Your Own Avatar IP',
     description:
-      'Design a spokesperson that stays on-brand forever. Reela keeps faces, voices, and wardrobe consistent across every scene.',
+      'Turn your photo and voice into a digital host that speaks for your brand — ideal for real estate agents, lawyers, and creators building authority online.',
     video: 'https://files.reela.com/workspace/uploads/202509/15/d992af1b-0721-4ece-aa6e-f04af3e59f80.mp4',
     cta: 'Start Building Your Avatar IP',
   },
   {
     title: 'Drive More Sales with Product Videos',
     description:
-      'Turn product shots and SKU references into persuasive explainers. Reela blends AI avatars, branded motion graphics, and auto-generated B-roll automatically.',
+      'Generate story-based videos that highlight your products with accurate visuals, consistent branding, and persuasive storytelling.',
     video: 'https://files.reela.com/workspace/uploads/202509/15/4cad780e-2cc6-485f-bd24-3359bbd5a3c1.mp4',
     cta: 'Create Product Videos',
   },
   {
     title: 'Earn More from Social Media',
     description:
-      'Publish platform-ready stories every day. Remix multi-modal footage, auto-caption, and localize for new audiences with one click.',
+      'Produce scroll-stopping videos for TikTok, YouTube, and Instagram — made faster, cheaper, and perfectly on-brand with Reela AI.',
     video: 'https://files.reela.com/workspace/uploads/202509/15/1431a1ef-7d5f-41a3-97ca-f966b71011c8.mp4',
     cta: 'Launch Social Campaigns',
   },
@@ -31,7 +31,7 @@ const WhyCreators = () => {
             Why Creators Choose <span class='text-brand'>Reela</span>
           </h2>
           <p class='mt-4 text-lg text-gray-600'>
-            Transform ideas into income streams with multi-reference accuracy, multimodal storytelling, and ready-to-publish edits.
+            Reela helps creators, brands, and professionals turn ideas into high-impact videos that grow influence and drive results.
           </p>
         </div>
         <div class='space-y-8'>
@@ -146,6 +146,9 @@ const WhyCreators = () => {
             </div>
           ))}
         </div>
+        <p class='mt-16 text-center text-xl font-semibold text-gray-900'>
+          Discover how far your ideas can go with Reela.
+        </p>
       </div>
     </section>
   );
