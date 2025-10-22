@@ -6,7 +6,7 @@ const Section6 = () => {
       <div class='container mx-auto mb-12 px-4 py-16 text-center'>
         <h2 class='font-inter text-4xl font-bold md:text-6xl'>
           A new vision for
-          <span class='text-brand'> video creation </span>
+          <span class='text-brand'> Sora-scale storytelling </span>
         </h2>
       </div>
       <div class='mx-auto mb-20 max-w-[1200px] px-4'>

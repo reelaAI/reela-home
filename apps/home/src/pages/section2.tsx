@@ -7,26 +7,26 @@ const Section2 = () => {
     <section className='w-full bg-gradient-to-b from-gray-50 to-white py-24 px-4'>
       <div className='max-w-7xl mx-auto'>
         <h2 className='text-4xl md:text-5xl font-bold text-center mb-4'>
-          Reela Is Built for <span className='text-brand'>Speed & Results</span>
+          Built to <span className='text-brand'>outpace Sora</span> at every step
         </h2>
         <p className='text-xl text-gray-600 text-center mb-20 max-w-4xl mx-auto'>
-          Unlock fully-automated video creation — zero editing, zero timelines, zero hassle.
+          Reela pairs our upgraded Consistency Engine with native Sora pipelines so creative teams publish more, spend less, and stay on-brand.
         </p>
 
         <div className='grid md:grid-cols-3 gap-10 max-w-6xl mx-auto'>
           <FeatureCard
-            title='5-Minute Video Creation'
-            description='Just input your script or idea, and Reela delivers a publish-ready video in 5 minutes flat.'
+            title='Multi-Reference Consistency Engine'
+            description='Upload hero shots, product stills, and style frames. Reela locks every scene to your references for pixel-level continuity.'
             icon='zap'
           />
           <FeatureCard
-            title='No Editing, No Timeline'
-            description='Forget the timeline. No trimming, cutting, or stitching required. Reela assembles your entire video, automatically.'
+            title='Sora Co-Pilot Workflows'
+            description='Spin up Sora sequences inside Reela, then auto-assemble voiceover, captions, and edits without touching a timeline.'
             icon='scissors'
           />
           <FeatureCard
-            title='All-in-One, Ready-to-Share Videos'
-            description='From avatars and voiceovers to scenes, subtitles, pacing, and B-roll — Reela handles it all, delivering a complete, polished video.'
+            title='Long-form, Budget-Friendly Delivery'
+            description='Ship 10-minute cinematic videos for a fraction of Sora-only costs with automated revisions, localization, and exports.'
             icon='brain'
           />
         </div>

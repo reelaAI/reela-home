@@ -2,22 +2,22 @@ const Section5 = () => {
   return (
     <>
       <div class='container mx-auto mb-12 px-4 py-16 text-center'>
-        <h2 class='font-inter text-4xl font-bold md:text-6xl'>Universal Video Capabilities</h2>
+        <h2 class='font-inter text-4xl font-bold md:text-6xl'>Production tools for Sora-scale launches</h2>
       </div>
       <div class='mx-auto mb-16 max-w-[1200px] px-4'>
         <div class='overflow-hidden rounded-3xl bg-white shadow-lg'>
           <div class='flex flex-col lg:flex-row'>
             <div class='flex flex-col justify-center p-6 lg:w-1/2 lg:p-12'>
               <h2 class='mb-6 text-3xl font-bold md:text-4xl'>
-                Reela Editor - Smart, Flexible, Ready to Export
+                Reela Studio — orchestrate every Sora render
               </h2>
               <p class='mb-4 text-lg text-gray-600'>
-                Edit scenes, subtitles, voiceovers and music with Reela's intuitive timeline editor
-                — no editing experience required.
+                Review Sora generations, Reela scenes, and AI voice in one collaborative board. Swap references, lock the best
+                takes, and re-render without losing continuity.
               </p>
               <p class='mb-6 text-lg text-gray-600'>
-                Export your project directly as a full video or as editable files for Premiere Pro
-                and CapCut for advanced editing.
+                Export long-form timelines directly or hand off layered files for Premiere Pro and CapCut when teams need
+                manual polish.
               </p>
               <div class='mt-2 flex items-center gap-6'>
                 <img
@@ -72,9 +72,9 @@ const Section5 = () => {
                   <path d='M2 12h20'></path>
                 </svg>
               </div>
-              <h3 class='mb-2 text-xl font-bold'>Multilingual Video Support</h3>
+              <h3 class='mb-2 text-xl font-bold'>Multi-reference boards</h3>
               <p class='text-gray-600'>
-                Create videos in over 140 languages to reach global audiences.
+                Upload hero shots, product stills, and wardrobe looks to anchor every shot across Sora and Reela renders.
               </p>
             </div>
           </div>
@@ -97,8 +97,10 @@ const Section5 = () => {
                   <rect width='20' height='12' x='2' y='6' rx='2'></rect>
                 </svg>
               </div>
-              <h3 class='mb-2 text-xl font-bold'>Flexible Aspect Ratios</h3>
-              <p class='text-gray-600'>Support 16:9, 9:16, and 1:1 formats for any platform.</p>
+              <h3 class='mb-2 text-xl font-bold'>Auto aspect remixes</h3>
+              <p class='text-gray-600'>
+                Generate horizontal, square, and vertical cuts from the same prompt without breaking brand guidelines.
+              </p>
             </div>
           </div>
           <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
@@ -124,9 +126,9 @@ const Section5 = () => {
                   <path d='M14 18h6'></path>
                 </svg>
               </div>
-              <h3 class='mb-2 text-xl font-bold'>Multilingual Subtitles</h3>
+              <h3 class='mb-2 text-xl font-bold'>Localized voice + captions</h3>
               <p class='text-gray-600'>
-                Add single-language or bilingual subtitles with one click.
+                Auto-generate dubbing and subtitles in 140+ languages to keep your Sora stories global-ready.
               </p>
             </div>
           </div>
@@ -152,7 +154,7 @@ const Section5 = () => {
               </div>
               <h3 class='mb-2 text-xl font-bold'>AI Background Music</h3>
               <p class='text-gray-600'>
-                Generate and sync background music tailored to your video scenes.
+                Generate adaptive scores that react to Sora scene changes and narrative beats.
               </p>
             </div>
           </div>
@@ -178,9 +180,9 @@ const Section5 = () => {
                   <path d='M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z'></path>
                 </svg>
               </div>
-              <h3 class='mb-2 text-xl font-bold'>Style Variations</h3>
+              <h3 class='mb-2 text-xl font-bold'>Reusable style presets</h3>
               <p class='text-gray-600'>
-                Choose from a variety of video styles to match your brand tone.
+                Save approved looks and instantly reapply them to new Sora prompts, remixes, or avatar shoots.
               </p>
             </div>
           </div>
@@ -206,7 +208,7 @@ const Section5 = () => {
               </div>
               <h3 class='mb-2 text-xl font-bold'>AI Sound Effects</h3>
               <p class='text-gray-600'>
-                Auto-generate sound effects that match scenes and actions.
+                Auto-generate foley and motion cues that align with your Sora footage in a single click.
               </p>
             </div>
           </div>

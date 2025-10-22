@@ -1,104 +1,119 @@
-// Unified Multimodal Video Creation
-
-import { Fragment } from 'hono/jsx';
-
 const Section4 = () => {
-  const config = [
+  const comparison = [
     {
-      name: 'Avatar + AI B-Roll',
-      url: 'https://files.reela.com/assets/videos/97ec5506-716c-4218-b415-a75305754d65.mp4',
+      label: 'Max video length per render',
+      reela: 'Up to 10 minutes with automated stitching',
+      sora: 'Up to ~2 minutes in beta',
     },
     {
-      name: 'Remix + AI B-Roll',
-      url: 'https://files.reela.com/assets/videos/692960a2-1b64-464e-8be3-d5f32bef2dac.mp4',
+      label: 'Reference stability',
+      reela: 'Multi-image consistency engine locks talent, wardrobe, and product shots',
+      sora: 'Single-prompt variability leads to on-set drift',
     },
     {
-      name: 'Avatar + Remix',
-      url: 'https://files.reela.com/assets/videos/6fcb9566-099e-4b63-9297-6059531ddc2f.mp4',
+      label: 'Average cost per finished minute',
+      reela: 'From $2.10 with Plus plan credits',
+      sora: 'Estimated $6.00+ per minute of final footage',
     },
     {
-      name: 'AI Video + Image-to-Video',
-      url: 'https://files.reela.com/assets/videos/883f524f-357b-4a1b-bfc8-2c5a8610ec83.mp4',
+      label: 'Workflow automation',
+      reela: 'Scripts, voiceover, subtitles, and edits assembled automatically',
+      sora: 'Manual stitching across tools',
     },
     {
-      name: 'Avatar + Avatar',
-      url: 'https://files.reela.com/assets/videos/de717acc-af87-47a0-9a79-1f4544cfc113.mp4',
+      label: 'Team collaboration',
+      reela: 'Review links, version history, brand kits, and API access',
+      sora: 'Individual experiments only',
+    },
+  ];
+
+  const proofPoints = [
+    {
+      title: 'Launch faster',
+      description: 'Ship campaigns in hours, not weeks, with pre-built automations and reusable brand kits.',
+    },
+    {
+      title: 'Scale smarter',
+      description: 'Extend every prompt into horizontal, square, and vertical cuts while keeping references locked.',
+    },
+    {
+      title: 'Own the ROI',
+      description: 'Lower cost-per-video and reduce revision cycles with frame-accurate consistency.',
     },
   ];
 
   return (
-    <Fragment>
-      <div class='container mx-auto px-4 text-center py-16 mb-12'>
-        <h2 class='text-4xl md:text-6xl font-bold font-inter'>
-          Unified <span class='text-brand'>Multimodal </span>
-          Video Creation
-          <p class='mt-6 text-xl text-gray-600 max-w-3xl mx-auto font-bold font-inter'>
-            Create seamless videos by combining avatars, AI scenes, video clips, illustrations, and
-            B-roll — all in one unified workflow.
-          </p>
+    <section class='container mx-auto px-4 py-16' id='reela-vs-sora'>
+      <div class='mb-12 text-center'>
+        <h2 class='font-inter text-4xl font-bold md:text-6xl'>
+          Reela vs. Sora
+          <span class='text-brand'> — the production-ready choice</span>
         </h2>
+        <p class='mx-auto mt-6 max-w-3xl text-lg text-gray-600'>
+          Ride the Sora wave without sacrificing control. Reela delivers the consistency, run-time, and pricing teams need to
+          ship cinematic work every day.
+        </p>
       </div>
 
-      <section class='container mx-auto px-4 mb-8'>
-        <div class='max-w-[1200px] mx-auto'>
-          <div class='rounded-3xl overflow-hidden bg-white shadow-lg mb-8 grid lg:grid-cols-[minmax(100px,250px)_1fr] gird-cols-1 gap-4 p-6 md:p-12'>
-            {config.map((item, index) => (
-              <div key={String(index)} class='contents group'>
-                <label class='w-full transition-all duration-200 bg-white hover:bg-gray-50 border border-gray-200 rounded-lg overflow-hidden p-4 label-sm col-start-1 max-h-max'>
-                  <span class='text-sm font-medium text-gray-700 has-checked:text-brand'>
-                    {item.name}
-                  </span>
-                  <input
-                    type='radio'
-                    name='video-combination'
-                    class='hidden'
-                    checked={index === 0}
-                    onchange='pauseAllVideos()'
-                  />
-                </label>
-                <div class='relative rounded-xl overflow-hidden shadow-lg bg-black w-full h-full lg:col-start-2 hidden group-has-checked:block row-span-10 lg:row-start-1 row-start-6'>
-                  <div class='aspect-video w-full'>
-                    <video
-                      src={item.url}
-                      class='w-full h-full object-cover hidden group-has-checked:block'
-                      loop
-                      preload='metadata'
-                      controls
-                    ></video>
-                  </div>
-                </div>
+      <div class='mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[3fr_2fr]'>
+        <div class='overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl'>
+          <div class='bg-gray-900 px-8 py-6 text-white'>
+            <div class='flex items-center justify-between text-sm uppercase tracking-wide'>
+              <span>Production criteria</span>
+              <div class='flex items-center gap-6'>
+                <span class='font-semibold text-brand'>Reela</span>
+                <span class='font-semibold text-gray-300'>Sora</span>
               </div>
-            ))}
+            </div>
           </div>
-          <div class='flex flex-wrap items-center justify-center gap-2 text-center'>
-            <h3 class='text-2xl font-bold'>
-              More <span class='text-brand'>multimodal </span>
-              AI video combinations
-            </h3>
-            <a href='/workspace'>
-              <button class='bg-brand text-white px-6 py-3 rounded-full font-medium hover:scale-105 transition-transform inline-flex items-center'>
-                are waiting for you
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='20'
-                  height='20'
-                  viewBox='0 0 24 24'
-                  fill='none'
-                  stroke='currentColor'
-                  stroke-width='2'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  class='h-5 w-5 ml-2'
-                >
-                  <path d='M5 12h14'></path>
-                  <path d='m12 5 7 7-7 7'></path>
-                </svg>
-              </button>
+          <ul class='divide-y divide-gray-100'>
+            {comparison.map((row) => (
+              <li class='grid gap-4 px-8 py-6 md:grid-cols-[1.2fr_1fr_1fr]' key={row.label}>
+                <p class='text-base font-semibold text-gray-900'>{row.label}</p>
+                <p class='text-sm text-gray-700 md:text-base'>{row.reela}</p>
+                <p class='text-sm text-gray-500 md:text-base'>{row.sora}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class='space-y-6'>
+          {proofPoints.map((point) => (
+            <div class='rounded-3xl border border-gray-200 bg-white p-6 text-left shadow-md' key={point.title}>
+              <h3 class='text-xl font-semibold text-gray-900'>{point.title}</h3>
+              <p class='mt-3 text-sm text-gray-600 md:text-base'>{point.description}</p>
+            </div>
+          ))}
+          <div class='rounded-3xl border border-rose-200 bg-rose-50 p-6 shadow-inner'>
+            <h3 class='text-xl font-semibold text-brand'>Ready to outrun the hype?</h3>
+            <p class='mt-2 text-sm text-rose-900 md:text-base'>
+              Combine Reela automation with Sora creativity and keep your pipeline predictable.
+            </p>
+            <a
+              href='/workspace'
+              class='mt-6 inline-flex items-center justify-center rounded-full bg-brand px-6 py-3 text-white transition-transform hover:scale-105'
+            >
+              Start creating
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='20'
+                height='20'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                stroke-width='2'
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                class='ml-2 h-5 w-5'
+              >
+                <path d='M5 12h14'></path>
+                <path d='m12 5 7 7-7 7'></path>
+              </svg>
             </a>
           </div>
         </div>
-      </section>
-    </Fragment>
+      </div>
+    </section>
   );
 };
 

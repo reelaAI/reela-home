@@ -7,8 +7,8 @@ const Section7 = () => {
     <>
       <div class='container mx-auto mb-12 px-4 py-16 text-center'>
         <h2 class='font-inter text-4xl font-bold md:text-6xl'>
-          The right plans,
-          <span class='text-brand'> for the right price</span>
+          Plans built for
+          <span class='text-brand'> Sora-ready production</span>
         </h2>
       </div>
 
@@ -145,13 +145,12 @@ const Section7 = () => {
               Enterprise-Ready AI Video Solutions
             </h2>
             <p class='mb-4 text-lg opacity-90 md:text-xl'>
-              Whether you're scaling creative production, localizing content across regions, or
-              generating hundreds of videos via API — Reela's enterprise solutions are built to
-              adapt.
+              Whether you're scaling Sora-driven storytelling, localizing content across regions, or generating hundreds of
+              videos via API — Reela's enterprise solutions are built to adapt.
             </p>
             <p class='mb-8 text-lg opacity-90 md:text-xl'>
-              Get custom avatars, private model training, API access, workflow integration, and
-              white-glove support — all designed to fit your business.
+              Get custom avatars, private consistency models, API access, workflow integration, and white-glove support — all
+              designed to fit your business.
             </p>
             <a href='mailto:contact@reela.ai'>
               <button class='text-brand inline-flex items-center rounded-full bg-white px-6 py-3 text-lg font-medium transition-transform hover:scale-105'>

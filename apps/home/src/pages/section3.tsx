@@ -1,99 +1,97 @@
-// You imagine it. Reela AI directs it.
-
-import VideoTab from './video-tab';
-
-const config = [
-  {
-    title: 'AI Avatar Video',
-    button: 'Create Your Avatar Video',
-    videos: [
-      {
-        title: 'AI Avatar Narration',
-        description: 'Scripted avatar videos in multiple styles and languages.',
-        src: 'https://files.reela.com/assets/videos/369886bf-8dbd-4353-b74b-a60ce6c81c86.mp4',
-      },
-      {
-        title: 'Multi-Scene & Multi-Cam',
-        description: 'Auto-switch scenes and camera angles for cinematic avatar delivery.',
-        src: 'https://files.reela.com/assets/videos/650f8889-9c4d-4653-a080-1e936d787460.mp4',
-      },
-      {
-        title: 'Multilingual Lip Sync',
-        description: 'Accurate lip sync in 140+ languages with natural expression.',
-        src: 'https://files.reela.com/assets/videos/11dc6a0b-81dc-49a9-aa53-32b00c7e2aa5.mp4',
-      },
-    ],
-  },
-  {
-    title: 'AI Video Generation',
-    button: 'Start with Your Idea',
-    videos: [
-      {
-        title: 'Creative-to-Video',
-        description: 'Turn ideas into high-quality videos with AI — no editing needed.',
-        src: 'https://files.reela.com/assets/videos/e9f9d167-97d2-436c-9c2d-088c8dd77e8f.mp4',
-      },
-      {
-        title: 'Image-Guided Product Video',
-        description: 'Upload images to create videos with accurate product visuals.',
-        src: 'https://files.reela.com/assets/videos/c0135f8f-fe66-4ae2-b189-6e20f4f58a89.mp4',
-      },
-      {
-        title: 'AI Storybook Generator',
-        description: 'Convert text into visual storybooks with voiceover.',
-        src: 'https://files.reela.com/assets/videos/ebac1bc1-96ae-41ab-87a7-6bb208eaa827.mp4',
-      },
-    ],
-  },
-  {
-    title: 'AI-Powered Video Remixes',
-    button: 'Remix Your Video with AI',
-    videos: [
-      {
-        title: 'Visual-Only Remix',
-        description:
-          'Mute original audio and recombine only the video layer — ideal for clean-cut montage creation.',
-        src: 'https://files.reela.com/assets/videos/63bf450b-a007-4de7-819e-6a443b18d394.mp4',
-      },
-      {
-        title: 'Audio-Intergrated Remix',
-        description:
-          'Remix scenes with synchronized original audio to retain voice, tone, and narrative flow.',
-        src: 'https://files.reela.com/assets/videos/765026be-861e-4de1-b1ab-fe2c1eed9b75.mp4',
-      },
-    ],
-  },
-];
-
 const Section3 = () => {
+  const highlights = [
+    'Multi-image prompts pin characters, wardrobe, and lighting for frame-perfect continuity.',
+    'Route your prompt to Sora, then let Reela automate pacing, subtitles, and delivery.',
+    'Swap between horizontal and vertical outputs with one click while preserving references.',
+  ];
+
+  const metrics = [
+    { value: '10 min+', label: 'Cinematic sequences delivered through Reela + Sora' },
+    { value: '65% less', label: 'Average cost per finished video compared to Sora-only runs' },
+    { value: 'Multi-ref', label: 'Consistent faces, products, and scenes across shots' },
+  ];
+
   return (
-    <>
-      <div class='container mx-auto mb-12 px-4 py-16 text-center'>
+    <section class='container mx-auto px-4 py-16' id='sora-pipeline'>
+      <div class='mb-12 text-center'>
         <h2 class='font-inter text-4xl font-bold md:text-6xl'>
-          You imagine it.
-          <span class='text-brand'> Reela AI </span>
-          directs it.
+          Reela x Sora:
+          <span class='text-brand'> cinematic automation</span>
         </h2>
+        <p class='mx-auto mt-6 max-w-3xl text-lg text-gray-600'>
+          Feed Reela your brief, brand kit, and visual references. We orchestrate Sora generation, enforce
+          consistency, and deliver ready-to-publish edits in minutes.
+        </p>
       </div>
-      <section class='container mx-auto px-4'>
-        {config.map((section) => (
-          <>
-            <div
-              class='mx-auto max-w-[1200px] overflow-hidden rounded-3xl'
-              style='background: linear-gradient(to bottom left, #ffeef1, #f5f7fa)'
-            >
-              <VideoTab
-                tabTitle={section.title}
-                tabButton={section.button}
-                tabButtonSrc={'/workspace'}
-                videos={section.videos}
-              />
+      <div class='grid gap-12 lg:grid-cols-2 lg:items-start'>
+        <div class='space-y-6'>
+          <div class='rounded-3xl border border-gray-200 bg-white p-8 shadow-lg'>
+            <h3 class='text-left text-2xl font-bold text-gray-900'>From references to finished films</h3>
+            <ul class='mt-6 space-y-4 text-left text-lg text-gray-700'>
+              {highlights.map((item) => (
+                <li class='flex items-start gap-3' key={item}>
+                  <span class='mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand/10 text-brand'>
+                    ✓
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class='grid gap-4 md:grid-cols-3'>
+            {metrics.map((metric) => (
+              <div
+                class='rounded-2xl border border-gray-200 bg-white px-4 py-6 text-center shadow-sm'
+                key={metric.label}
+              >
+                <p class='text-2xl font-bold text-brand'>{metric.value}</p>
+                <p class='mt-2 text-sm font-medium text-gray-600'>{metric.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class='grid gap-8'>
+          <div class='overflow-hidden rounded-3xl border border-gray-200 bg-black shadow-xl'>
+            <div class='relative aspect-video w-full'>
+              <video
+                src='https://files.reela.com/reelanything/tasks/1967299690420559872/output_stream.mp4'
+                class='h-full w-full object-cover'
+                loop
+                preload='metadata'
+                controls
+              ></video>
             </div>
-            <div class='h-[40px]'></div>
-          </>
-        ))}
-      </section>
-    </>
+            <div class='bg-white px-6 py-4 text-left'>
+              <h4 class='text-lg font-semibold text-gray-900'>Long-form launch sequence</h4>
+              <p class='mt-1 text-sm text-gray-600'>
+                Automated Sora footage stitched with Reela voice, captions, and branded lower thirds.
+              </p>
+            </div>
+          </div>
+          <div class='rounded-3xl border border-gray-200 bg-white p-6 shadow-lg'>
+            <div class='flex flex-col gap-4 md:flex-row md:items-center md:justify-between'>
+              <div>
+                <h4 class='text-lg font-semibold text-gray-900'>Vertical launch-ready preview</h4>
+                <p class='mt-1 text-sm text-gray-600'>
+                  Repurpose the same prompt for vertical feeds while Reela keeps talent, wardrobe, and layout locked.
+                </p>
+              </div>
+              <div class='overflow-hidden rounded-2xl border border-gray-100 bg-black p-2'>
+                <div class='relative h-64 w-36 mx-auto'>
+                  <video
+                    src='https://files.reela.com/reelanything/tasks/1975624543519170560/output_stream.mp4'
+                    class='h-full w-full rounded-xl object-cover'
+                    loop
+                    preload='metadata'
+                    controls
+                  ></video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
