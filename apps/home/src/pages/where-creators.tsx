@@ -1,7 +1,7 @@
 const monetizationPaths = [
   {
-    title: 'E-Commerce Sellers',
-    description: 'Avatar try-ons, unboxings, and sales ads that directly boost conversions.',
+    title: 'E-commerce Stores',
+    description: 'Create persuasive product videos for Amazon, Shopify, and TikTok Shop to boost clicks and conversions.',
     icon: (
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -23,8 +23,8 @@ const monetizationPaths = [
     ),
   },
   {
-    title: 'YouTubers',
-    description: 'Faceless or avatar-hosted explainers, plus identity-safe sponsorship videos.',
+    title: 'YouTube Channels',
+    description: 'Generate long-form explainers, reviews, and educational content that grow your audience and ad revenue.',
     icon: (
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -44,8 +44,8 @@ const monetizationPaths = [
     ),
   },
   {
-    title: 'Social Influencers',
-    description: 'Avatar-generated TikTok and Instagram clips to grow followers and land brand deals.',
+    title: 'Social Media Platforms',
+    description: 'Produce short, scroll-stopping videos for TikTok and Instagram to attract followers and sponsorships.',
     icon: (
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -66,8 +66,8 @@ const monetizationPaths = [
     ),
   },
   {
-    title: 'Agencies & Freelancers',
-    description: 'Deliver scalable ads, promos, and branded storytelling at speed.',
+    title: 'Agencies & Enterprises',
+    description: 'Deliver ad-ready videos at scale for clients — faster, cheaper, and more consistent than traditional production.',
     icon: (
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -98,7 +98,7 @@ const WhereCreators = () => {
             Where Creators Monetize with <span class='text-brand'>Reela</span>
           </h2>
           <p class='mt-4 text-lg text-gray-600'>
-            Reela adapts to every creator journey — from selling products to building audiences. Choose your path to revenue.
+            Reela turns your videos into income — from personal brands to e-commerce stores and marketing campaigns.
           </p>
         </div>
         <div class='grid gap-6 md:grid-cols-2 lg:grid-cols-4'>
@@ -115,6 +115,9 @@ const WhereCreators = () => {
             </div>
           ))}
         </div>
+        <p class='mt-10 text-center text-base font-semibold text-gray-900'>
+          → See how creators turn every video into opportunity with Reela.
+        </p>
       </div>
     </section>
   );
