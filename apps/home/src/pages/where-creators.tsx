@@ -115,9 +115,6 @@ const WhereCreators = () => {
             </div>
           ))}
         </div>
-        <p class='mt-10 text-center text-base font-semibold text-gray-900'>
-          → See how creators turn every video into opportunity with Reela.
-        </p>
       </div>
     </section>
   );

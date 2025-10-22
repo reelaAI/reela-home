@@ -146,9 +146,6 @@ const WhyCreators = () => {
             </div>
           ))}
         </div>
-        <p class='mt-16 text-center text-xl font-semibold text-gray-900'>
-          Discover how far your ideas can go with Reela.
-        </p>
       </div>
     </section>
   );
