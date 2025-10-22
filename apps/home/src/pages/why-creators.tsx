@@ -70,6 +70,7 @@ const WhyCreators = () => {
                     src={card.video}
                     class='absolute inset-0 h-full w-full rounded-[24px] object-cover'
                     playsinline
+                    loop
                     preload='metadata'
                     muted
                     data-autoplay-video

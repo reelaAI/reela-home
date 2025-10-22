@@ -66,6 +66,7 @@ const VideoTab = ({ videos, tabTitle, tabButton, tabButtonSrc }: Props) => {
                   <video
                     src={video.src}
                     class='h-full w-full rounded-[24px] object-cover'
+                    loop
                     preload='metadata'
                     muted
                     playsinline
