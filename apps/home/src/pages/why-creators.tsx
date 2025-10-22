@@ -64,39 +64,58 @@ const WhyCreators = () => {
                   </button>
                 </a>
               </div>
-              <div class='relative overflow-hidden rounded-2xl bg-white shadow-lg' data-video-card>
-                <div class='relative aspect-video w-full overflow-hidden md:mx-auto md:max-w-[520px]'>
+              <div class='relative overflow-hidden rounded-[24px] bg-white shadow-lg md:mx-auto md:max-w-[520px]' data-video-container>
+                <div class='relative aspect-video w-full overflow-hidden'>
                   <video
                     src={card.video}
-                    class='absolute inset-0 h-full w-full object-cover'
+                    class='absolute inset-0 h-full w-full rounded-[24px] object-cover'
                     playsinline
-                    controls
                     preload='metadata'
-                    onplay='handleVideoPlay(this)'
-                    onpause='handleVideoPause(this)'
-                    onended='handleVideoEnded(this)'
+                    muted
+                    data-autoplay-video
+                    data-reset-on-pause='false'
                   ></video>
-                  <div
-                    class='absolute inset-0 flex items-center justify-center bg-black/40 opacity-100 transition-opacity duration-200'
-                    data-overlay
+                  <button
+                    type='button'
+                    class='absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur transition hover:bg-black/80'
+                    data-sound-toggle
+                    onclick='toggleVideoMute(this)'
                   >
-                    <button
-                      type='button'
-                      class='flex h-16 w-16 items-center justify-center rounded-full bg-white/90 text-slate-950 shadow-lg transition-transform duration-200 hover:scale-105'
-                      onclick='playVideoFromOverlay(this)'
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='20'
+                      height='20'
+                      viewBox='0 0 24 24'
+                      fill='none'
+                      stroke='currentColor'
+                      stroke-width='2'
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      class='h-5 w-5'
+                      data-sound-icon='muted'
                     >
-                      <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        width='32'
-                        height='32'
-                        viewBox='0 0 24 24'
-                        fill='currentColor'
-                        class='ml-1'
-                      >
-                        <path d='m9 7 8 5-8 5V7z'></path>
-                      </svg>
-                    </button>
-                  </div>
+                      <path d='m9 9-6 6h4l5 5V4l-5 5H3l6 6'></path>
+                      <line x1='23' x2='17' y1='9' y2='15'></line>
+                      <line x1='17' x2='23' y1='9' y2='15'></line>
+                    </svg>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='20'
+                      height='20'
+                      viewBox='0 0 24 24'
+                      fill='none'
+                      stroke='currentColor'
+                      stroke-width='2'
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      class='hidden h-5 w-5'
+                      data-sound-icon='unmuted'
+                    >
+                      <path d='M11 5 6 9H2v6h4l5 4V5z'></path>
+                      <path d='M19 5c1.5 1.5 2 3 2 7s-.5 5.5-2 7'></path>
+                      <path d='M15.5 8.5a5 5 0 0 1 0 7'></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>

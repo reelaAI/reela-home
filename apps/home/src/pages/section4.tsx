@@ -56,15 +56,62 @@ const Section4 = () => {
                     onchange='pauseAllVideos()'
                   />
                 </label>
-                <div class='relative rounded-xl overflow-hidden shadow-lg bg-black w-full h-full lg:col-start-2 hidden group-has-checked:block row-span-10 lg:row-start-1 row-start-6'>
+                <div
+                  class='relative rounded-[24px] overflow-hidden shadow-lg bg-black w-full h-full lg:col-start-2 hidden group-has-checked:block row-span-10 lg:row-start-1 row-start-6'
+                  data-video-container
+                >
                   <div class='aspect-video w-full'>
                     <video
                       src={item.url}
-                      class='w-full h-full object-cover hidden group-has-checked:block'
+                      class='w-full h-full object-cover hidden group-has-checked:block rounded-[24px]'
                       loop
                       preload='metadata'
-                      controls
+                      muted
+                      playsinline
+                      data-autoplay-video
+                      data-reset-on-pause='false'
                     ></video>
+                    <button
+                      type='button'
+                      class='absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur transition hover:bg-black/80'
+                      data-sound-toggle
+                      onclick='toggleVideoMute(this)'
+                    >
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='20'
+                        height='20'
+                        viewBox='0 0 24 24'
+                        fill='none'
+                        stroke='currentColor'
+                        stroke-width='2'
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        class='h-5 w-5'
+                        data-sound-icon='muted'
+                      >
+                        <path d='m9 9-6 6h4l5 5V4l-5 5H3l6 6'></path>
+                        <line x1='23' x2='17' y1='9' y2='15'></line>
+                        <line x1='17' x2='23' y1='9' y2='15'></line>
+                      </svg>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='20'
+                        height='20'
+                        viewBox='0 0 24 24'
+                        fill='none'
+                        stroke='currentColor'
+                        stroke-width='2'
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        class='hidden h-5 w-5'
+                        data-sound-icon='unmuted'
+                      >
+                        <path d='M11 5 6 9H2v6h4l5 4V5z'></path>
+                        <path d='M19 5c1.5 1.5 2 3 2 7s-.5 5.5-2 7'></path>
+                        <path d='M15.5 8.5a5 5 0 0 1 0 7'></path>
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </div>

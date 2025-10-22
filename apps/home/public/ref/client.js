@@ -12,40 +12,6 @@ document.addEventListener('click', function (event) {
   }
 });
 
-function playOnHover(element) {
-  // get inner video element
-  const video = element.querySelector('video');
-  if (video) {
-    video.play();
-  }
-}
-
-function pauseOnLeave(element) {
-  // get inner video element
-  const video = element.querySelector('video');
-  if (video) {
-    video.pause();
-    video.currentTime = 0; // Reset video to start
-  }
-}
-
-function toggleMute(element) {
-  // get peer video element
-  const video = element.parentElement.querySelector('video');
-  if (video) {
-    video.muted = !video.muted;
-  }
-  const volumeOnIcon = element.querySelector('.lucide-volume-2');
-  const volumeOffIcon = element.querySelector('.lucide-volume-x');
-  if (video.muted) {
-    volumeOnIcon.classList.add('hidden');
-    volumeOffIcon.classList.remove('hidden');
-  } else {
-    volumeOnIcon.classList.remove('hidden');
-    volumeOffIcon.classList.add('hidden');
-  }
-}
-
 function horizontalScroll(element, direction) {
   const scrollContainer = element.querySelector('.scroll-container');
   if (!scrollContainer) return;
@@ -54,41 +20,6 @@ function horizontalScroll(element, direction) {
     left: direction === 'left' ? -scrollAmount : scrollAmount,
     behavior: 'smooth',
   });
-}
-
-function playVideoFromOverlay(button) {
-  const video = button.closest('[data-video-card]')?.querySelector('video');
-  if (video) {
-    video.play();
-  }
-}
-
-function handleVideoPlay(video) {
-  const overlay = video.parentElement.querySelector('[data-overlay]');
-  if (!overlay) return;
-  if (overlay.__reactivateTimeout) {
-    clearTimeout(overlay.__reactivateTimeout);
-    overlay.__reactivateTimeout = null;
-  }
-  overlay.classList.add('opacity-0', 'pointer-events-none');
-}
-
-function handleVideoPause(video) {
-  const overlay = video.parentElement.querySelector('[data-overlay]');
-  if (!overlay) return;
-  if (overlay.__reactivateTimeout) {
-    clearTimeout(overlay.__reactivateTimeout);
-  }
-  overlay.__reactivateTimeout = window.setTimeout(() => {
-    overlay.classList.remove('opacity-0', 'pointer-events-none');
-    overlay.__reactivateTimeout = null;
-  }, 150);
-}
-
-function handleVideoEnded(video) {
-  video.pause();
-  video.currentTime = 0;
-  handleVideoPause(video);
 }
 
 function activateLabel(element) {
@@ -116,17 +47,21 @@ function videoTabClick(element, tabName) {
   pauseAllVideos();
 }
 
-function pauseAllVideos() {
+function pauseAllVideos(exceptVideo) {
   const videos = document.querySelectorAll('video');
   videos.forEach((video) => {
+    if (video === exceptVideo) return;
     if (video.paused) return; // Skip if already paused
     video.pause();
-    video.currentTime = 0; // Reset video to start
+    if (video.dataset.resetOnPause !== 'false') {
+      video.currentTime = 0; // Reset video to start
+    }
   });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   initAutoScrollSections();
+  initScrollAutoplayVideos();
 });
 
 function initAutoScrollSections() {
@@ -170,4 +105,105 @@ function initAutoScrollSections() {
 
     window.addEventListener('focus', restartInterval);
   });
+}
+
+function updateSoundButton(button, isMuted) {
+  const mutedIcon = button.querySelector('[data-sound-icon="muted"]');
+  const unmutedIcon = button.querySelector('[data-sound-icon="unmuted"]');
+
+  if (mutedIcon && unmutedIcon) {
+    if (isMuted) {
+      mutedIcon.classList.remove('hidden');
+      unmutedIcon.classList.add('hidden');
+    } else {
+      mutedIcon.classList.add('hidden');
+      unmutedIcon.classList.remove('hidden');
+    }
+  }
+
+  button.setAttribute('aria-label', isMuted ? '开启声音' : '关闭声音');
+  button.setAttribute('aria-pressed', String(!isMuted));
+}
+
+function syncSoundButtonForVideo(video) {
+  const container = video.closest('[data-video-container]');
+  if (!container) return;
+  const button = container.querySelector('[data-sound-toggle]');
+  if (!button) return;
+  updateSoundButton(button, video.muted);
+}
+
+function toggleVideoMute(button) {
+  const container = button.closest('[data-video-container]');
+  if (!container) return;
+  const video = container.querySelector('[data-autoplay-video]');
+  if (!video) return;
+
+  const newMutedState = !video.muted;
+  video.muted = newMutedState;
+
+  if (!newMutedState) {
+    pauseAllVideos(video);
+    const playPromise = video.play();
+    if (playPromise) {
+      playPromise.catch(() => {});
+    }
+  }
+
+  updateSoundButton(button, newMutedState);
+}
+
+function initScrollAutoplayVideos() {
+  const videos = Array.from(document.querySelectorAll('[data-autoplay-video]'));
+  if (!videos.length || typeof IntersectionObserver === 'undefined') {
+    videos.forEach((video) => {
+      video.muted = true;
+      video.controls = false;
+      video.dataset.resetOnPause = 'false';
+      syncSoundButtonForVideo(video);
+    });
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const video = entry.target;
+      if (!(video instanceof HTMLVideoElement)) return;
+
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
+        if (video.paused) {
+          pauseAllVideos(video);
+          const playPromise = video.play();
+          if (playPromise) {
+            playPromise.catch(() => {});
+          }
+        }
+      } else if (!entry.isIntersecting && !video.paused) {
+        video.pause();
+      }
+    });
+  }, { threshold: [0.6] });
+
+  videos.forEach((video) => {
+    video.muted = true;
+    video.controls = false;
+    video.dataset.resetOnPause = 'false';
+    video.setAttribute('playsinline', '');
+
+    video.addEventListener('play', () => {
+      pauseAllVideos(video);
+      syncSoundButtonForVideo(video);
+    });
+
+    video.addEventListener('volumechange', () => {
+      syncSoundButtonForVideo(video);
+    });
+
+    observer.observe(video);
+    syncSoundButtonForVideo(video);
+  });
+}
+
+function toggleMute(element) {
+  toggleVideoMute(element);
 }
