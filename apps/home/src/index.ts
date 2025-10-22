@@ -15,7 +15,7 @@ const app = new Hono();
 app.use(logger());
 
 app.use(
-  "/_pages/*",
+  "/*",
   etag(),
   serveStatic({
     root: path.resolve(__dirname, "../public"),

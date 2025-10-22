@@ -21,12 +21,12 @@ const Section5 = () => {
               </p>
               <div class='mt-2 flex items-center gap-6'>
                 <img
-                  src='/_pages/pr.svg'
+                  src='/pr.svg'
                   alt='Adobe Premiere Pro'
                   class='h-8 w-auto opacity-80 grayscale'
                 />
                 <img
-                  src='/_pages/capcut.png'
+                  src='/capcut.png'
                   alt='CapCut'
                   class='h-6 w-auto'
                   style='
@@ -40,7 +40,7 @@ const Section5 = () => {
             <div class='p-6 lg:w-1/2 lg:p-12 lg:pl-0'>
               <div class='relative overflow-hidden rounded-xl shadow-lg'>
                 <img
-                  src='/_pages/editor.png'
+                  src='/editor.png'
                   alt='Reela Editor interface showing video editing timeline and preview'
                   class='h-auto w-full object-cover'
                   style='max-height: none'

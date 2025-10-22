@@ -57,8 +57,8 @@ export default function layout({
         <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
         <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
         {/* <!-- tailwindcss --> */}
-        <link href='/_pages/ref/daisyui.css' rel='stylesheet' type='text/css' />
-        <script src='/_pages/ref/tailwindcss'></script>
+        <link href='/ref/daisyui.css' rel='stylesheet' type='text/css' />
+        <script src='/ref/tailwindcss'></script>
         {/* <!-- google fonts --> */}
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin='anonymous' />
@@ -76,7 +76,7 @@ export default function layout({
           {children}
           <Footer />
         </div>
-        <script src='/_pages/ref/client.js'></script>
+        <script src='/ref/client.js'></script>
       </body>
     </html>
   );

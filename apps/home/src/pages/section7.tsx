@@ -12,7 +12,7 @@ const Section7 = () => {
         </h2>
       </div>
 
-      <form action='/_pages/subscribe' method='post'>
+      <form action='/subscribe' method='post'>
         <div class='relative mx-auto mb-20 flex max-w-[1200px] flex-wrap justify-center px-4'>
           <label class='peer/y has-checked:bg-brand has-checked:text-white mb-4 rounded-full bg-gray-200 px-6 py-2 text-gray-800'>
             <input type='radio' name='plan' value='year' class='peer hidden' checked />

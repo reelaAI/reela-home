@@ -16,7 +16,7 @@ const Footer = () => {
                 data-nimg='1'
                 class='h-12 w-auto'
                 style='color: transparent'
-                src='/_pages/logo-white.svg'
+                src='/logo-white.svg'
               />
             </a>
             <p class='mt-4 text-gray-400 max-w-md'>

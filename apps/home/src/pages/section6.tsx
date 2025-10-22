@@ -44,7 +44,7 @@ const Section6 = () => {
                       bottom: 0;
                       color: transparent;
                     '
-                    src='/_pages/user-1.png'
+                    src='/user-1.png'
                   />
                 </div>
               </div>
@@ -83,7 +83,7 @@ const Section6 = () => {
                       bottom: 0;
                       color: transparent;
                     '
-                    src='/_pages/user-2.png'
+                    src='/user-2.png'
                   />
                 </div>
               </div>
@@ -122,7 +122,7 @@ const Section6 = () => {
                       bottom: 0;
                       color: transparent;
                     '
-                    src='/_pages/user-3.png'
+                    src='/user-3.png'
                   />
                 </div>
               </div>
@@ -161,7 +161,7 @@ const Section6 = () => {
                       bottom: 0;
                       color: transparent;
                     '
-                    src='/_pages/user-4.png'
+                    src='/user-4.png'
                   />
                 </div>
               </div>
@@ -200,7 +200,7 @@ const Section6 = () => {
                       bottom: 0;
                       color: transparent;
                     '
-                    src='/_pages/user-5.png'
+                    src='/user-5.png'
                   />
                 </div>
               </div>

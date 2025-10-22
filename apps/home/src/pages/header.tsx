@@ -54,7 +54,7 @@ export default function header({ avatarUrl }: { avatarUrl?: string }) {
               data-nimg='1'
               class='h-8 w-auto'
               style='color: transparent'
-              src='/_pages/logo.svg'
+              src='/logo.svg'
             />
           </a>
           <div class='hidden items-center gap-6 md:flex'>

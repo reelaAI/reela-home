@@ -1,13 +1,13 @@
 const Section1 = () => {
   const brands = [
-    '/_pages/brands/meta.png',
-    '/_pages/brands/amazon.png',
-    '/_pages/brands/google.png',
-    '/_pages/brands/netflix.png',
-    '/_pages/brands/opt.svg',
-    '/_pages/brands/pias.png',
-    '/_pages/brands/microsoft.png',
-    '/_pages/brands/byteplus.svg',
+    '/brands/meta.png',
+    '/brands/amazon.png',
+    '/brands/google.png',
+    '/brands/netflix.png',
+    '/brands/opt.svg',
+    '/brands/pias.png',
+    '/brands/microsoft.png',
+    '/brands/byteplus.svg',
   ];
 
   return (
