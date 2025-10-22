@@ -16,17 +16,17 @@ const Section2 = () => {
         <div className='grid md:grid-cols-3 gap-10 max-w-6xl mx-auto'>
           <FeatureCard
             title='5-Minute Video Creation'
-            description='Just input your script or idea, and Reela delivers a publish-ready video in 5 minutes flat.'
+            description='Just drop your brief or product links — Reela builds a finished video in five minutes while locking avatar look, wardrobe, and product shots into perfect alignment.'
             icon='zap'
           />
           <FeatureCard
             title='No Editing, No Timeline'
-            description='Forget the timeline. No trimming, cutting, or stitching required. Reela assembles your entire video, automatically.'
+            description='Forget the timeline. Reela stitches avatars, AI footage, and remixed clips automatically — now with multi-reference control so every scene mirrors your source materials.'
             icon='scissors'
           />
           <FeatureCard
             title='All-in-One, Ready-to-Share Videos'
-            description='From avatars and voiceovers to scenes, subtitles, pacing, and B-roll — Reela handles it all, delivering a complete, polished video.'
+            description='From avatars and voiceovers to AI B-roll, subtitles, and sound — mix virtual humans with generated visuals or uploaded footage in one export-ready package.'
             icon='brain'
           />
         </div>

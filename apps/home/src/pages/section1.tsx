@@ -12,13 +12,15 @@ const Section1 = () => {
 
   return (
     <section class='container mx-auto px-4 py-16 text-center'>
-      <h1 class='font-inter mx-auto max-w-4xl text-5xl font-bold leading-tight tracking-tight md:text-7xl'>
-        Video Creation,
-        <span class='text-brand'> Automated.</span>
+      <h1 class='font-inter mx-auto max-w-5xl text-5xl font-bold leading-tight tracking-tight md:text-7xl'>
+        Turn Product Stories into
+        <span class='text-brand'> Consistent AI Videos.</span>
       </h1>
-      <p class='font-inter mx-auto mt-6 max-w-2xl text-xl text-gray-600'>
-        The first autonomous AI agent that turns any idea into publish-ready videos with AI visuals,
-        avatars, dubbing, and smart editing.
+      <p class='font-inter mx-auto mt-6 max-w-3xl text-xl text-gray-600'>
+        Launch sales campaigns, creator series, and training drops with avatar-led videos that keep
+        every product, persona, and scene perfectly aligned. Reela now fuses flawless multi-reference
+        matching, cross-avatar consistency, and multimodal generation into one fully-automated
+        workflow.
       </p>
       <div class='mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row'>
         <a href='/workspace'>
@@ -40,6 +42,11 @@ const Section1 = () => {
             </svg>
           </div>
         </a>
+      </div>
+      <div class='font-inter mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-medium uppercase tracking-[0.2em] text-gray-500'>
+        <span>Perfect Avatar &amp; Product Consistency</span>
+        <span>Multi-Reference Character Matching</span>
+        <span>Virtual Human × AI Footage × Remix</span>
       </div>
       <div class='mt-10 flex items-center justify-center px-4'>
         <div class='flex flex-wrap items-center justify-center gap-6'>

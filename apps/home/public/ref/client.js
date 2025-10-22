@@ -47,8 +47,9 @@ function toggleMute(element) {
 }
 
 function horizontalScroll(element, direction) {
-  // has checked
-  const scrollContainer = element.querySelector('.scroll-container:has(:checked)');
+  // prefer containers with radio state but fall back to the first scroll container
+  const scrollContainer =
+    element.querySelector('.scroll-container:has(:checked)') || element.querySelector('.scroll-container');
   if (!scrollContainer) return;
   scrollContainer.scrollBy({
     left: direction === 'left' ? -scrollContainer.offsetWidth : scrollContainer.offsetWidth,
@@ -87,5 +88,47 @@ function pauseAllVideos() {
     if (video.paused) return; // Skip if already paused
     video.pause();
     video.currentTime = 0; // Reset video to start
+    const overlay = video.closest('.video-wrapper')?.querySelector('.video-overlay');
+    if (overlay) {
+      overlay.classList.remove('opacity-0', 'pointer-events-none');
+      overlay.setAttribute('aria-hidden', 'false');
+    }
   });
+}
+
+function toggleVideoOverlay(button) {
+  const wrapper = button.closest('.video-wrapper');
+  if (!wrapper) return;
+  const video = wrapper.querySelector('video');
+  if (video) {
+    toggleVideoPlayback(video);
+  }
+}
+
+function toggleVideoPlayback(video) {
+  const wrapper = video.closest('.video-wrapper');
+  const overlay = wrapper?.querySelector('.video-overlay');
+  if (!wrapper || !overlay) return;
+
+  if (video.paused) {
+    pauseAllVideos();
+    video.play();
+    overlay.classList.add('opacity-0', 'pointer-events-none');
+    overlay.setAttribute('aria-hidden', 'true');
+  } else {
+    video.pause();
+    overlay.classList.remove('opacity-0', 'pointer-events-none');
+    overlay.setAttribute('aria-hidden', 'false');
+  }
+}
+
+function resetVideoOverlay(video) {
+  const wrapper = video.closest('.video-wrapper');
+  const overlay = wrapper?.querySelector('.video-overlay');
+  if (overlay) {
+    video.pause();
+    video.currentTime = 0;
+    overlay.classList.remove('opacity-0', 'pointer-events-none');
+    overlay.setAttribute('aria-hidden', 'false');
+  }
 }
