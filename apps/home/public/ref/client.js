@@ -46,6 +46,7 @@ function playVideoFromOverlay(button) {
     if (card) {
       delete card.dataset.videoUserPaused;
     }
+    pauseOtherVideos(video);
     video.play();
   }
 }
@@ -153,6 +154,15 @@ function pauseAllVideos() {
   });
 }
 
+function pauseOtherVideos(currentVideo) {
+  const videos = document.querySelectorAll('[data-video-element]');
+  videos.forEach((video) => {
+    if (video === currentVideo) return;
+    if (video.paused) return;
+    video.pause();
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initAutoScrollSections();
   initVideoAutoplay();
@@ -216,6 +226,7 @@ function initVideoAutoplay() {
 
         if (entry.isIntersecting) {
           if (!userPaused) {
+            pauseOtherVideos(video);
             video.play().catch(() => {
               /* Ignore play errors triggered by browser policies */
             });
