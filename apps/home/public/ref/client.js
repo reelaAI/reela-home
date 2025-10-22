@@ -90,7 +90,11 @@ function handleVideoEnded(video) {
   handleVideoPause(video, { force: true });
 }
 
-function pauseVideoOnClick(video) {
+function pauseVideoOnClick(event, video) {
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
   if (video.paused) return;
   const card = video.closest('[data-video-card]');
   if (card) {
