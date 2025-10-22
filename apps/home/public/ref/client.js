@@ -1,13 +1,13 @@
 document.addEventListener('click', function (event) {
   const helpDropdown = document.getElementById('help-dropdown');
   // 如果点击的不是helpDropdown, 则隐藏下拉菜单
-  if (!helpDropdown.contains(event.target)) {
+  if (helpDropdown && !helpDropdown.contains(event.target)) {
     helpDropdown.removeAttribute('open');
   }
 
   const reelaDropdown = document.getElementById('reela-dropdown');
   // 如果点击的不是reelaDropdown, 则隐藏下拉菜单
-  if (!reelaDropdown.contains(event.target)) {
+  if (reelaDropdown && !reelaDropdown.contains(event.target)) {
     reelaDropdown.removeAttribute('open');
   }
 });
@@ -170,7 +170,7 @@ function initScrollAutoplayVideos() {
       const video = entry.target;
       if (!(video instanceof HTMLVideoElement)) return;
 
-      if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
         if (video.paused) {
           pauseAllVideos(video);
           const playPromise = video.play();
@@ -182,7 +182,7 @@ function initScrollAutoplayVideos() {
         video.pause();
       }
     });
-  }, { threshold: [0.6] });
+  }, { threshold: [0.3, 0.6] });
 
   videos.forEach((video) => {
     video.muted = true;
