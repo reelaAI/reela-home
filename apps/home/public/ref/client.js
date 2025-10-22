@@ -231,12 +231,12 @@ function initVideoAutoplay() {
               /* Ignore play errors triggered by browser policies */
             });
           }
-        } else {
+        } else if (!video.paused) {
           video.pause();
         }
       });
     },
-    { threshold: 0.6 }
+    { threshold: [0, 0.25, 0.5, 0.75, 1], rootMargin: '-30% 0px -30% 0px' }
   );
 
   cards.forEach((card) => {
