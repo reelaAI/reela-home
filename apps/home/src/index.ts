@@ -7,6 +7,7 @@ import { serveStatic } from "@hono/node-server/serve-static";
 import { etag } from "hono/etag";
 import path from "path";
 import { fileURLToPath } from "url";
+import { serve } from "@hono/node-server";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -35,12 +36,12 @@ app.get("/", (c) => {
 
 export default app;
 
-// serve(
-//   {
-//     fetch: app.fetch,
-//     port: process.env.PORT ? Number(process.env.PORT) : 3000,
-//   },
-//   (info) => {
-//     console.log(`Server is running at http://localhost:${info.port}`);
-//   }
-// );
+serve(
+  {
+    fetch: app.fetch,
+    port: process.env.PORT ? Number(process.env.PORT) : 3000,
+  },
+  (info) => {
+    console.log(`Server is running at http://localhost:${info.port}`);
+  }
+);
