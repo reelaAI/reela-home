@@ -1,0 +1,32 @@
+{
+  "name": "reel-webapps",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.17.1",
+  "devDependencies": {
+    "@turbo/gen": "catalog:",
+    "prettier": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:",
+    "tsx": "catalog:",
+    "turbo": "catalog:",
+    "typescript": "catalog:"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "start": "turbo run start"
+  },
+  "pnpm": {
+    "patchedDependencies": {}
+  },
+  "author": "",
+  "description": "",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "type": "module"
+}

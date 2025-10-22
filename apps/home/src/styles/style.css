@@ -1,0 +1,73 @@
+@keyframes infinite-scroll {
+  from {
+    -webkit-transform: translatex(0);
+    -moz-transform: translatex(0);
+    -o-transform: translatex(0);
+    transform: translatex(0);
+  }
+  to {
+    -webkit-transform: translatex(-50%);
+    -moz-transform: translatex(-50%);
+    -o-transform: translatex(-50%);
+    transform: translatex(-50%);
+  }
+}
+.animate-infinite-scroll {
+  animation: infinite-scroll 90s linear infinite;
+}
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+label {
+  cursor: pointer;
+  display: block;
+}
+button {
+  cursor: pointer;
+}
+
+.label-sm:has(:checked) {
+  background-image: linear-gradient(to right, rgba(247, 38, 91, 0.1), rgba(247, 38, 91, 0.05));
+  border-left-width: 4px;
+  border-left-color: #f7265b;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.label-sm:has(:checked) span {
+  color: #f7265b;
+}
+
+.gradient-border {
+  border-radius: 0.75rem;
+  position: relative;
+  background-color: white;
+}
+
+/* dark */
+@media (prefers-color-scheme: dark) {
+  .gradient-border {
+    background-color: var(--color-gray-50);
+  }
+}
+
+.gradient-border::before {
+  border-radius: 0.75rem;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid transparent;
+  background: linear-gradient(100deg, rgba(239, 32, 84, 1) 0%, rgba(250, 213, 99, 1) 100%)
+    border-box;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#cab3b3 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+}

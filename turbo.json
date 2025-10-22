@@ -1,0 +1,42 @@
+{
+  "$schema": "./node_modules/turbo/schema.json",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "env": ["ENV", "NODE_ENV"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "passThroughEnv": ["ENV", "NODE_ENV"],
+      "outputs": ["dist/**"]
+    },
+    "dev": {
+      "cache": false,
+      "passThroughEnv": [
+        "ENV",
+        "BROWSER",
+        "BROWSER_ARGS",
+        "DISPLAY",
+        "WAYLAND_DISPLAY"
+      ],
+      "persistent": true
+    },
+    "lint": {
+      "inputs": ["src/**/*.ts", "src/**/*.tsx"]
+    },
+    "typecheck": {
+      "dependsOn": ["^typecheck"],
+      "inputs": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "test/**/*.ts",
+        "app/**/*.ts",
+        "tsconfig.json",
+        ".hono/**/*.ts"
+      ]
+    },
+    "start": {
+      "cache": false,
+      "persistent": true
+    }
+  },
+  "ui": "tui"
+}

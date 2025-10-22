@@ -1,0 +1,11 @@
+{
+  "extends": "@repo/tsconfig/hono.tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDirs": ["."],
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx"
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "tsup.config.ts"],
+  "exclude": ["node_modules", "dist"]
+}

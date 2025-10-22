@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": false,
+    "noEmit": true,
+    "module": "ESNext",
+    "strict": true,
+    "moduleResolution": "Bundler"
+  }
+}

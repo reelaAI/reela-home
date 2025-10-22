@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": false,
+    "skipLibCheck": true,
+
+    "resolveJsonModule": true,
+    "noImplicitAny": false,
+    "noImplicitOverride": true,
+    "strictNullChecks": false,
+
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "module": "esnext",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "target": "esnext",
+
+    "removeComments": true,
+    "declaration": true,
+    "declarationMap": false
+  }
+}
