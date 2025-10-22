@@ -64,8 +64,11 @@ const WhyCreators = () => {
                   </button>
                 </a>
               </div>
-              <div class='relative overflow-hidden rounded-2xl bg-white shadow-lg' data-video-card>
-                <div class='relative aspect-[16/9] w-full overflow-hidden md:mx-auto md:max-w-[540px]' data-video-autoplay>
+              <div
+                class='relative aspect-[16/9] w-full self-center overflow-hidden rounded-2xl bg-white shadow-lg md:mx-auto md:max-w-[540px]'
+                data-video-card
+              >
+                <div class='absolute inset-0' data-video-autoplay>
                   <video
                     src={card.video}
                     class='h-full w-full object-cover'
@@ -79,12 +82,12 @@ const WhyCreators = () => {
                     onended='handleVideoEnded(this)'
                   ></video>
                   <div
-                    class='absolute inset-0 flex items-center justify-center opacity-100 transition-opacity duration-200'
+                    class='pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-200'
                     data-overlay
                   >
                     <button
                       type='button'
-                      class='pointer-events-auto flex h-16 w-16 items-center justify-center rounded-full bg-white/90 text-slate-950 shadow-lg transition-transform duration-200 hover:scale-105'
+                      class='pointer-events-auto flex h-16 w-16 items-center justify-center rounded-full bg-black/60 text-white shadow-lg transition-transform duration-200 hover:scale-105'
                       onclick='playVideoFromOverlay(this)'
                     >
                       <svg
@@ -101,7 +104,7 @@ const WhyCreators = () => {
                   </div>
                   <button
                     type='button'
-                    class='pointer-events-auto absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-slate-950 shadow-lg transition-transform duration-200 hover:scale-105'
+                    class='pointer-events-auto absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-black/60 text-white shadow-lg transition-transform duration-200 hover:scale-105'
                     aria-label='Toggle sound'
                     onclick='toggleVideoSound(this)'
                   >

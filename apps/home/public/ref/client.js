@@ -60,12 +60,23 @@ function handleVideoPlay(video) {
   overlay.classList.add('opacity-0', 'pointer-events-none');
 }
 
-function handleVideoPause(video) {
+function handleVideoPause(video, options) {
   const overlay = video.parentElement.querySelector('[data-overlay]');
   if (!overlay) return;
   if (overlay.__reactivateTimeout) {
     clearTimeout(overlay.__reactivateTimeout);
   }
+  const card = video.closest('[data-video-card]');
+  const userPaused = card?.dataset.videoUserPaused === 'true';
+  const force = options?.force === true;
+  const shouldShowOverlay = force || userPaused;
+
+  if (!shouldShowOverlay) {
+    overlay.classList.add('opacity-0', 'pointer-events-none');
+    overlay.__reactivateTimeout = null;
+    return;
+  }
+
   overlay.__reactivateTimeout = window.setTimeout(() => {
     overlay.classList.remove('opacity-0', 'pointer-events-none');
     overlay.__reactivateTimeout = null;
@@ -75,7 +86,7 @@ function handleVideoPause(video) {
 function handleVideoEnded(video) {
   video.pause();
   video.currentTime = 0;
-  handleVideoPause(video);
+  handleVideoPause(video, { force: true });
 }
 
 function pauseVideoOnClick(video) {
