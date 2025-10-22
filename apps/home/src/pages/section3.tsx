@@ -12,12 +12,6 @@ const comparison = [
   },
 ];
 
-const highlights = [
-  'Multi-reference continuity stays locked, so multi-product sequences stay true to your brief.',
-  'Blend virtual humans, AI-generated footage, and live assets in one adaptive timeline.',
-  'Deliver long-form videos and vertical cutdowns simultaneously without rebuilding edits.',
-];
-
 const Section3 = () => {
   return (
     <>
@@ -28,12 +22,11 @@ const Section3 = () => {
               New · Sora Model Integration
             </span>
             <h2 class='font-inter text-[28px] font-bold md:text-[36px] lg:text-[44px]'>
-              Generate Long-Form Sora Videos with Reela
+              Generate Long-Form Videos with Sora via Reela
             </h2>
             <p class='text-base text-white/80 md:text-lg'>
-              Combine Reela&apos;s autonomous directing with OpenAI&apos;s Sora model to produce cinematic videos over one minute long.
-              Start with brand guidelines, product references, or storyboards, and our multi-agent workflow choreographs avatars,
-              Sora footage, and AI edits into a single output.
+              Access Sora’s long-form generation directly inside Reela — no complex setup or API needed. Just type your prompt,
+              and Reela handles the full workflow.
             </p>
             <ul class='space-y-3 text-base text-white/80'>
               <li class='flex items-start gap-3'>
@@ -41,8 +34,9 @@ const Section3 = () => {
                   1
                 </span>
                 <span>
-                  Upload products, characters, and motion cues — Reela preserves identity-perfect visuals
-                  with multi-reference guidance.
+                  Direct Sora Integration
+                  <br />
+                  Use the Sora model seamlessly within Reela to produce cinematic, story-driven videos.
                 </span>
               </li>
               <li class='flex items-start gap-3'>
@@ -50,8 +44,9 @@ const Section3 = () => {
                   2
                 </span>
                 <span>
-                  Reela orchestrates Sora scenes, AI avatars, and remix footage into cohesive sequences for
-                  ads, tutorials, and launch films up to 10 minutes long.
+                  Full-Length Generation
+                  <br />
+                  Create extended scenes and continuous storytelling far beyond typical short-form limits.
                 </span>
               </li>
               <li class='flex items-start gap-3'>
@@ -59,8 +54,9 @@ const Section3 = () => {
                   3
                 </span>
                 <span>
-                  Deliver finalized cuts instantly, or continue editing inside Reela for subtitles, music,
-                  and channel-ready exports.
+                  Simplified Workflow
+                  <br />
+                  Reela manages Sora prompts, timing, and output — so creators can focus purely on ideas.
                 </span>
               </li>
             </ul>
@@ -89,20 +85,7 @@ const Section3 = () => {
       </section>
       <section class='bg-slate-950 text-white'>
         <div class='container mx-auto px-4 pb-16'>
-          <div class='grid gap-6 rounded-3xl border border-white/10 bg-white/5 px-6 py-10 backdrop-blur lg:grid-cols-[1.1fr_0.9fr] lg:px-10'>
-            <div>
-              <h3 class='font-inter text-2xl font-semibold text-white md:text-3xl'>Reela Workflow Highlights</h3>
-              <ul class='mt-6 grid gap-4 text-sm text-white/70 md:grid-cols-2 md:text-base lg:grid-cols-1'>
-                {highlights.map((item) => (
-                  <li class='flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-5' key={item}>
-                    <span class='mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-white/40 text-sm font-semibold text-white'>
-                      •
-                    </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div class='rounded-3xl border border-white/10 bg-white/5 px-6 py-10 backdrop-blur lg:px-10'>
             <div class='rounded-3xl border border-white/15 bg-white/5 p-6 text-white shadow-[0_20px_60px_rgba(15,23,42,0.35)] lg:p-7'>
               <h3 class='font-inter text-2xl font-semibold text-white md:text-3xl'>Reela vs. Sora</h3>
               <div class='mt-4 space-y-3 text-sm text-white/70 md:text-base'>
