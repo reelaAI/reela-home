@@ -8,7 +8,7 @@ const Footer = () => {
           <div class='mb-6 md:mb-0'>
             <a class='flex items-center' href='/'>
               <img
-                alt='Reela AI'
+                alt='Reela AI white logo'
                 loading='lazy'
                 width='180'
                 height='50'

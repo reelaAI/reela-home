@@ -1,166 +1,79 @@
-// A new vision for video creation
-
 const testimonials = [
   {
-    category: 'E-COMMERCE',
+    name: 'Maya Lee',
+    industry: 'DTC Beauty',
+    country: 'Singapore',
     avatar: '/user-1.png',
-    quote:
-      'Reela lets us produce localized product videos for 10+ markets weekly — no agency needed.',
-    highlight: 'Time-to-market is 70% faster and ad CTR is up by 35%.',
-    role: 'Digital Marketing Manager @ E-commerce Brand',
+    quote: 'We launch TikTok ads with Reela avatars twice as fast — every script already has captions and hooks.',
   },
   {
-    category: 'EDUCATION',
+    name: 'Jordan Smith',
+    industry: 'Online Education',
+    country: 'United States',
     avatar: '/user-2.png',
-    quote:
-      'With AI avatars and multilingual support, I now teach students in three languages without recording anything.',
-    highlight: 'Reela became my full production team — and my class went global.',
-    role: 'Online Course Creator',
+    quote: 'I narrate entire lesson tracks in English and Spanish without re-recording a single take.',
   },
   {
-    category: 'SOCIAL MEDIA',
-    avatar: '/user-3.png',
-    quote:
-      "I paste a link, remix it, and drop — that's how I post daily with AI B-roll magic.",
-    highlight: 'Reela keeps my content flow fast, fresh, and monetizable.',
-    role: 'TikTok Content Creator',
-  },
-  {
-    category: 'CREATIVE',
+    name: 'Ines Romero',
+    industry: 'Agency Production',
+    country: 'Spain',
     avatar: '/user-4.png',
-    quote:
-      "Reela's AI storyboard and scene builder turns rough ideas into full visual drafts in 10 minutes.",
-    highlight: 'We now prototype campaigns without touching a camera.',
-    role: 'Creative Director @ Media Studio',
+    quote: 'Clients love seeing storyboards become avatar-led videos overnight — no studio bookings needed.',
   },
   {
-    category: 'CONTENT CREATOR',
+    name: 'Marcus Chen',
+    industry: 'SaaS Marketing',
+    country: 'Canada',
     avatar: '/user-5.png',
-    quote:
-      "I turned my blogs into videos with Reela's voiceover and illustration modes — my channel exploded.",
-    highlight: 'It saved me 15+ hours per week and tripled my views.',
-    role: 'Health & Wellness Influencer',
+    quote: 'Localized launch explainers ship the same day. Reela handles subtitles and B-roll automatically.',
   },
   {
-    category: 'RETAIL',
+    name: 'Lina Abasi',
+    industry: 'E-commerce',
+    country: 'UAE',
     avatar: '/user-6.png',
-    quote:
-      'Reela maps every product angle and character note into the script, so our catalog videos feel shot on location.',
-    highlight: 'Multi-reference alignment keeps 40+ SKUs pixel-perfect across variants.',
-    role: 'Head of Content @ Retail Marketplace',
-  },
-  {
-    category: 'AGENCY',
-    avatar: '/user-7.png',
-    quote:
-      'We storyboard hero shots, drop in AI B-roll, and Reela blends avatars with graphics without leaving the timeline.',
-    highlight: 'Mixed-media sequences now take hours, not days.',
-    role: 'Executive Producer @ Creative Agency',
+    quote: 'Avatar product demos boosted conversions 32% once we swapped our static product pages for video.',
   },
 ];
 
 const Section6 = () => {
   return (
-    <>
-      <div class='container mx-auto mb-12 px-4 py-16 text-center'>
-        <h2 class='font-inter text-4xl font-bold md:text-6xl'>
-          A new vision for
-          <span class='text-brand'> video creation </span>
-        </h2>
-      </div>
-      <div class='mx-auto mb-20 max-w-[1200px] px-4'>
-        <div class='relative' data-auto-scroll>
-          <div
-            class='hide-scrollbar scroll-container flex snap-x snap-mandatory gap-6 overflow-x-auto py-8'
-            style='scrollbar-width: none; -ms-overflow-style: none'
-          >
-            {testimonials.map((testimonial) => (
-              <div
-                key={testimonial.quote}
-                class='testimonial-card w-full flex-shrink-0 snap-start rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]'
-              >
-                <div class='mb-6 flex items-start justify-between'>
-                  <span class='inline-block rounded-full bg-black px-3 py-1 text-xs font-semibold text-white'>
-                    {testimonial.category}
-                  </span>
-                  <div class='border-brand relative h-16 w-16 overflow-hidden rounded-full border-2 shadow-md'>
-                    <img
-                      alt={`${testimonial.role} avatar`}
-                      loading='lazy'
-                      decoding='async'
-                      data-nimg='fill'
-                      class='object-cover'
-                      style='
-                        position: absolute;
-                        height: 100%;
-                        width: 100%;
-                        left: 0;
-                        top: 0;
-                        right: 0;
-                        bottom: 0;
-                        color: transparent;
-                      '
-                      src={testimonial.avatar}
-                    />
-                  </div>
+    <section class='bg-[#FFF6F8] py-20'>
+      <div class='container mx-auto px-4'>
+        <div class='mx-auto mb-12 max-w-3xl text-center'>
+          <h2 class='font-inter text-4xl font-bold md:text-6xl'>Loved by Creators Worldwide</h2>
+          <p class='mt-4 text-lg text-gray-600'>
+            Hear how teams across industries publish more video, faster, with AI-first workflows.
+          </p>
+        </div>
+        <div class='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
+          {testimonials.map((testimonial) => (
+            <article
+              key={testimonial.name}
+              class='flex h-full flex-col gap-6 rounded-3xl border border-gray-100 bg-white p-6 shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl'
+            >
+              <div class='flex items-center gap-4'>
+                <div class='relative h-14 w-14 overflow-hidden rounded-full border border-[#ff0058]/40 shadow-sm'>
+                  <img
+                    src={testimonial.avatar}
+                    alt={`${testimonial.name} profile`}
+                    class='h-full w-full object-cover'
+                    loading='lazy'
+                  />
                 </div>
-                <div class='mb-6'>
-                  <p class='mb-4 text-lg font-medium'>"{testimonial.quote}"</p>
-                  <p class='text-brand font-bold'>{testimonial.highlight}</p>
-                </div>
-                <div class='mt-auto'>
-                  <p class='font-bold'>{testimonial.role}</p>
+                <div>
+                  <h3 class='text-lg font-semibold text-gray-900'>{testimonial.name}</h3>
+                  <p class='text-sm text-gray-500'>
+                    {testimonial.industry} · {testimonial.country}
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
-
-          <button
-            class='absolute left-0 top-1/2 z-10 -ml-5 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg transition-colors hover:bg-gray-100'
-            type='button'
-            aria-label='Scroll left'
-            onclick="horizontalScroll(this.parentElement, 'left')"
-          >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='24'
-              height='24'
-              viewBox='0 0 24 24'
-              fill='none'
-              stroke='currentColor'
-              stroke-width='2'
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              class='lucide lucide-chevron-left h-6 w-6 text-gray-700'
-            >
-              <path d='m15 18-6-6 6-6'></path>
-            </svg>
-          </button>
-
-          <button
-            class='absolute right-0 top-1/2 z-10 -mr-5 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg transition-colors hover:bg-gray-100'
-            type='button'
-            aria-label='Next testimonial'
-            onclick="horizontalScroll(this.parentElement, 'right')"
-          >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='24'
-              height='24'
-              viewBox='0 0 24 24'
-              fill='none'
-              stroke='currentColor'
-              stroke-width='2'
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              class='lucide lucide-chevron-right h-6 w-6 text-gray-700'
-            >
-              <path d='m9 18 6-6-6-6'></path>
-            </svg>
-          </button>
+              <blockquote class='text-base text-gray-700'>“{testimonial.quote}”</blockquote>
+            </article>
+          ))}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

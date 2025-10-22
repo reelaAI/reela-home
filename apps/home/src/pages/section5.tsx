@@ -9,33 +9,11 @@ const Section5 = () => {
           <div class='flex flex-col lg:flex-row'>
             <div class='flex flex-col justify-center p-6 lg:w-1/2 lg:p-12'>
               <h2 class='mb-6 text-3xl font-bold md:text-4xl'>
-                Reela Editor - Smart, Flexible, Ready to Export
+                Reela Editor — Flexible &amp; Exportable
               </h2>
-              <p class='mb-4 text-lg text-gray-600'>
-                Edit scenes, subtitles, voiceovers and music with Reela's intuitive timeline editor
-                — no editing experience required.
-              </p>
               <p class='mb-6 text-lg text-gray-600'>
-                Export your project directly as a full video or as editable files for Premiere Pro
-                and CapCut for advanced editing.
+                Fine-tune your AI video or export to Premiere Pro / CapCut for advanced edits.
               </p>
-              <div class='mt-2 flex items-center gap-6'>
-                <img
-                  src='/pr.svg'
-                  alt='Adobe Premiere Pro'
-                  class='h-8 w-auto opacity-80 grayscale'
-                />
-                <img
-                  src='/capcut.png'
-                  alt='CapCut'
-                  class='h-6 w-auto'
-                  style='
-                    filter: brightness(0) saturate(100%) invert(22%) sepia(0%)
-                      saturate(0%) hue-rotate(0deg) brightness(95%)
-                      contrast(89%);
-                  '
-                />
-              </div>
             </div>
             <div class='p-6 lg:w-1/2 lg:p-12 lg:pl-0'>
               <div class='relative overflow-hidden rounded-xl shadow-lg'>
@@ -44,7 +22,22 @@ const Section5 = () => {
                   alt='Reela Editor interface showing video editing timeline and preview'
                   class='h-auto w-full object-cover'
                   style='max-height: none'
+                  loading='lazy'
                 />
+                <div class='absolute bottom-4 right-4 flex items-center gap-3 rounded-full bg-white/90 px-4 py-2 shadow-md backdrop-blur'>
+                  <img
+                    src='/pr.svg'
+                    alt='Premiere Pro export icon'
+                    class='h-8 w-auto'
+                    loading='lazy'
+                  />
+                  <img
+                    src='/capcut.png'
+                    alt='CapCut export icon'
+                    class='h-7 w-auto'
+                    loading='lazy'
+                  />
+                </div>
               </div>
             </div>
           </div>

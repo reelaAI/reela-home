@@ -166,6 +166,7 @@ function pauseOtherVideos(currentVideo) {
 document.addEventListener('DOMContentLoaded', () => {
   initAutoScrollSections();
   initVideoAutoplay();
+  initBackToTop();
 });
 
 function initAutoScrollSections() {
@@ -208,6 +209,23 @@ function initAutoScrollSections() {
     });
 
     window.addEventListener('focus', restartInterval);
+  });
+}
+
+function initBackToTop() {
+  const button = document.getElementById('back-to-top');
+  if (!button) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      button.classList.add('visible');
+    } else {
+      button.classList.remove('visible');
+    }
+  });
+
+  button.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
 

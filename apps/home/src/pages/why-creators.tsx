@@ -1,147 +1,88 @@
 const cards = [
   {
-    title: 'Build Your Own Avatar IP',
-    description:
-      'Design a spokesperson that stays on-brand forever. Reela keeps faces, voices, and wardrobe consistent across every scene.',
+    title: 'Product Spokesperson',
+    description: 'Vertical demo videos that introduce offers with a human face.',
+    badge: 'Vertical video',
     video: 'https://files.reela.com/workspace/uploads/202509/15/d992af1b-0721-4ece-aa6e-f04af3e59f80.mp4',
-    cta: 'Start Building Your Avatar IP',
   },
   {
-    title: 'Drive More Sales with Product Videos',
-    description:
-      'Turn product shots and SKU references into persuasive explainers. Reela blends AI avatars, branded motion graphics, and auto-generated B-roll automatically.',
+    title: 'Course Instructor',
+    description: 'Landscape lessons, onboarding, and walkthroughs with virtual educators.',
+    badge: 'Landscape',
     video: 'https://files.reela.com/workspace/uploads/202509/15/4cad780e-2cc6-485f-bd24-3359bbd5a3c1.mp4',
-    cta: 'Create Product Videos',
   },
   {
-    title: 'Earn More from Social Media',
-    description:
-      'Publish platform-ready stories every day. Remix multi-modal footage, auto-caption, and localize for new audiences with one click.',
+    title: 'Story Narrator',
+    description: 'Stylized animations and explainers for storytelling-heavy content.',
+    badge: 'Animation style',
     video: 'https://files.reela.com/workspace/uploads/202509/15/1431a1ef-7d5f-41a3-97ca-f966b71011c8.mp4',
-    cta: 'Launch Social Campaigns',
   },
 ];
 
 const WhyCreators = () => {
   return (
-    <section class='bg-[#FFF6F8] py-20'>
+    <section class='bg-white py-20'>
       <div class='container mx-auto px-4'>
         <div class='mx-auto mb-14 max-w-3xl text-center'>
           <h2 class='font-inter text-4xl font-bold md:text-6xl md:whitespace-nowrap'>
-            Why Creators Choose <span class='text-brand'>Reela</span>
+            Use AI Avatars to Host, Explain, Narrate
           </h2>
           <p class='mt-4 text-lg text-gray-600'>
-            Transform ideas into income streams with multi-reference accuracy, multimodal storytelling, and ready-to-publish edits.
+            Deploy ready-to-speak AI presenters for every channel — swap styles, orientations, and languages in seconds.
           </p>
         </div>
-        <div class='space-y-8'>
+        <div class='grid gap-8 md:grid-cols-3'>
           {cards.map((card) => (
             <div
               key={card.title}
-              class='grid gap-8 overflow-hidden rounded-3xl bg-white p-6 shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl md:grid-cols-[1fr_1fr] md:p-8 lg:p-10'
+              class='group flex h-full flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl'
             >
-              <div class='space-y-4 self-center'>
-                <h3 class='text-2xl font-bold text-gray-900 md:text-3xl'>{card.title}</h3>
-                <p class='text-lg text-gray-600'>{card.description}</p>
-                <a href='https://app.reela.com/workspace' target='_blank' rel='noopener noreferrer'>
-                  <button class='inline-flex items-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-105'>
-                    {card.cta}
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='20'
-                      height='20'
-                      viewBox='0 0 24 24'
-                      fill='none'
-                      stroke='currentColor'
-                      stroke-width='2'
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      class='ml-2 h-5 w-5'
-                    >
-                      <path d='M5 12h14'></path>
-                      <path d='m12 5 7 7-7 7'></path>
-                    </svg>
-                  </button>
-                </a>
-              </div>
               <div
-                class='relative aspect-[16/9] w-full self-center overflow-hidden rounded-2xl bg-white shadow-lg md:mx-auto md:max-w-[540px]'
+                class='relative aspect-[4/5] w-full overflow-hidden bg-black text-white'
                 data-video-card
+                onmouseenter='playOnHover(this)'
+                onmouseleave='pauseOnLeave(this)'
               >
-                <div class='absolute inset-0' data-video-autoplay>
-                  <video
-                    src={card.video}
-                    class='h-full w-full object-cover'
-                    playsinline
-                    preload='metadata'
-                    muted
-                    data-video-element
-                    onclick='pauseVideoOnClick(this)'
-                    onplay='handleVideoPlay(this)'
-                    onpause='handleVideoPause(this)'
-                    onended='handleVideoEnded(this)'
-                  ></video>
-                  <div
-                    class='pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-200'
-                    data-overlay
-                  >
-                    <button
-                      type='button'
-                      class='pointer-events-auto flex h-16 w-16 items-center justify-center rounded-full bg-black/60 text-white shadow-lg transition-transform duration-200 hover:scale-105'
-                      onclick='playVideoFromOverlay(this)'
-                    >
-                      <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        width='32'
-                        height='32'
-                        viewBox='0 0 24 24'
-                        fill='currentColor'
-                        class='ml-1'
-                      >
-                        <path d='m9 7 8 5-8 5V7z'></path>
-                      </svg>
-                    </button>
-                  </div>
-                  <button
-                    type='button'
-                    class='pointer-events-auto absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-black/60 text-white shadow-lg transition-transform duration-200 hover:scale-105'
-                    aria-label='Toggle sound'
-                    onclick='toggleVideoSound(this)'
-                  >
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='20'
-                      height='20'
-                      viewBox='0 0 24 24'
-                      fill='none'
-                      stroke='currentColor'
-                      stroke-width='2'
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      class='icon-sound-on'
-                    >
-                      <path d='M11 5 6 9H3v6h3l5 4V5Z'></path>
-                      <path d='M19 5c1.5 2 1.5 12 0 14'></path>
-                      <path d='M15.5 8.5c.75 1 1 6.5 0 7.5'></path>
-                    </svg>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='20'
-                      height='20'
-                      viewBox='0 0 24 24'
-                      fill='none'
-                      stroke='currentColor'
-                      stroke-width='2'
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      class='icon-sound-off hidden'
-                    >
-                      <path d='m16 9 6 6'></path>
-                      <path d='m22 9-6 6'></path>
-                      <path d='M11 5 6 9H3v6h3l5 4V5Z'></path>
-                    </svg>
-                  </button>
+                <video
+                  class='h-full w-full object-cover transition-transform duration-300 group-hover:scale-105'
+                  src={card.video}
+                  playsinline
+                  preload='metadata'
+                  muted
+                  loop
+                  data-video-element
+                ></video>
+              </div>
+              <div class='flex flex-1 flex-col gap-4 p-6'>
+                <span class='inline-flex w-max items-center rounded-full bg-[#ff0058]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#ff0058]'>
+                  {card.badge}
+                </span>
+                <div>
+                  <h3 class='text-2xl font-bold text-gray-900'>{card.title}</h3>
+                  <p class='mt-3 text-base text-gray-600'>{card.description}</p>
                 </div>
+                <a
+                  class='mt-auto inline-flex items-center gap-2 text-sm font-semibold text-[#ff0058] transition-colors duration-200 hover:text-[#d70047]'
+                  href='https://app.reela.com/workspace'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Try Reela for Free
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='18'
+                    height='18'
+                    viewBox='0 0 24 24'
+                    fill='none'
+                    stroke='currentColor'
+                    stroke-width='2'
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                  >
+                    <path d='M5 12h14'></path>
+                    <path d='m12 5 7 7-7 7'></path>
+                  </svg>
+                </a>
               </div>
             </div>
           ))}

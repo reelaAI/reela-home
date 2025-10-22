@@ -10,21 +10,20 @@ export const products = [
     name: 'Video Remixer',
     href: '/video-remixer',
   },
-  // {
-  //   name: 'Photo Animation',
-  //   href: '/photo-animation',
-  // },
 ];
 
 export default function header({ avatarUrl }: { avatarUrl?: string }) {
   let user = (
     <Fragment>
+      <a class='hidden text-gray-700 hover:text-gray-900 md:block' href='/pricing'>
+        Pricing
+      </a>
       <a class='hidden text-gray-700 hover:text-gray-900 md:block' href='/workspace'>
-        Login
+        Log in
       </a>
       <a href='/workspace'>
-        <button class='ring-offset-background focus-visible:ring-ring [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-gray-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50'>
-          Sign Up
+        <button class='ring-offset-background focus-visible:ring-ring [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#ff0058] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#d70047] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#ff0058] disabled:pointer-events-none disabled:opacity-50'>
+          Try for Free
         </button>
       </a>
     </Fragment>
@@ -34,7 +33,8 @@ export default function header({ avatarUrl }: { avatarUrl?: string }) {
     user = (
       <img
         src={avatarUrl}
-        alt='Avatar'
+        alt='User avatar'
+        loading='lazy'
         class='hidden h-10 w-10 rounded-full border border-gray-200 shadow-sm md:block'
       />
     );
@@ -46,8 +46,8 @@ export default function header({ avatarUrl }: { avatarUrl?: string }) {
         <div class='flex items-end gap-8'>
           <a class='flex items-center' href='/'>
             <img
-              alt='Reela'
-              loading='lazy'
+              alt='Reela logo'
+              loading='eager'
               width='120'
               height='40'
               decoding='async'
@@ -89,12 +89,10 @@ export default function header({ avatarUrl }: { avatarUrl?: string }) {
                 },
               ]}
             />
-            <a
-              class='text-gray-700 hover:text-gray-900'
-              target='_blank'
-              rel='noopener noreferrer'
-              href='/pricing'
-            >
+            <a class='text-gray-700 hover:text-gray-900' href='#use-cases'>
+              Use Cases
+            </a>
+            <a class='text-gray-700 hover:text-gray-900' href='/pricing'>
               Pricing
             </a>
           </div>

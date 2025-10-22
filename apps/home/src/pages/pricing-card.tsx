@@ -9,6 +9,7 @@ interface Props {
   features: string[];
   isPopular?: boolean;
   period?: 'year' | 'month';
+  ctaLabel?: string;
 }
 
 const PricingCard: FC<Props> = ({
@@ -19,6 +20,7 @@ const PricingCard: FC<Props> = ({
   features,
   isPopular = false,
   period = 'year',
+  ctaLabel = 'Subscribe',
 }) => {
   return (
     <div
@@ -73,7 +75,7 @@ const PricingCard: FC<Props> = ({
         name='id'
         type='submit'
       >
-        Subscribe
+        {ctaLabel}
       </a>
 
       {/* features */}

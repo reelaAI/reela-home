@@ -15,18 +15,18 @@ const Section2 = () => {
 
         <div className='grid md:grid-cols-3 gap-10 max-w-6xl mx-auto'>
           <FeatureCard
-            title='5-Minute Go-Live Videos'
-            description='Upload product references, campaign talking points, and avatar preferences — Reela assembles a publish-ready cut with perfect SKU and talent alignment.'
+            title='5-Minute Video Generation'
+            description='From script to final cut, 100% AI-powered.'
             icon='zap'
           />
           <FeatureCard
-            title='Hands-Off, Brand-Perfect Consistency'
-            description='No timelines, no reshoots. Multi-reference identity tracking keeps every avatar, product, and storyline locked to your brief across scenes and versions.'
+            title='Zero Editing Required'
+            description='Skip trimming, cutting, or stitching.'
             icon='scissors'
           />
           <FeatureCard
-            title='All-in-One Multimodal Storytelling'
-            description='Blend virtual humans, AI-crafted scenes, product B-roll, and remix clips in a single workflow — ready to export for ads, ecommerce, and social.'
+            title='Fully-Automated Output'
+            description='Voice, scenes, captions—done for you.'
             icon='brain'
           />
         </div>

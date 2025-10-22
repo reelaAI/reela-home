@@ -76,6 +76,14 @@ export default function layout({
           {children}
           <Footer />
         </div>
+        <button
+          id='back-to-top'
+          class='back-to-top'
+          type='button'
+          aria-label='Back to top'
+        >
+          ↑ Back to Top
+        </button>
         <script src='/ref/client.js'></script>
       </body>
     </html>

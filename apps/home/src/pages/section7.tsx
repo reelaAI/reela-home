@@ -36,6 +36,7 @@ const Section7 = () => {
               ]}
               price={7}
               id='starter'
+              ctaLabel='Start for Free'
             />
             <PricingCard
               title='plus'
@@ -53,6 +54,7 @@ const Section7 = () => {
               price={31}
               isPopular
               id='plus'
+              ctaLabel='Most Popular · Choose Plan'
             />
             <PricingCard
               title='ultra'
@@ -69,6 +71,7 @@ const Section7 = () => {
               ]}
               price={79}
               id='ultra'
+              ctaLabel='Select Ultra Plan'
             />
           </div>
 
@@ -95,6 +98,7 @@ const Section7 = () => {
               ]}
               price={9}
               id='starter'
+              ctaLabel='Start for Free'
             />
             <PricingCard
               period='month'
@@ -113,6 +117,7 @@ const Section7 = () => {
               price={39}
               id='plus'
               isPopular
+              ctaLabel='Most Popular · Choose Plan'
             />
             <PricingCard
               period='month'
@@ -130,6 +135,7 @@ const Section7 = () => {
               ]}
               id='ultra'
               price={99}
+              ctaLabel='Select Ultra Plan'
             />
           </div>
         </div>

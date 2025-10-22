@@ -1,21 +1,76 @@
-const comparison = [
-  {
-    feature: 'Max video length',
-    reela: 'Generates 60-second-plus Sora scenes and stitches up to 10-minute narratives.',
-    sora: 'Up to 25 seconds per generation.',
-  },
-  {
-    feature: 'Talent & product options',
-    reela:
-      'Choose from hundreds of Reela virtual humans or bring your licensed actors for SKU-perfect storytelling.',
-    sora: 'Only supports characters you personally upload and authorize.',
-  },
-];
-
 const highlights = [
-  'Multi-reference continuity stays locked, so multi-product sequences stay true to your brief.',
-  'Blend virtual humans, AI-generated footage, and live assets in one adaptive timeline.',
-  'Deliver long-form videos and vertical cutdowns simultaneously without rebuilding edits.',
+  {
+    title: 'Script-to-Video in minutes',
+    description: 'Draft, generate, and publish long-form stories faster with Sora orchestration.',
+    icon: (
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='28'
+        height='28'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        class='text-brand'
+      >
+        <path d='M4 17h16' />
+        <path d='M7 7h10' />
+        <path d='M9 12h6' />
+        <path d='M5 3h14v18H5z' />
+      </svg>
+    ),
+  },
+  {
+    title: 'No video skills required',
+    description: 'Guided prompts and AI scene assembly keep your creative pipeline on autopilot.',
+    icon: (
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='28'
+        height='28'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        class='text-brand'
+      >
+        <path d='M4 4h16v16H4z' />
+        <path d='M8 8h8' />
+        <path d='M8 12h5' />
+        <path d='M8 16h4' />
+      </svg>
+    ),
+  },
+  {
+    title: 'Effortless multilingual support',
+    description: 'Auto-dub voices and captions so every market gets a localized edit instantly.',
+    icon: (
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='28'
+        height='28'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        class='text-brand'
+      >
+        <path d='M5 8h8' />
+        <path d='M7 6h4' />
+        <path d='M5 12h8' />
+        <path d='M5 16h6' />
+        <path d='m16 6 3 6 3-6' />
+        <path d='M19 18c-1.9 0-3.5-1.1-4-2.6' />
+        <path d='M23 18c-1.9 0-3.5-1.1-4-2.6' />
+      </svg>
+    ),
+  },
 ];
 
 const Section3 = () => {
@@ -89,41 +144,23 @@ const Section3 = () => {
       </section>
       <section class='bg-slate-950 text-white'>
         <div class='container mx-auto px-4 pb-16'>
-          <div class='grid gap-6 rounded-3xl border border-white/10 bg-white/5 px-6 py-10 backdrop-blur lg:grid-cols-[1.1fr_0.9fr] lg:px-10'>
-            <div>
-              <h3 class='font-inter text-2xl font-semibold text-white md:text-3xl'>Reela Workflow Highlights</h3>
-              <ul class='mt-6 grid gap-4 text-sm text-white/70 md:grid-cols-2 md:text-base lg:grid-cols-1'>
-                {highlights.map((item) => (
-                  <li class='flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-5' key={item}>
-                    <span class='mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-white/40 text-sm font-semibold text-white'>
-                      •
-                    </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div class='rounded-3xl border border-white/15 bg-white/5 p-6 text-white shadow-[0_20px_60px_rgba(15,23,42,0.35)] lg:p-7'>
-              <h3 class='font-inter text-2xl font-semibold text-white md:text-3xl'>Reela vs. Sora</h3>
-              <div class='mt-4 space-y-3 text-sm text-white/70 md:text-base'>
-                {comparison.map((item) => (
-                  <div class='rounded-2xl border border-white/10 bg-white/5 p-5' key={item.feature}>
-                    <p class='text-sm font-semibold uppercase tracking-wide text-pink-100'>
-                      {item.feature}
-                    </p>
-                    <div class='mt-3 grid gap-4 md:grid-cols-2'>
-                      <div>
-                        <p class='text-xs font-semibold text-white/60'>Sora</p>
-                        <p class='text-base font-medium text-white'>{item.sora}</p>
-                      </div>
-                      <div>
-                        <p class='text-xs font-semibold text-white/60'>Reela</p>
-                        <p class='text-base font-medium text-white'>{item.reela}</p>
-                      </div>
-                    </div>
+          <div class='rounded-3xl border border-white/10 bg-white/5 px-6 py-10 backdrop-blur lg:px-10'>
+            <h3 class='font-inter text-2xl font-semibold text-white md:text-3xl'>Reela Workflow Highlights</h3>
+            <div class='mt-8 grid gap-6 md:grid-cols-3'>
+              {highlights.map((item) => (
+                <div
+                  key={item.title}
+                  class='flex h-full flex-col gap-4 rounded-2xl border border-white/10 bg-white/5 p-6 text-left shadow-[0_20px_60px_rgba(15,23,42,0.25)] transition-transform duration-300 hover:-translate-y-1'
+                >
+                  <div class='inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#ff0058]/20 text-white'>
+                    {item.icon}
                   </div>
-                ))}
-              </div>
+                  <div>
+                    <h4 class='text-xl font-semibold text-white'>{item.title}</h4>
+                    <p class='mt-2 text-base text-white/70'>{item.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

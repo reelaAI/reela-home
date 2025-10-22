@@ -101,26 +101,24 @@ const features = [
 
 const Section1 = () => {
   const brands = [
-    '/brands/meta.png',
-    '/brands/amazon.png',
-    '/brands/google.png',
-    '/brands/netflix.png',
-    '/brands/opt.svg',
-    '/brands/pias.png',
-    '/brands/microsoft.png',
-    '/brands/byteplus.svg',
+    { src: '/brands/meta.png', alt: 'Meta logo' },
+    { src: '/brands/amazon.png', alt: 'Amazon logo' },
+    { src: '/brands/google.png', alt: 'Google logo' },
+    { src: '/brands/netflix.png', alt: 'Netflix logo' },
+    { src: '/brands/opt.svg', alt: 'OpenAI logo' },
+    { src: '/brands/pias.png', alt: 'PIAS logo' },
+    { src: '/brands/microsoft.png', alt: 'Microsoft logo' },
+    { src: '/brands/byteplus.svg', alt: 'BytePlus logo' },
   ];
 
   return (
     <section class='fade-in-up container mx-auto px-4 py-20 text-center'>
       <div class='mx-auto flex max-w-6xl flex-col items-center text-center'>
         <h1 class='font-inter font-bold leading-tight tracking-tight text-[44px] md:text-[70px]'>
-          Turn Products, Ideas &amp; Avatars into Profitable Videos — Instantly.
+          Create Publish-Ready Videos in 5 Minutes — With AI, No Editing Required
         </h1>
         <p class='font-inter mt-6 max-w-4xl text-[18px] text-gray-600 md:text-[24px]'>
-          Reela combines AI avatars, product references, and smart scene generation to create
-          monetizable videos in minutes — for creators, sellers, and brands who want growth without
-          production limits.
+          No Timeline · No Software · No Learning Curve
         </p>
         <div class='mt-10 grid w-full max-w-5xl gap-4 text-left sm:grid-cols-2'>
           {features.map((feature) => (
@@ -136,12 +134,18 @@ const Section1 = () => {
             </div>
           ))}
         </div>
-        <div class='mt-10 flex w-full max-w-xs flex-col items-center gap-6 sm:max-w-md'>
+        <div class='mt-10 flex w-full flex-col items-center gap-4 sm:flex-row sm:justify-center'>
           <a
-            class='w-full rounded-full bg-[#F7265B] px-8 py-4 text-base font-semibold text-white shadow-sm transition-all duration-200 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F7265B] focus-visible:ring-offset-2'
+            class='w-full rounded-full bg-[#F7265B] px-8 py-4 text-base font-semibold text-white shadow-sm transition-all duration-200 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F7265B] focus-visible:ring-offset-2 sm:w-auto'
             href='https://app.reela.com/workspace'
           >
-            Create with Reela AI
+            Create with Reela
+          </a>
+          <a
+            class='w-full rounded-full border border-[#F7265B] px-8 py-4 text-base font-semibold text-[#F7265B] transition-all duration-200 hover:scale-[1.02] hover:bg-[#F7265B]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F7265B] focus-visible:ring-offset-2 sm:w-auto'
+            href='https://app.reela.com/workspace'
+          >
+            Try Reela for Free
           </a>
         </div>
         <div class='mt-14 flex w-full items-center justify-center px-4'>
@@ -150,15 +154,15 @@ const Section1 = () => {
             <div class='hidden h-6 border-l border-gray-300 md:block'></div>
             <div class='relative max-w-[90vw] overflow-x-hidden md:max-w-2xl'>
               <div class='animate-infinite-scroll mt-10 flex w-[1000%] md:mt-0'>
-                {[brands, brands, brands].flat().map((b, index) => (
-                  <div class='mx-8 flex flex-shrink-0 items-center justify-center' key={`${b}-${index}`}>
+                {[brands, brands, brands].flat().map((brand, index) => (
+                  <div class='mx-8 flex flex-shrink-0 items-center justify-center' key={`${brand.alt}-${index}`}>
                     <img
-                      alt='logo'
+                      alt={brand.alt}
                       class='h-6 object-contain opacity-70 grayscale transition-opacity hover:opacity-100'
                       decoding='async'
                       height='40'
                       loading='lazy'
-                      src={b}
+                      src={brand.src}
                       style='color: transparent'
                       width='120'
                     />
@@ -168,6 +172,9 @@ const Section1 = () => {
             </div>
           </div>
         </div>
+        <p class='mt-6 text-sm font-semibold uppercase tracking-widest text-gray-500'>
+          Powered by industry-leading AI models
+        </p>
       </div>
     </section>
   );

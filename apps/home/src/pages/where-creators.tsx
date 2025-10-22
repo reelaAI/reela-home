@@ -1,7 +1,7 @@
 const monetizationPaths = [
   {
-    title: 'E-Commerce Sellers',
-    description: 'Avatar try-ons, unboxings, and sales ads that directly boost conversions.',
+    title: 'Viral TikTok / Shorts',
+    description: 'Launch short-form hooks with avatars, subtitles, and motion baked in.',
     icon: (
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -15,16 +15,16 @@ const monetizationPaths = [
         stroke-linejoin='round'
         class='text-brand'
       >
-        <path d='M5.5 7h13l-1.5 9h-10z'></path>
-        <path d='M7 7l-1-4H4'></path>
-        <circle cx='9' cy='20' r='1'></circle>
-        <circle cx='17' cy='20' r='1'></circle>
+        <path d='M9 3h6v2'></path>
+        <path d='M9 19v2h6v-2'></path>
+        <path d='M4 7h16v10H4z'></path>
+        <path d='m10 9 4 3-4 3z'></path>
       </svg>
     ),
   },
   {
-    title: 'YouTubers',
-    description: 'Faceless or avatar-hosted explainers, plus identity-safe sponsorship videos.',
+    title: 'Product Ads',
+    description: 'Auto-generate storyboards, B-roll, and pitch-perfect selling points.',
     icon: (
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -38,14 +38,15 @@ const monetizationPaths = [
         stroke-linejoin='round'
         class='text-brand'
       >
-        <path d='m10 15 5.19-3L10 9v6Z'></path>
-        <rect width='20' height='14' x='2' y='5' rx='2'></rect>
+        <path d='m2 8 10-5 10 5-10 5-10-5z'></path>
+        <path d='m2 17 10 5 10-5'></path>
+        <path d='m2 12 10 5 10-5'></path>
       </svg>
     ),
   },
   {
-    title: 'Social Influencers',
-    description: 'Avatar-generated TikTok and Instagram clips to grow followers and land brand deals.',
+    title: 'UGC Review Video',
+    description: 'Turn testimonials into scripted avatar hosts with social proof overlays.',
     icon: (
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -59,15 +60,13 @@ const monetizationPaths = [
         stroke-linejoin='round'
         class='text-brand'
       >
-        <path d='M16 3h5v5'></path>
-        <path d='M8 21H3v-5'></path>
-        <path d='M16 8 5 19'></path>
+        <path d='M12 20c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 2.143 1.017 4.076 2.667 5.434L6 21l4.053-1.624A8.93 8.93 0 0 0 12 20Z'></path>
       </svg>
     ),
   },
   {
-    title: 'Agencies & Freelancers',
-    description: 'Deliver scalable ads, promos, and branded storytelling at speed.',
+    title: 'Long-form Explainer',
+    description: 'Combine chapters, scenes, and localized voiceovers for in-depth videos.',
     icon: (
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -81,9 +80,11 @@ const monetizationPaths = [
         stroke-linejoin='round'
         class='text-brand'
       >
-        <path d='M4 4h16v16H4z'></path>
-        <path d='M9 4v16'></path>
-        <path d='m15 10-2 2 2 2'></path>
+        <path d='M4 19h16'></path>
+        <path d='M4 5h16'></path>
+        <path d='M8 5v14'></path>
+        <path d='M12 9h8'></path>
+        <path d='M12 13h8'></path>
       </svg>
     ),
   },
@@ -91,14 +92,12 @@ const monetizationPaths = [
 
 const WhereCreators = () => {
   return (
-    <section class='bg-white py-20'>
+    <section class='bg-white py-20' id='use-cases'>
       <div class='container mx-auto px-4'>
         <div class='mx-auto mb-12 max-w-3xl text-center'>
-          <h2 class='font-inter text-4xl font-bold md:text-6xl'>
-            Where Creators Monetize with <span class='text-brand'>Reela</span>
-          </h2>
+          <h2 class='font-inter text-4xl font-bold md:text-6xl'>Top Use Cases Powered by Reela</h2>
           <p class='mt-4 text-lg text-gray-600'>
-            Reela adapts to every creator journey — from selling products to building audiences. Choose your path to revenue.
+            Deliver social, ad, and education-ready videos without touching a timeline — no matter the format.
           </p>
         </div>
         <div class='grid gap-6 md:grid-cols-2 lg:grid-cols-4'>

@@ -6,6 +6,8 @@ import Section6 from './section6';
 import Section7 from './section7';
 import WhereCreators from './where-creators';
 import WhyCreators from './why-creators';
+import AvatarIpSection from './avatar-ip';
+import FAQSection from './faq';
 
 export default function Main() {
   return (
@@ -13,10 +15,12 @@ export default function Main() {
       <Section1 />
       <Section2 />
       <Section3 />
+      <AvatarIpSection />
       <WhyCreators />
       <WhereCreators />
       <Section5 />
       <Section6 />
+      <FAQSection />
       <Section7 />
     </>
   );
