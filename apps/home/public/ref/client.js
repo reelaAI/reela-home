@@ -32,11 +32,38 @@ function pauseOnLeave(element) {
 function horizontalScroll(element, direction) {
   const scrollContainer = element.querySelector('.scroll-container');
   if (!scrollContainer) return;
+
+  const autoScrollData = element.__autoScrollData;
+  if (autoScrollData) {
+    autoScrollData.stop();
+    if (direction === 'left') {
+      autoScrollData.scrollPrev();
+    } else {
+      autoScrollData.scrollNext();
+    }
+    autoScrollData.start();
+    return;
+  }
+
   const scrollAmount = scrollContainer.clientWidth;
-  scrollContainer.scrollBy({
-    left: direction === 'left' ? -scrollAmount : scrollAmount,
-    behavior: 'smooth',
-  });
+  const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+  const threshold = 2;
+
+  if (direction === 'right') {
+    if (scrollContainer.scrollLeft >= maxScrollLeft - threshold) {
+      scrollContainer.scrollTo({ left: 0, behavior: 'auto' });
+      return;
+    }
+    scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    return;
+  }
+
+  if (scrollContainer.scrollLeft <= threshold) {
+    scrollContainer.scrollTo({ left: Math.max(maxScrollLeft, 0), behavior: 'auto' });
+    return;
+  }
+
+  scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
 }
 
 function playVideoFromOverlay(button) {
@@ -173,41 +200,90 @@ function initAutoScrollSections() {
   sections.forEach((section) => {
     const scrollContainer = section.querySelector('.scroll-container');
     if (!scrollContainer) return;
-    if (scrollContainer.scrollWidth <= scrollContainer.clientWidth) return;
 
-    const scrollStep = () => {
-      const atEnd = scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth - 2;
-      if (atEnd) {
-        scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        scrollContainer.scrollBy({ left: scrollContainer.clientWidth, behavior: 'smooth' });
+    const threshold = 2;
+    const getScrollAmount = () => scrollContainer.clientWidth;
+    const getMaxScrollLeft = () => scrollContainer.scrollWidth - scrollContainer.clientWidth;
+
+    const scrollNext = () => {
+      const maxScrollLeft = getMaxScrollLeft();
+      if (maxScrollLeft <= 0) return;
+      if (scrollContainer.scrollLeft >= maxScrollLeft - threshold) {
+        scrollContainer.scrollTo({ left: 0, behavior: 'auto' });
+        return;
+      }
+      scrollContainer.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+    };
+
+    const scrollPrev = () => {
+      const maxScrollLeft = getMaxScrollLeft();
+      if (maxScrollLeft <= 0) return;
+      if (scrollContainer.scrollLeft <= threshold) {
+        scrollContainer.scrollTo({ left: Math.max(maxScrollLeft, 0), behavior: 'auto' });
+        return;
+      }
+      scrollContainer.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+    };
+
+    let intervalId = null;
+
+    const start = () => {
+      if (intervalId !== null) return;
+      if (getMaxScrollLeft() <= 0) return;
+      intervalId = window.setInterval(() => {
+        scrollNext();
+      }, 3000);
+    };
+
+    const stop = () => {
+      if (intervalId === null) return;
+      window.clearInterval(intervalId);
+      intervalId = null;
+    };
+
+    const handleResize = () => {
+      const maxScrollLeft = getMaxScrollLeft();
+      if (maxScrollLeft <= 0) {
+        scrollContainer.scrollTo({ left: 0, behavior: 'auto' });
+        stop();
+        return;
+      }
+
+      if (scrollContainer.scrollLeft > maxScrollLeft) {
+        scrollContainer.scrollTo({ left: Math.max(maxScrollLeft, 0), behavior: 'auto' });
+      }
+
+      if (intervalId === null) {
+        start();
       }
     };
 
-    let intervalId = window.setInterval(scrollStep, 6000);
+    section.addEventListener('mouseenter', stop);
+    section.addEventListener('mouseleave', start);
+    section.addEventListener('touchstart', stop, { passive: true });
+    section.addEventListener('touchend', start, { passive: true });
+    section.addEventListener('touchcancel', start, { passive: true });
 
-    const restartInterval = () => {
-      if (intervalId) {
-        clearInterval(intervalId);
-      }
-      intervalId = window.setInterval(scrollStep, 6000);
+    window.addEventListener('blur', stop);
+    window.addEventListener('focus', start);
+
+    if (typeof ResizeObserver !== 'undefined') {
+      const resizeObserver = new ResizeObserver(handleResize);
+      resizeObserver.observe(scrollContainer);
+    } else {
+      window.addEventListener('resize', handleResize);
+    }
+
+    section.__autoScrollData = {
+      scrollNext,
+      scrollPrev,
+      start,
+      stop,
     };
 
-    section.addEventListener('mouseenter', () => {
-      if (intervalId) {
-        clearInterval(intervalId);
-      }
-    });
-
-    section.addEventListener('mouseleave', restartInterval);
-
-    window.addEventListener('blur', () => {
-      if (intervalId) {
-        clearInterval(intervalId);
-      }
-    });
-
-    window.addEventListener('focus', restartInterval);
+    if (getMaxScrollLeft() > 0) {
+      start();
+    }
   });
 }
 
