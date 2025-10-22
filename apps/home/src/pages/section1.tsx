@@ -98,14 +98,22 @@ const heroHighlights = [
 
 const Section1 = () => {
   const brands = [
-    '/brands/meta.png',
-    '/brands/amazon.png',
-    '/brands/google.png',
-    '/brands/netflix.png',
-    '/brands/opt.svg',
-    '/brands/pias.png',
-    '/brands/microsoft.png',
-    '/brands/byteplus.svg',
+    { src: 'https://files.reela.com/assets/images/claude.png', name: 'Claude' },
+    { src: 'https://files.reela.com/assets/images/elevenlabs.png', name: 'Elevenlabs' },
+    { src: 'https://files.reela.com/assets/images/flux.png', name: 'Flux' },
+    { src: 'https://files.reela.com/assets/images/gemini.png', name: 'Gemini' },
+    { src: 'https://files.reela.com/assets/images/jimeng.png', name: 'Jimeng' },
+    { src: 'https://files.reela.com/assets/images/kling.png', name: 'Kling' },
+    { src: 'https://files.reela.com/assets/images/meta.png', name: 'Meta' },
+    { src: 'https://files.reela.com/assets/images/microsoft.png', name: 'Microsoft' },
+    { src: 'https://files.reela.com/assets/images/midjourney.png', name: 'Midjourney' },
+    { src: 'https://files.reela.com/assets/images/openai.png', name: 'Openai' },
+    { src: 'https://files.reela.com/assets/images/runway.png', name: 'Runway' },
+    { src: 'https://files.reela.com/assets/images/sora.png', name: 'Sora' },
+    { src: 'https://files.reela.com/assets/images/suno.png', name: 'Suno' },
+    { src: 'https://files.reela.com/assets/images/vidu.png', name: 'Vidu' },
+    { src: 'https://files.reela.com/assets/images/volcengine.png', name: 'Volcengine' },
+    { src: 'https://files.reela.com/assets/images/bytedance.png', name: 'Bytedance' },
   ];
 
   return (
@@ -143,22 +151,26 @@ const Section1 = () => {
         </div>
         <div class='mt-14 flex w-full items-center justify-center px-4'>
           <div class='flex flex-wrap items-center justify-center gap-6'>
-            <p class='shrink-0 whitespace-nowrap font-medium text-gray-700'>Powered by industry-leading AI models.</p>
+            <p class='shrink-0 whitespace-nowrap font-medium text-gray-700'>Powered by industry-leading AI models:</p>
             <div class='hidden h-6 border-l border-gray-300 md:block'></div>
             <div class='relative max-w-[90vw] overflow-x-hidden md:max-w-2xl'>
               <div class='animate-infinite-scroll mt-10 flex w-[1000%] md:mt-0'>
-                {[brands, brands, brands].flat().map((b, index) => (
-                  <div class='mx-8 flex flex-shrink-0 items-center justify-center' key={`${b}-${index}`}>
+                {[brands, brands, brands].flat().map((brand, index) => (
+                  <div
+                    class='mx-8 flex flex-shrink-0 flex-col items-center justify-center gap-2 text-[#C2C2C1]'
+                    key={`${brand.name}-${index}`}
+                  >
                     <img
-                      alt='logo'
-                      class='h-6 object-contain opacity-70 grayscale transition-opacity hover:opacity-100'
+                      alt={`${brand.name} logo`}
+                      class='h-10 w-24 object-contain'
                       decoding='async'
                       height='40'
                       loading='lazy'
-                      src={b}
-                      style='color: transparent'
+                      src={brand.src}
+                      style='color: transparent; filter: brightness(0) saturate(100%) invert(78%) sepia(6%) saturate(209%) hue-rotate(169deg) brightness(95%) contrast(89%);'
                       width='120'
                     />
+                    <span class='text-xs font-medium'>{brand.name}</span>
                   </div>
                 ))}
               </div>
