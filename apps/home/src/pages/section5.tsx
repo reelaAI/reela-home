@@ -1,6 +1,118 @@
+const monetizationPaths = [
+  {
+    title: 'E-Commerce Sellers',
+    description: 'Avatar try-ons, unboxings, and sales demos that drive instant product conversion.',
+    icon: (
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='24'
+        height='24'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        class='h-8 w-8 text-brand'
+      >
+        <path d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z' />
+        <path d='M3.29 7 12 12l8.71-5' />
+        <path d='M12 22V12' />
+      </svg>
+    ),
+  },
+  {
+    title: 'YouTubers',
+    description: 'Faceless or avatar-hosted explainers that stay monetization-safe and binge-worthy.',
+    icon: (
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='24'
+        height='24'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        class='h-8 w-8 text-brand'
+      >
+        <rect width='20' height='14' x='2' y='5' rx='2' />
+        <path d='m10 9 5 3-5 3V9Z' />
+      </svg>
+    ),
+  },
+  {
+    title: 'Social Influencers',
+    description: 'AI-generated TikTok and Instagram clips that remix trends with signature personas.',
+    icon: (
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='24'
+        height='24'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        class='h-8 w-8 text-brand'
+      >
+        <circle cx='18' cy='15' r='3' />
+        <circle cx='6' cy='9' r='3' />
+        <path d='M9 9h8a3 3 0 0 1 3 3v3' />
+        <path d='M15 15H7a3 3 0 0 1-3-3V9' />
+      </svg>
+    ),
+  },
+  {
+    title: 'Agencies & Freelancers',
+    description: 'Deliver scalable ads, promos, and branded storytelling at client speed.',
+    icon: (
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='24'
+        height='24'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        class='h-8 w-8 text-brand'
+      >
+        <path d='M10 14 21 3' />
+        <path d='m21 3-6 18-4-8-8-4Z' />
+      </svg>
+    ),
+  },
+];
+
 const Section5 = () => {
   return (
     <>
+      <section class='bg-white py-24 px-4'>
+        <div class='container mx-auto max-w-6xl text-center'>
+          <h2 class='font-inter text-4xl font-bold md:text-6xl'>Where Creators Monetize <span class='text-brand'>with Reela</span></h2>
+          <p class='mx-auto mt-4 max-w-3xl text-lg text-gray-600 md:text-xl'>
+            Reela adapts to every creator journey — from selling products to building communities and pitching clients.
+            Choose your revenue path and let automation handle the rest.
+          </p>
+          <div class='mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4'>
+            {monetizationPaths.map((item) => (
+              <div
+                key={item.title}
+                class='flex h-full flex-col items-start rounded-2xl border border-gray-100 bg-white p-6 text-left shadow-sm transition-shadow duration-300 hover:shadow-lg'
+              >
+                <div class='mb-4 rounded-xl bg-[#FFF0F3] p-3'>{item.icon}</div>
+                <h3 class='text-xl font-bold text-gray-900'>{item.title}</h3>
+                <p class='mt-2 text-base text-gray-600'>{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <div class='container mx-auto mb-12 px-4 py-16 text-center'>
         <h2 class='font-inter text-4xl font-bold md:text-6xl'>Universal Video Capabilities</h2>
       </div>
@@ -12,19 +124,13 @@ const Section5 = () => {
                 Reela Editor - Smart, Flexible, Ready to Export
               </h2>
               <p class='mb-4 text-lg text-gray-600'>
-                Edit scenes, subtitles, voiceovers and music with Reela's intuitive timeline editor
-                — no editing experience required.
+                Edit scenes, subtitles, voiceovers and music with Reela's intuitive timeline editor — no editing experience required.
               </p>
               <p class='mb-6 text-lg text-gray-600'>
-                Export your project directly as a full video or as editable files for Premiere Pro
-                and CapCut for advanced editing.
+                Export your project directly as a full video or as editable files for Premiere Pro and CapCut for advanced editing.
               </p>
               <div class='mt-2 flex items-center gap-6'>
-                <img
-                  src='/pr.svg'
-                  alt='Adobe Premiere Pro'
-                  class='h-8 w-auto opacity-80 grayscale'
-                />
+                <img src='/pr.svg' alt='Adobe Premiere Pro' class='h-8 w-auto opacity-80 grayscale' />
                 <img
                   src='/capcut.png'
                   alt='CapCut'
@@ -73,9 +179,7 @@ const Section5 = () => {
                 </svg>
               </div>
               <h3 class='mb-2 text-xl font-bold'>Multilingual Video Support</h3>
-              <p class='text-gray-600'>
-                Create videos in over 140 languages to reach global audiences.
-              </p>
+              <p class='text-gray-600'>Create videos in over 140 languages to reach global audiences.</p>
             </div>
           </div>
           <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
@@ -125,9 +229,7 @@ const Section5 = () => {
                 </svg>
               </div>
               <h3 class='mb-2 text-xl font-bold'>Multilingual Subtitles</h3>
-              <p class='text-gray-600'>
-                Add single-language or bilingual subtitles with one click.
-              </p>
+              <p class='text-gray-600'>Add single-language or bilingual subtitles with one click.</p>
             </div>
           </div>
           <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
@@ -151,9 +253,7 @@ const Section5 = () => {
                 </svg>
               </div>
               <h3 class='mb-2 text-xl font-bold'>AI Background Music</h3>
-              <p class='text-gray-600'>
-                Generate and sync background music tailored to your video scenes.
-              </p>
+              <p class='text-gray-600'>Generate and sync background music tailored to your video scenes.</p>
             </div>
           </div>
           <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
@@ -179,9 +279,7 @@ const Section5 = () => {
                 </svg>
               </div>
               <h3 class='mb-2 text-xl font-bold'>Style Variations</h3>
-              <p class='text-gray-600'>
-                Choose from a variety of video styles to match your brand tone.
-              </p>
+              <p class='text-gray-600'>Choose from a variety of video styles to match your brand tone.</p>
             </div>
           </div>
           <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
@@ -199,15 +297,13 @@ const Section5 = () => {
                   stroke-linejoin='round'
                   class='lucide lucide-volume2 text-brand h-8 w-8'
                 >
-                  <path d='M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z'></path>
-                  <path d='M16 9a5 5 0 0 1 0 6'></path>
-                  <path d='M19.364 18.364a9 9 0 0 0 0-12.728'></path>
+                  <path d='M11 5 6 9H2v6h4l5 4V5Z'></path>
+                  <path d='M19.07 4.93a10 10 0 0 1 0 14.14'></path>
+                  <path d='M15.54 8.46a5 5 0 0 1 0 7.07'></path>
                 </svg>
               </div>
-              <h3 class='mb-2 text-xl font-bold'>AI Sound Effects</h3>
-              <p class='text-gray-600'>
-                Auto-generate sound effects that match scenes and actions.
-              </p>
+              <h3 class='mb-2 text-xl font-bold'>Voice &amp; Audio Control</h3>
+              <p class='text-gray-600'>Fine-tune voices, emphasis, and mix stems to match your brand cadence.</p>
             </div>
           </div>
         </div>

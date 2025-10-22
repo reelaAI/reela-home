@@ -11,17 +11,18 @@ const Section1 = () => {
   ];
 
   return (
-    <section class='container mx-auto px-4 py-16 text-center'>
-      <h1 class='font-inter mx-auto max-w-4xl text-5xl font-bold leading-tight tracking-tight md:text-7xl'>
-        Video Creation,
+    <section class='container mx-auto px-4 py-20 text-center'>
+      <h1 class='font-inter mx-auto max-w-5xl text-5xl font-bold leading-tight tracking-tight md:text-7xl'>
+        Scenario-Ready Video Creation,
         <span class='text-brand'> Automated.</span>
       </h1>
-      <p class='font-inter mx-auto mt-6 max-w-2xl text-xl text-gray-600'>
-        The first autonomous AI agent that turns any idea into publish-ready videos with AI visuals,
-        avatars, dubbing, and smart editing.
+      <p class='font-inter mx-auto mt-6 max-w-3xl text-xl text-gray-600'>
+        Launch product explainers, character-driven campaigns, and social drops that stay perfectly on-brand.
+        Reela now delivers identity-perfect avatars, multi-reference fidelity, and blended multimodal stories in
+        a single, automated workflow.
       </p>
       <div class='mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row'>
-        <a href='/workspace'>
+        <a href='https://app.reela.com/workspace'>
           <div class='bg-brand ring-offset-background focus-visible:ring-ring inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-full px-8 py-6 text-base font-medium text-white transition-transform hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50'>
             Create with Reela AI
             <svg
@@ -41,11 +42,9 @@ const Section1 = () => {
           </div>
         </a>
       </div>
-      <div class='mt-10 flex items-center justify-center px-4'>
+      <div class='mt-16 flex items-center justify-center px-4'>
         <div class='flex flex-wrap items-center justify-center gap-6'>
-          <p class='shrink-0 whitespace-nowrap font-medium text-gray-700'>
-            Trusted by Leading Brands
-          </p>
+          <p class='shrink-0 whitespace-nowrap font-medium text-gray-700'>Trusted by Leading Brands</p>
           <div class='hidden h-6 border-l border-gray-300 md:block'></div>
           <div class='relative max-w-[90vw] overflow-x-hidden md:max-w-2xl'>
             <div class='animate-infinite-scroll mt-10 flex w-[1000%] md:mt-0'>

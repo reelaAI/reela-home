@@ -1,99 +1,90 @@
-// You imagine it. Reela AI directs it.
-
-import VideoTab from './video-tab';
-
-const config = [
-  {
-    title: 'AI Avatar Video',
-    button: 'Create Your Avatar Video',
-    videos: [
-      {
-        title: 'AI Avatar Narration',
-        description: 'Scripted avatar videos in multiple styles and languages.',
-        src: 'https://files.reela.com/assets/videos/369886bf-8dbd-4353-b74b-a60ce6c81c86.mp4',
-      },
-      {
-        title: 'Multi-Scene & Multi-Cam',
-        description: 'Auto-switch scenes and camera angles for cinematic avatar delivery.',
-        src: 'https://files.reela.com/assets/videos/650f8889-9c4d-4653-a080-1e936d787460.mp4',
-      },
-      {
-        title: 'Multilingual Lip Sync',
-        description: 'Accurate lip sync in 140+ languages with natural expression.',
-        src: 'https://files.reela.com/assets/videos/11dc6a0b-81dc-49a9-aa53-32b00c7e2aa5.mp4',
-      },
-    ],
-  },
-  {
-    title: 'AI Video Generation',
-    button: 'Start with Your Idea',
-    videos: [
-      {
-        title: 'Creative-to-Video',
-        description: 'Turn ideas into high-quality videos with AI — no editing needed.',
-        src: 'https://files.reela.com/assets/videos/e9f9d167-97d2-436c-9c2d-088c8dd77e8f.mp4',
-      },
-      {
-        title: 'Image-Guided Product Video',
-        description: 'Upload images to create videos with accurate product visuals.',
-        src: 'https://files.reela.com/assets/videos/c0135f8f-fe66-4ae2-b189-6e20f4f58a89.mp4',
-      },
-      {
-        title: 'AI Storybook Generator',
-        description: 'Convert text into visual storybooks with voiceover.',
-        src: 'https://files.reela.com/assets/videos/ebac1bc1-96ae-41ab-87a7-6bb208eaa827.mp4',
-      },
-    ],
-  },
-  {
-    title: 'AI-Powered Video Remixes',
-    button: 'Remix Your Video with AI',
-    videos: [
-      {
-        title: 'Visual-Only Remix',
-        description:
-          'Mute original audio and recombine only the video layer — ideal for clean-cut montage creation.',
-        src: 'https://files.reela.com/assets/videos/63bf450b-a007-4de7-819e-6a443b18d394.mp4',
-      },
-      {
-        title: 'Audio-Intergrated Remix',
-        description:
-          'Remix scenes with synchronized original audio to retain voice, tone, and narrative flow.',
-        src: 'https://files.reela.com/assets/videos/765026be-861e-4de1-b1ab-fe2c1eed9b75.mp4',
-      },
-    ],
-  },
-];
-
 const Section3 = () => {
+  const comparison = [
+    {
+      label: 'Max video length',
+      reela: 'Reela 2.0 Pro delivers scenario-ready stories up to 10 minutes long.',
+      sora: 'Sora outputs top out at 25 seconds per render.',
+    },
+    {
+      label: 'Character fidelity',
+      reela: 'Identity-perfect avatars and multi-character consistency across every shot.',
+      sora: 'Single-subject focus with limited control over recurring talent.',
+    },
+    {
+      label: 'Creative inventory',
+      reela: 'Hundreds of ready-to-cast virtual humans and branded personas.',
+      sora: 'Requires building your own characters from scratch.',
+    },
+    {
+      label: 'Production flexibility',
+      reela: 'Blend AI footage, virtual humans, remix clips, and product renders in one workflow.',
+      sora: 'Generates standalone clips without multimodal layering.',
+    },
+  ];
+
   return (
-    <>
-      <div class='container mx-auto mb-12 px-4 py-16 text-center'>
-        <h2 class='font-inter text-4xl font-bold md:text-6xl'>
-          You imagine it.
-          <span class='text-brand'> Reela AI </span>
-          directs it.
-        </h2>
-      </div>
-      <section class='container mx-auto px-4'>
-        {config.map((section) => (
-          <>
-            <div
-              class='mx-auto max-w-[1200px] overflow-hidden rounded-3xl'
-              style='background: linear-gradient(to bottom left, #ffeef1, #f5f7fa)'
+    <section class='w-full bg-white py-24 px-4'>
+      <div class='mx-auto flex max-w-6xl flex-col gap-12 rounded-[32px] bg-gradient-to-br from-white via-[#fff7fa] to-[#fef0f4] p-10 shadow-xl md:flex-row md:items-center md:p-16'>
+        <div class='flex-1 text-left'>
+          <p class='font-semibold uppercase tracking-[0.2em] text-brand'>New in Reela</p>
+          <h2 class='font-inter mt-4 text-4xl font-bold md:text-6xl'>
+            Generate Sora-length stories
+            <span class='text-brand'> with Reela automation</span>
+          </h2>
+          <p class='mt-6 text-lg text-gray-600 md:text-xl'>
+            Connect the latest Sora model to Reela to spin up cinematic videos that run for a minute or more.
+            Start with your storyboard, keep avatars and products perfectly consistent, and let Reela stitch the
+            full sequence while Sora handles long-form visuals.
+          </p>
+          <div class='mt-8 grid gap-4 rounded-2xl bg-white/80 p-6 shadow-md'>
+            {comparison.map((item) => (
+              <div class='grid gap-4 border-b border-gray-100 pb-4 last:border-b-0 last:pb-0 md:grid-cols-2' key={item.label}>
+                <div>
+                  <p class='text-sm font-semibold uppercase tracking-wide text-gray-500'>{item.label}</p>
+                  <p class='mt-2 text-base font-semibold text-gray-900'>Reela 2.0 Pro</p>
+                  <p class='text-gray-600'>{item.reela}</p>
+                </div>
+                <div class='rounded-xl bg-gray-50 p-4'>
+                  <p class='text-base font-semibold text-gray-900'>Sora</p>
+                  <p class='text-gray-600'>{item.sora}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <a href='https://app.reela.com/workspace' class='mt-10 inline-flex items-center rounded-full bg-brand px-6 py-3 text-lg font-medium text-white transition-transform hover:scale-105'>
+            Launch a Reela + Sora project
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='20'
+              height='20'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              class='ml-2 h-5 w-5'
             >
-              <VideoTab
-                tabTitle={section.title}
-                tabButton={section.button}
-                tabButtonSrc={'/workspace'}
-                videos={section.videos}
-              />
-            </div>
-            <div class='h-[40px]'></div>
-          </>
-        ))}
-      </section>
-    </>
+              <path d='M5 12h14'></path>
+              <path d='m12 5 7 7-7 7'></path>
+            </svg>
+          </a>
+        </div>
+        <div class='flex-1 rounded-3xl bg-black/90 p-1 shadow-2xl'>
+          <div class='relative overflow-hidden rounded-[28px] bg-black'>
+            <div class='absolute inset-0 bg-gradient-to-b from-white/5 via-white/0 to-black/50'></div>
+            <img
+              src='https://files.reela.com/assets/images/sora-showcase-frame.png'
+              alt='Storyboard preview showing Reela 2.0 Pro directing a Sora render sequence'
+              class='h-full w-full object-cover opacity-90'
+            />
+          </div>
+          <p class='mt-6 text-center text-sm font-medium uppercase tracking-[0.3em] text-white/70'>
+            Seamless handoff between Reela and Sora
+          </p>
+        </div>
+      </div>
+    </section>
   );
 };
 

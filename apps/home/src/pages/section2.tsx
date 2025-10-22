@@ -6,27 +6,27 @@ const Section2 = () => {
   return (
     <section className='w-full bg-gradient-to-b from-gray-50 to-white py-24 px-4'>
       <div className='max-w-7xl mx-auto'>
-        <h2 className='text-4xl md:text-5xl font-bold text-center mb-4'>
+        <h2 className='text-4xl md:text-6xl font-bold text-center mb-6'>
           Reela Is Built for <span className='text-brand'>Speed & Results</span>
         </h2>
         <p className='text-xl text-gray-600 text-center mb-20 max-w-4xl mx-auto'>
-          Unlock fully-automated video creation — zero editing, zero timelines, zero hassle.
+          Unlock fully-automated video creation that keeps every hero, product, and storyline on brand — zero editing, zero timelines, zero hassle.
         </p>
 
         <div className='grid md:grid-cols-3 gap-10 max-w-6xl mx-auto'>
           <FeatureCard
             title='5-Minute Video Creation'
-            description='Just input your script or idea, and Reela delivers a publish-ready video in 5 minutes flat.'
+            description="Drop in your script or product brief and get a finished video in under five minutes — now with perfect avatar and product identity matching for every scene."
             icon='zap'
           />
           <FeatureCard
             title='No Editing, No Timeline'
-            description='Forget the timeline. No trimming, cutting, or stitching required. Reela assembles your entire video, automatically.'
+            description='Feed Reela multiple character or product references and it handles multi-shot continuity, so campaign series stay visually aligned without touching a timeline.'
             icon='scissors'
           />
           <FeatureCard
             title='All-in-One, Ready-to-Share Videos'
-            description='From avatars and voiceovers to scenes, subtitles, pacing, and B-roll — Reela handles it all, delivering a complete, polished video.'
+            description='Combine virtual humans, AI-generated visuals, and remix footage in one pass. Reela balances voiceover, subtitles, pacing, and B-roll for polished, multi-modal delivery.'
             icon='brain'
           />
         </div>
