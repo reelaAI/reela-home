@@ -57,6 +57,16 @@ const testimonials: Testimonial[] = [
   },
   {
     category: 'CREATOR',
+    avatar: 'https://files.reela.com/assets/images/a5.png',
+    quote:
+      'I used to spend a full day editing each TikTok video — now Reela lets me finish in just 10 minutes.',
+    highlight:
+      'My latest video hit over 1M views, and I’m creating faster than ever before.',
+    role: 'Lena — TikTok Creator',
+    video: 'https://files.reela.com/assets/videos/a5.mp4',
+  },
+  {
+    category: 'CREATOR',
     avatar: 'https://files.reela.com/assets/images/a3.png',
     quote:
       'Reela turns short scripts into full animated Shorts in minutes — smooth, cinematic, and ready to post.',
