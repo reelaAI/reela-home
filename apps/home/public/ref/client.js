@@ -301,6 +301,7 @@ function initTestimonialCarousel() {
     const textPanelClassMap = new Map();
     const quoteClassMap = new Map();
     const highlightClassMap = new Map();
+    const avatarClassMap = new Map();
 
     cards.forEach((card) => {
       classMap.set(card, {
@@ -358,6 +359,18 @@ function initTestimonialCarousel() {
           inactive: highlight.dataset.highlightClassInactive || '',
         });
       }
+
+      const avatar = card.querySelector('[data-avatar-container]');
+      if (avatar) {
+        avatarClassMap.set(card, {
+          element: avatar,
+          base: avatar.dataset.avatarBaseClass || '',
+          active: avatar.dataset.avatarClassActive || '',
+          prev: avatar.dataset.avatarClassPrev || '',
+          next: avatar.dataset.avatarClassNext || '',
+          inactive: avatar.dataset.avatarClassInactive || '',
+        });
+      }
     });
 
     const total = cards.length;
@@ -406,6 +419,11 @@ function initTestimonialCarousel() {
       const highlightData = highlightClassMap.get(card);
       if (highlightData) {
         highlightData.element.className = `${highlightData.base} ${highlightData[position] || ''}`.trim();
+      }
+
+      const avatarData = avatarClassMap.get(card);
+      if (avatarData) {
+        avatarData.element.className = `${avatarData.base} ${avatarData[position] || ''}`.trim();
       }
 
       const soundToggle = card.querySelector('[data-sound-toggle]');

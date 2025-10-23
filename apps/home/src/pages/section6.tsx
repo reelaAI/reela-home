@@ -108,7 +108,7 @@ const positionClassMap: Record<CardPosition, string> = {
 };
 
 const baseVideoClasses =
-  'relative mx-auto aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] sm:w-28 md:w-32 lg:mx-0 lg:w-36 lg:self-start xl:w-40';
+  'relative mx-auto aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] origin-top-left sm:w-28 md:w-32 lg:mx-0 lg:w-36 lg:self-start xl:w-40';
 
 const textPanelBaseClasses =
   'flex flex-1 flex-col gap-3 text-left lg:gap-4 lg:max-w-[260px]';
@@ -140,9 +140,9 @@ const highlightStateClassMap: Record<CardPosition, string> = {
 
 const videoPositionClassMap: Record<CardPosition, string> = {
   active: 'scale-100 lg:mr-8',
-  prev: 'scale-75 lg:mr-4',
-  next: 'scale-75 lg:mr-4',
-  inactive: 'scale-75 lg:mr-4',
+  prev: 'scale-75 lg:mr-3',
+  next: 'scale-75 lg:mr-3',
+  inactive: 'scale-75 lg:mr-3',
 };
 
 const avatarBaseClasses =
