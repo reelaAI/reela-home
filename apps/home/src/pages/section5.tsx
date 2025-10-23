@@ -58,9 +58,8 @@ const Section5 = () => {
             <div class='flex flex-col items-start'>
               <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
                 <Icon
-                  name='globe'
-                  class='lucide lucide-globe text-brand h-8 w-8'
-                  size={32}
+                  name='api'
+                  className='lucide text-brand h-8 w-8'
                 />
               </div>
               <h3 class='mb-2 text-xl font-bold'>Multilingual Video Support</h3>
@@ -73,9 +72,8 @@ const Section5 = () => {
             <div class='flex flex-col items-start'>
               <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
                 <Icon
-                  name='ratio'
-                  class='lucide lucide-ratio text-brand h-8 w-8'
-                  size={32}
+                  name='template'
+                  className='lucide text-brand h-8 w-8'
                 />
               </div>
               <h3 class='mb-2 text-xl font-bold'>Flexible Aspect Ratios</h3>
@@ -86,9 +84,8 @@ const Section5 = () => {
             <div class='flex flex-col items-start'>
               <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
                 <Icon
-                  name='languages'
-                  class='lucide lucide-languages text-brand h-8 w-8'
-                  size={32}
+                  name='remix'
+                  className='lucide text-brand h-8 w-8'
                 />
               </div>
               <h3 class='mb-2 text-xl font-bold'>Multilingual Subtitles</h3>
@@ -101,9 +98,8 @@ const Section5 = () => {
             <div class='flex flex-col items-start'>
               <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
                 <Icon
-                  name='music'
-                  class='lucide lucide-music text-brand h-8 w-8'
-                  size={32}
+                  name='play'
+                  className='lucide text-brand h-8 w-8'
                 />
               </div>
               <h3 class='mb-2 text-xl font-bold'>AI Background Music</h3>
@@ -116,9 +112,8 @@ const Section5 = () => {
             <div class='flex flex-col items-start'>
               <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
                 <Icon
-                  name='palette'
-                  class='lucide lucide-palette text-brand h-8 w-8'
-                  size={32}
+                  name='star'
+                  className='lucide text-brand h-8 w-8'
                 />
               </div>
               <h3 class='mb-2 text-xl font-bold'>Style Variations</h3>
@@ -131,9 +126,8 @@ const Section5 = () => {
             <div class='flex flex-col items-start'>
               <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
                 <Icon
-                  name='volume-2'
-                  class='lucide lucide-volume2 text-brand h-8 w-8'
-                  size={32}
+                  name='volume'
+                  className='lucide text-brand h-8 w-8'
                 />
               </div>
               <h3 class='mb-2 text-xl font-bold'>AI Sound Effects</h3>

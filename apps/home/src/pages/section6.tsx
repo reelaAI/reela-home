@@ -192,14 +192,12 @@ const Section6 = () => {
                       aria-label='Toggle sound'
                     >
                       <Icon
-                        name='volume-2'
-                        class='icon-sound-on hidden h-4 w-4'
-                        size={16}
+                        name='volume'
+                        className='icon-sound-on hidden h-4 w-4'
                       />
                       <Icon
-                        name='volume-x'
-                        class='icon-sound-off h-4 w-4'
-                        size={16}
+                        name='mute'
+                        className='icon-sound-off h-4 w-4'
                       />
                     </button>
                   </div>
@@ -283,7 +281,7 @@ const Section6 = () => {
             data-carousel-prev=''
             aria-label='Show previous testimonial'
           >
-            <Icon name='chevron-left' class='h-5 w-5' size={20} />
+            <Icon name='arrowRight' className='h-5 w-5 -scale-x-100' />
           </button>
           <button
             type='button'
@@ -291,7 +289,7 @@ const Section6 = () => {
             data-carousel-next=''
             aria-label='Show next testimonial'
           >
-            <Icon name='chevron-right' class='h-5 w-5' size={20} />
+            <Icon name='arrowRight' className='h-5 w-5' />
           </button>
         </div>
       </div>

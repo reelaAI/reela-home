@@ -1,7 +1,8 @@
 // Reela Is Built for Speed & Results
 
 import { Icon } from '../components/Icon';
-import type { IconName } from '../components/Icon';
+
+type IconName = Parameters<typeof Icon>[0]['name'];
 import { cn } from '../utils/cn';
 
 const Section2 = () => {
@@ -20,22 +21,22 @@ const Section2 = () => {
           <FeatureCard
             title='Minutes to Full Videos'
             description='From prompt to polished video in minutes — no setup, no editing.'
-            icon='timer'
+            icon='video'
           />
           <FeatureCard
             title='AI Avatars that Speak and Sell'
             description='Branded hosts in any language, with voice and style that stay consistent.'
-            icon='sparkles'
+            icon='avatar'
           />
           <FeatureCard
             title='Product-Consistent Generation'
             description='Keep every color, texture, and detail true to your product visuals.'
-            icon='boxes'
+            icon='template'
           />
           <FeatureCard
             title='Multi-Reference & Multimodal Creation'
             description='Combine real footage, AI visuals, and reference images with perfect continuity.'
-            icon='layers'
+            icon='remix'
           />
         </div>
       </div>
@@ -70,7 +71,7 @@ function FeatureCard({
       <div className='relative z-10'>
         <div className='flex flex-col items-center text-center space-y-8'>
           <div className='w-24 h-24 bg-brand rounded-3xl flex items-center justify-center text-white group-hover:scale-105 transition-all duration-500 shadow-xl'>
-            <Icon name={icon} size={48} class='size-12 text-white' />
+            <Icon name={icon} className='size-12 text-white' />
           </div>
 
           <div className='space-y-4'>
