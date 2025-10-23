@@ -81,12 +81,12 @@ const testimonials: Testimonial[] = [
   },
   {
     category: 'E-COMMERCE',
-    avatar: 'https://files.reela.com/assets/images/a6.png',
+    avatar: 'https://files.reela.com/assets/images/a8.png',
     quote:
       'Reelaを使えば、売上につながる商品動画を1時間に10本以上も作れます。どの動画も一貫したクオリティで仕上がります。',
     highlight: '導入からわずか2週間で売上が3倍に。新しい動画を投稿するたびに確実に成果が出ています。',
     role: 'Mia — TikTokセラー',
-    video: 'https://files.reela.com/assets/videos/a6.mp4',
+    video: 'https://files.reela.com/assets/videos/a8.mp4',
   },
   {
     category: 'FITNESS',
