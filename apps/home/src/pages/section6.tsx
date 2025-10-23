@@ -1,15 +1,30 @@
 // See What Creators Made with Reela
 
+import type { JSX } from 'hono/jsx';
+
 import { Icon } from '../components/Icon';
 
-const testimonials = [
+type Testimonial = {
+  category: string;
+  avatar: string;
+  quote: string;
+  highlight: JSX.Element;
+  role: string;
+  video: string;
+};
+
+const testimonials: Testimonial[] = [
   {
     category: 'REAL ESTATE',
     avatar: 'https://files.reela.com/assets/images/a1.png',
     quote:
       'Reela lets me create listing videos in just 10 minutes — fast, clear, and consistent with my brand.',
-    highlight:
-      'Property inquiries tripled and video views are up 420%. What used to take a team now takes minutes.',
+    highlight: (
+      <>
+        <strong>Property inquiries tripled</strong> and video views are up <strong>420%</strong>.{' '}
+        <strong>What used to take a team now takes minutes.</strong>
+      </>
+    ),
     role: 'Alexis — Realtor',
     video: 'https://files.reela.com/assets/videos/a1.mp4',
   },
@@ -18,8 +33,11 @@ const testimonials = [
     avatar: 'https://files.reela.com/assets/images/a2.png',
     quote:
       'Reela makes stylish try-on videos for every drop in minutes, keeping our visuals consistent and on-brand.',
-    highlight:
-      'Ad CTR hit 8.2% and monthly GMV grew 3.6× — no production team needed.',
+    highlight: (
+      <>
+        <strong>Ad CTR hit 8.2%</strong> and monthly GMV grew <strong>3.6×</strong> — no production team needed.
+      </>
+    ),
     role: 'Emma — Fashion Seller',
     video: 'https://files.reela.com/assets/videos/a2.mp4',
   },
@@ -28,8 +46,12 @@ const testimonials = [
     avatar: 'https://files.reela.com/assets/images/a4.png',
     quote:
       'Reela lets me create full ad samples in just 5 minutes — I can deliver a complete pitch within an hour.',
-    highlight:
-      'Clients are amazed by the speed and quality. Reela turned my workflow into pure creative efficiency.',
+    highlight: (
+      <>
+        <strong>Clients are amazed by the speed and quality.</strong> Reela turned my workflow into{' '}
+        <strong>pure creative efficiency.</strong>
+      </>
+    ),
     role: 'Sophie — Ad Producer',
     video: 'https://files.reela.com/assets/videos/a4.mp4',
   },
@@ -38,8 +60,12 @@ const testimonials = [
     avatar: 'https://files.reela.com/assets/images/a3.png',
     quote:
       'Reela turns short scripts into full animated Shorts in minutes — smooth, cinematic, and ready to post.',
-    highlight:
-      'Weekly views top 400K and subscribers doubled in a month — all powered by Reela.',
+    highlight: (
+      <>
+        <strong>Weekly views top 400K</strong> and <strong>subscribers doubled</strong> in a month — all powered by
+        Reela.
+      </>
+    ),
     role: 'Jason — YouTuber',
     video: 'https://files.reela.com/assets/videos/a3.mp4',
   },
@@ -69,29 +95,29 @@ const getCardPosition = (index: number, activeIndex: number, total: number): Car
 };
 
 const baseCardClasses =
-  'testimonial-card group relative flex w-full max-w-[960px] flex-col gap-6 overflow-hidden rounded-3xl bg-white/95 p-6 shadow-md transition-[transform,box-shadow,opacity,margin] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:flex-row lg:items-start lg:gap-8 lg:p-8';
+  'testimonial-card group relative flex w-full max-w-[960px] flex-col gap-4 overflow-hidden rounded-3xl bg-white/95 p-5 shadow-md transition-[transform,box-shadow,opacity,margin] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:flex-row lg:items-start lg:gap-6 lg:p-5';
 
 const positionClassMap: Record<CardPosition, string> = {
   active:
-    'z-30 shadow-2xl ring-2 ring-brand/10 lg:-mx-16 lg:-mt-12 lg:flex lg:scale-[1.08]',
+    'z-30 gap-6 p-6 shadow-2xl ring-2 ring-brand/10 lg:-mx-16 lg:flex lg:items-center lg:gap-8 lg:p-8',
   prev:
-    'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-sm lg:mt-8 lg:scale-90 lg:opacity-60 lg:z-10',
+    'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-sm lg:items-center lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
   next:
-    'hidden opacity-0 lg:pointer-events-auto lg:-ml-10 lg:flex lg:max-w-sm lg:mt-8 lg:scale-90 lg:opacity-60 lg:z-10',
-  inactive: 'hidden opacity-0',
+    'hidden opacity-0 lg:pointer-events-auto lg:-ml-10 lg:flex lg:max-w-sm lg:items-center lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
+  inactive: 'hidden opacity-0 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
 };
 
 const baseVideoClasses =
-  'relative mx-auto aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] sm:w-28 md:w-32 lg:mx-0 lg:w-36 lg:self-start xl:w-40';
+  'relative mx-auto aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl transition-[transform,width] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] origin-top-left sm:w-28 md:w-32 lg:mx-0 lg:w-36 lg:self-start xl:w-40';
 
 const textPanelBaseClasses =
   'flex flex-1 flex-col gap-3 text-left lg:gap-4 lg:max-w-[260px]';
 
 const textPanelStateClassMap: Record<CardPosition, string> = {
   active: 'lg:max-w-[420px]',
-  prev: 'lg:max-w-[280px]',
-  next: 'lg:max-w-[280px]',
-  inactive: '',
+  prev: 'lg:max-w-[280px] !gap-2 lg:!gap-2.5',
+  next: 'lg:max-w-[280px] !gap-2 lg:!gap-2.5',
+  inactive: '!gap-2 lg:!gap-2.5',
 };
 
 const quoteBaseClasses = 'text-[11px] leading-relaxed text-slate-700';
@@ -103,7 +129,7 @@ const quoteStateClassMap: Record<CardPosition, string> = {
   inactive: '',
 };
 
-const highlightBaseClasses = 'text-[10px] text-brand';
+const highlightBaseClasses = 'text-[10px] text-brand font-medium';
 
 const highlightStateClassMap: Record<CardPosition, string> = {
   active: 'sm:text-xs md:text-sm',
@@ -113,10 +139,20 @@ const highlightStateClassMap: Record<CardPosition, string> = {
 };
 
 const videoPositionClassMap: Record<CardPosition, string> = {
-  active: 'scale-100',
-  prev: 'scale-75',
-  next: 'scale-75',
-  inactive: 'scale-75',
+  active: 'lg:mr-8',
+  prev: '!w-20 sm:!w-24 md:!w-28 lg:mr-2 lg:!w-28 xl:!w-32',
+  next: '!w-20 sm:!w-24 md:!w-28 lg:mr-2 lg:!w-28 xl:!w-32',
+  inactive: '!w-20 sm:!w-24 md:!w-28 lg:mr-2 lg:!w-28 xl:!w-32',
+};
+
+const avatarBaseClasses =
+  'border-brand relative shrink-0 overflow-hidden rounded-full border-2 shadow-md transition-[width,height] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:ml-auto';
+
+const avatarStateClassMap: Record<CardPosition, string> = {
+  active: 'h-16 w-16 sm:h-20 sm:w-20',
+  prev: 'h-10 w-10 sm:h-12 sm:w-12',
+  next: 'h-10 w-10 sm:h-12 sm:w-12',
+  inactive: 'h-10 w-10 sm:h-12 sm:w-12',
 };
 
 const Section6 = () => {
@@ -128,7 +164,7 @@ const Section6 = () => {
         <h2 class='font-inter text-4xl font-bold md:text-6xl'>
           See What <span class='text-brand'>Creators</span> Made with <span class='text-brand'>Reela</span>
         </h2>
-        <p class='mx-auto mt-2 max-w-2xl text-sm text-slate-600 md:text-base'>
+        <p class='mx-auto mt-2 max-w-2xl text-base text-slate-600 md:text-lg'>
           Real creators, real results — all made in minutes with Reela’s AI studio.
         </p>
       </div>
@@ -138,11 +174,11 @@ const Section6 = () => {
           data-testimonial-carousel=''
           data-interval='5000'
         >
-          <div class='flex items-stretch justify-center gap-4 lg:items-end lg:gap-0'>
+          <div class='flex items-stretch justify-center gap-4 lg:items-center lg:gap-0'>
             {testimonials.map((testimonial, index) => {
               const position = getCardPosition(index, initialActiveIndex, totalTestimonials);
               const cardClasses = `${baseCardClasses} ${positionClassMap[position]}`;
-              const videoClasses = `${baseVideoClasses} ${videoPositionClassMap[position]}`;
+              const videoClasses = baseVideoClasses;
 
               return (
                 <article
@@ -159,9 +195,9 @@ const Section6 = () => {
                   data-video-card={position === 'active' ? '' : undefined}
                 >
                   <div
-                    class={`${videoClasses} lg:mr-8`}
+                    class={`${videoClasses} ${videoPositionClassMap[position]}`}
                     data-video-container=''
-                    data-video-base-class={`${baseVideoClasses} lg:mr-8`}
+                    data-video-base-class={baseVideoClasses}
                     data-video-class-active={videoPositionClassMap.active}
                     data-video-class-prev={videoPositionClassMap.prev}
                     data-video-class-next={videoPositionClassMap.next}
@@ -216,7 +252,15 @@ const Section6 = () => {
                       <span class='inline-block rounded-full bg-black px-3 py-1 text-xs font-semibold text-white lg:text-[11px]'>
                         {testimonial.category}
                       </span>
-                      <div class='border-brand relative h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 shadow-md lg:ml-auto'>
+                      <div
+                        class={`${avatarBaseClasses} ${avatarStateClassMap[position]}`}
+                        data-avatar-container=''
+                        data-avatar-base-class={avatarBaseClasses}
+                        data-avatar-class-active={avatarStateClassMap.active}
+                        data-avatar-class-prev={avatarStateClassMap.prev}
+                        data-avatar-class-next={avatarStateClassMap.next}
+                        data-avatar-class-inactive={avatarStateClassMap.inactive}
+                      >
                         <img
                           alt={`${testimonial.role} avatar`}
                           loading='lazy'
