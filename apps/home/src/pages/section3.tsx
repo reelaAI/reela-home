@@ -1,5 +1,3 @@
-import { ArrowRight } from 'lucide-react';
-
 const Section3 = () => {
   return (
     <>
@@ -51,7 +49,21 @@ const Section3 = () => {
             <a href='https://app.reela.com/workspace' target='_blank' rel='noopener noreferrer'>
               <button class='mt-6 inline-flex items-center rounded-full bg-brand px-7 py-3 text-sm font-semibold text-white transition-transform hover:scale-105'>
                 Launch a Sora Project
-                <ArrowRight className='ml-2 h-5 w-5' strokeWidth={1.75} />
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='20'
+                  height='20'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  stroke='currentColor'
+                  stroke-width='2'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  class='ml-2 h-5 w-5'
+                >
+                  <path d='M5 12h14'></path>
+                  <path d='m12 5 7 7-7 7'></path>
+                </svg>
               </button>
             </a>
           </div>

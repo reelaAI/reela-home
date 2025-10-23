@@ -1,4 +1,3 @@
-import { ChevronDown } from 'lucide-react';
 import { Fragment } from 'hono/jsx';
 
 export const products = [
@@ -125,7 +124,20 @@ function DropDown({
     >
       <summary class='flex items-center gap-1'>
         <div>{title}</div>
-        <ChevronDown className='h-4 w-4 transition-transform' strokeWidth={1.75} />
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='24'
+          height='24'
+          viewBox='0 0 24 24'
+          fill='none'
+          stroke='currentColor'
+          stroke-width='2'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          class='lucide lucide-chevron-down h-4 w-4 transition-transform'
+        >
+          <path d='m6 9 6 6 6-6'></path>
+        </svg>
       </summary>
       <ul class='menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm'>
         {items.map((item) => (

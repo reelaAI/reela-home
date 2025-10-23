@@ -1,25 +1,91 @@
-import { Building2, Share2, ShoppingCart, Youtube } from 'lucide-react';
-
 const monetizationPaths = [
   {
     title: 'E-commerce Stores',
     description: 'Create persuasive product videos for Amazon, Shopify, and TikTok Shop to boost clicks and conversions.',
-    icon: <ShoppingCart className='h-7 w-7 text-brand' strokeWidth={1.75} />,
+    icon: (
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='28'
+        height='28'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        class='text-brand'
+      >
+        <path d='M5.5 7h13l-1.5 9h-10z'></path>
+        <path d='M7 7l-1-4H4'></path>
+        <circle cx='9' cy='20' r='1'></circle>
+        <circle cx='17' cy='20' r='1'></circle>
+      </svg>
+    ),
   },
   {
     title: 'YouTube Channels',
     description: 'Generate long-form explainers, reviews, and educational content that grow your audience and ad revenue.',
-    icon: <Youtube className='h-7 w-7 text-brand' strokeWidth={1.75} />,
+    icon: (
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='28'
+        height='28'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        class='text-brand'
+      >
+        <path d='m10 15 5.19-3L10 9v6Z'></path>
+        <rect width='20' height='14' x='2' y='5' rx='2'></rect>
+      </svg>
+    ),
   },
   {
     title: 'Social Media Platforms',
     description: 'Produce short, scroll-stopping videos for TikTok and Instagram to attract followers and sponsorships.',
-    icon: <Share2 className='h-7 w-7 text-brand' strokeWidth={1.75} />,
+    icon: (
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='28'
+        height='28'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        class='text-brand'
+      >
+        <path d='M16 3h5v5'></path>
+        <path d='M8 21H3v-5'></path>
+        <path d='M16 8 5 19'></path>
+      </svg>
+    ),
   },
   {
     title: 'Agencies & Enterprises',
     description: 'Deliver ad-ready videos at scale for clients — faster, cheaper, and more consistent than traditional production.',
-    icon: <Building2 className='h-7 w-7 text-brand' strokeWidth={1.75} />,
+    icon: (
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='28'
+        height='28'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        class='text-brand'
+      >
+        <path d='M4 4h16v16H4z'></path>
+        <path d='M9 4v16'></path>
+        <path d='m15 10-2 2 2 2'></path>
+      </svg>
+    ),
   },
 ];
 
