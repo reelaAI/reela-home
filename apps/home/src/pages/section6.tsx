@@ -1,5 +1,8 @@
 // A new vision for video creation
 
+const VIDEO_PLACEHOLDER =
+  'https://files.reela.com/assets/videos/TalkingAvatar-Ads-1.mp4';
+
 const testimonials = [
   {
     category: 'E-COMMERCE',
@@ -8,6 +11,7 @@ const testimonials = [
       'Reela lets us produce localized product videos for 10+ markets weekly — no agency needed.',
     highlight: 'Time-to-market is 70% faster and ad CTR is up by 35%.',
     role: 'Digital Marketing Manager @ E-commerce Brand',
+    video: VIDEO_PLACEHOLDER,
   },
   {
     category: 'EDUCATION',
@@ -16,6 +20,7 @@ const testimonials = [
       'With AI avatars and multilingual support, I now teach students in three languages without recording anything.',
     highlight: 'Reela became my full production team — and my class went global.',
     role: 'Online Course Creator',
+    video: VIDEO_PLACEHOLDER,
   },
   {
     category: 'SOCIAL MEDIA',
@@ -24,6 +29,7 @@ const testimonials = [
       "I paste a link, remix it, and drop — that's how I post daily with AI B-roll magic.",
     highlight: 'Reela keeps my content flow fast, fresh, and monetizable.',
     role: 'TikTok Content Creator',
+    video: VIDEO_PLACEHOLDER,
   },
   {
     category: 'CREATIVE',
@@ -32,6 +38,7 @@ const testimonials = [
       "Reela's AI storyboard and scene builder turns rough ideas into full visual drafts in 10 minutes.",
     highlight: 'We now prototype campaigns without touching a camera.',
     role: 'Creative Director @ Media Studio',
+    video: VIDEO_PLACEHOLDER,
   },
   {
     category: 'CONTENT CREATOR',
@@ -40,6 +47,7 @@ const testimonials = [
       "I turned my blogs into videos with Reela's voiceover and illustration modes — my channel exploded.",
     highlight: 'It saved me 15+ hours per week and tripled my views.',
     role: 'Health & Wellness Influencer',
+    video: VIDEO_PLACEHOLDER,
   },
   {
     category: 'RETAIL',
@@ -48,6 +56,7 @@ const testimonials = [
       'Reela maps every product angle and character note into the script, so our catalog videos feel shot on location.',
     highlight: 'Multi-reference alignment keeps 40+ SKUs pixel-perfect across variants.',
     role: 'Head of Content @ Retail Marketplace',
+    video: VIDEO_PLACEHOLDER,
   },
   {
     category: 'AGENCY',
@@ -56,6 +65,7 @@ const testimonials = [
       'We storyboard hero shots, drop in AI B-roll, and Reela blends avatars with graphics without leaving the timeline.',
     highlight: 'Mixed-media sequences now take hours, not days.',
     role: 'Executive Producer @ Creative Agency',
+    video: VIDEO_PLACEHOLDER,
   },
 ];
 
@@ -79,6 +89,17 @@ const Section6 = () => {
                 key={testimonial.quote}
                 class='testimonial-card w-full flex-shrink-0 snap-start rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]'
               >
+                <div class='mb-6 overflow-hidden rounded-lg bg-black' style='aspect-ratio: 9 / 16;'>
+                  <video
+                    src={testimonial.video}
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    controls
+                    class='h-full w-full object-cover'
+                  />
+                </div>
                 <div class='mb-6 flex items-start justify-between'>
                   <span class='inline-block rounded-full bg-black px-3 py-1 text-xs font-semibold text-white'>
                     {testimonial.category}
