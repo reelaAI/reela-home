@@ -93,7 +93,7 @@ const getCardPosition = (index: number, activeIndex: number, total: number): Car
 };
 
 const baseCardClasses =
-  'testimonial-card group relative flex w-full max-w-xl flex-col gap-6 rounded-3xl bg-white/95 p-6 shadow-md transition-[transform,box-shadow,opacity,margin] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:p-8';
+  'testimonial-card group relative flex w-full max-w-4xl flex-col gap-6 rounded-3xl bg-white/95 p-6 shadow-md transition-[transform,box-shadow,opacity,margin] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:flex-row lg:items-stretch lg:gap-10 lg:p-8';
 
 const positionClassMap: Record<CardPosition, string> = {
   active:
@@ -106,7 +106,7 @@ const positionClassMap: Record<CardPosition, string> = {
 };
 
 const baseVideoClasses =
-  'relative aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl bg-black transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] sm:w-28 md:w-36 lg:w-44 xl:w-52';
+  'relative mx-auto aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl bg-black transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] sm:w-28 md:w-32 lg:mx-0 lg:w-36 xl:w-40';
 
 const videoPositionClassMap: Record<CardPosition, string> = {
   active: 'scale-100',
@@ -153,9 +153,9 @@ const Section6 = () => {
                   data-video-card={position === 'active' ? '' : undefined}
                 >
                   <div
-                    class={`${videoClasses} lg:mx-auto`}
+                    class={`${videoClasses} lg:mr-10`}
                     data-video-container=''
-                    data-video-base-class={`${baseVideoClasses} lg:mx-auto`}
+                    data-video-base-class={`${baseVideoClasses} lg:mr-10`}
                     data-video-class-active={videoPositionClassMap.active}
                     data-video-class-prev={videoPositionClassMap.prev}
                     data-video-class-next={videoPositionClassMap.next}
@@ -214,12 +214,12 @@ const Section6 = () => {
                       </svg>
                     </button>
                   </div>
-                  <div class='flex flex-1 flex-col gap-4 text-left lg:text-center'>
-                    <div class='flex items-start justify-between gap-4 lg:flex-col lg:items-center'>
+                  <div class='flex flex-1 flex-col gap-4 text-left lg:gap-6'>
+                    <div class='flex flex-col items-start gap-4 lg:flex-row lg:items-center lg:justify-between'>
                       <span class='inline-block rounded-full bg-black px-3 py-1 text-xs font-semibold text-white lg:text-[11px]'>
                         {testimonial.category}
                       </span>
-                      <div class='border-brand relative h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 shadow-md'>
+                      <div class='border-brand relative h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 shadow-md lg:ml-auto'>
                         <img
                           alt={`${testimonial.role} avatar`}
                           loading='lazy'
@@ -240,11 +240,11 @@ const Section6 = () => {
                         />
                       </div>
                     </div>
-                    <div class='space-y-3 text-left lg:text-center'>
+                    <div class='space-y-3 text-left'>
                       <p class='text-sm text-slate-700 md:text-base'>"{testimonial.quote}"</p>
                       <p class='text-sm text-brand'>{testimonial.highlight}</p>
                     </div>
-                    <div class='mt-auto flex justify-start lg:justify-center'>
+                    <div class='mt-auto flex justify-start'>
                       <p class='inline-block rounded-full bg-slate-900/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white'>
                         {testimonial.role}
                       </p>
