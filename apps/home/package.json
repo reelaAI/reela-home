@@ -13,6 +13,7 @@
     "@dotenvx/dotenvx": "catalog:",
     "@hono/node-server": "catalog:",
     "clsx": "catalog:",
+    "lucide-react": "catalog:",
     "hono": "catalog:",
     "tailwind-merge": "catalog:"
   },

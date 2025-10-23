@@ -1,5 +1,7 @@
 // A new vision for video creation
 
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
 const testimonials = [
   {
     category: 'E-COMMERCE',
@@ -121,20 +123,7 @@ const Section6 = () => {
             aria-label='Scroll left'
             onclick="horizontalScroll(this.parentElement, 'left')"
           >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='24'
-              height='24'
-              viewBox='0 0 24 24'
-              fill='none'
-              stroke='currentColor'
-              stroke-width='2'
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              class='lucide lucide-chevron-left h-6 w-6 text-gray-700'
-            >
-              <path d='m15 18-6-6 6-6'></path>
-            </svg>
+            <ChevronLeft className='h-6 w-6 text-gray-700' strokeWidth={1.75} />
           </button>
 
           <button
@@ -143,20 +132,7 @@ const Section6 = () => {
             aria-label='Next testimonial'
             onclick="horizontalScroll(this.parentElement, 'right')"
           >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='24'
-              height='24'
-              viewBox='0 0 24 24'
-              fill='none'
-              stroke='currentColor'
-              stroke-width='2'
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              class='lucide lucide-chevron-right h-6 w-6 text-gray-700'
-            >
-              <path d='m9 18 6-6-6-6'></path>
-            </svg>
+            <ChevronRight className='h-6 w-6 text-gray-700' strokeWidth={1.75} />
           </button>
         </div>
       </div>
