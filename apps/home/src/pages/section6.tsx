@@ -7,9 +7,9 @@ const testimonials = [
     category: 'REAL ESTATE',
     avatar: 'https://files.reela.com/assets/images/a1.png',
     quote:
-      'Reela helps me turn every new listing into a professional walk-through video in just 10 minutes. My avatar host looks exactly like me and delivers a consistent, trustworthy presence to clients.',
+      'Reela lets me create listing videos in just 10 minutes — fast, clear, and consistent with my brand.',
     highlight:
-      'Since using Reela, my property inquiries have tripled and video views are up 420%. What used to take a production team now takes me only minutes.',
+      'Property inquiries tripled and video views are up 420%. What used to take a team now takes minutes.',
     role: 'Alexis — Realtor',
     video: 'https://files.reela.com/assets/videos/a1.mp4',
   },
@@ -17,21 +17,21 @@ const testimonials = [
     category: 'E-COMMERCE',
     avatar: 'https://files.reela.com/assets/images/a2.png',
     quote:
-      'Reela lets me create stylish try-on videos for every new collection in minutes. The model avatar keeps our look consistent across all campaigns.',
+      'Reela makes stylish try-on videos for every drop in minutes, keeping our visuals consistent and on-brand.',
     highlight:
-      'Our ad CTR jumped to 8.2% and monthly GMV has grown 3.6× since switching to Reela videos — without hiring any production team.',
+      'Ad CTR hit 8.2% and monthly GMV grew 3.6× — no production team needed.',
     role: 'Emma — Fashion Seller',
     video: 'https://files.reela.com/assets/videos/a2.mp4',
   },
   {
     category: 'CREATOR',
-    avatar: 'https://files.reela.com/assets/images/a3.png',
+    avatar: '/assets/testimonials/jason_kim.jpg',
     quote:
-      'Reela lets me turn short scripts into full animated Shorts in minutes. The AI scenes look smooth, cinematic, and ready to post right away.',
+      'Reela turns short scripts into full animated Shorts in minutes — smooth, cinematic, and ready to post.',
     highlight:
-      'My animation Shorts now average over 400K weekly views, and my channel gained 2× more subscribers in just a month — faster than ever before.',
+      'Weekly views top 400K and subscribers doubled in a month — all powered by Reela.',
     role: 'Jason — YouTuber',
-    video: 'https://files.reela.com/assets/videos/a3.mp4',
+    video: '/videos/testimonials/animation_shorts_demo.mp4',
   },
 ];
 
@@ -88,8 +88,8 @@ const quoteBaseClasses = 'text-[11px] leading-relaxed text-slate-700';
 
 const quoteStateClassMap: Record<CardPosition, string> = {
   active: 'sm:text-sm md:text-[15px]',
-  prev: 'text-[10px] sm:text-[10px] md:text-xs',
-  next: 'text-[10px] sm:text-[10px] md:text-xs',
+  prev: 'text-[6px] sm:text-[7px] md:text-[7px]',
+  next: 'text-[6px] sm:text-[7px] md:text-[7px]',
   inactive: '',
 };
 
@@ -97,8 +97,8 @@ const highlightBaseClasses = 'text-[10px] text-brand';
 
 const highlightStateClassMap: Record<CardPosition, string> = {
   active: 'sm:text-xs md:text-sm',
-  prev: 'text-[9px] sm:text-[10px] md:text-xs',
-  next: 'text-[9px] sm:text-[10px] md:text-xs',
+  prev: 'text-[5px] sm:text-[6px] md:text-[7px]',
+  next: 'text-[5px] sm:text-[6px] md:text-[7px]',
   inactive: '',
 };
 
