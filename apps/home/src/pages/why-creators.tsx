@@ -53,13 +53,14 @@ const WhyCreators = () => {
                       viewBox='0 0 24 24'
                       fill='none'
                       stroke='currentColor'
-                      stroke-width='2'
+                      stroke-width='1.5'
                       stroke-linecap='round'
                       stroke-linejoin='round'
                       class='ml-2 h-5 w-5'
                     >
-                      <path d='M5 12h14'></path>
-                      <path d='m12 5 7 7-7 7'></path>
+                      <path d='M6 12h8.5'></path>
+                      <path d='M14.5 8.5L19 12l-4.5 3.5'></path>
+                      <path d='M6 7h5'></path>
                     </svg>
                   </button>
                 </a>
@@ -95,10 +96,14 @@ const WhyCreators = () => {
                         width='32'
                         height='32'
                         viewBox='0 0 24 24'
-                        fill='currentColor'
+                        fill='none'
+                        stroke='currentColor'
+                        stroke-width='1.5'
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
                         class='ml-1'
                       >
-                        <path d='m9 7 8 5-8 5V7z'></path>
+                        <path d='M9.5 7.5L17 12l-7.5 4.5Z'></path>
                       </svg>
                     </button>
                   </div>
@@ -115,14 +120,14 @@ const WhyCreators = () => {
                       viewBox='0 0 24 24'
                       fill='none'
                       stroke='currentColor'
-                      stroke-width='2'
+                      stroke-width='1.5'
                       stroke-linecap='round'
                       stroke-linejoin='round'
                       class='icon-sound-on'
                     >
-                      <path d='M11 5 6 9H3v6h3l5 4V5Z'></path>
-                      <path d='M19 5c1.5 2 1.5 12 0 14'></path>
-                      <path d='M15.5 8.5c.75 1 1 6.5 0 7.5'></path>
+                      <path d='M11 5.5L7.5 8H5v8h2.5L11 18.5V5.5Z'></path>
+                      <path d='M17 8.5a4 4 0 0 1 0 7'></path>
+                      <path d='M19.5 7a6.5 6.5 0 0 1 0 10'></path>
                     </svg>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
@@ -131,14 +136,14 @@ const WhyCreators = () => {
                       viewBox='0 0 24 24'
                       fill='none'
                       stroke='currentColor'
-                      stroke-width='2'
+                      stroke-width='1.5'
                       stroke-linecap='round'
                       stroke-linejoin='round'
                       class='icon-sound-off hidden'
                     >
-                      <path d='m16 9 6 6'></path>
-                      <path d='m22 9-6 6'></path>
-                      <path d='M11 5 6 9H3v6h3l5 4V5Z'></path>
+                      <path d='M11 5.5L7.5 8H5v8h2.5L11 18.5V5.5Z'></path>
+                      <path d='M16 9l6 6'></path>
+                      <path d='M22 9l-6 6'></path>
                     </svg>
                   </button>
                 </div>

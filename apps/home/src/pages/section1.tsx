@@ -7,22 +7,15 @@ const heroHighlights = [
         class='h-10 w-10 text-[#F7265B]'
         viewBox='0 0 48 48'
         fill='none'
+        stroke='currentColor'
+        stroke-width='1.5'
+        stroke-linecap='round'
+        stroke-linejoin='round'
         xmlns='http://www.w3.org/2000/svg'
       >
-        <circle cx='18' cy='16' r='8' stroke='currentColor' stroke-width='2.5'></circle>
-        <path
-          d='M6 38c1.4-7.2 6.4-11 12-11s10.6 3.8 12 11'
-          stroke='currentColor'
-          stroke-width='2.5'
-          stroke-linecap='round'
-        ></path>
-        <path
-          d='M34 12v9m0 0 4-4m-4 4-4-4'
-          stroke='currentColor'
-          stroke-width='2.5'
-          stroke-linecap='round'
-          stroke-linejoin='round'
-        ></path>
+        <path d='M18 11.5a 6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0 -13 Z'></path>
+        <path d='M7.5 36c1.5-6.6 6.4-10 10.5-10s9 3.4 10.5 10'></path>
+        <path d='M29.5 15.5L36 9m0 6.5V9m-6.5 0H36'></path>
       </svg>
     ),
   },
@@ -34,30 +27,16 @@ const heroHighlights = [
         class='h-10 w-10 text-[#F7265B]'
         viewBox='0 0 48 48'
         fill='none'
+        stroke='currentColor'
+        stroke-width='1.5'
+        stroke-linecap='round'
+        stroke-linejoin='round'
         xmlns='http://www.w3.org/2000/svg'
       >
-        <rect
-          x='6'
-          y='10'
-          width='18'
-          height='28'
-          rx='4'
-          stroke='currentColor'
-          stroke-width='2.5'
-        ></rect>
-        <path
-          d='M32 14h10v8h-10z'
-          stroke='currentColor'
-          stroke-width='2.5'
-          stroke-linejoin='round'
-        ></path>
-        <path
-          d='M32 26h10l-2 8H32z'
-          stroke='currentColor'
-          stroke-width='2.5'
-          stroke-linejoin='round'
-        ></path>
-        <path d='M12 20h6M12 26h6M12 32h6' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'></path>
+        <path d='M9 12h18v20H9Z'></path>
+        <path d='M18 18.5L25 22l-7 3.5 Z'></path>
+        <path d='M14 34.5h8'></path>
+        <path d='M31 12.5h8v10.5l-8-2.5 Z'></path>
       </svg>
     ),
   },
@@ -69,28 +48,17 @@ const heroHighlights = [
         class='h-10 w-10 text-[#F7265B]'
         viewBox='0 0 48 48'
         fill='none'
+        stroke='currentColor'
+        stroke-width='1.5'
+        stroke-linecap='round'
+        stroke-linejoin='round'
         xmlns='http://www.w3.org/2000/svg'
       >
-        <circle cx='16' cy='30' r='10' stroke='currentColor' stroke-width='2.5'></circle>
-        <path
-          d='M16 22v16'
-          stroke='currentColor'
-          stroke-width='2.5'
-          stroke-linecap='round'
-        ></path>
-        <path
-          d='M11 27c1.4-1.5 3.6-2.5 5-.9 1.3 1.4.2 3.4-1.8 4.1-1.9.7-3.4 1.8-2.6 3.6.9 2.1 4.1 2.2 6.4.3'
-          stroke='currentColor'
-          stroke-width='2.5'
-          stroke-linecap='round'
-        ></path>
-        <path
-          d='M28 14h14m-7-7v14'
-          stroke='currentColor'
-          stroke-width='2.5'
-          stroke-linecap='round'
-          stroke-linejoin='round'
-        ></path>
+        <path d='M16 20a 8 8 0 1 1 0 16 8 8 0 0 1 0 -16 Z'></path>
+        <path d='M16 23.5v9'></path>
+        <path d='M12.2 28.6c1.1-1.1 3-1.9 4.4-1 1.7 1.2.6 3.3-1.6 4-2 .6-3.3 2-1.8 3.6 1.2 1.4 3.8 1.4 5.4.1'></path>
+        <path d='M28 14h12'></path>
+        <path d='M34 8v12'></path>
       </svg>
     ),
   },

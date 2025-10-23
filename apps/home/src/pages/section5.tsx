@@ -62,14 +62,15 @@ const Section5 = () => {
                   viewBox='0 0 24 24'
                   fill='none'
                   stroke='currentColor'
-                  stroke-width='2'
+                  stroke-width='1.5'
                   stroke-linecap='round'
                   stroke-linejoin='round'
                   class='lucide lucide-globe text-brand h-8 w-8'
                 >
-                  <circle cx='12' cy='12' r='10'></circle>
-                  <path d='M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20'></path>
-                  <path d='M2 12h20'></path>
+                  <path d='M12 2.5a 9.5 9.5 0 1 1 0 19 9.5 9.5 0 0 1 0 -19 Z'></path>
+                  <path d='M12 2.5c 2.6 3.1 3.8 6.6 3.8 9.5s -1.2 6.4 -3.8 9.5'></path>
+                  <path d='M12 2.5c -2.6 3.1 -3.8 6.6 -3.8 9.5s 1.2 6.4 3.8 9.5'></path>
+                  <path d='M2.5 12h19'></path>
                 </svg>
               </div>
               <h3 class='mb-2 text-xl font-bold'>Multilingual Video Support</h3>
@@ -88,13 +89,15 @@ const Section5 = () => {
                   viewBox='0 0 24 24'
                   fill='none'
                   stroke='currentColor'
-                  stroke-width='2'
+                  stroke-width='1.5'
                   stroke-linecap='round'
                   stroke-linejoin='round'
                   class='lucide lucide-ratio text-brand h-8 w-8'
                 >
-                  <rect width='12' height='20' x='6' y='2' rx='2'></rect>
-                  <rect width='20' height='12' x='2' y='6' rx='2'></rect>
+                  <path d='M5 5h14v10H5Z'></path>
+                  <path d='M9 9h10v10H9Z'></path>
+                  <path d='M9 14h3'></path>
+                  <path d='M14 9v3'></path>
                 </svg>
               </div>
               <h3 class='mb-2 text-xl font-bold'>Flexible Aspect Ratios</h3>
@@ -111,17 +114,15 @@ const Section5 = () => {
                   viewBox='0 0 24 24'
                   fill='none'
                   stroke='currentColor'
-                  stroke-width='2'
+                  stroke-width='1.5'
                   stroke-linecap='round'
                   stroke-linejoin='round'
                   class='lucide lucide-languages text-brand h-8 w-8'
                 >
-                  <path d='m5 8 6 6'></path>
-                  <path d='m4 14 6-6 2-3'></path>
-                  <path d='M2 5h12'></path>
-                  <path d='M7 2h1'></path>
-                  <path d='m22 22-5-10-5 10'></path>
-                  <path d='M14 18h6'></path>
+                  <path d='M4.5 18.5L8.5 6.5l4 12'></path>
+                  <path d='M5.7 14.5h5.6'></path>
+                  <path d='M16 6.5h4.5v12'></path>
+                  <path d='M16 12.5h4.5'></path>
                 </svg>
               </div>
               <h3 class='mb-2 text-xl font-bold'>Multilingual Subtitles</h3>
@@ -140,14 +141,14 @@ const Section5 = () => {
                   viewBox='0 0 24 24'
                   fill='none'
                   stroke='currentColor'
-                  stroke-width='2'
+                  stroke-width='1.5'
                   stroke-linecap='round'
                   stroke-linejoin='round'
                   class='lucide lucide-music text-brand h-8 w-8'
                 >
-                  <path d='M9 18V5l12-2v13'></path>
-                  <circle cx='6' cy='18' r='3'></circle>
-                  <circle cx='18' cy='16' r='3'></circle>
+                  <path d='M10 6.5L19 5v10.5'></path>
+                  <path d='M8.5 18.5a 2.5 2.5 0 1 1 -5 0 2.5 2.5 0 0 1 5 0 Z'></path>
+                  <path d='M19 15.5a 2.5 2.5 0 1 1 -5 0 2.5 2.5 0 0 1 5 0 Z'></path>
                 </svg>
               </div>
               <h3 class='mb-2 text-xl font-bold'>AI Background Music</h3>
@@ -166,16 +167,16 @@ const Section5 = () => {
                   viewBox='0 0 24 24'
                   fill='none'
                   stroke='currentColor'
-                  stroke-width='2'
+                  stroke-width='1.5'
                   stroke-linecap='round'
                   stroke-linejoin='round'
                   class='lucide lucide-palette text-brand h-8 w-8'
                 >
-                  <circle cx='13.5' cy='6.5' r='.5' fill='currentColor'></circle>
-                  <circle cx='17.5' cy='10.5' r='.5' fill='currentColor'></circle>
-                  <circle cx='8.5' cy='7.5' r='.5' fill='currentColor'></circle>
-                  <circle cx='6.5' cy='12.5' r='.5' fill='currentColor'></circle>
-                  <path d='M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z'></path>
+                  <path d='M12 3.5c -4.7 0 -8.5 3.8 -8.5 8.5s 3.8 8.5 8.5 8.5c 1.5 0 2.6 -.9 2.6 -2.2 0 -.6 -.2 -1.1 -.6 -1.5 -.4 -.4 -.7 -.9 -.7 -1.6 a 2.3 2.3 0 0 1 2.3 -2.3h 1.6c 2.8 0 5.1 -2.3 5.1 -5.1C 22.3 6.9 17.8 3.5 12 3.5Z'></path>
+                  <path d='M8.5 9.2a .8 .8 0 1 1 0 1.6 .8 .8 0 0 1 0 -1.6 Z'></path>
+                  <path d='M15 8.2a .8 .8 0 1 1 0 1.6 .8 .8 0 0 1 0 -1.6 Z'></path>
+                  <path d='M10.5 6.2a .8 .8 0 1 1 0 1.6 .8 .8 0 0 1 0 -1.6 Z'></path>
+                  <path d='M6.8 12.8a .8 .8 0 1 1 0 1.6 .8 .8 0 0 1 0 -1.6 Z'></path>
                 </svg>
               </div>
               <h3 class='mb-2 text-xl font-bold'>Style Variations</h3>
@@ -194,14 +195,14 @@ const Section5 = () => {
                   viewBox='0 0 24 24'
                   fill='none'
                   stroke='currentColor'
-                  stroke-width='2'
+                  stroke-width='1.5'
                   stroke-linecap='round'
                   stroke-linejoin='round'
                   class='lucide lucide-volume2 text-brand h-8 w-8'
                 >
-                  <path d='M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z'></path>
-                  <path d='M16 9a5 5 0 0 1 0 6'></path>
-                  <path d='M19.364 18.364a9 9 0 0 0 0-12.728'></path>
+                  <path d='M11 6L7 9H4v6h3l4 3V6Z'></path>
+                  <path d='M17 9.5a 3.5 3.5 0 0 1 0 5'></path>
+                  <path d='M19.5 7a 6 6 0 0 1 0 10'></path>
                 </svg>
               </div>
               <h3 class='mb-2 text-xl font-bold'>AI Sound Effects</h3>

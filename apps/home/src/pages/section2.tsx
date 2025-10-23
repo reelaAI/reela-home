@@ -94,16 +94,17 @@ const iconMap = {
       viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
-      strokeWidth='2'
+      strokeWidth='1.5'
       strokeLinecap='round'
       strokeLinejoin='round'
       className='lucide lucide-timer size-8'
     >
-      <path d='M10 2h4' />
-      <path d='M12 14v-4' />
-      <path d='M4.93 4.93 7.76 7.76' />
-      <path d='M12 8a8 8 0 1 0 8 8 8 8 0 0 0-8-8Z' />
-    </svg>
+      <path d='M9.5 3.5h5'></path>
+      <path d='M6.2 6.2L4.4 4.4'></path>
+      <path d='M12 6.5a 7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0 -15 Z'></path>
+      <path d='M12 10.5v4l3 2'></path>
+      <path d='M3 12.5h2.5'></path>
+  </svg>
   ),
   sparkles: (
     <svg
@@ -113,20 +114,17 @@ const iconMap = {
       viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
-      strokeWidth='2'
+      strokeWidth='1.5'
       strokeLinecap='round'
       strokeLinejoin='round'
       className='lucide lucide-sparkles size-8'
     >
-      <path d='M12 3v6' />
-      <path d='M16.2 7.8 12 12' />
-      <path d='M22 12h-6' />
-      <path d='M18.2 16.2 12 12' />
-      <path d='M12 18v-6' />
-      <path d='M7.8 16.2 12 12' />
-      <path d='M2 12h6' />
-      <path d='M7.8 7.8 12 12' />
-    </svg>
+      <path d='M12 5.5a 3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0 -7 Z'></path>
+      <path d='M4.5 19.5c1.4-4.2 4.8-6 7.5-6s6.1 1.8 7.5 6'></path>
+      <path d='M19 5.5L22 2.5'></path>
+      <path d='M22 6V2.5'></path>
+      <path d='M19 2.5h3'></path>
+  </svg>
   ),
   boxes: (
     <svg
@@ -136,16 +134,16 @@ const iconMap = {
       viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
-      strokeWidth='2'
+      strokeWidth='1.5'
       strokeLinecap='round'
       strokeLinejoin='round'
       className='lucide lucide-boxes size-8'
     >
-      <path d='M3 7.5V21l9 2 9-2V7.5' />
-      <path d='M3 7.5 12 10l9-2.5' />
-      <path d='M12 10v13' />
-      <path d='m7.5 4.27 4.5 1.23 4.5-1.23L12 3Z' />
-    </svg>
+      <path d='M4.5 8.5L12 4.5l7.5 4-7.5 4Z'></path>
+      <path d='M4.5 8.5v8L12 20.5l7.5-4v-8'></path>
+      <path d='M4.5 16.5L12 13l7.5 3.5'></path>
+      <path d='M12 12.5v8'></path>
+  </svg>
   ),
   layers: (
     <svg
@@ -155,17 +153,15 @@ const iconMap = {
       viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
-      strokeWidth='2'
+      strokeWidth='1.5'
       strokeLinecap='round'
       strokeLinejoin='round'
       className='lucide lucide-layers size-8'
     >
-      <path d='m12.17 5.5 6.94 3.47-7.11 3.46-6.87-3.44 7.04-3.49a.5.5 0 0 1 .43 0Z' />
-      <path d='m3.96 10.91 7.04 3.58' />
-      <path d='m14.87 14.5 5.16-2.62' />
-      <path d='M3.96 15.81 11 19' />
-      <path d='m14.87 19 5.16-2.62' />
-    </svg>
+      <path d='M4 11h10l2 2-2 2H4Z'></path>
+      <path d='M7 7h10l2 2-2 2H7Z'></path>
+      <path d='M10 15h10l2 2-2 2H10Z'></path>
+  </svg>
   ),
 };
 

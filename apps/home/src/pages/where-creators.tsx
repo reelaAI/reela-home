@@ -10,15 +10,15 @@ const monetizationPaths = [
         viewBox='0 0 24 24'
         fill='none'
         stroke='currentColor'
-        stroke-width='2'
+        stroke-width='1.5'
         stroke-linecap='round'
         stroke-linejoin='round'
         class='text-brand'
       >
-        <path d='M5.5 7h13l-1.5 9h-10z'></path>
-        <path d='M7 7l-1-4H4'></path>
-        <circle cx='9' cy='20' r='1'></circle>
-        <circle cx='17' cy='20' r='1'></circle>
+        <path d='M4 6.5h16l-2 9H8l-2-9Z'></path>
+        <path d='M7 6.5L6 3.5H3.5'></path>
+        <path d='M8.2 19.8a 1.8 1.8 0 1 1 -3.6 0 1.8 1.8 0 0 1 3.6 0 Z'></path>
+        <path d='M19 19.8a 1.8 1.8 0 1 1 -3.6 0 1.8 1.8 0 0 1 3.6 0 Z'></path>
       </svg>
     ),
   },
@@ -33,13 +33,14 @@ const monetizationPaths = [
         viewBox='0 0 24 24'
         fill='none'
         stroke='currentColor'
-        stroke-width='2'
+        stroke-width='1.5'
         stroke-linecap='round'
         stroke-linejoin='round'
         class='text-brand'
       >
-        <path d='m10 15 5.19-3L10 9v6Z'></path>
-        <rect width='20' height='14' x='2' y='5' rx='2'></rect>
+        <path d='M3.5 6h17v12h-17Z'></path>
+        <path d='M11 11.5L15.5 14l-4.5 2.5Z'></path>
+        <path d='M9 19.5h6'></path>
       </svg>
     ),
   },
@@ -54,14 +55,15 @@ const monetizationPaths = [
         viewBox='0 0 24 24'
         fill='none'
         stroke='currentColor'
-        stroke-width='2'
+        stroke-width='1.5'
         stroke-linecap='round'
         stroke-linejoin='round'
         class='text-brand'
       >
-        <path d='M16 3h5v5'></path>
-        <path d='M8 21H3v-5'></path>
-        <path d='M16 8 5 19'></path>
+        <path d='M16 4h5v5'></path>
+        <path d='M8 20H3v-5'></path>
+        <path d='M16 9L6.5 18.5'></path>
+        <path d='M11.5 9.5L8 13'></path>
       </svg>
     ),
   },
@@ -76,14 +78,16 @@ const monetizationPaths = [
         viewBox='0 0 24 24'
         fill='none'
         stroke='currentColor'
-        stroke-width='2'
+        stroke-width='1.5'
         stroke-linecap='round'
         stroke-linejoin='round'
         class='text-brand'
       >
-        <path d='M4 4h16v16H4z'></path>
-        <path d='M9 4v16'></path>
-        <path d='m15 10-2 2 2 2'></path>
+        <path d='M4 5h16v14H4Z'></path>
+        <path d='M10 5v14'></path>
+        <path d='M15.5 11.5L13.5 13l2 1.5'></path>
+        <path d='M7 9.5h3'></path>
+        <path d='M7 13.5h3'></path>
       </svg>
     ),
   },

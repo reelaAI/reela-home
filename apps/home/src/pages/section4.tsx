@@ -85,13 +85,14 @@ const Section4 = () => {
                   viewBox='0 0 24 24'
                   fill='none'
                   stroke='currentColor'
-                  stroke-width='2'
+                  stroke-width='1.5'
                   stroke-linecap='round'
                   stroke-linejoin='round'
                   class='h-5 w-5 ml-2'
                 >
-                  <path d='M5 12h14'></path>
-                  <path d='m12 5 7 7-7 7'></path>
+                  <path d='M6 12h8.5'></path>
+                  <path d='M14.5 8.5L19 12l-4.5 3.5'></path>
+                  <path d='M6 7h5'></path>
                 </svg>
               </button>
             </a>
