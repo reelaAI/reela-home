@@ -7,9 +7,9 @@ const testimonials = [
     category: 'REAL ESTATE',
     avatar: 'https://files.reela.com/assets/images/a1.png',
     quote:
-      'Reela lets me create listing videos in just 10 minutes — fast, clear, and consistent with my brand.',
+      'Reela helps me turn every new listing into a professional walk-through video in just 10 minutes. My avatar host looks exactly like me and delivers a consistent, trustworthy presence to clients.',
     highlight:
-      'Property inquiries tripled and video views are up 420%. What used to take a team now takes minutes.',
+      'Since using Reela, my property inquiries have tripled and video views are up 420%. What used to take a production team now takes me only minutes.',
     role: 'Alexis — Realtor',
     video: 'https://files.reela.com/assets/videos/a1.mp4',
   },
@@ -17,21 +17,21 @@ const testimonials = [
     category: 'E-COMMERCE',
     avatar: 'https://files.reela.com/assets/images/a2.png',
     quote:
-      'Reela makes stylish try-on videos for every drop in minutes, keeping our visuals consistent and on-brand.',
+      'Reela lets me create stylish try-on videos for every new collection in minutes. The model avatar keeps our look consistent across all campaigns.',
     highlight:
-      'Ad CTR hit 8.2% and monthly GMV grew 3.6× — no production team needed.',
+      'Our ad CTR jumped to 8.2% and monthly GMV has grown 3.6× since switching to Reela videos — without hiring any production team.',
     role: 'Emma — Fashion Seller',
     video: 'https://files.reela.com/assets/videos/a2.mp4',
   },
   {
     category: 'CREATOR',
-    avatar: '/assets/testimonials/jason_kim.jpg',
+    avatar: 'https://files.reela.com/assets/images/a2.png',
     quote:
       'Reela turns short scripts into full animated Shorts in minutes — smooth, cinematic, and ready to post.',
     highlight:
       'Weekly views top 400K and subscribers doubled in a month — all powered by Reela.',
     role: 'Jason — YouTuber',
-    video: '/videos/testimonials/animation_shorts_demo.mp4',
+    video: 'https://files.reela.com/assets/videos/a3.mp4',
   },
 ];
 
