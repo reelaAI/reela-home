@@ -1,5 +1,6 @@
 // Reela Is Built for Speed & Results
 
+import { Icon, type IconName } from '../components/Icon';
 import { cn } from '../utils/cn';
 
 const Section2 = () => {
@@ -68,7 +69,11 @@ function FeatureCard({
       <div className='relative z-10'>
         <div className='flex flex-col items-center text-center space-y-8'>
           <div className='w-24 h-24 bg-brand rounded-3xl flex items-center justify-center text-white group-hover:scale-105 transition-all duration-500 shadow-xl'>
-            {iconMap[icon]}
+            <Icon
+              name={iconMap[icon]}
+              class='size-12'
+              aria-hidden='true'
+            />
           </div>
 
           <div className='space-y-4'>
@@ -85,87 +90,10 @@ function FeatureCard({
   );
 }
 
-const iconMap = {
-  timer: (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      width='24'
-      height='24'
-      viewBox='0 0 24 24'
-      fill='none'
-      stroke='currentColor'
-      strokeWidth='2'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      className='lucide lucide-timer size-8'
-    >
-      <path d='M10 2h4' />
-      <path d='M12 14v-4' />
-      <path d='M4.93 4.93 7.76 7.76' />
-      <path d='M12 8a8 8 0 1 0 8 8 8 8 0 0 0-8-8Z' />
-    </svg>
-  ),
-  sparkles: (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      width='24'
-      height='24'
-      viewBox='0 0 24 24'
-      fill='none'
-      stroke='currentColor'
-      strokeWidth='2'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      className='lucide lucide-sparkles size-8'
-    >
-      <path d='M12 3v6' />
-      <path d='M16.2 7.8 12 12' />
-      <path d='M22 12h-6' />
-      <path d='M18.2 16.2 12 12' />
-      <path d='M12 18v-6' />
-      <path d='M7.8 16.2 12 12' />
-      <path d='M2 12h6' />
-      <path d='M7.8 7.8 12 12' />
-    </svg>
-  ),
-  boxes: (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      width='24'
-      height='24'
-      viewBox='0 0 24 24'
-      fill='none'
-      stroke='currentColor'
-      strokeWidth='2'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      className='lucide lucide-boxes size-8'
-    >
-      <path d='M3 7.5V21l9 2 9-2V7.5' />
-      <path d='M3 7.5 12 10l9-2.5' />
-      <path d='M12 10v13' />
-      <path d='m7.5 4.27 4.5 1.23 4.5-1.23L12 3Z' />
-    </svg>
-  ),
-  layers: (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      width='24'
-      height='24'
-      viewBox='0 0 24 24'
-      fill='none'
-      stroke='currentColor'
-      strokeWidth='2'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      className='lucide lucide-layers size-8'
-    >
-      <path d='m12.17 5.5 6.94 3.47-7.11 3.46-6.87-3.44 7.04-3.49a.5.5 0 0 1 .43 0Z' />
-      <path d='m3.96 10.91 7.04 3.58' />
-      <path d='m14.87 14.5 5.16-2.62' />
-      <path d='M3.96 15.81 11 19' />
-      <path d='m14.87 19 5.16-2.62' />
-    </svg>
-  ),
+const iconMap: Record<'timer' | 'sparkles' | 'boxes' | 'layers', IconName> = {
+  timer: 'timer',
+  sparkles: 'sparkles',
+  boxes: 'boxes',
+  layers: 'layers',
 };
 

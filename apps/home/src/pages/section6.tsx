@@ -1,5 +1,7 @@
 // A new vision for video creation
 
+import { Icon } from '../components/Icon';
+
 const VIDEO_PLACEHOLDER =
   'https://files.reela.com/assets/videos/TalkingAvatar-Ads-1.mp4';
 
@@ -213,34 +215,16 @@ const Section6 = () => {
                       onclick='toggleVideoSound(this)'
                       aria-label='Toggle sound'
                     >
-                      <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        viewBox='0 0 24 24'
-                        fill='none'
-                        stroke='currentColor'
-                        stroke-width='2'
-                        stroke-linecap='round'
-                        stroke-linejoin='round'
+                      <Icon
+                        name='volume-2'
                         class='icon-sound-on hidden h-4 w-4'
-                      >
-                        <path d='M11 5 6 9H2v6h4l5 4z'></path>
-                        <path d='M19 5c1.5 1.5 2.5 3.5 2.5 5.5S20.5 14.5 19 16'></path>
-                        <path d='M15.5 8.5c.5.5 1 1.5 1 2.5s-.5 2-1 2.5'></path>
-                      </svg>
-                      <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        viewBox='0 0 24 24'
-                        fill='none'
-                        stroke='currentColor'
-                        stroke-width='2'
-                        stroke-linecap='round'
-                        stroke-linejoin='round'
+                        aria-hidden='true'
+                      />
+                      <Icon
+                        name='volume-x'
                         class='icon-sound-off h-4 w-4'
-                      >
-                        <path d='M11 5 6 9H2v6h4l5 4z'></path>
-                        <path d='m19 9-4 4'></path>
-                        <path d='m15 9 4 4'></path>
-                      </svg>
+                        aria-hidden='true'
+                      />
                     </button>
                   </div>
                   <div
@@ -323,18 +307,11 @@ const Section6 = () => {
             data-carousel-prev=''
             aria-label='Show previous testimonial'
           >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 24 24'
-              fill='none'
-              stroke='currentColor'
-              stroke-width='2'
-              stroke-linecap='round'
-              stroke-linejoin='round'
+            <Icon
+              name='chevron-left'
               class='h-5 w-5'
-            >
-              <polyline points='15 18 9 12 15 6'></polyline>
-            </svg>
+              aria-hidden='true'
+            />
           </button>
           <button
             type='button'
@@ -342,18 +319,11 @@ const Section6 = () => {
             data-carousel-next=''
             aria-label='Show next testimonial'
           >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 24 24'
-              fill='none'
-              stroke='currentColor'
-              stroke-width='2'
-              stroke-linecap='round'
-              stroke-linejoin='round'
+            <Icon
+              name='chevron-right'
               class='h-5 w-5'
-            >
-              <polyline points='9 18 15 12 9 6'></polyline>
-            </svg>
+              aria-hidden='true'
+            />
           </button>
         </div>
       </div>

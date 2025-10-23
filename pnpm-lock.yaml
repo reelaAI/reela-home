@@ -92,6 +92,9 @@ importers:
       clsx:
         specifier: 'catalog:'
         version: 2.1.1
+      lucide-react:
+        specifier: 'catalog:'
+        version: 0.536.0
       hono:
         specifier: 'catalog:'
         version: 4.8.5
