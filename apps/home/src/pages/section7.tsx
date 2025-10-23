@@ -27,7 +27,7 @@ const Section7 = () => {
                 '700 monthly credits', // model tooltip
                 'Access to Reela 2.0 Lite Model',
                 'AI Remixing – Upload and edit your videos',
-                'Default Avatar access (no custom creation)',
+                'Default Avatar access',
                 'AI Voiceover – Multi-character narration',
                 'Max video length: 1 minute',
                 '1 active job at a time',
@@ -86,7 +86,7 @@ const Section7 = () => {
                 '700 monthly credits', // model tooltip
                 'Access to Reela 2.0 Lite Model',
                 'AI Remixing – Upload and edit your videos',
-                'Default Avatar access (no custom creation)',
+                'Default Avatar access',
                 'AI Voiceover – Multi-character narration',
                 'Max video length: 1 minute',
                 '1 active job at a time',
