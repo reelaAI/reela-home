@@ -193,6 +193,7 @@ function pauseOtherVideos(currentVideo) {
 document.addEventListener('DOMContentLoaded', () => {
   initAutoScrollSections();
   initVideoAutoplay();
+  initTestimonialCarousel();
 });
 
 function initAutoScrollSections() {
@@ -284,6 +285,282 @@ function initAutoScrollSections() {
     if (getMaxScrollLeft() > 0) {
       start();
     }
+  });
+}
+
+function initTestimonialCarousel() {
+  const carousels = document.querySelectorAll('[data-testimonial-carousel]');
+  if (!carousels.length) return;
+
+  carousels.forEach((carousel) => {
+    const cards = Array.from(carousel.querySelectorAll('[data-carousel-card]'));
+    if (!cards.length) return;
+
+    const classMap = new Map();
+    const videoClassMap = new Map();
+    const textPanelClassMap = new Map();
+    const quoteClassMap = new Map();
+    const highlightClassMap = new Map();
+
+    cards.forEach((card) => {
+      classMap.set(card, {
+        base: card.dataset.baseClass || '',
+        active: card.dataset.classActive || '',
+        prev: card.dataset.classPrev || '',
+        next: card.dataset.classNext || '',
+        inactive: card.dataset.classInactive || '',
+      });
+
+      const videoContainer = card.querySelector('[data-video-container]');
+      if (videoContainer) {
+        videoClassMap.set(card, {
+          element: videoContainer,
+          base: videoContainer.dataset.videoBaseClass || '',
+          active: videoContainer.dataset.videoClassActive || '',
+          prev: videoContainer.dataset.videoClassPrev || '',
+          next: videoContainer.dataset.videoClassNext || '',
+          inactive: videoContainer.dataset.videoClassInactive || '',
+        });
+      }
+
+      const textPanel = card.querySelector('[data-text-panel]');
+      if (textPanel) {
+        textPanelClassMap.set(card, {
+          element: textPanel,
+          base: textPanel.dataset.textPanelBaseClass || '',
+          active: textPanel.dataset.textPanelClassActive || '',
+          prev: textPanel.dataset.textPanelClassPrev || '',
+          next: textPanel.dataset.textPanelClassNext || '',
+          inactive: textPanel.dataset.textPanelClassInactive || '',
+        });
+      }
+
+      const quote = card.querySelector('[data-quote]');
+      if (quote) {
+        quoteClassMap.set(card, {
+          element: quote,
+          base: quote.dataset.quoteBaseClass || '',
+          active: quote.dataset.quoteClassActive || '',
+          prev: quote.dataset.quoteClassPrev || '',
+          next: quote.dataset.quoteClassNext || '',
+          inactive: quote.dataset.quoteClassInactive || '',
+        });
+      }
+
+      const highlight = card.querySelector('[data-highlight]');
+      if (highlight) {
+        highlightClassMap.set(card, {
+          element: highlight,
+          base: highlight.dataset.highlightBaseClass || '',
+          active: highlight.dataset.highlightClassActive || '',
+          prev: highlight.dataset.highlightClassPrev || '',
+          next: highlight.dataset.highlightClassNext || '',
+          inactive: highlight.dataset.highlightClassInactive || '',
+        });
+      }
+    });
+
+    const total = cards.length;
+    const interval = Number.parseInt(carousel.dataset.interval || '0', 10);
+    let activeIndex = cards.findIndex((card) => card.dataset.position === 'active');
+    if (activeIndex < 0) {
+      activeIndex = 0;
+    }
+
+    let rotateTimer = null;
+
+    const applyPosition = (card, position) => {
+      const classData = classMap.get(card);
+      if (classData) {
+        card.className = `${classData.base} ${classData[position] || ''}`.trim();
+      }
+
+      card.dataset.position = position;
+
+      const cardIndex = Number.parseInt(card.dataset.index || '0', 10);
+      const positionOrder =
+        position === 'prev'
+          ? 1
+          : position === 'active'
+          ? 2
+          : position === 'next'
+          ? 3
+          : 10 + (Number.isNaN(cardIndex) ? 0 : cardIndex);
+      card.style.order = String(positionOrder);
+
+      const videoData = videoClassMap.get(card);
+      if (videoData) {
+        videoData.element.className = `${videoData.base} ${videoData[position] || ''}`.trim();
+      }
+
+      const textPanelData = textPanelClassMap.get(card);
+      if (textPanelData) {
+        textPanelData.element.className = `${textPanelData.base} ${textPanelData[position] || ''}`.trim();
+      }
+
+      const quoteData = quoteClassMap.get(card);
+      if (quoteData) {
+        quoteData.element.className = `${quoteData.base} ${quoteData[position] || ''}`.trim();
+      }
+
+      const highlightData = highlightClassMap.get(card);
+      if (highlightData) {
+        highlightData.element.className = `${highlightData.base} ${highlightData[position] || ''}`.trim();
+      }
+
+      const soundToggle = card.querySelector('[data-sound-toggle]');
+      if (soundToggle) {
+        if (position === 'active') {
+          soundToggle.classList.remove('hidden');
+        } else {
+          soundToggle.classList.add('hidden');
+        }
+      }
+
+      const overlayButton = card.querySelector('[data-carousel-activate]');
+      if (overlayButton) {
+        if (position === 'active') {
+          overlayButton.classList.add('hidden');
+          overlayButton.setAttribute('tabindex', '-1');
+        } else {
+          overlayButton.classList.remove('hidden');
+          overlayButton.removeAttribute('tabindex');
+        }
+      }
+
+      const video = card.querySelector('video');
+      if (!video) return;
+
+      const soundButton = soundToggle;
+      delete card.dataset.videoUserPaused;
+      if (position === 'active') {
+        card.setAttribute('data-video-card', '');
+        video.setAttribute('data-video-element', '');
+        video.setAttribute('loop', '');
+        video.setAttribute('autoplay', '');
+        video.setAttribute('controls', '');
+        video.setAttribute('muted', '');
+        video.muted = true;
+        if (soundButton) {
+          syncSoundIcon(soundButton, true);
+        }
+        pauseOtherVideos(video);
+        try {
+          video.currentTime = 0;
+          video.play().catch(() => {
+            /* Ignore playback errors triggered by browser policies */
+          });
+        } catch (error) {
+          /* noop */
+        }
+      } else {
+        card.removeAttribute('data-video-card');
+        video.removeAttribute('data-video-element');
+        video.removeAttribute('autoplay');
+        video.removeAttribute('controls');
+        video.removeAttribute('loop');
+        video.pause();
+        video.currentTime = 0;
+        video.muted = true;
+        if (soundButton) {
+          syncSoundIcon(soundButton, true);
+        }
+      }
+    };
+
+    const goToIndex = (index) => {
+      if (!cards.length) return;
+      if (index === activeIndex) return;
+
+      const nextIndex = (index + 1) % total;
+      const prevIndex = (index - 1 + total) % total;
+
+      cards.forEach((card, cardIndex) => {
+        let position = 'inactive';
+        if (cardIndex === index) {
+          position = 'active';
+        } else if (cardIndex === prevIndex) {
+          position = 'prev';
+        } else if (cardIndex === nextIndex) {
+          position = 'next';
+        }
+
+        applyPosition(card, position);
+      });
+
+      activeIndex = index;
+    };
+
+    const goNext = () => {
+      const nextIndex = (activeIndex + 1) % total;
+      goToIndex(nextIndex);
+    };
+
+    const goPrev = () => {
+      const prevIndex = (activeIndex - 1 + total) % total;
+      goToIndex(prevIndex);
+    };
+
+    const stopRotate = () => {
+      if (rotateTimer !== null) {
+        window.clearInterval(rotateTimer);
+        rotateTimer = null;
+      }
+    };
+
+    const startRotate = () => {
+      if (!interval || interval <= 0) return;
+      stopRotate();
+      rotateTimer = window.setInterval(goNext, interval);
+    };
+
+    const prevButton = carousel.querySelector('[data-carousel-prev]');
+    const nextButton = carousel.querySelector('[data-carousel-next]');
+
+    if (prevButton) {
+      prevButton.addEventListener('click', () => {
+        stopRotate();
+        goPrev();
+        startRotate();
+      });
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener('click', () => {
+        stopRotate();
+        goNext();
+        startRotate();
+      });
+    }
+
+    const activateButtons = carousel.querySelectorAll('[data-carousel-activate]');
+    activateButtons.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        const card = button.closest('[data-carousel-card]');
+        if (!card) return;
+        const targetIndex = Number.parseInt(card.dataset.index || '-1', 10);
+        if (Number.isNaN(targetIndex) || targetIndex < 0) return;
+        stopRotate();
+        goToIndex(targetIndex);
+        startRotate();
+      });
+    });
+
+    carousel.addEventListener('mouseenter', stopRotate);
+    carousel.addEventListener('mouseleave', startRotate);
+    carousel.addEventListener('focusin', stopRotate);
+    carousel.addEventListener('focusout', () => {
+      if (!carousel.contains(document.activeElement)) {
+        startRotate();
+      }
+    });
+    carousel.addEventListener('touchstart', stopRotate, { passive: true });
+    carousel.addEventListener('touchend', startRotate, { passive: true });
+    carousel.addEventListener('touchcancel', startRotate, { passive: true });
+
+    goToIndex(activeIndex);
+    startRotate();
   });
 }
 
