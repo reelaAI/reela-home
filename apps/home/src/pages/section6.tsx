@@ -101,10 +101,10 @@ const positionClassMap: Record<CardPosition, string> = {
   active:
     'z-30 gap-6 p-6 shadow-2xl ring-2 ring-brand/10 lg:-mx-16 lg:-mt-12 lg:flex lg:gap-8 lg:p-8',
   prev:
-    'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-sm lg:mt-8 lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-3',
+    'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-sm lg:mt-8 lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
   next:
-    'hidden opacity-0 lg:pointer-events-auto lg:-ml-10 lg:flex lg:max-w-sm lg:mt-8 lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-3',
-  inactive: 'hidden opacity-0 lg:!gap-3 lg:!p-4 lg:!pb-3',
+    'hidden opacity-0 lg:pointer-events-auto lg:-ml-10 lg:flex lg:max-w-sm lg:mt-8 lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
+  inactive: 'hidden opacity-0 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
 };
 
 const baseVideoClasses =
