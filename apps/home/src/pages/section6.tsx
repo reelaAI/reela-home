@@ -81,23 +81,23 @@ const Section6 = () => {
         </h2>
       </div>
       <div class='mx-auto mb-20 max-w-[1200px] px-4'>
-        <div class='flex flex-col gap-6 lg:flex-row'>
+        <div class='flex flex-col gap-6 lg:flex-row lg:items-stretch lg:justify-center'>
           {visibleTestimonials.map((testimonial, index) => {
             const isFeatured = index === 1;
 
             return (
               <div
                 key={testimonial.quote}
-                class={`testimonial-card flex h-full flex-1 flex-row items-start gap-6 rounded-xl bg-white p-6 shadow-sm transition-transform duration-300 hover:shadow-md ${
+                class={`testimonial-card relative flex h-full flex-1 flex-row items-start gap-6 rounded-xl bg-white/95 p-6 shadow-sm transition-all duration-300 hover:shadow-md ${
                   isFeatured
-                    ? 'lg:flex-[1.2] lg:scale-105 lg:shadow-xl'
-                    : 'lg:flex-1'
+                    ? 'lg:-mx-6 lg:-translate-y-4 lg:flex-[1.2] lg:shadow-2xl lg:ring-2 lg:ring-brand/20 lg:z-10'
+                    : 'lg:flex-1 lg:translate-y-4 lg:bg-white'
                 }`}
                 data-video-card={isFeatured ? '' : undefined}
               >
                 <div
-                  class={`relative aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-lg bg-black sm:w-28 md:w-32 ${
-                    isFeatured ? 'md:w-36 lg:w-40 xl:w-48' : 'lg:w-36'
+                  class={`relative aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-xl bg-black sm:w-28 md:w-32 ${
+                    isFeatured ? 'md:w-36 lg:w-40 xl:w-48' : 'lg:w-32'
                   }`}
                   data-video-autoplay={isFeatured ? '' : undefined}
                 >
@@ -180,11 +180,13 @@ const Section6 = () => {
                     </div>
                   </div>
                   <div class='space-y-3'>
-                    <p class='text-lg font-medium'>"{testimonial.quote}"</p>
-                    <p class='text-brand font-bold'>{testimonial.highlight}</p>
+                    <p class='text-base font-medium text-slate-700 md:text-lg'>"{testimonial.quote}"</p>
+                    <p class='text-sm font-semibold uppercase tracking-wide text-brand'>{testimonial.highlight}</p>
                   </div>
                   <div class='mt-auto'>
-                    <p class='font-bold'>{testimonial.role}</p>
+                    <p class='inline-block rounded-full bg-slate-900/90 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white'>
+                      {testimonial.role}
+                    </p>
                   </div>
                 </div>
               </div>
