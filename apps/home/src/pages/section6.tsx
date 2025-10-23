@@ -93,26 +93,26 @@ const getCardPosition = (index: number, activeIndex: number, total: number): Car
 };
 
 const baseCardClasses =
-  'testimonial-card group relative flex w-full max-w-xl flex-col gap-6 rounded-3xl bg-white/95 p-6 shadow-md transition-all duration-500 ease-out lg:p-8';
+  'testimonial-card group relative flex w-full max-w-xl flex-col gap-6 rounded-3xl bg-white/95 p-6 shadow-md lg:p-8';
 
 const positionClassMap: Record<CardPosition, string> = {
   active:
-    'z-20 scale-[1.03] shadow-2xl ring-2 ring-brand/10 lg:-mx-16 lg:-translate-y-10 lg:flex lg:scale-[1.08]',
+    'z-30 shadow-2xl ring-2 ring-brand/10 lg:-mx-16 lg:-translate-y-12 lg:flex lg:scale-105',
   prev:
-    'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-md lg:translate-y-8 lg:scale-90 lg:opacity-70 lg:z-10',
+    'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-sm lg:translate-y-6 lg:scale-90 lg:opacity-60 lg:z-10',
   next:
-    'hidden opacity-0 lg:pointer-events-auto lg:-ml-10 lg:flex lg:max-w-md lg:translate-y-8 lg:scale-90 lg:opacity-70 lg:z-10',
+    'hidden opacity-0 lg:pointer-events-auto lg:-ml-10 lg:flex lg:max-w-sm lg:translate-y-6 lg:scale-90 lg:opacity-60 lg:z-10',
   inactive: 'hidden opacity-0',
 };
 
 const baseVideoClasses =
-  'relative aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl bg-black transition-all duration-500 ease-out sm:w-28 md:w-32';
+  'relative aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl bg-black sm:w-28 md:w-36 lg:w-44 xl:w-52';
 
 const videoPositionClassMap: Record<CardPosition, string> = {
-  active: 'md:w-36 lg:w-44 xl:w-52',
-  prev: 'lg:w-32',
-  next: 'lg:w-32',
-  inactive: 'lg:w-32',
+  active: 'scale-100',
+  prev: 'scale-75',
+  next: 'scale-75',
+  inactive: 'scale-75',
 };
 
 const Section6 = () => {
