@@ -30,6 +30,21 @@ const icons = {
       <path d='m7.5 4.27 4.5 1.23 4.5-1.23L12 3Z' />,
     ],
   },
+  'ads-minimal': {
+    elements: [
+      <rect x='3.5' y='6.5' width='17' height='11' rx='1.5' />,
+      <path d='m11 10 4 2-4 2' />,
+      <path d='M6 10h2' />,
+      <path d='M6 13h3' />,
+    ],
+  },
+  'avatar-minimal': {
+    elements: [
+      <circle cx='12' cy='9' r='3.25' />,
+      <path d='M6.5 18.5c1.35-2.7 3.77-4.5 5.5-4.5s4.15 1.8 5.5 4.5' />,
+      <path d='M4.5 20.5h15' />,
+    ],
+  },
   'chevron-down': {
     elements: [<path d='m6 9 6 6 6-6' />],
   },
@@ -103,6 +118,13 @@ const icons = {
     elements: [
       <rect x='6' y='2' width='12' height='20' rx='2' />,
       <rect x='2' y='6' width='20' height='12' rx='2' />,
+    ],
+  },
+  'revenue-minimal': {
+    elements: [
+      <circle cx='12' cy='12' r='6.5' />,
+      <path d='M12 8v8' />,
+      <path d='M9.75 10.5c0-1.2 1-2 2.25-2s2.25.8 2.25 2-1 2-2.25 2-2.25.8-2.25 2 1 2 2.25 2 2.25-.8 2.25-2' />,
     ],
   },
   'panel-right-open': {
