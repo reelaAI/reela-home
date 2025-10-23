@@ -155,12 +155,13 @@ const Section7 = () => {
               white-glove support — all designed to fit your business.
             </p>
             <a href='mailto:contact@reela.ai'>
-              <button class='text-brand inline-flex items-center rounded-full bg-white px-6 py-3 text-lg font-medium transition-transform hover:scale-105'>
+              <button class='group inline-flex items-center rounded-full bg-white px-6 py-3 text-lg font-medium text-brand transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80'>
                 Contact Sales
                 <Icon
                   name='arrow-up-right'
-                  class='lucide lucide-arrow-up-right ml-2 h-5 w-5'
-                  size={24}
+                  class='ml-2 h-5 w-5 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5'
+                  size={20}
+                  aria-hidden='true'
                 />
               </button>
             </a>

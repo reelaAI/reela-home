@@ -27,30 +27,22 @@ const Footer = () => {
           </div>
           <div class='flex flex-wrap gap-4'>
             <a
-              class='bg-gray-800 hover:bg-[#F7265B] p-3 rounded-full transition-colors duration-300'
-              aria-label='Twitter'
+              class='rounded-full bg-gray-800 p-3 transition-colors duration-300 hover:bg-[#F7265B] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F7265B]/60'
+              aria-label='Follow Reela on X'
               target='_blank'
               rel='noopener noreferrer'
               href='https://x.com/ReelaAI'
             >
-              <Icon
-                name='twitter'
-                class='lucide lucide-twitter h-5 w-5'
-                size={24}
-              />
+              <Icon name='brand-x' class='h-5 w-5' size={20} aria-hidden='true' />
             </a>
             <a
-              class='bg-gray-800 hover:bg-[#F7265B] p-3 rounded-full transition-colors duration-300'
-              aria-label='YouTube'
+              class='rounded-full bg-gray-800 p-3 transition-colors duration-300 hover:bg-[#F7265B] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F7265B]/60'
+              aria-label='Watch Reela on YouTube'
               target='_blank'
               rel='noopener noreferrer'
               href='https://www.youtube.com/@ReelaAI'
             >
-              <Icon
-                name='youtube'
-                class='lucide lucide-youtube h-5 w-5'
-                size={24}
-              />
+              <Icon name='youtube' class='h-5 w-5' size={20} aria-hidden='true' />
             </a>
           </div>
         </div>

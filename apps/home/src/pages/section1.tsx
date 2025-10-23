@@ -65,7 +65,7 @@ const Section1 = () => {
                   name={highlight.icon}
                   class='h-10 w-10 text-[#F7265B]'
                   size={40}
-                  strokeWidth={2.5}
+                  aria-hidden='true'
                 />
               </div>
               <p class='text-lg font-semibold text-gray-900'>{highlight.title}</p>

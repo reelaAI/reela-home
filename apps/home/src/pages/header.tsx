@@ -120,16 +120,17 @@ function DropDown({
   return (
     <details
       id={id}
-      class='dropdown cursor-pointer text-gray-700 hover:text-gray-900 focus:outline-none'
+      class='group dropdown cursor-pointer text-gray-700 transition-colors hover:text-gray-900 focus:outline-none'
       aria-expanded='false'
       aria-haspopup='true'
     >
-      <summary class='flex items-center gap-1'>
+      <summary class='flex items-center gap-1 focus:outline-none focus-visible:text-gray-900'>
         <div>{title}</div>
         <Icon
           name='chevron-down'
-          class='lucide lucide-chevron-down h-4 w-4 transition-transform'
-          size={24}
+          class='h-4 w-4 text-gray-500 transition-colors transition-transform duration-200 group-open:rotate-180 group-hover:text-gray-900'
+          size={20}
+          aria-hidden='true'
         />
       </summary>
       <ul class='menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm'>

@@ -36,6 +36,13 @@
 body {
   font-family: 'Inter', sans-serif;
 }
+
+.reela-icon {
+  color: inherit;
+  display: inline-block;
+  transition: color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+  vertical-align: middle;
+}
 label {
   cursor: pointer;
   display: block;

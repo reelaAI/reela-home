@@ -46,9 +46,14 @@ const WhyCreators = () => {
                 <h3 class='text-2xl font-bold text-gray-900 md:text-3xl'>{card.title}</h3>
                 <p class='text-lg text-gray-600'>{card.description}</p>
                 <a href='https://app.reela.com/workspace' target='_blank' rel='noopener noreferrer'>
-                  <button class='inline-flex items-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-105'>
+                  <button class='group inline-flex items-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80'>
                     {card.cta}
-                    <Icon name='arrow-right' class='ml-2 h-5 w-5' size={20} />
+                    <Icon
+                      name='arrow-right'
+                      class='ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1'
+                      size={20}
+                      aria-hidden='true'
+                    />
                   </button>
                 </a>
               </div>
@@ -75,20 +80,21 @@ const WhyCreators = () => {
                   >
                     <button
                       type='button'
-                      class='pointer-events-auto flex h-16 w-16 items-center justify-center rounded-full bg-black/60 text-white shadow-lg transition-transform duration-200 hover:scale-105'
+                      class='pointer-events-auto flex h-16 w-16 items-center justify-center rounded-full bg-black/60 text-white shadow-lg transition-transform duration-200 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80'
                       onclick='playVideoFromOverlay(this)'
+                      aria-label='Play video'
                     >
-                    <Icon name='play' class='ml-1 h-8 w-8' size={32} />
+                      <Icon name='play' class='ml-1 h-8 w-8' size={32} aria-hidden='true' />
                     </button>
                   </div>
                   <button
                     type='button'
-                    class='pointer-events-auto absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-black/60 text-white shadow-lg transition-transform duration-200 hover:scale-105'
+                    class='pointer-events-auto absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-black/60 text-white shadow-lg transition-transform duration-200 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80'
                     aria-label='Toggle sound'
                     onclick='toggleVideoSound(this)'
                   >
-                    <Icon name='volume-2' class='icon-sound-on' size={20} />
-                    <Icon name='volume-x' class='icon-sound-off hidden' size={20} />
+                    <Icon name='volume-2' class='icon-sound-on' size={20} aria-hidden='true' />
+                    <Icon name='volume-x' class='icon-sound-off hidden' size={20} aria-hidden='true' />
                   </button>
                 </div>
               </div>

@@ -219,11 +219,13 @@ const Section6 = () => {
                         name='volume-2'
                         class='icon-sound-on hidden h-4 w-4'
                         size={16}
+                        aria-hidden='true'
                       />
                       <Icon
                         name='volume-x'
                         class='icon-sound-off h-4 w-4'
                         size={16}
+                        aria-hidden='true'
                       />
                     </button>
                   </div>
@@ -303,19 +305,29 @@ const Section6 = () => {
           </div>
           <button
             type='button'
-            class='absolute left-0 top-1/2 hidden -translate-y-1/2 rounded-full border border-black/10 bg-white/90 p-3 text-black shadow-lg transition hover:bg-white sm:flex sm:z-30'
+            class='group absolute left-0 top-1/2 hidden -translate-y-1/2 rounded-full border border-black/10 bg-white/90 p-3 text-black shadow-lg transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand/40 sm:flex sm:z-30'
             data-carousel-prev=''
             aria-label='Show previous testimonial'
           >
-            <Icon name='chevron-left' class='h-5 w-5' size={20} />
+            <Icon
+              name='chevron-left'
+              class='h-5 w-5 transition-transform duration-200 group-hover:-translate-x-0.5'
+              size={20}
+              aria-hidden='true'
+            />
           </button>
           <button
             type='button'
-            class='absolute right-0 top-1/2 hidden -translate-y-1/2 rounded-full border border-black/10 bg-white/90 p-3 text-black shadow-lg transition hover:bg-white sm:flex sm:z-30'
+            class='group absolute right-0 top-1/2 hidden -translate-y-1/2 rounded-full border border-black/10 bg-white/90 p-3 text-black shadow-lg transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand/40 sm:flex sm:z-30'
             data-carousel-next=''
             aria-label='Show next testimonial'
           >
-            <Icon name='chevron-right' class='h-5 w-5' size={20} />
+            <Icon
+              name='chevron-right'
+              class='h-5 w-5 transition-transform duration-200 group-hover:translate-x-0.5'
+              size={20}
+              aria-hidden='true'
+            />
           </button>
         </div>
       </div>

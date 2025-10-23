@@ -78,9 +78,14 @@ const Section4 = () => {
               AI video combinations
             </h3>
             <a href='/workspace'>
-              <button class='bg-brand text-white px-6 py-3 rounded-full font-medium hover:scale-105 transition-transform inline-flex items-center'>
+              <button class='group inline-flex items-center rounded-full bg-brand px-6 py-3 font-medium text-white transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand/60'>
                 are waiting for you
-                <Icon name='arrow-right' class='ml-2 h-5 w-5' size={20} />
+                <Icon
+                  name='arrow-right'
+                  class='ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1'
+                  size={20}
+                  aria-hidden='true'
+                />
               </button>
             </a>
           </div>

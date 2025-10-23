@@ -49,9 +49,14 @@ const Section3 = () => {
               </li>
             </ul>
             <a href='https://app.reela.com/workspace' target='_blank' rel='noopener noreferrer'>
-              <button class='mt-6 inline-flex items-center rounded-full bg-brand px-7 py-3 text-sm font-semibold text-white transition-transform hover:scale-105'>
+              <button class='group mt-6 inline-flex items-center rounded-full bg-brand px-7 py-3 text-sm font-semibold text-white transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80'>
                 Launch a Sora Project
-                <Icon name='arrow-right' class='ml-2 h-5 w-5' size={20} />
+                <Icon
+                  name='arrow-right'
+                  class='ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1'
+                  size={20}
+                  aria-hidden='true'
+                />
               </button>
             </a>
           </div>
