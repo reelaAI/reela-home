@@ -7,9 +7,9 @@ const testimonials = [
     category: 'REAL ESTATE',
     avatar: 'https://files.reela.com/assets/images/a1.png',
     quote:
-      'Reela helps me turn every new listing into a professional walk-through video in just 10 minutes. My avatar host looks exactly like me and delivers a consistent, trustworthy presence to clients.',
+      'Reela lets me create listing videos in just 10 minutes — fast, clear, and consistent with my brand.',
     highlight:
-      'Since using Reela, my property inquiries have tripled and video views are up 420%. What used to take a production team now takes me only minutes.',
+      'Property inquiries tripled and video views are up 420%. What used to take a team now takes minutes.',
     role: 'Alexis — Realtor',
     video: 'https://files.reela.com/assets/videos/a1.mp4',
   },
@@ -17,15 +17,15 @@ const testimonials = [
     category: 'E-COMMERCE',
     avatar: 'https://files.reela.com/assets/images/a2.png',
     quote:
-      'Reela lets me create stylish try-on videos for every new collection in minutes. The model avatar keeps our look consistent across all campaigns.',
+      'Reela makes stylish try-on videos for every drop in minutes, keeping our visuals consistent and on-brand.',
     highlight:
-      'Our ad CTR jumped to 8.2% and monthly GMV has grown 3.6× since switching to Reela videos — without hiring any production team.',
+      'Ad CTR hit 8.2% and monthly GMV grew 3.6× — no production team needed.',
     role: 'Emma — Fashion Seller',
     video: 'https://files.reela.com/assets/videos/a2.mp4',
   },
   {
     category: 'CREATOR',
-    avatar: 'https://files.reela.com/assets/images/a2.png',
+    avatar: 'https://files.reela.com/assets/images/a3.png',
     quote:
       'Reela turns short scripts into full animated Shorts in minutes — smooth, cinematic, and ready to post.',
     highlight:
