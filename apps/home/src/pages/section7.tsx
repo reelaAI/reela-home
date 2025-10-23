@@ -43,7 +43,7 @@ const Section7 = () => {
               description='Ideal for Content Professionals'
               features={[
                 '2,500 monthly credits',
-                'Access to Reela 2.0 Lite, Pro & Sora Models',
+                'Access to Reela 2.0 Lite & Pro 720 Models',
                 'Unlimited custom avatars',
                 'AI Voiceover & Enhanced Sound Effects',
                 '3 active jobs at a time',
@@ -60,7 +60,7 @@ const Section7 = () => {
               description='The Ultimate Plan for Power Creators'
               features={[
                 '6,500 monthly credits',
-                'Exclusive access to Reela 2.0 Veo Model for top-tier quality',
+                'Access to Reela 2.0 Pro 1080 Model for top-tier quality',
                 'Unlimited custom avatars',
                 'Unlimited concurrent jobs',
                 'Extended videos up to 10 minutes',
@@ -103,7 +103,7 @@ const Section7 = () => {
               description='Ideal for Content Professionals'
               features={[
                 '2,500 monthly credits',
-                'Access to Reela 2.0 Lite, Pro & Sora Models',
+                'Access to Reela 2.0 Lite & Pro 720 Models',
                 'Unlimited custom avatars',
                 'AI Voiceover & Enhanced Sound Effects',
                 '3 active jobs at a time',
@@ -121,7 +121,7 @@ const Section7 = () => {
               description='The Ultimate Plan for Power Creators'
               features={[
                 '6,500 monthly credits',
-                'Exclusive access to Reela 2.0 Veo Model for top-tier quality',
+                'Access to Reela 2.0 Pro 1080 Model for top-tier quality',
                 'Unlimited custom avatars',
                 'Unlimited concurrent jobs',
                 'Extended videos up to 10 minutes',
