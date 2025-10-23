@@ -157,10 +157,7 @@ const Section7 = () => {
             <a href='mailto:contact@reela.ai'>
               <button class='text-brand inline-flex items-center rounded-full bg-white px-6 py-3 text-lg font-medium transition-transform hover:scale-105'>
                 Contact Sales
-                <Icon
-                  name='external'
-                  className='lucide ml-2 h-5 w-5'
-                />
+                <Icon name='external' className='ml-2 h-5 w-5' aria-hidden />
               </button>
             </a>
           </div>

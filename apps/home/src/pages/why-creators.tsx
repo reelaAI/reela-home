@@ -48,7 +48,7 @@ const WhyCreators = () => {
                 <a href='https://app.reela.com/workspace' target='_blank' rel='noopener noreferrer'>
                   <button class='inline-flex items-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-105'>
                     {card.cta}
-                    <Icon name='arrowRight' className='ml-2 h-5 w-5' />
+                    <Icon name='arrowRight' className='ml-2 h-5 w-5' aria-hidden />
                   </button>
                 </a>
               </div>
@@ -78,7 +78,7 @@ const WhyCreators = () => {
                       class='pointer-events-auto flex h-16 w-16 items-center justify-center rounded-full bg-black/60 text-white shadow-lg transition-transform duration-200 hover:scale-105'
                       onclick='playVideoFromOverlay(this)'
                     >
-                    <Icon name='play' className='ml-1 h-8 w-8' />
+                      <Icon name='play' className='ml-1 h-8 w-8' aria-hidden />
                     </button>
                   </div>
                   <button
@@ -87,8 +87,8 @@ const WhyCreators = () => {
                     aria-label='Toggle sound'
                     onclick='toggleVideoSound(this)'
                   >
-                    <Icon name='volume' className='icon-sound-on' />
-                    <Icon name='mute' className='icon-sound-off hidden' />
+                    <Icon name='volume' className='icon-sound-on' aria-hidden />
+                    <Icon name='mute' className='icon-sound-off hidden' aria-hidden />
                   </button>
                 </div>
               </div>

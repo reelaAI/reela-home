@@ -4,10 +4,7 @@
     "outDir": "dist",
     "rootDirs": ["."],
     "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx",
-    "paths": {
-      "lucide-react": ["./src/lib/lucide-react"]
-    }
+    "jsxImportSource": "hono/jsx"
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "tsup.config.ts"],
   "exclude": ["node_modules", "dist"]

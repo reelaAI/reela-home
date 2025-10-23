@@ -1,8 +1,8 @@
 "use client";
 import * as Lucide from "lucide-react";
-import { ComponentType } from "react";
+import type { ComponentType } from "react";
 
-const ICONS: Record<string, ComponentType<any>> = {
+export const ICONS: Record<string, ComponentType<any>> = {
   play: Lucide.Play,
   pause: Lucide.Pause,
   volume: Lucide.Volume2,
@@ -29,12 +29,16 @@ const ICONS: Record<string, ComponentType<any>> = {
   linkedin: Lucide.Linkedin,
   instagram: Lucide.Instagram,
   youtube: Lucide.Youtube,
+  languages: Lucide.Languages,
+  aspect: Lucide.AspectRatio,
+  subtitles: Lucide.Subtitles,
+  music: Lucide.Music2,
+  styles: Lucide.Sparkles,
+  sfx: Lucide.AudioLines,
 };
 
-export function Icon({
-  name, className, "aria-label": ariaLabel, "aria-hidden": ariaHidden,
-}: { name: keyof typeof ICONS | string; className?: string; "aria-label"?: string; "aria-hidden"?: boolean }) {
+export function Icon({ name, className, ...a11y }: { name: keyof typeof ICONS | string; className?: string }) {
   const C = ICONS[name as string];
   if (!C) return null;
-  return <C className={className} aria-label={ariaLabel} aria-hidden={ariaHidden} />;
+  return <C className={className} {...a11y} />;
 }

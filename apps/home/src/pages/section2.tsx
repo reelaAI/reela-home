@@ -71,7 +71,7 @@ function FeatureCard({
       <div className='relative z-10'>
         <div className='flex flex-col items-center text-center space-y-8'>
           <div className='w-24 h-24 bg-brand rounded-3xl flex items-center justify-center text-white group-hover:scale-105 transition-all duration-500 shadow-xl'>
-            <Icon name={icon} className='size-12 text-white' />
+            <Icon name={icon} className='size-12 text-white' aria-hidden />
           </div>
 
           <div className='space-y-4'>

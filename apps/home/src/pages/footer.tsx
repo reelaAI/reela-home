@@ -33,10 +33,7 @@ const Footer = () => {
               rel='noopener noreferrer'
               href='https://x.com/ReelaAI'
             >
-              <Icon
-                name='twitter'
-                className='lucide lucide-twitter h-5 w-5'
-              />
+              <Icon name='twitter' className='h-5 w-5' aria-hidden />
             </a>
             <a
               class='bg-gray-800 hover:bg-[#F7265B] p-3 rounded-full transition-colors duration-300'
@@ -45,10 +42,7 @@ const Footer = () => {
               rel='noopener noreferrer'
               href='https://www.youtube.com/@ReelaAI'
             >
-              <Icon
-                name='youtube'
-                className='lucide lucide-youtube h-5 w-5'
-              />
+              <Icon name='youtube' className='h-5 w-5' aria-hidden />
             </a>
           </div>
         </div>

@@ -14,6 +14,8 @@
     "@hono/node-server": "catalog:",
     "clsx": "catalog:",
     "hono": "catalog:",
+    "lucide-react": "catalog:",
+    "react": "catalog:",
     "tailwind-merge": "catalog:"
   },
   "devDependencies": {
@@ -21,7 +23,9 @@
     "@tailwindcss/vite": "catalog:",
     "@types/node": "catalog:",
     "@types/nodemailer": "catalog:",
+    "@types/react": "catalog:",
     "eslint": "catalog:",
+    "typescript-eslint": "catalog:",
     "tsup": "catalog:",
     "vite": "catalog:"
   }

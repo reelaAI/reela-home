@@ -80,7 +80,7 @@ const Section4 = () => {
             <a href='/workspace'>
               <button class='bg-brand text-white px-6 py-3 rounded-full font-medium hover:scale-105 transition-transform inline-flex items-center'>
                 are waiting for you
-                <Icon name='arrowRight' className='ml-2 h-5 w-5' />
+                <Icon name='arrowRight' className='ml-2 h-5 w-5' aria-hidden />
               </button>
             </a>
           </div>

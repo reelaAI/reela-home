@@ -126,10 +126,7 @@ function DropDown({
     >
       <summary class='flex items-center gap-1'>
         <div>{title}</div>
-        <Icon
-          name='chevronDown'
-          className='lucide lucide-chevron-down h-4 w-4 transition-transform'
-        />
+        <Icon name='chevronDown' className='h-4 w-4 transition-transform' aria-hidden />
       </summary>
       <ul class='menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm'>
         {items.map((item) => (

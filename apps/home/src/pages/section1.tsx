@@ -58,10 +58,7 @@ const Section1 = () => {
               class='flex h-full items-center gap-4 rounded-3xl border border-gray-200/70 bg-white/90 p-4 shadow-sm backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg md:p-5'
             >
               <div class='flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F7265B]/8'>
-                <Icon
-                  name={highlight.icon}
-                  className='h-8 w-8 text-[#F7265B]'
-                />
+                <Icon name={highlight.icon} className='h-8 w-8 text-[#F7265B]' aria-hidden />
               </div>
               <p class='text-base font-semibold text-gray-900 md:text-lg'>{highlight.title}</p>
             </div>

@@ -84,7 +84,7 @@ const PricingCard: FC<Props> = ({
           const [title, desc] = feature.split('_');
           return (
             <div key={index} className='my-2 flex items-center gap-2'>
-              <Icon name='check' className='h-4 w-4 shrink-0 text-brand' />
+              <Icon name='check' className='h-4 w-4 shrink-0 text-brand' aria-hidden />
               <span key={index} className='flex-1'>
                 {title}
               </span>

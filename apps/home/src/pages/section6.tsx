@@ -240,10 +240,12 @@ const Section6 = () => {
                       <Icon
                         name='volume'
                         className='icon-sound-on hidden h-4 w-4'
+                        aria-hidden
                       />
                       <Icon
                         name='mute'
                         className='icon-sound-off h-4 w-4'
+                        aria-hidden
                       />
                     </button>
                   </div>
@@ -335,7 +337,7 @@ const Section6 = () => {
             data-carousel-prev=''
             aria-label='Show previous testimonial'
           >
-            <Icon name='arrowRight' className='h-5 w-5 -scale-x-100' />
+            <Icon name='arrowRight' className='h-5 w-5 -scale-x-100' aria-hidden />
           </button>
           <button
             type='button'
@@ -343,7 +345,7 @@ const Section6 = () => {
             data-carousel-next=''
             aria-label='Show next testimonial'
           >
-            <Icon name='arrowRight' className='h-5 w-5' />
+            <Icon name='arrowRight' className='h-5 w-5' aria-hidden />
           </button>
         </div>
       </div>

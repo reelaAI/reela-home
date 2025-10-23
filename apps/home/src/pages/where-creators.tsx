@@ -48,7 +48,7 @@ const WhereCreators = () => {
               class='flex h-full flex-col rounded-3xl border border-gray-100 bg-gray-50 p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg'
             >
               <div class='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFE3EA]'>
-                <Icon name={path.icon} className='text-brand h-7 w-7' />
+                <Icon name={path.icon} className='h-7 w-7 text-brand' aria-hidden />
               </div>
               <h3 class='text-xl font-semibold text-gray-900'>{path.title}</h3>
               <p class='mt-3 text-base text-gray-600'>{path.description}</p>
