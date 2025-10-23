@@ -205,6 +205,7 @@ const ICONS: Record<string, IconDefinition> = {
     ],
   },
   music: {
+    viewBox: '0 0 24 24',
     children: [
       { tag: 'path', attrs: { d: 'M9 18V5l12-2v13' } },
       { tag: 'circle', attrs: { cx: 6, cy: 18, r: 3 } },
@@ -212,6 +213,7 @@ const ICONS: Record<string, IconDefinition> = {
     ],
   },
   palette: {
+    viewBox: '0 0 24 24',
     children: [
       { tag: 'circle', attrs: { cx: 13.5, cy: 6.5, r: 0.5, fill: 'currentColor', stroke: 'none' } },
       { tag: 'circle', attrs: { cx: 17.5, cy: 10.5, r: 0.5, fill: 'currentColor', stroke: 'none' } },
@@ -265,6 +267,7 @@ const ICONS: Record<string, IconDefinition> = {
     ],
   },
   play: {
+    viewBox: '0 0 24 24',
     stroke: 'none',
     fill: 'currentColor',
     children: [{ tag: 'path', attrs: { d: 'm9 7 8 5-8 5V7z' } }],
