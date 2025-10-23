@@ -24,6 +24,16 @@ const testimonials = [
     video: 'https://files.reela.com/assets/videos/a2.mp4',
   },
   {
+    category: 'ADVERTISING',
+    avatar: 'https://files.reela.com/assets/images/a4.png',
+    quote:
+      'Reela lets me create full ad samples in just 5 minutes — I can deliver a complete pitch within an hour.',
+    highlight:
+      'Clients are amazed by the speed and quality. Reela turned my workflow into pure creative efficiency.',
+    role: 'Sophie — Ad Producer',
+    video: 'https://files.reela.com/assets/videos/a4.mp4',
+  },
+  {
     category: 'CREATOR',
     avatar: 'https://files.reela.com/assets/images/a3.png',
     quote:
