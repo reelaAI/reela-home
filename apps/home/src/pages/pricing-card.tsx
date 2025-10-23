@@ -1,5 +1,7 @@
-import { cn } from '../utils/cn';
 import type { FC } from 'hono/jsx';
+
+import { Icon } from '../components/Icon';
+import { cn } from '../utils/cn';
 
 interface Props {
   id?: string;
@@ -82,7 +84,7 @@ const PricingCard: FC<Props> = ({
           const [title, desc] = feature.split('_');
           return (
             <div key={index} className='my-2 flex items-center gap-2'>
-              <span>•</span>
+              <Icon name='check' className='h-4 w-4 shrink-0 text-brand' />
               <span key={index} className='flex-1'>
                 {title}
               </span>
