@@ -95,16 +95,16 @@ const getCardPosition = (index: number, activeIndex: number, total: number): Car
 };
 
 const baseCardClasses =
-  'testimonial-card group relative flex w-full max-w-[960px] flex-col gap-6 overflow-hidden rounded-3xl bg-white/95 p-6 shadow-md transition-[transform,box-shadow,opacity,margin] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:flex-row lg:items-start lg:gap-8 lg:p-8';
+  'testimonial-card group relative flex w-full max-w-[960px] flex-col gap-4 overflow-hidden rounded-3xl bg-white/95 p-5 shadow-md transition-[transform,box-shadow,opacity,margin] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:flex-row lg:items-start lg:gap-6 lg:p-5';
 
 const positionClassMap: Record<CardPosition, string> = {
   active:
-    'z-30 shadow-2xl ring-2 ring-brand/10 lg:-mx-16 lg:-mt-12 lg:flex lg:scale-[1.08]',
+    'z-30 gap-6 p-6 shadow-2xl ring-2 ring-brand/10 lg:-mx-16 lg:-mt-12 lg:flex lg:gap-8 lg:p-8 lg:scale-[1.08]',
   prev:
-    'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-sm lg:mt-8 lg:scale-90 lg:opacity-60 lg:z-10',
+    'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-sm lg:mt-8 lg:scale-90 lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-5',
   next:
-    'hidden opacity-0 lg:pointer-events-auto lg:-ml-10 lg:flex lg:max-w-sm lg:mt-8 lg:scale-90 lg:opacity-60 lg:z-10',
-  inactive: 'hidden opacity-0',
+    'hidden opacity-0 lg:pointer-events-auto lg:-ml-10 lg:flex lg:max-w-sm lg:mt-8 lg:scale-90 lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-5',
+  inactive: 'hidden opacity-0 lg:!gap-3 lg:!p-5',
 };
 
 const baseVideoClasses =
@@ -115,9 +115,9 @@ const textPanelBaseClasses =
 
 const textPanelStateClassMap: Record<CardPosition, string> = {
   active: 'lg:max-w-[420px]',
-  prev: 'lg:max-w-[280px]',
-  next: 'lg:max-w-[280px]',
-  inactive: '',
+  prev: 'lg:max-w-[280px] !gap-2 lg:!gap-2.5',
+  next: 'lg:max-w-[280px] !gap-2 lg:!gap-2.5',
+  inactive: '!gap-2 lg:!gap-2.5',
 };
 
 const quoteBaseClasses = 'text-[11px] leading-relaxed text-slate-700';
@@ -140,9 +140,9 @@ const highlightStateClassMap: Record<CardPosition, string> = {
 
 const videoPositionClassMap: Record<CardPosition, string> = {
   active: 'scale-100 lg:mr-8',
-  prev: 'scale-75 lg:mr-3',
-  next: 'scale-75 lg:mr-3',
-  inactive: 'scale-75 lg:mr-3',
+  prev: 'scale-75 lg:mr-1.5',
+  next: 'scale-75 lg:mr-1.5',
+  inactive: 'scale-75 lg:mr-1.5',
 };
 
 const avatarBaseClasses =
