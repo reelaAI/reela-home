@@ -25,11 +25,11 @@ const Section7 = () => {
               description='Perfect for Individual Creators'
               features={[
                 '700 monthly credits', // model tooltip
-                'Reela 1.5 Lite Model_',
-                'AI Remixing - Upload & edit your videos',
-                'Basic Avatars - Fixed-camera, default look',
-                'AI Voiceover - Multi-character narration',
-                'Max video length: 5 min',
+                'Access to Reela 2.0 Lite Model',
+                'AI Remixing – Upload and edit your videos',
+                'Default Avatar access (no custom creation)',
+                'AI Voiceover – Multi-character narration',
+                'Max video length: 1 minute',
                 '1 active job at a time',
                 'AI Background Music',
                 'Multi-aspect ratios (16:9, 9:16, 1:1)',
@@ -42,12 +42,12 @@ const Section7 = () => {
               title='plus'
               description='Ideal for Content Professionals'
               features={[
-                '2,500 credits/month',
-                'Access to Lite, Pro & Identity Models_',
-                '3 Custom Avatars (coming soon)',
-                'Advanced Avatars - Multi-angle, adaptive look',
+                '2,500 monthly credits',
+                'Access to Reela 2.0 Lite & Pro 720 Models',
+                'Unlimited custom avatars',
+                'AI Voiceover & Enhanced Sound Effects',
                 '3 active jobs at a time',
-                'AI-Enhanced Sound Effects',
+                'Max video length: 5 minutes',
                 'Includes all Starter features',
                 'Buy extra credits anytime',
               ]}
@@ -59,11 +59,11 @@ const Section7 = () => {
               title='ultra'
               description='The Ultimate Plan for Power Creators'
               features={[
-                '6,500 credits/month',
-                'Exclusive access to Reela Max for top-tier quality_',
-                '10 Custom Avatars (coming soon)',
-                '5 concurrent jobs - Work faster, create more',
-                'Extended videos - Up to 10 min length',
+                '6,500 monthly credits',
+                'Access to Reela 2.0 Pro 1080 Model for top-tier quality',
+                'Unlimited custom avatars',
+                'Unlimited concurrent jobs',
+                'Extended videos up to 10 minutes',
                 'Priority processing for faster delivery',
                 'Includes all Plus features',
                 'Buy extra credits anytime',
@@ -84,11 +84,11 @@ const Section7 = () => {
               description='Perfect for Individual Creators'
               features={[
                 '700 monthly credits', // model tooltip
-                'Reela 1.5 Lite Model_',
-                'AI Remixing - Upload & edit your videos',
-                'Basic Avatars - Fixed-camera, default look',
-                'AI Voiceover - Multi-character narration',
-                'Max video length: 5 min',
+                'Access to Reela 2.0 Lite Model',
+                'AI Remixing – Upload and edit your videos',
+                'Default Avatar access (no custom creation)',
+                'AI Voiceover – Multi-character narration',
+                'Max video length: 1 minute',
                 '1 active job at a time',
                 'AI Background Music',
                 'Multi-aspect ratios (16:9, 9:16, 1:1)',
@@ -102,12 +102,12 @@ const Section7 = () => {
               title='plus'
               description='Ideal for Content Professionals'
               features={[
-                '2,500 credits/month',
-                'Access to Lite, Pro & Identity Models_',
-                '3 Custom Avatars (coming soon)',
-                'Advanced Avatars - Multi-angle, adaptive look',
+                '2,500 monthly credits',
+                'Access to Reela 2.0 Lite & Pro 720 Models',
+                'Unlimited custom avatars',
+                'AI Voiceover & Enhanced Sound Effects',
                 '3 active jobs at a time',
-                'AI-Enhanced Sound Effects',
+                'Max video length: 5 minutes',
                 'Includes all Starter features',
                 'Buy extra credits anytime',
               ]}
@@ -120,11 +120,11 @@ const Section7 = () => {
               title='ultra'
               description='The Ultimate Plan for Power Creators'
               features={[
-                '6,500 credits/month',
-                'Exclusive access to Reela Max for top-tier quality_',
-                '10 Custom Avatars (coming soon)',
-                '5 concurrent jobs - Work faster, create more',
-                'Extended videos - Up to 10 min length',
+                '6,500 monthly credits',
+                'Access to Reela 2.0 Pro 1080 Model for top-tier quality',
+                'Unlimited custom avatars',
+                'Unlimited concurrent jobs',
+                'Extended videos up to 10 minutes',
                 'Priority processing for faster delivery',
                 'Includes all Plus features',
                 'Buy extra credits anytime',
