@@ -93,7 +93,7 @@ const getCardPosition = (index: number, activeIndex: number, total: number): Car
 };
 
 const baseCardClasses =
-  'testimonial-card group relative flex w-full max-w-[960px] flex-col gap-6 overflow-hidden rounded-3xl bg-white/95 p-6 shadow-md transition-[transform,box-shadow,opacity,margin] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:flex-row lg:items-stretch lg:gap-8 lg:p-8';
+  'testimonial-card group relative flex w-full max-w-[960px] flex-col gap-6 overflow-hidden rounded-3xl bg-white/95 p-6 shadow-md transition-[transform,box-shadow,opacity,margin] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:flex-row lg:items-start lg:gap-8 lg:p-8';
 
 const positionClassMap: Record<CardPosition, string> = {
   active:
@@ -106,7 +106,7 @@ const positionClassMap: Record<CardPosition, string> = {
 };
 
 const baseVideoClasses =
-  'relative mx-auto aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] sm:w-28 md:w-32 lg:mx-0 lg:w-36 xl:w-40';
+  'relative mx-auto aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] sm:w-28 md:w-32 lg:mx-0 lg:w-36 lg:self-start xl:w-40';
 
 const textPanelBaseClasses =
   'flex flex-1 flex-col gap-3 text-left lg:gap-4 lg:max-w-[260px]';
@@ -193,6 +193,7 @@ const Section6 = () => {
                       src={testimonial.video}
                       playsinline
                       class='h-full w-full object-cover'
+                      style={{ aspectRatio: '9 / 16' }}
                       {...(position === 'active'
                         ? {
                             autoplay: true,
