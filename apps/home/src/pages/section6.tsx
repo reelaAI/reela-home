@@ -8,7 +8,7 @@ type Testimonial = {
   category: string;
   avatar: string;
   quote: string;
-  highlight: JSX.Element;
+  highlight: JSX.Element | string;
   role: string;
   video: string;
 };
@@ -78,6 +78,25 @@ const testimonials: Testimonial[] = [
     ),
     role: 'Jason — YouTuber',
     video: 'https://files.reela.com/assets/videos/a3.mp4',
+  },
+  {
+    category: 'E-COMMERCE',
+    avatar: 'https://files.reela.com/assets/images/a6.png',
+    quote:
+      'Reelaを使えば、売上につながる商品動画を1時間に10本以上も作れます。どの動画も一貫したクオリティで仕上がります。',
+    highlight: '導入からわずか2週間で売上が3倍に。新しい動画を投稿するたびに確実に成果が出ています。',
+    role: 'Mia — TikTokセラー',
+    video: 'https://files.reela.com/assets/videos/a6.mp4',
+  },
+  {
+    category: 'FITNESS',
+    avatar: 'https://files.reela.com/assets/images/a7.png',
+    quote:
+      'Reela lets me create calm, beautiful promo videos for my yoga studio in minutes — no camera crew, no editing stress.',
+    highlight:
+      'Our TikTok videos reached 500K+ views this month, and class bookings have doubled since I started using Reela.',
+    role: 'Aisha — Yoga Studio Owner',
+    video: 'https://files.reela.com/assets/videos/a7.mp4',
   },
 ];
 
