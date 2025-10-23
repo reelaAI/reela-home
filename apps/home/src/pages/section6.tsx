@@ -69,8 +69,54 @@ const testimonials = [
   },
 ];
 
+type CardPosition = 'active' | 'prev' | 'next' | 'inactive';
+
+const initialActiveIndex = 1;
+
+const getCardPosition = (index: number, activeIndex: number, total: number): CardPosition => {
+  if (index === activeIndex) {
+    return 'active';
+  }
+
+  const prevIndex = (activeIndex - 1 + total) % total;
+  const nextIndex = (activeIndex + 1) % total;
+
+  if (index === prevIndex) {
+    return 'prev';
+  }
+
+  if (index === nextIndex) {
+    return 'next';
+  }
+
+  return 'inactive';
+};
+
+const baseCardClasses =
+  'testimonial-card group relative flex w-full max-w-xl flex-col gap-6 rounded-3xl bg-white/95 p-6 shadow-md transition-all duration-500 ease-out lg:p-8';
+
+const positionClassMap: Record<CardPosition, string> = {
+  active:
+    'z-20 scale-[1.03] shadow-2xl ring-2 ring-brand/10 lg:-mx-16 lg:-translate-y-10 lg:flex lg:scale-[1.08]',
+  prev:
+    'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-md lg:translate-y-8 lg:scale-90 lg:opacity-70 lg:z-10',
+  next:
+    'hidden opacity-0 lg:pointer-events-auto lg:-ml-10 lg:flex lg:max-w-md lg:translate-y-8 lg:scale-90 lg:opacity-70 lg:z-10',
+  inactive: 'hidden opacity-0',
+};
+
+const baseVideoClasses =
+  'relative aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl bg-black transition-all duration-500 ease-out sm:w-28 md:w-32';
+
+const videoPositionClassMap: Record<CardPosition, string> = {
+  active: 'md:w-36 lg:w-44 xl:w-52',
+  prev: 'lg:w-32',
+  next: 'lg:w-32',
+  inactive: 'lg:w-32',
+};
+
 const Section6 = () => {
-  const visibleTestimonials = testimonials.slice(0, 3);
+  const totalTestimonials = testimonials.length;
 
   return (
     <>
@@ -81,44 +127,60 @@ const Section6 = () => {
         </h2>
       </div>
       <div class='mx-auto mb-20 max-w-[1200px] px-4'>
-        <div class='flex flex-col gap-6 lg:flex-row lg:items-stretch lg:justify-center'>
-          {visibleTestimonials.map((testimonial, index) => {
-            const isFeatured = index === 1;
+        <div
+          class='relative'
+          data-testimonial-carousel=''
+          data-interval='5000'
+        >
+          <div class='flex items-stretch justify-center gap-4 lg:gap-0'>
+            {testimonials.map((testimonial, index) => {
+              const position = getCardPosition(index, initialActiveIndex, totalTestimonials);
+              const cardClasses = `${baseCardClasses} ${positionClassMap[position]}`;
+              const videoClasses = `${baseVideoClasses} ${videoPositionClassMap[position]}`;
 
-            return (
-              <div
-                key={testimonial.quote}
-                class={`testimonial-card relative flex h-full flex-1 flex-row items-start gap-6 rounded-xl bg-white/95 p-6 shadow-sm transition-all duration-300 hover:shadow-md ${
-                  isFeatured
-                    ? 'lg:-mx-6 lg:-translate-y-4 lg:flex-[1.2] lg:shadow-2xl lg:ring-2 lg:ring-brand/20 lg:z-10'
-                    : 'lg:flex-1 lg:translate-y-4 lg:bg-white'
-                }`}
-                data-video-card={isFeatured ? '' : undefined}
-              >
-                <div
-                  class={`relative aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-xl bg-black sm:w-28 md:w-32 ${
-                    isFeatured ? 'md:w-36 lg:w-40 xl:w-48' : 'lg:w-32'
-                  }`}
-                  data-video-autoplay={isFeatured ? '' : undefined}
+              return (
+                <article
+                  key={testimonial.quote}
+                  class={cardClasses}
+                  data-carousel-card=''
+                  data-index={index}
+                  data-position={position}
+                  data-base-class={baseCardClasses}
+                  data-class-active={positionClassMap.active}
+                  data-class-prev={positionClassMap.prev}
+                  data-class-next={positionClassMap.next}
+                  data-class-inactive={positionClassMap.inactive}
+                  data-video-card={position === 'active' ? '' : undefined}
                 >
-                  <video
-                    src={testimonial.video}
-                    playsinline
-                    controls
-                    class='h-full w-full object-cover'
-                    {...(isFeatured
-                      ? {
-                          autoplay: true,
-                          loop: true,
-                          muted: true,
-                          'data-video-element': '',
-                        }
-                      : {})}
-                  />
-                  {isFeatured && (
+                  <div
+                    class={`${videoClasses} lg:mx-auto`}
+                    data-video-container=''
+                    data-video-base-class={`${baseVideoClasses} lg:mx-auto`}
+                    data-video-class-active={videoPositionClassMap.active}
+                    data-video-class-prev={videoPositionClassMap.prev}
+                    data-video-class-next={videoPositionClassMap.next}
+                    data-video-class-inactive={videoPositionClassMap.inactive}
+                  >
+                    <video
+                      src={testimonial.video}
+                      playsinline
+                      class='h-full w-full object-cover'
+                      {...(position === 'active'
+                        ? {
+                            autoplay: true,
+                            loop: true,
+                            muted: true,
+                            controls: true,
+                            'data-video-element': '',
+                          }
+                        : {})}
+                    />
                     <button
                       type='button'
-                      class='absolute right-2 top-2 rounded-full bg-black/60 p-2 text-white transition hover:bg-black/80'
+                      class={`absolute right-3 top-3 rounded-full bg-black/65 p-2 text-white transition hover:bg-black/80 ${
+                        position === 'active' ? '' : 'hidden'
+                      }`}
+                      data-sound-toggle=''
                       onclick='toggleVideoSound(this)'
                       aria-label='Toggle sound'
                     >
@@ -151,47 +213,91 @@ const Section6 = () => {
                         <path d='m15 9 4 4'></path>
                       </svg>
                     </button>
-                  )}
-                </div>
-                <div class='flex flex-1 flex-col gap-4'>
-                  <div class='flex items-start justify-between gap-4'>
-                    <span class='inline-block rounded-full bg-black px-3 py-1 text-xs font-semibold text-white'>
-                      {testimonial.category}
-                    </span>
-                    <div class='border-brand relative h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 shadow-md'>
-                      <img
-                        alt={`${testimonial.role} avatar`}
-                        loading='lazy'
-                        decoding='async'
-                        data-nimg='fill'
-                        class='object-cover'
-                        style='
-                          position: absolute;
-                          height: 100%;
-                          width: 100%;
-                          left: 0;
-                          top: 0;
-                          right: 0;
-                          bottom: 0;
-                          color: transparent;
-                        '
-                        src={testimonial.avatar}
-                      />
+                  </div>
+                  <div class='flex flex-1 flex-col gap-4 text-left lg:text-center'>
+                    <div class='flex items-start justify-between gap-4 lg:flex-col lg:items-center'>
+                      <span class='inline-block rounded-full bg-black px-3 py-1 text-xs font-semibold text-white lg:text-[11px]'>
+                        {testimonial.category}
+                      </span>
+                      <div class='border-brand relative h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 shadow-md'>
+                        <img
+                          alt={`${testimonial.role} avatar`}
+                          loading='lazy'
+                          decoding='async'
+                          data-nimg='fill'
+                          class='object-cover'
+                          style='
+                            position: absolute;
+                            height: 100%;
+                            width: 100%;
+                            left: 0;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            color: transparent;
+                          '
+                          src={testimonial.avatar}
+                        />
+                      </div>
+                    </div>
+                    <div class='space-y-3 text-left lg:text-center'>
+                      <p class='text-sm text-slate-700 md:text-base'>"{testimonial.quote}"</p>
+                      <p class='text-sm text-brand'>{testimonial.highlight}</p>
+                    </div>
+                    <div class='mt-auto flex justify-start lg:justify-center'>
+                      <p class='inline-block rounded-full bg-slate-900/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white'>
+                        {testimonial.role}
+                      </p>
                     </div>
                   </div>
-                  <div class='space-y-3'>
-                    <p class='text-base font-medium text-slate-700 md:text-lg'>"{testimonial.quote}"</p>
-                    <p class='text-sm font-semibold uppercase tracking-wide text-brand'>{testimonial.highlight}</p>
-                  </div>
-                  <div class='mt-auto'>
-                    <p class='inline-block rounded-full bg-slate-900/90 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white'>
-                      {testimonial.role}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+                  <button
+                    type='button'
+                    class='absolute inset-0 z-30 hidden rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/60'
+                    data-carousel-activate=''
+                    aria-label={`Show testimonial from ${testimonial.role}`}
+                  />
+                </article>
+              );
+            })}
+          </div>
+          <button
+            type='button'
+            class='absolute left-0 top-1/2 hidden -translate-y-1/2 rounded-full border border-black/10 bg-white/90 p-3 text-black shadow-lg transition hover:bg-white sm:flex sm:z-30'
+            data-carousel-prev=''
+            aria-label='Show previous testimonial'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              class='h-5 w-5'
+            >
+              <polyline points='15 18 9 12 15 6'></polyline>
+            </svg>
+          </button>
+          <button
+            type='button'
+            class='absolute right-0 top-1/2 hidden -translate-y-1/2 rounded-full border border-black/10 bg-white/90 p-3 text-black shadow-lg transition hover:bg-white sm:flex sm:z-30'
+            data-carousel-next=''
+            aria-label='Show next testimonial'
+          >
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              class='h-5 w-5'
+            >
+              <polyline points='9 18 15 12 9 6'></polyline>
+            </svg>
+          </button>
         </div>
       </div>
     </>
