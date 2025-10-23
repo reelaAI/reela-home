@@ -87,8 +87,8 @@ const WhyCreators = () => {
                     aria-label='Toggle sound'
                     onclick='toggleVideoSound(this)'
                   >
-                    <Icon name='volume' className='icon-sound-on' />
-                    <Icon name='mute' className='icon-sound-off hidden' />
+                    <Icon name='volume' className='icon-sound-on hidden h-4 w-4' />
+                    <Icon name='mute' className='icon-sound-off h-4 w-4' />
                   </button>
                 </div>
               </div>
