@@ -93,7 +93,7 @@ const getCardPosition = (index: number, activeIndex: number, total: number): Car
 };
 
 const baseCardClasses =
-  'testimonial-card group relative flex w-full max-w-[960px] flex-col gap-6 rounded-3xl bg-white/95 p-6 shadow-md transition-[transform,box-shadow,opacity,margin] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:flex-row lg:items-stretch lg:gap-8 lg:p-8';
+  'testimonial-card group relative flex w-full max-w-[960px] flex-col gap-6 overflow-hidden rounded-3xl bg-white/95 p-6 shadow-md transition-[transform,box-shadow,opacity,margin] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:flex-row lg:items-stretch lg:gap-8 lg:p-8';
 
 const positionClassMap: Record<CardPosition, string> = {
   active:
@@ -106,10 +106,10 @@ const positionClassMap: Record<CardPosition, string> = {
 };
 
 const baseVideoClasses =
-  'relative mx-auto aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl bg-black transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] sm:w-28 md:w-32 lg:mx-0 lg:w-36 xl:w-40';
+  'relative mx-auto aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] sm:w-28 md:w-32 lg:mx-0 lg:w-36 xl:w-40';
 
 const textPanelBaseClasses =
-  'flex flex-1 flex-col gap-4 text-left lg:gap-5 lg:max-w-[260px]';
+  'flex flex-1 flex-col gap-3 text-left lg:gap-4 lg:max-w-[260px]';
 
 const textPanelStateClassMap: Record<CardPosition, string> = {
   active: 'lg:max-w-[420px]',
@@ -118,21 +118,21 @@ const textPanelStateClassMap: Record<CardPosition, string> = {
   inactive: '',
 };
 
-const quoteBaseClasses = 'text-xs leading-relaxed text-slate-700';
+const quoteBaseClasses = 'text-[11px] leading-relaxed text-slate-700';
 
 const quoteStateClassMap: Record<CardPosition, string> = {
-  active: 'sm:text-sm md:text-base',
-  prev: 'sm:text-xs md:text-sm',
-  next: 'sm:text-xs md:text-sm',
+  active: 'sm:text-sm md:text-[15px]',
+  prev: 'text-[10px] sm:text-[10px] md:text-xs',
+  next: 'text-[10px] sm:text-[10px] md:text-xs',
   inactive: '',
 };
 
-const highlightBaseClasses = 'text-[11px] text-brand';
+const highlightBaseClasses = 'text-[10px] text-brand';
 
 const highlightStateClassMap: Record<CardPosition, string> = {
   active: 'sm:text-xs md:text-sm',
-  prev: 'sm:text-[11px] md:text-xs',
-  next: 'sm:text-[11px] md:text-xs',
+  prev: 'text-[9px] sm:text-[10px] md:text-xs',
+  next: 'text-[9px] sm:text-[10px] md:text-xs',
   inactive: '',
 };
 
@@ -192,7 +192,7 @@ const Section6 = () => {
                     <video
                       src={testimonial.video}
                       playsinline
-                      class='h-full w-full object-contain'
+                      class='h-full w-full object-cover'
                       {...(position === 'active'
                         ? {
                             autoplay: true,
@@ -276,7 +276,7 @@ const Section6 = () => {
                         />
                       </div>
                     </div>
-                    <div class='space-y-3 text-left'>
+                    <div class='space-y-2 text-left'>
                       <p
                         class={`${quoteBaseClasses} ${quoteStateClassMap[position]}`}
                         data-quote=''
@@ -300,8 +300,8 @@ const Section6 = () => {
                         {testimonial.highlight}
                       </p>
                     </div>
-                    <div class='mt-auto flex justify-start'>
-                      <p class='inline-block rounded-full bg-slate-900/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white'>
+                    <div class='flex justify-start pt-1'>
+                      <p class='inline-block rounded-full bg-slate-900/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-white'>
                         {testimonial.role}
                       </p>
                     </div>
