@@ -1,73 +1,37 @@
-// A new vision for video creation
+// See What Creators Made with Reela
 
 import { Icon } from '../components/Icon';
 
-const VIDEO_PLACEHOLDER =
-  'https://files.reela.com/assets/videos/TalkingAvatar-Ads-1.mp4';
-
 const testimonials = [
   {
+    category: 'REAL ESTATE',
+    avatar: 'https://files.reela.com/assets/images/a1.png',
+    quote:
+      'Reela helps me turn every new listing into a professional walk-through video in just 10 minutes. My avatar host looks exactly like me and delivers a consistent, trustworthy presence to clients.',
+    highlight:
+      'Since using Reela, my property inquiries have tripled and video views are up 420%. What used to take a production team now takes me only minutes.',
+    role: 'Alexis — Realtor',
+    video: 'https://files.reela.com/assets/videos/a1.mp4',
+  },
+  {
     category: 'E-COMMERCE',
-    avatar: '/user-1.png',
+    avatar: 'https://files.reela.com/assets/images/a2.png',
     quote:
-      'Reela lets us produce localized product videos for 10+ markets weekly — no agency needed.',
-    highlight: 'Time-to-market is 70% faster and ad CTR is up by 35%.',
-    role: 'Digital Marketing Manager @ E-commerce Brand',
-    video: VIDEO_PLACEHOLDER,
+      'Reela lets me create stylish try-on videos for every new collection in minutes. The model avatar keeps our look consistent across all campaigns.',
+    highlight:
+      'Our ad CTR jumped to 8.2% and monthly GMV has grown 3.6× since switching to Reela videos — without hiring any production team.',
+    role: 'Emma — Fashion Seller',
+    video: 'https://files.reela.com/assets/videos/a2.mp4',
   },
   {
-    category: 'EDUCATION',
-    avatar: '/user-2.png',
+    category: 'CREATOR',
+    avatar: 'https://files.reela.com/assets/images/a3.png',
     quote:
-      'With AI avatars and multilingual support, I now teach students in three languages without recording anything.',
-    highlight: 'Reela became my full production team — and my class went global.',
-    role: 'Online Course Creator',
-    video: VIDEO_PLACEHOLDER,
-  },
-  {
-    category: 'SOCIAL MEDIA',
-    avatar: '/user-3.png',
-    quote:
-      "I paste a link, remix it, and drop — that's how I post daily with AI B-roll magic.",
-    highlight: 'Reela keeps my content flow fast, fresh, and monetizable.',
-    role: 'TikTok Content Creator',
-    video: VIDEO_PLACEHOLDER,
-  },
-  {
-    category: 'CREATIVE',
-    avatar: '/user-4.png',
-    quote:
-      "Reela's AI storyboard and scene builder turns rough ideas into full visual drafts in 10 minutes.",
-    highlight: 'We now prototype campaigns without touching a camera.',
-    role: 'Creative Director @ Media Studio',
-    video: VIDEO_PLACEHOLDER,
-  },
-  {
-    category: 'CONTENT CREATOR',
-    avatar: '/user-5.png',
-    quote:
-      "I turned my blogs into videos with Reela's voiceover and illustration modes — my channel exploded.",
-    highlight: 'It saved me 15+ hours per week and tripled my views.',
-    role: 'Health & Wellness Influencer',
-    video: VIDEO_PLACEHOLDER,
-  },
-  {
-    category: 'RETAIL',
-    avatar: '/user-6.png',
-    quote:
-      'Reela maps every product angle and character note into the script, so our catalog videos feel shot on location.',
-    highlight: 'Multi-reference alignment keeps 40+ SKUs pixel-perfect across variants.',
-    role: 'Head of Content @ Retail Marketplace',
-    video: VIDEO_PLACEHOLDER,
-  },
-  {
-    category: 'AGENCY',
-    avatar: '/user-7.png',
-    quote:
-      'We storyboard hero shots, drop in AI B-roll, and Reela blends avatars with graphics without leaving the timeline.',
-    highlight: 'Mixed-media sequences now take hours, not days.',
-    role: 'Executive Producer @ Creative Agency',
-    video: VIDEO_PLACEHOLDER,
+      'Reela lets me turn short scripts into full animated Shorts in minutes. The AI scenes look smooth, cinematic, and ready to post right away.',
+    highlight:
+      'My animation Shorts now average over 400K weekly views, and my channel gained 2× more subscribers in just a month — faster than ever before.',
+    role: 'Jason — YouTuber',
+    video: 'https://files.reela.com/assets/videos/a3.mp4',
   },
 ];
 
@@ -152,9 +116,11 @@ const Section6 = () => {
     <>
       <div class='container mx-auto mb-12 px-4 py-16 text-center'>
         <h2 class='font-inter text-4xl font-bold md:text-6xl'>
-          A new vision for
-          <span class='text-brand'> video creation </span>
+          See What Creators Made with Reela
         </h2>
+        <p class='mx-auto mt-4 max-w-2xl text-sm text-slate-600 md:text-base'>
+          Real creators, real results — all made in minutes with Reela’s AI studio.
+        </p>
       </div>
       <div class='mx-auto mb-20 max-w-[1200px] px-4'>
         <div
