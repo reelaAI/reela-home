@@ -83,12 +83,12 @@ const WhyCreators = () => {
                   </div>
                   <button
                     type='button'
-                    class='pointer-events-auto absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-black/60 text-white shadow-lg transition-transform duration-200 hover:scale-105'
+                    class='pointer-events-auto absolute right-3 top-3 rounded-full bg-black/65 p-2 text-white shadow-lg transition hover:bg-black/80'
                     aria-label='Toggle sound'
                     onclick='toggleVideoSound(this)'
                   >
-                    <Icon name='volume' className='icon-sound-on' />
-                    <Icon name='mute' className='icon-sound-off hidden' />
+                    <Icon name='volume' className='icon-sound-on hidden h-4 w-4' />
+                    <Icon name='mute' className='icon-sound-off h-4 w-4' />
                   </button>
                 </div>
               </div>
