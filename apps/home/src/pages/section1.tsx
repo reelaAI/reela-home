@@ -1,5 +1,6 @@
 import { Icon } from '../components/Icon';
-import type { IconName } from '../components/Icon';
+
+type IconName = Parameters<typeof Icon>[0]['name'];
 
 const heroHighlights: Array<{
   title: string;
@@ -7,15 +8,15 @@ const heroHighlights: Array<{
 }> = [
   {
     title: 'Build Your Avatar IP',
-    icon: 'avatar-minimal',
+    icon: 'avatar',
   },
   {
     title: 'Promote Your Products',
-    icon: 'ads-minimal',
+    icon: 'analytics',
   },
   {
     title: 'Monetize Your Channels',
-    icon: 'revenue-minimal',
+    icon: 'dollar',
   },
 ];
 
@@ -59,9 +60,7 @@ const Section1 = () => {
               <div class='flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F7265B]/8'>
                 <Icon
                   name={highlight.icon}
-                  class='h-8 w-8 text-[#F7265B]'
-                  size={32}
-                  strokeWidth={1.25}
+                  className='h-8 w-8 text-[#F7265B]'
                 />
               </div>
               <p class='text-base font-semibold text-gray-900 md:text-lg'>{highlight.title}</p>

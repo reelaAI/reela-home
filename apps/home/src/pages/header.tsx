@@ -127,9 +127,8 @@ function DropDown({
       <summary class='flex items-center gap-1'>
         <div>{title}</div>
         <Icon
-          name='chevron-down'
-          class='lucide lucide-chevron-down h-4 w-4 transition-transform'
-          size={24}
+          name='chevronDown'
+          className='lucide lucide-chevron-down h-4 w-4 transition-transform'
         />
       </summary>
       <ul class='menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm'>

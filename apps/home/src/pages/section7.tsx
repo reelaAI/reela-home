@@ -158,9 +158,8 @@ const Section7 = () => {
               <button class='text-brand inline-flex items-center rounded-full bg-white px-6 py-3 text-lg font-medium transition-transform hover:scale-105'>
                 Contact Sales
                 <Icon
-                  name='arrow-up-right'
-                  class='lucide lucide-arrow-up-right ml-2 h-5 w-5'
-                  size={24}
+                  name='external'
+                  className='lucide ml-2 h-5 w-5'
                 />
               </button>
             </a>

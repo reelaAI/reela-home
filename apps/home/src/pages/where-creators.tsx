@@ -1,5 +1,6 @@
 import { Icon } from '../components/Icon';
-import type { IconName } from '../components/Icon';
+
+type IconName = Parameters<typeof Icon>[0]['name'];
 
 const monetizationPaths: Array<{
   title: string;
@@ -9,22 +10,22 @@ const monetizationPaths: Array<{
   {
     title: 'E-commerce Stores',
     description: 'Create persuasive product videos for Amazon, Shopify, and TikTok Shop to boost clicks and conversions.',
-    icon: 'shopping-cart',
+    icon: 'dollar',
   },
   {
     title: 'YouTube Channels',
     description: 'Generate long-form explainers, reviews, and educational content that grow your audience and ad revenue.',
-    icon: 'monitor-play',
+    icon: 'video',
   },
   {
     title: 'Social Media Platforms',
     description: 'Produce short, scroll-stopping videos for TikTok and Instagram to attract followers and sponsorships.',
-    icon: 'expand',
+    icon: 'external',
   },
   {
     title: 'Agencies & Enterprises',
     description: 'Deliver ad-ready videos at scale for clients — faster, cheaper, and more consistent than traditional production.',
-    icon: 'panel-right-open',
+    icon: 'analytics',
   },
 ];
 
@@ -47,7 +48,7 @@ const WhereCreators = () => {
               class='flex h-full flex-col rounded-3xl border border-gray-100 bg-gray-50 p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg'
             >
               <div class='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFE3EA]'>
-                <Icon name={path.icon} class='text-brand h-7 w-7' size={28} />
+                <Icon name={path.icon} className='text-brand h-7 w-7' />
               </div>
               <h3 class='text-xl font-semibold text-gray-900'>{path.title}</h3>
               <p class='mt-3 text-base text-gray-600'>{path.description}</p>

@@ -35,8 +35,7 @@ const Footer = () => {
             >
               <Icon
                 name='twitter'
-                class='lucide lucide-twitter h-5 w-5'
-                size={24}
+                className='lucide lucide-twitter h-5 w-5'
               />
             </a>
             <a
@@ -48,8 +47,7 @@ const Footer = () => {
             >
               <Icon
                 name='youtube'
-                class='lucide lucide-youtube h-5 w-5'
-                size={24}
+                className='lucide lucide-youtube h-5 w-5'
               />
             </a>
           </div>
