@@ -124,20 +124,20 @@ const getCardPosition = (index: number, activeIndex: number, total: number): Car
 };
 
 const baseCardClasses =
-  'testimonial-card group relative flex w-full max-w-[960px] flex-col gap-4 overflow-hidden rounded-3xl bg-white/95 p-5 shadow-md transition-[transform,box-shadow,opacity,margin] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:flex-row lg:items-start lg:gap-6 lg:p-5';
+  'testimonial-card group relative flex w-[85vw] max-w-[380px] flex-shrink-0 snap-center flex-col gap-4 overflow-hidden rounded-3xl bg-white/95 p-5 shadow-md transition-[transform,box-shadow,opacity,margin] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] sm:w-[360px] md:w-[420px] lg:w-full lg:max-w-[960px] lg:flex-row lg:items-start lg:gap-6 lg:p-5';
 
 const positionClassMap: Record<CardPosition, string> = {
   active:
     'z-30 gap-6 p-6 shadow-2xl ring-2 ring-brand/10 lg:-mx-16 lg:flex lg:items-center lg:gap-8 lg:p-8',
   prev:
-    'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-sm lg:items-center lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
+    'opacity-70 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-sm lg:items-center lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
   next:
-    'hidden opacity-0 lg:pointer-events-auto lg:-ml-10 lg:flex lg:max-w-sm lg:items-center lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
-  inactive: 'hidden opacity-0 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
+    'opacity-70 lg:pointer-events-auto lg:-ml-10 lg:flex lg:max-w-sm lg:items-center lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
+  inactive: 'opacity-50 lg:hidden lg:!gap-3 lg:!p-4 lg:!pb-1.5',
 };
 
 const baseVideoClasses =
-  'relative mx-auto aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl transition-[transform,width] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] origin-top-left sm:w-28 md:w-32 lg:mx-0 lg:w-36 lg:self-start xl:w-40';
+  'relative mx-auto aspect-[9/16] w-36 shrink-0 overflow-hidden rounded-2xl transition-[transform,width] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] origin-top-left sm:w-40 md:w-48 lg:mx-0 lg:w-36 lg:self-start xl:w-40';
 
 const textPanelBaseClasses =
   'flex flex-1 flex-col gap-3 text-left lg:gap-4 lg:max-w-[260px]';
@@ -169,9 +169,9 @@ const highlightStateClassMap: Record<CardPosition, string> = {
 
 const videoPositionClassMap: Record<CardPosition, string> = {
   active: 'lg:mr-8',
-  prev: '!w-20 sm:!w-24 md:!w-28 lg:mr-2 lg:!w-28 xl:!w-32',
-  next: '!w-20 sm:!w-24 md:!w-28 lg:mr-2 lg:!w-28 xl:!w-32',
-  inactive: '!w-20 sm:!w-24 md:!w-28 lg:mr-2 lg:!w-28 xl:!w-32',
+  prev: '!w-32 sm:!w-36 md:!w-40 lg:mr-2 lg:!w-28 xl:!w-32',
+  next: '!w-32 sm:!w-36 md:!w-40 lg:mr-2 lg:!w-28 xl:!w-32',
+  inactive: '!w-32 sm:!w-36 md:!w-40 lg:mr-2 lg:!w-28 xl:!w-32',
 };
 
 const avatarBaseClasses =
@@ -203,7 +203,7 @@ const Section6 = () => {
           data-testimonial-carousel=''
           data-interval='5000'
         >
-          <div class='flex items-stretch justify-center gap-4 lg:items-center lg:gap-0'>
+          <div class='-mx-4 flex snap-x snap-mandatory items-stretch gap-4 overflow-x-auto overscroll-x-contain px-4 pb-4 scroll-smooth lg:mx-0 lg:justify-center lg:overflow-visible lg:px-0 lg:pb-0 lg:items-center lg:gap-0'>
             {testimonials.map((testimonial, index) => {
               const position = getCardPosition(index, initialActiveIndex, totalTestimonials);
               const cardClasses = `${baseCardClasses} ${positionClassMap[position]}`;
