@@ -124,11 +124,11 @@ const Section6 = () => {
 
   return (
     <>
-      <div class='container mx-auto mb-12 px-4 py-16 text-center'>
+      <div class='container mx-auto mb-6 px-4 py-8 text-center'>
         <h2 class='font-inter text-4xl font-bold md:text-6xl'>
-          See What Creators Made with Reela
+          See What <span class='text-brand'>Creators</span> Made with <span class='text-brand'>Reela</span>
         </h2>
-        <p class='mx-auto mt-4 max-w-2xl text-sm text-slate-600 md:text-base'>
+        <p class='mx-auto mt-2 max-w-2xl text-sm text-slate-600 md:text-base'>
           Real creators, real results — all made in minutes with Reela’s AI studio.
         </p>
       </div>
