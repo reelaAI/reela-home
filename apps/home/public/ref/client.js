@@ -338,6 +338,17 @@ function initTestimonialCarousel() {
 
       card.dataset.position = position;
 
+      const cardIndex = Number.parseInt(card.dataset.index || '0', 10);
+      const positionOrder =
+        position === 'prev'
+          ? 1
+          : position === 'active'
+          ? 2
+          : position === 'next'
+          ? 3
+          : 10 + (Number.isNaN(cardIndex) ? 0 : cardIndex);
+      card.style.order = String(positionOrder);
+
       const videoData = videoClassMap.get(card);
       if (videoData) {
         videoData.element.className = `${videoData.base} ${videoData[position] || ''}`.trim();
