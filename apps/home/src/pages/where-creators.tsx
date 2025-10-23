@@ -1,91 +1,31 @@
-const monetizationPaths = [
+import { Icon, type IconName } from '../components/Icon';
+
+type MonetizationPath = {
+  title: string;
+  description: string;
+  icon: IconName;
+};
+
+const monetizationPaths: MonetizationPath[] = [
   {
     title: 'E-commerce Stores',
     description: 'Create persuasive product videos for Amazon, Shopify, and TikTok Shop to boost clicks and conversions.',
-    icon: (
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        width='28'
-        height='28'
-        viewBox='0 0 24 24'
-        fill='none'
-        stroke='currentColor'
-        stroke-width='2'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        class='text-brand'
-      >
-        <path d='M5.5 7h13l-1.5 9h-10z'></path>
-        <path d='M7 7l-1-4H4'></path>
-        <circle cx='9' cy='20' r='1'></circle>
-        <circle cx='17' cy='20' r='1'></circle>
-      </svg>
-    ),
+    icon: 'ShoppingCart',
   },
   {
     title: 'YouTube Channels',
     description: 'Generate long-form explainers, reviews, and educational content that grow your audience and ad revenue.',
-    icon: (
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        width='28'
-        height='28'
-        viewBox='0 0 24 24'
-        fill='none'
-        stroke='currentColor'
-        stroke-width='2'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        class='text-brand'
-      >
-        <path d='m10 15 5.19-3L10 9v6Z'></path>
-        <rect width='20' height='14' x='2' y='5' rx='2'></rect>
-      </svg>
-    ),
+    icon: 'Youtube',
   },
   {
     title: 'Social Media Platforms',
     description: 'Produce short, scroll-stopping videos for TikTok and Instagram to attract followers and sponsorships.',
-    icon: (
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        width='28'
-        height='28'
-        viewBox='0 0 24 24'
-        fill='none'
-        stroke='currentColor'
-        stroke-width='2'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        class='text-brand'
-      >
-        <path d='M16 3h5v5'></path>
-        <path d='M8 21H3v-5'></path>
-        <path d='M16 8 5 19'></path>
-      </svg>
-    ),
+    icon: 'MoveUpRight',
   },
   {
     title: 'Agencies & Enterprises',
     description: 'Deliver ad-ready videos at scale for clients — faster, cheaper, and more consistent than traditional production.',
-    icon: (
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        width='28'
-        height='28'
-        viewBox='0 0 24 24'
-        fill='none'
-        stroke='currentColor'
-        stroke-width='2'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        class='text-brand'
-      >
-        <path d='M4 4h16v16H4z'></path>
-        <path d='M9 4v16'></path>
-        <path d='m15 10-2 2 2 2'></path>
-      </svg>
-    ),
+    icon: 'Building2',
   },
 ];
 
@@ -108,7 +48,7 @@ const WhereCreators = () => {
               class='flex h-full flex-col rounded-3xl border border-gray-100 bg-gray-50 p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg'
             >
               <div class='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFE3EA]'>
-                {path.icon}
+                <Icon name={path.icon} class='h-7 w-7 text-brand' />
               </div>
               <h3 class='text-xl font-semibold text-gray-900'>{path.title}</h3>
               <p class='mt-3 text-base text-gray-600'>{path.description}</p>

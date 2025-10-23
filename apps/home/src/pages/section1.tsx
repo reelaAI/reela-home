@@ -1,98 +1,26 @@
-const heroHighlights = [
+import { Icon, type IconName } from '../components/Icon';
+
+type HeroHighlight = {
+  title: string;
+  description: string;
+  icon: IconName;
+};
+
+const heroHighlights: HeroHighlight[] = [
   {
     title: 'Build Your Avatar IP',
     description: 'Grow your personal brand with consistent talking videos.',
-    icon: (
-      <svg
-        class='h-10 w-10 text-[#F7265B]'
-        viewBox='0 0 48 48'
-        fill='none'
-        xmlns='http://www.w3.org/2000/svg'
-      >
-        <circle cx='18' cy='16' r='8' stroke='currentColor' stroke-width='2.5'></circle>
-        <path
-          d='M6 38c1.4-7.2 6.4-11 12-11s10.6 3.8 12 11'
-          stroke='currentColor'
-          stroke-width='2.5'
-          stroke-linecap='round'
-        ></path>
-        <path
-          d='M34 12v9m0 0 4-4m-4 4-4-4'
-          stroke='currentColor'
-          stroke-width='2.5'
-          stroke-linecap='round'
-          stroke-linejoin='round'
-        ></path>
-      </svg>
-    ),
+    icon: 'UserRound',
   },
   {
     title: 'Promote Your Products',
     description: 'Generate ad-ready videos that sell.',
-    icon: (
-      <svg
-        class='h-10 w-10 text-[#F7265B]'
-        viewBox='0 0 48 48'
-        fill='none'
-        xmlns='http://www.w3.org/2000/svg'
-      >
-        <rect
-          x='6'
-          y='10'
-          width='18'
-          height='28'
-          rx='4'
-          stroke='currentColor'
-          stroke-width='2.5'
-        ></rect>
-        <path
-          d='M32 14h10v8h-10z'
-          stroke='currentColor'
-          stroke-width='2.5'
-          stroke-linejoin='round'
-        ></path>
-        <path
-          d='M32 26h10l-2 8H32z'
-          stroke='currentColor'
-          stroke-width='2.5'
-          stroke-linejoin='round'
-        ></path>
-        <path d='M12 20h6M12 26h6M12 32h6' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'></path>
-      </svg>
-    ),
+    icon: 'Megaphone',
   },
   {
     title: 'Monetize Your Channels',
     description: 'Turn your content into income across every platform.',
-    icon: (
-      <svg
-        class='h-10 w-10 text-[#F7265B]'
-        viewBox='0 0 48 48'
-        fill='none'
-        xmlns='http://www.w3.org/2000/svg'
-      >
-        <circle cx='16' cy='30' r='10' stroke='currentColor' stroke-width='2.5'></circle>
-        <path
-          d='M16 22v16'
-          stroke='currentColor'
-          stroke-width='2.5'
-          stroke-linecap='round'
-        ></path>
-        <path
-          d='M11 27c1.4-1.5 3.6-2.5 5-.9 1.3 1.4.2 3.4-1.8 4.1-1.9.7-3.4 1.8-2.6 3.6.9 2.1 4.1 2.2 6.4.3'
-          stroke='currentColor'
-          stroke-width='2.5'
-          stroke-linecap='round'
-        ></path>
-        <path
-          d='M28 14h14m-7-7v14'
-          stroke='currentColor'
-          stroke-width='2.5'
-          stroke-linecap='round'
-          stroke-linejoin='round'
-        ></path>
-      </svg>
-    ),
+    icon: 'Coins',
   },
 ];
 
@@ -134,7 +62,7 @@ const Section1 = () => {
               class='flex h-full flex-col gap-4 rounded-3xl border border-gray-200/70 bg-white/90 p-6 shadow-sm backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg'
             >
               <div class='flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F7265B]/10'>
-                {highlight.icon}
+                <Icon name={highlight.icon} class='h-10 w-10 text-[#F7265B]' strokeWidth={2.5} />
               </div>
               <p class='text-lg font-semibold text-gray-900'>{highlight.title}</p>
               <p class='text-sm text-gray-600'>{highlight.description}</p>

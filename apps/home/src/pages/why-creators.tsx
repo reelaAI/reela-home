@@ -1,3 +1,5 @@
+import { Icon } from '../components/Icon';
+
 const cards = [
   {
     title: 'Build Your Own Avatar IP',
@@ -46,21 +48,7 @@ const WhyCreators = () => {
                 <a href='https://app.reela.com/workspace' target='_blank' rel='noopener noreferrer'>
                   <button class='inline-flex items-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-105'>
                     {card.cta}
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='20'
-                      height='20'
-                      viewBox='0 0 24 24'
-                      fill='none'
-                      stroke='currentColor'
-                      stroke-width='2'
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      class='ml-2 h-5 w-5'
-                    >
-                      <path d='M5 12h14'></path>
-                      <path d='m12 5 7 7-7 7'></path>
-                    </svg>
+                    <Icon name='ArrowRight' class='ml-2 h-5 w-5' />
                   </button>
                 </a>
               </div>
@@ -90,16 +78,7 @@ const WhyCreators = () => {
                       class='pointer-events-auto flex h-16 w-16 items-center justify-center rounded-full bg-black/60 text-white shadow-lg transition-transform duration-200 hover:scale-105'
                       onclick='playVideoFromOverlay(this)'
                     >
-                      <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        width='32'
-                        height='32'
-                        viewBox='0 0 24 24'
-                        fill='currentColor'
-                        class='ml-1'
-                      >
-                        <path d='m9 7 8 5-8 5V7z'></path>
-                      </svg>
+                      <Icon name='Play' class='ml-1 h-10 w-10' />
                     </button>
                   </div>
                   <button
@@ -108,38 +87,8 @@ const WhyCreators = () => {
                     aria-label='Toggle sound'
                     onclick='toggleVideoSound(this)'
                   >
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='20'
-                      height='20'
-                      viewBox='0 0 24 24'
-                      fill='none'
-                      stroke='currentColor'
-                      stroke-width='2'
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      class='icon-sound-on'
-                    >
-                      <path d='M11 5 6 9H3v6h3l5 4V5Z'></path>
-                      <path d='M19 5c1.5 2 1.5 12 0 14'></path>
-                      <path d='M15.5 8.5c.75 1 1 6.5 0 7.5'></path>
-                    </svg>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='20'
-                      height='20'
-                      viewBox='0 0 24 24'
-                      fill='none'
-                      stroke='currentColor'
-                      stroke-width='2'
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      class='icon-sound-off hidden'
-                    >
-                      <path d='m16 9 6 6'></path>
-                      <path d='m22 9-6 6'></path>
-                      <path d='M11 5 6 9H3v6h3l5 4V5Z'></path>
-                    </svg>
+                    <Icon name='Volume2' class='icon-sound-on h-5 w-5' />
+                    <Icon name='VolumeX' class='icon-sound-off hidden h-5 w-5' />
                   </button>
                 </div>
               </div>
