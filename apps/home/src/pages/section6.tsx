@@ -93,11 +93,11 @@ const getCardPosition = (index: number, activeIndex: number, total: number): Car
 };
 
 const baseCardClasses =
-  'testimonial-card group relative flex w-full max-w-xl flex-col gap-6 rounded-3xl bg-white/95 p-6 shadow-md lg:p-8';
+  'testimonial-card group relative flex w-full max-w-xl flex-col gap-6 rounded-3xl bg-white/95 p-6 shadow-md transition-[transform,box-shadow,opacity,margin] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:p-8';
 
 const positionClassMap: Record<CardPosition, string> = {
   active:
-    'z-30 shadow-2xl ring-2 ring-brand/10 lg:-mx-16 lg:-translate-y-12 lg:flex lg:scale-105',
+    'z-30 shadow-2xl ring-2 ring-brand/10 lg:-mx-16 lg:-translate-y-12 lg:flex lg:scale-[1.08]',
   prev:
     'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-sm lg:translate-y-6 lg:scale-90 lg:opacity-60 lg:z-10',
   next:
@@ -106,7 +106,7 @@ const positionClassMap: Record<CardPosition, string> = {
 };
 
 const baseVideoClasses =
-  'relative aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl bg-black sm:w-28 md:w-36 lg:w-44 xl:w-52';
+  'relative aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl bg-black transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] sm:w-28 md:w-36 lg:w-44 xl:w-52';
 
 const videoPositionClassMap: Record<CardPosition, string> = {
   active: 'scale-100',

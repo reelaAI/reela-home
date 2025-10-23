@@ -405,6 +405,7 @@ function initTestimonialCarousel() {
 
     const goToIndex = (index) => {
       if (!cards.length) return;
+      if (index === activeIndex) return;
 
       const nextIndex = (index + 1) % total;
       const prevIndex = (index - 1 + total) % total;
