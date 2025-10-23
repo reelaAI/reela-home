@@ -14,6 +14,7 @@
     "@hono/node-server": "catalog:",
     "clsx": "catalog:",
     "hono": "catalog:",
+    "lucide-react": "catalog:",
     "tailwind-merge": "catalog:"
   },
   "devDependencies": {
