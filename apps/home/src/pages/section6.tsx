@@ -99,11 +99,11 @@ const baseCardClasses =
 
 const positionClassMap: Record<CardPosition, string> = {
   active:
-    'z-30 gap-6 p-6 shadow-2xl ring-2 ring-brand/10 lg:-mx-16 lg:-mt-12 lg:flex lg:gap-8 lg:p-8',
+    'z-30 gap-6 p-6 shadow-2xl ring-2 ring-brand/10 lg:-mx-16 lg:flex lg:items-center lg:gap-8 lg:p-8',
   prev:
-    'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-sm lg:mt-8 lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
+    'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-sm lg:items-center lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
   next:
-    'hidden opacity-0 lg:pointer-events-auto lg:-ml-10 lg:flex lg:max-w-sm lg:mt-8 lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
+    'hidden opacity-0 lg:pointer-events-auto lg:-ml-10 lg:flex lg:max-w-sm lg:items-center lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
   inactive: 'hidden opacity-0 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
 };
 
@@ -174,7 +174,7 @@ const Section6 = () => {
           data-testimonial-carousel=''
           data-interval='5000'
         >
-          <div class='flex items-stretch justify-center gap-4 lg:items-end lg:gap-0'>
+          <div class='flex items-stretch justify-center gap-4 lg:items-center lg:gap-0'>
             {testimonials.map((testimonial, index) => {
               const position = getCardPosition(index, initialActiveIndex, totalTestimonials);
               const cardClasses = `${baseCardClasses} ${positionClassMap[position]}`;
