@@ -83,7 +83,7 @@ const Section1 = () => {
         </div>
         <div class='mt-14 flex w-full items-center justify-center px-4'>
           <div class='flex flex-wrap items-center justify-center gap-6'>
-            <p class='shrink-0 whitespace-nowrap font-medium text-gray-700'>Powered by industry-leading AI models:</p>
+            <p class='shrink-0 whitespace-nowrap font-medium text-[#F7265B]'>Powered by industry-leading AI models:</p>
             <div class='hidden h-6 border-l border-gray-300 md:block'></div>
             <div class='relative max-w-[90vw] overflow-x-hidden md:max-w-2xl'>
               <div class='animate-infinite-scroll mt-10 flex w-[1000%] md:mt-0'>
