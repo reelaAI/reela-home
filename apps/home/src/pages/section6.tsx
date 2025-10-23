@@ -1,5 +1,7 @@
 // A new vision for video creation
 
+const testimonialVideoUrl = 'https://files.reela.com/assets/videos/TalkingAvatar-Ads-1.mp4';
+
 const testimonials = [
   {
     category: 'E-COMMERCE',
@@ -101,6 +103,24 @@ const Section6 = () => {
                         color: transparent;
                       '
                       src={testimonial.avatar}
+                    />
+                  </div>
+                </div>
+                <div class='mb-6 overflow-hidden rounded-xl bg-black'>
+                  <div
+                    class='relative w-full'
+                    style='
+                      padding-bottom: 177.78%;
+                    '
+                  >
+                    <video
+                      src={testimonialVideoUrl}
+                      class='absolute left-0 top-0 h-full w-full object-cover'
+                      controls
+                      muted
+                      loop
+                      playsinline
+                      preload='metadata'
                     />
                   </div>
                 </div>
