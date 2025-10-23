@@ -298,6 +298,9 @@ function initTestimonialCarousel() {
 
     const classMap = new Map();
     const videoClassMap = new Map();
+    const textPanelClassMap = new Map();
+    const quoteClassMap = new Map();
+    const highlightClassMap = new Map();
 
     cards.forEach((card) => {
       classMap.set(card, {
@@ -317,6 +320,42 @@ function initTestimonialCarousel() {
           prev: videoContainer.dataset.videoClassPrev || '',
           next: videoContainer.dataset.videoClassNext || '',
           inactive: videoContainer.dataset.videoClassInactive || '',
+        });
+      }
+
+      const textPanel = card.querySelector('[data-text-panel]');
+      if (textPanel) {
+        textPanelClassMap.set(card, {
+          element: textPanel,
+          base: textPanel.dataset.textPanelBaseClass || '',
+          active: textPanel.dataset.textPanelClassActive || '',
+          prev: textPanel.dataset.textPanelClassPrev || '',
+          next: textPanel.dataset.textPanelClassNext || '',
+          inactive: textPanel.dataset.textPanelClassInactive || '',
+        });
+      }
+
+      const quote = card.querySelector('[data-quote]');
+      if (quote) {
+        quoteClassMap.set(card, {
+          element: quote,
+          base: quote.dataset.quoteBaseClass || '',
+          active: quote.dataset.quoteClassActive || '',
+          prev: quote.dataset.quoteClassPrev || '',
+          next: quote.dataset.quoteClassNext || '',
+          inactive: quote.dataset.quoteClassInactive || '',
+        });
+      }
+
+      const highlight = card.querySelector('[data-highlight]');
+      if (highlight) {
+        highlightClassMap.set(card, {
+          element: highlight,
+          base: highlight.dataset.highlightBaseClass || '',
+          active: highlight.dataset.highlightClassActive || '',
+          prev: highlight.dataset.highlightClassPrev || '',
+          next: highlight.dataset.highlightClassNext || '',
+          inactive: highlight.dataset.highlightClassInactive || '',
         });
       }
     });
@@ -352,6 +391,21 @@ function initTestimonialCarousel() {
       const videoData = videoClassMap.get(card);
       if (videoData) {
         videoData.element.className = `${videoData.base} ${videoData[position] || ''}`.trim();
+      }
+
+      const textPanelData = textPanelClassMap.get(card);
+      if (textPanelData) {
+        textPanelData.element.className = `${textPanelData.base} ${textPanelData[position] || ''}`.trim();
+      }
+
+      const quoteData = quoteClassMap.get(card);
+      if (quoteData) {
+        quoteData.element.className = `${quoteData.base} ${quoteData[position] || ''}`.trim();
+      }
+
+      const highlightData = highlightClassMap.get(card);
+      if (highlightData) {
+        highlightData.element.className = `${highlightData.base} ${highlightData[position] || ''}`.trim();
       }
 
       const soundToggle = card.querySelector('[data-sound-toggle]');

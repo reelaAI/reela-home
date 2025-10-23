@@ -93,7 +93,7 @@ const getCardPosition = (index: number, activeIndex: number, total: number): Car
 };
 
 const baseCardClasses =
-  'testimonial-card group relative flex w-full max-w-4xl flex-col gap-6 rounded-3xl bg-white/95 p-6 shadow-md transition-[transform,box-shadow,opacity,margin] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:flex-row lg:items-stretch lg:gap-10 lg:p-8';
+  'testimonial-card group relative flex w-full max-w-[960px] flex-col gap-6 rounded-3xl bg-white/95 p-6 shadow-md transition-[transform,box-shadow,opacity,margin] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:flex-row lg:items-stretch lg:gap-8 lg:p-8';
 
 const positionClassMap: Record<CardPosition, string> = {
   active:
@@ -107,6 +107,34 @@ const positionClassMap: Record<CardPosition, string> = {
 
 const baseVideoClasses =
   'relative mx-auto aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl bg-black transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] sm:w-28 md:w-32 lg:mx-0 lg:w-36 xl:w-40';
+
+const textPanelBaseClasses =
+  'flex flex-1 flex-col gap-4 text-left lg:gap-5 lg:max-w-[260px]';
+
+const textPanelStateClassMap: Record<CardPosition, string> = {
+  active: 'lg:max-w-[420px]',
+  prev: 'lg:max-w-[280px]',
+  next: 'lg:max-w-[280px]',
+  inactive: '',
+};
+
+const quoteBaseClasses = 'text-xs leading-relaxed text-slate-700';
+
+const quoteStateClassMap: Record<CardPosition, string> = {
+  active: 'sm:text-sm md:text-base',
+  prev: 'sm:text-xs md:text-sm',
+  next: 'sm:text-xs md:text-sm',
+  inactive: '',
+};
+
+const highlightBaseClasses = 'text-[11px] text-brand';
+
+const highlightStateClassMap: Record<CardPosition, string> = {
+  active: 'sm:text-xs md:text-sm',
+  prev: 'sm:text-[11px] md:text-xs',
+  next: 'sm:text-[11px] md:text-xs',
+  inactive: '',
+};
 
 const videoPositionClassMap: Record<CardPosition, string> = {
   active: 'scale-100',
@@ -153,9 +181,9 @@ const Section6 = () => {
                   data-video-card={position === 'active' ? '' : undefined}
                 >
                   <div
-                    class={`${videoClasses} lg:mr-10`}
+                    class={`${videoClasses} lg:mr-8`}
                     data-video-container=''
-                    data-video-base-class={`${baseVideoClasses} lg:mr-10`}
+                    data-video-base-class={`${baseVideoClasses} lg:mr-8`}
                     data-video-class-active={videoPositionClassMap.active}
                     data-video-class-prev={videoPositionClassMap.prev}
                     data-video-class-next={videoPositionClassMap.next}
@@ -164,7 +192,7 @@ const Section6 = () => {
                     <video
                       src={testimonial.video}
                       playsinline
-                      class='h-full w-full object-cover'
+                      class='h-full w-full object-contain'
                       {...(position === 'active'
                         ? {
                             autoplay: true,
@@ -214,7 +242,15 @@ const Section6 = () => {
                       </svg>
                     </button>
                   </div>
-                  <div class='flex flex-1 flex-col gap-4 text-left lg:gap-6'>
+                  <div
+                    class={`${textPanelBaseClasses} ${textPanelStateClassMap[position]}`}
+                    data-text-panel=''
+                    data-text-panel-base-class={textPanelBaseClasses}
+                    data-text-panel-class-active={textPanelStateClassMap.active}
+                    data-text-panel-class-prev={textPanelStateClassMap.prev}
+                    data-text-panel-class-next={textPanelStateClassMap.next}
+                    data-text-panel-class-inactive={textPanelStateClassMap.inactive}
+                  >
                     <div class='flex flex-col items-start gap-4 lg:flex-row lg:items-center lg:justify-between'>
                       <span class='inline-block rounded-full bg-black px-3 py-1 text-xs font-semibold text-white lg:text-[11px]'>
                         {testimonial.category}
@@ -241,8 +277,28 @@ const Section6 = () => {
                       </div>
                     </div>
                     <div class='space-y-3 text-left'>
-                      <p class='text-sm text-slate-700 md:text-base'>"{testimonial.quote}"</p>
-                      <p class='text-sm text-brand'>{testimonial.highlight}</p>
+                      <p
+                        class={`${quoteBaseClasses} ${quoteStateClassMap[position]}`}
+                        data-quote=''
+                        data-quote-base-class={quoteBaseClasses}
+                        data-quote-class-active={quoteStateClassMap.active}
+                        data-quote-class-prev={quoteStateClassMap.prev}
+                        data-quote-class-next={quoteStateClassMap.next}
+                        data-quote-class-inactive={quoteStateClassMap.inactive}
+                      >
+                        "{testimonial.quote}"
+                      </p>
+                      <p
+                        class={`${highlightBaseClasses} ${highlightStateClassMap[position]}`}
+                        data-highlight=''
+                        data-highlight-base-class={highlightBaseClasses}
+                        data-highlight-class-active={highlightStateClassMap.active}
+                        data-highlight-class-prev={highlightStateClassMap.prev}
+                        data-highlight-class-next={highlightStateClassMap.next}
+                        data-highlight-class-inactive={highlightStateClassMap.inactive}
+                      >
+                        {testimonial.highlight}
+                      </p>
                     </div>
                     <div class='mt-auto flex justify-start'>
                       <p class='inline-block rounded-full bg-slate-900/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white'>
