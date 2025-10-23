@@ -15,6 +15,7 @@ Use this guide to ramp up on the Reel Home monorepo quickly.
 - Run Prettier with `prettier-plugin-tailwindcss` to normalize formatting and class ordering before committing.
 - Components are PascalCase, utilities camelCase, and feature folders lowercase to match the current layout.
 - Reuse the profiles in `packages/tsconfig` and document any intentional deviations from strict defaults.
+- Use icons from `lucide-react`; avoid hand-coding inline SVG assets.
 
 ## Testing Guidelines
 - Use Vitest for unit and integration coverage; keep specs as `*.test.ts` beside source or under `test/` so they land in the `turbo.json` globs.
