@@ -99,16 +99,16 @@ const baseCardClasses =
 
 const positionClassMap: Record<CardPosition, string> = {
   active:
-    'z-30 gap-6 p-6 shadow-2xl ring-2 ring-brand/10 lg:-mx-16 lg:-mt-12 lg:flex lg:gap-8 lg:p-8 lg:scale-[1.08]',
+    'z-30 gap-6 p-6 shadow-2xl ring-2 ring-brand/10 lg:-mx-16 lg:-mt-12 lg:flex lg:gap-8 lg:p-8',
   prev:
-    'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-sm lg:mt-8 lg:scale-90 lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-5',
+    'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-sm lg:mt-8 lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-3',
   next:
-    'hidden opacity-0 lg:pointer-events-auto lg:-ml-10 lg:flex lg:max-w-sm lg:mt-8 lg:scale-90 lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-5',
-  inactive: 'hidden opacity-0 lg:!gap-3 lg:!p-5',
+    'hidden opacity-0 lg:pointer-events-auto lg:-ml-10 lg:flex lg:max-w-sm lg:mt-8 lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-3',
+  inactive: 'hidden opacity-0 lg:!gap-3 lg:!p-4 lg:!pb-3',
 };
 
 const baseVideoClasses =
-  'relative mx-auto aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] origin-top-left sm:w-28 md:w-32 lg:mx-0 lg:w-36 lg:self-start xl:w-40';
+  'relative mx-auto aspect-[9/16] w-24 shrink-0 overflow-hidden rounded-2xl transition-[transform,width] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] origin-top-left sm:w-28 md:w-32 lg:mx-0 lg:w-36 lg:self-start xl:w-40';
 
 const textPanelBaseClasses =
   'flex flex-1 flex-col gap-3 text-left lg:gap-4 lg:max-w-[260px]';
@@ -139,10 +139,10 @@ const highlightStateClassMap: Record<CardPosition, string> = {
 };
 
 const videoPositionClassMap: Record<CardPosition, string> = {
-  active: 'scale-100 lg:mr-8',
-  prev: 'scale-75 lg:mr-1.5',
-  next: 'scale-75 lg:mr-1.5',
-  inactive: 'scale-75 lg:mr-1.5',
+  active: 'lg:mr-8',
+  prev: '!w-20 sm:!w-24 md:!w-28 lg:mr-2 lg:!w-28 xl:!w-32',
+  next: '!w-20 sm:!w-24 md:!w-28 lg:mr-2 lg:!w-28 xl:!w-32',
+  inactive: '!w-20 sm:!w-24 md:!w-28 lg:mr-2 lg:!w-28 xl:!w-32',
 };
 
 const avatarBaseClasses =
