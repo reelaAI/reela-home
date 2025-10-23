@@ -3,23 +3,19 @@ import type { IconName } from '../components/Icon';
 
 const heroHighlights: Array<{
   title: string;
-  description: string;
   icon: IconName;
 }> = [
   {
     title: 'Build Your Avatar IP',
-    description: 'Grow your personal brand with consistent talking videos.',
-    icon: 'sparkles',
+    icon: 'avatar-minimal',
   },
   {
     title: 'Promote Your Products',
-    description: 'Generate ad-ready videos that sell.',
-    icon: 'monitor-play',
+    icon: 'ads-minimal',
   },
   {
     title: 'Monetize Your Channels',
-    description: 'Turn your content into income across every platform.',
-    icon: 'shopping-cart',
+    icon: 'revenue-minimal',
   },
 ];
 
@@ -54,22 +50,21 @@ const Section1 = () => {
           Create viral-ready videos for TikTok, YouTube, and ads — all powered by Reela’s AI studio.
           From your idea to a finished video in minutes.
         </p>
-        <div class='mt-12 grid w-full max-w-5xl gap-6 text-left md:grid-cols-3'>
+        <div class='mt-12 grid w-full max-w-5xl gap-4 text-left md:grid-cols-3'>
           {heroHighlights.map((highlight) => (
             <div
               key={highlight.title}
-              class='flex h-full flex-col gap-4 rounded-3xl border border-gray-200/70 bg-white/90 p-6 shadow-sm backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg'
+              class='flex h-full items-center gap-4 rounded-3xl border border-gray-200/70 bg-white/90 p-4 shadow-sm backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg md:p-5'
             >
-              <div class='flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F7265B]/10'>
+              <div class='flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F7265B]/8'>
                 <Icon
                   name={highlight.icon}
-                  class='h-10 w-10 text-[#F7265B]'
-                  size={40}
-                  strokeWidth={2.5}
+                  class='h-8 w-8 text-[#F7265B]'
+                  size={32}
+                  strokeWidth={1.25}
                 />
               </div>
-              <p class='text-lg font-semibold text-gray-900'>{highlight.title}</p>
-              <p class='text-sm text-gray-600'>{highlight.description}</p>
+              <p class='text-base font-semibold text-gray-900 md:text-lg'>{highlight.title}</p>
             </div>
           ))}
         </div>
