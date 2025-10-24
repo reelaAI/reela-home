@@ -7,7 +7,7 @@ const Section7 = () => {
   return (
     <>
       <div class='container mx-auto mb-12 px-4 py-16 text-center'>
-        <h2 class='font-inter text-4xl font-bold md:text-6xl'>
+        <h2 class='font-inter text-[3rem] font-bold'>
           The right plans,
           <span class='text-brand'> for the right price</span>
         </h2>
@@ -142,7 +142,7 @@ const Section7 = () => {
           style='background: linear-gradient(135deg, #f7265b 0%, #b01b43 100%)'
         >
           <div class='max-w-4xl'>
-            <h2 class='mb-6 text-3xl font-bold md:text-4xl lg:text-5xl'>
+            <h2 class='mb-6 text-[3rem] font-bold'>
               Enterprise-Ready AI Video Solutions
             </h2>
             <p class='mb-4 text-lg opacity-90 md:text-xl'>

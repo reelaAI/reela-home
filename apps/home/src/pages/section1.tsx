@@ -43,7 +43,7 @@ const Section1 = () => {
   return (
     <section class='fade-in-up container mx-auto px-4 py-20 text-center'>
       <div class='mx-auto flex max-w-6xl flex-col items-center text-center'>
-        <h1 class='font-inter font-bold leading-tight tracking-tight text-[44px] md:text-[70px]'>
+        <h1 class='font-inter font-bold leading-tight tracking-tight text-[4.5rem]'>
           Video Creation, <span class='text-[#F7265B]'>Automated.</span>
         </h1>
         <p class='font-inter mt-6 max-w-4xl text-[18px] text-gray-600 md:text-[24px]'>

@@ -9,7 +9,7 @@ const Section2 = () => {
   return (
     <section className='w-full bg-gradient-to-b from-gray-50 to-white px-4 py-12 md:py-16'>
       <div className='max-w-7xl mx-auto'>
-        <h2 className='font-inter text-4xl font-bold md:text-6xl text-center mb-4'>
+        <h2 className='font-inter text-[3rem] font-bold text-center mb-4'>
           Reela is Built for <span className='text-brand'>Speed &amp; Results</span>
         </h2>
         <p className='mx-auto mb-10 md:mb-12 max-w-4xl text-center text-xl text-gray-600'>
