@@ -6,7 +6,7 @@ const Section3 = () => {
       <section class='hidden bg-[#101828] text-white'>
         <div class='container mx-auto px-4 py-14'>
           <div class='mx-auto max-w-5xl space-y-5 text-white'>
-            <span class='inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-pink-100'>
+            <span class='inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-white/80'>
               New · Sora Model Integration
             </span>
             <h2 class='font-inter text-[3rem] font-bold'>

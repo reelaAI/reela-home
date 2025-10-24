@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
           <div class='flex flex-wrap gap-4'>
             <a
-              class='bg-gray-800 hover:bg-[#F7265B] p-3 rounded-full transition-colors duration-300'
+              class='bg-gray-800 hover:bg-[#0F4C81] p-3 rounded-full transition-colors duration-300'
               aria-label='Twitter'
               target='_blank'
               rel='noopener noreferrer'
@@ -39,7 +39,7 @@ const Footer = () => {
               />
             </a>
             <a
-              class='bg-gray-800 hover:bg-[#F7265B] p-3 rounded-full transition-colors duration-300'
+              class='bg-gray-800 hover:bg-[#0F4C81] p-3 rounded-full transition-colors duration-300'
               aria-label='YouTube'
               target='_blank'
               rel='noopener noreferrer'

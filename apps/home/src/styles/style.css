@@ -45,14 +45,14 @@ button {
 }
 
 .label-sm:has(:checked) {
-  background-image: linear-gradient(to right, rgba(247, 38, 91, 0.1), rgba(247, 38, 91, 0.05));
+  background-image: linear-gradient(to right, rgba(15, 76, 129, 0.12), rgba(15, 76, 129, 0.06));
   border-left-width: 4px;
-  border-left-color: #f7265b;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border-left-color: #0f4c81;
+  box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.08);
 }
 
 .label-sm:has(:checked) span {
-  color: #f7265b;
+  color: #0f4c81;
 }
 
 .gradient-border {
@@ -77,7 +77,7 @@ button {
   right: 0;
   bottom: 0;
   border: 2px solid transparent;
-  background: linear-gradient(100deg, rgba(239, 32, 84, 1) 0%, rgba(250, 213, 99, 1) 100%)
+  background: linear-gradient(100deg, rgba(15, 76, 129, 1) 0%, rgba(9, 31, 51, 1) 100%)
     border-box;
   -webkit-mask:
     linear-gradient(#fff 0 0) padding-box,

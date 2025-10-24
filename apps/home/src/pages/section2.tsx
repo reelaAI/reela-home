@@ -59,7 +59,7 @@ function FeatureCard({
     <div
       className={cn(
         'rounded-lg text-slate-950',
-        'p-10 shadow-xl bg-white group relative overflow-hidden h-full shadow-rose-500/10',
+        'p-10 shadow-xl bg-white group relative overflow-hidden h-full shadow-[0_20px_45px_rgba(15,76,129,0.12)]',
         'hover:shadow-2xl transition-all duration-500 hover:-translate-y-3'
       )}
     >

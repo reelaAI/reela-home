@@ -32,9 +32,7 @@ const Section5 = () => {
                   alt='CapCut'
                   class='h-6 w-auto'
                   style='
-                    filter: brightness(0) saturate(100%) invert(22%) sepia(0%)
-                      saturate(0%) hue-rotate(0deg) brightness(95%)
-                      contrast(89%);
+                    filter: grayscale(100%) brightness(92%) contrast(88%);
                   '
                 />
               </div>
@@ -56,7 +54,7 @@ const Section5 = () => {
         <div class='grid grid-cols-1 gap-6 md:grid-cols-3'>
           <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-lg bg-[#E6EFF8] p-3'>
                 <Icon
                   name='api'
                   className='lucide text-brand h-8 w-8'
@@ -70,7 +68,7 @@ const Section5 = () => {
           </div>
           <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-lg bg-[#E6EFF8] p-3'>
                 <Icon
                   name='template'
                   className='lucide text-brand h-8 w-8'
@@ -82,7 +80,7 @@ const Section5 = () => {
           </div>
           <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-lg bg-[#E6EFF8] p-3'>
                 <Icon
                   name='remix'
                   className='lucide text-brand h-8 w-8'
@@ -96,7 +94,7 @@ const Section5 = () => {
           </div>
           <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-lg bg-[#E6EFF8] p-3'>
                 <Icon
                   name='play'
                   className='lucide text-brand h-8 w-8'
@@ -110,7 +108,7 @@ const Section5 = () => {
           </div>
           <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-lg bg-[#E6EFF8] p-3'>
                 <Icon
                   name='star'
                   className='lucide text-brand h-8 w-8'
@@ -124,7 +122,7 @@ const Section5 = () => {
           </div>
           <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-lg bg-[#E6EFF8] p-3'>
                 <Icon
                   name='volume'
                   className='lucide text-brand h-8 w-8'

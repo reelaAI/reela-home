@@ -139,7 +139,7 @@ const Section7 = () => {
       <div class='mx-auto mb-20 max-w-[1200px] px-4'>
         <div
           class='relative overflow-hidden rounded-3xl p-12 text-white md:p-16'
-          style='background: linear-gradient(135deg, #f7265b 0%, #b01b43 100%)'
+          style='background: linear-gradient(135deg, #0F4C81 0%, #0B1F33 100%)'
         >
           <div class='max-w-4xl'>
             <h2 class='mb-6 text-[3rem] font-bold'>
