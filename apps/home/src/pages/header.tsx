@@ -21,11 +21,11 @@ export const products = [
 export default function header({ avatarUrl }: { avatarUrl?: string }) {
   let user = (
     <Fragment>
-      <a class='hidden text-gray-700 hover:text-gray-900 md:block' href='/workspace'>
+      <a class='hidden text-gray-600 transition-colors hover:text-gray-900 md:block' href='/workspace'>
         Login
       </a>
       <a href='/workspace'>
-        <button class='ring-offset-background focus-visible:ring-ring [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-gray-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50'>
+        <button class='ring-offset-background focus-visible:ring-ring [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-brand px-5 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/60 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50'>
           Sign Up
         </button>
       </a>
@@ -120,7 +120,7 @@ function DropDown({
   return (
     <details
       id={id}
-      class='dropdown cursor-pointer text-gray-700 hover:text-gray-900 focus:outline-none'
+      class='dropdown cursor-pointer text-gray-600 transition-colors hover:text-gray-900 focus:outline-none'
       aria-expanded='false'
       aria-haspopup='true'
     >

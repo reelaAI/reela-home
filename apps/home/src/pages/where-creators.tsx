@@ -45,9 +45,9 @@ const WhereCreators = () => {
           {monetizationPaths.map((path) => (
             <div
               key={path.title}
-              class='flex h-full flex-col rounded-3xl border border-gray-100 bg-gray-50 p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg'
+              class='flex h-full flex-col rounded-3xl border border-gray-100 bg-white p-6 text-left shadow-[0_20px_45px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_30px_65px_rgba(15,23,42,0.12)]'
             >
-              <div class='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFE3EA]'>
+              <div class='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10'>
                 <Icon name={path.icon} className='text-brand h-7 w-7' />
               </div>
               <h3 class='text-xl font-semibold text-gray-900'>{path.title}</h3>

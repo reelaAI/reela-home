@@ -7,7 +7,7 @@ const Section5 = () => {
         <h2 class='font-inter text-[3rem] font-bold'>Universal Video Capabilities</h2>
       </div>
       <div class='mx-auto mb-16 max-w-[1200px] px-4'>
-        <div class='overflow-hidden rounded-3xl bg-white shadow-lg'>
+        <div class='overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-[0_28px_60px_rgba(15,23,42,0.08)]'>
           <div class='flex flex-col lg:flex-row'>
             <div class='flex flex-col justify-center p-6 lg:w-1/2 lg:p-12'>
               <h2 class='mb-6 text-[3rem] font-bold'>
@@ -30,17 +30,13 @@ const Section5 = () => {
                 <img
                   src='/capcut.png'
                   alt='CapCut'
-                  class='h-6 w-auto'
-                  style='
-                    filter: brightness(0) saturate(100%) invert(22%) sepia(0%)
-                      saturate(0%) hue-rotate(0deg) brightness(95%)
-                      contrast(89%);
-                  '
+                  class='h-6 w-auto opacity-80'
+                  style='filter: grayscale(100%) brightness(62%);'
                 />
               </div>
             </div>
             <div class='p-6 lg:w-1/2 lg:p-12 lg:pl-0'>
-              <div class='relative overflow-hidden rounded-xl shadow-lg'>
+              <div class='relative overflow-hidden rounded-2xl border border-gray-100 shadow-[0_24px_50px_rgba(15,23,42,0.08)]'>
                 <img
                   src='https://files.reela.com/assets/images/edit.png'
                   alt='Reela Editor interface showing video editing timeline and preview'
@@ -54,9 +50,9 @@ const Section5 = () => {
       </div>
       <div class='mx-auto mb-16 max-w-[1200px] px-4'>
         <div class='grid grid-cols-1 gap-6 md:grid-cols-3'>
-          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+          <div class='rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-lg bg-brand/10 p-3'>
                 <Icon
                   name='api'
                   className='lucide text-brand h-8 w-8'
@@ -68,9 +64,9 @@ const Section5 = () => {
               </p>
             </div>
           </div>
-          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+          <div class='rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-lg bg-brand/10 p-3'>
                 <Icon
                   name='template'
                   className='lucide text-brand h-8 w-8'
@@ -80,9 +76,9 @@ const Section5 = () => {
               <p class='text-gray-600'>Support 16:9, 9:16, and 1:1 formats for any platform.</p>
             </div>
           </div>
-          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+          <div class='rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-lg bg-brand/10 p-3'>
                 <Icon
                   name='remix'
                   className='lucide text-brand h-8 w-8'
@@ -94,9 +90,9 @@ const Section5 = () => {
               </p>
             </div>
           </div>
-          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+          <div class='rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-lg bg-brand/10 p-3'>
                 <Icon
                   name='play'
                   className='lucide text-brand h-8 w-8'
@@ -108,9 +104,9 @@ const Section5 = () => {
               </p>
             </div>
           </div>
-          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+          <div class='rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-lg bg-brand/10 p-3'>
                 <Icon
                   name='star'
                   className='lucide text-brand h-8 w-8'
@@ -122,9 +118,9 @@ const Section5 = () => {
               </p>
             </div>
           </div>
-          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+          <div class='rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-lg bg-brand/10 p-3'>
                 <Icon
                   name='volume'
                   className='lucide text-brand h-8 w-8'

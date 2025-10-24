@@ -26,7 +26,7 @@ const cards = [
 
 const WhyCreators = () => {
   return (
-    <section class='bg-[#FFF6F8] py-20'>
+    <section class='bg-[rgba(255,0,88,0.05)] py-20'>
       <div class='container mx-auto px-4'>
         <div class='mx-auto mb-14 max-w-3xl text-center'>
           <h2 class='font-inter text-[3rem] font-bold md:whitespace-nowrap'>
@@ -40,7 +40,7 @@ const WhyCreators = () => {
           {cards.map((card) => (
             <div
               key={card.title}
-              class='grid gap-8 overflow-hidden rounded-3xl bg-white p-6 shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl md:grid-cols-[1fr_1fr] md:p-8 lg:p-10'
+              class='grid gap-8 overflow-hidden rounded-3xl border border-gray-100 bg-white p-6 shadow-[0_26px_55px_rgba(15,23,42,0.08)] transition-transform duration-300 hover:-translate-y-2 hover:shadow-[0_36px_70px_rgba(15,23,42,0.12)] md:grid-cols-[1fr_1fr] md:p-8 lg:p-10'
             >
               <div class='space-y-4 self-center'>
                 <h3 class='text-2xl font-bold text-gray-900 md:text-3xl'>{card.title}</h3>
