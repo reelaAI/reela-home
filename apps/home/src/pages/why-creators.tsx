@@ -26,13 +26,13 @@ const cards = [
 
 const WhyCreators = () => {
   return (
-    <section class='bg-[#FFF6F8] py-20'>
-      <div class='container mx-auto px-4'>
+    <section class='bg-[radial-gradient(circle_at_top,_rgba(40,38,74,0.6),_rgba(5,4,13,0.95)_65%)] py-20'>
+      <div class='container mx-auto px-4 text-white'>
         <div class='mx-auto mb-14 max-w-3xl text-center'>
-          <h2 class='font-inter text-[3rem] font-bold md:whitespace-nowrap'>
+          <h2 class='font-inter text-[3rem] font-bold md:whitespace-nowrap text-white'>
             Why Creators Choose <span class='text-brand'>Reela</span>
           </h2>
-          <p class='mt-4 text-base text-gray-600 md:text-lg'>
+          <p class='mt-4 text-base text-slate-300 md:text-lg'>
             Reela helps creators, brands, and professionals turn ideas into high-impact videos that grow influence and drive results.
           </p>
         </div>
@@ -40,20 +40,20 @@ const WhyCreators = () => {
           {cards.map((card) => (
             <div
               key={card.title}
-              class='grid gap-8 overflow-hidden rounded-3xl bg-white p-6 shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl md:grid-cols-[1fr_1fr] md:p-8 lg:p-10'
+              class='grid gap-8 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.05] p-6 text-slate-200 shadow-[0_30px_120px_rgba(0,0,0,0.5)] transition-transform duration-300 hover:-translate-y-2 hover:shadow-[0_40px_160px_rgba(255,0,88,0.25)] md:grid-cols-[1fr_1fr] md:p-8 lg:p-10'
             >
               <div class='space-y-4 self-center'>
-                <h3 class='text-2xl font-bold text-gray-900 md:text-3xl'>{card.title}</h3>
-                <p class='text-lg text-gray-600'>{card.description}</p>
+                <h3 class='text-2xl font-bold text-white md:text-3xl'>{card.title}</h3>
+                <p class='text-lg text-slate-300'>{card.description}</p>
                 <a href='https://app.reela.com/workspace' target='_blank' rel='noopener noreferrer'>
-                  <button class='inline-flex items-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-105'>
+                  <button class='inline-flex items-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white shadow-[0_20px_60px_rgba(255,0,88,0.35)] transition-transform hover:scale-105'>
                     {card.cta}
                     <Icon name='arrowRight' className='ml-2 h-5 w-5' />
                   </button>
                 </a>
               </div>
               <div
-                class='relative aspect-[16/9] w-full self-center overflow-hidden rounded-2xl bg-white shadow-lg md:mx-auto md:max-w-[540px]'
+                class='relative aspect-[16/9] w-full self-center overflow-hidden rounded-2xl border border-white/10 bg-black/80 shadow-[0_25px_90px_rgba(0,0,0,0.6)] md:mx-auto md:max-w-[540px]'
                 data-video-card
               >
                 <div class='absolute inset-0' data-video-autoplay>

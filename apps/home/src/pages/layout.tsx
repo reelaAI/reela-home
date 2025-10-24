@@ -33,6 +33,10 @@ export default function layout({
       @theme {
         --color-brand: #ff0058;
       }
+
+      body {
+        @apply bg-[#05040d] text-slate-100 antialiased;
+      }
     </style>
   `;
 
@@ -70,8 +74,8 @@ export default function layout({
         {Gtag}
         {Tailwind}
       </head>
-      <body style="font-family: 'Inter', sans-serif;">
-        <div class='min-h-screen bg-gray-50'>
+      <body class='bg-[#05040d] text-slate-100' style="font-family: 'Inter', sans-serif;">
+        <div class='relative min-h-screen bg-[radial-gradient(circle_at_top,_#17172a,_#05040d_55%)]'>
           <Header avatarUrl={avatarUrl} />
           {children}
           <Footer />
