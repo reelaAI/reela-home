@@ -66,9 +66,9 @@ const Section1 = () => {
             </div>
           ))}
         </div>
-        <div class='mt-10 flex w-full max-w-xs flex-col items-center gap-6 sm:max-w-md'>
+        <div class='mt-10 flex flex-col items-center gap-6'>
           <a
-            class='w-full rounded-full bg-[#F7265B] px-8 py-4 text-base font-semibold text-white shadow-sm transition-all duration-200 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F7265B] focus-visible:ring-offset-2'
+            class='inline-flex items-center justify-center rounded-full bg-[#F7265B] px-8 py-4 text-base font-semibold text-white shadow-sm transition-all duration-200 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F7265B] focus-visible:ring-offset-2'
             href='https://app.reela.com/workspace'
           >
             Create with Reela AI
