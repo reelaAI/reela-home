@@ -86,3 +86,120 @@ button {
   mask-composite: exclude;
   pointer-events: none;
 }
+
+/* ================== reela light theme : tokens ================== */
+:root {
+  /* Brand —— 只在视觉层使用，不改变任何结构类名 */
+  --brand: #FF0058;          /* 主色 */
+  --brand-600: #e6004f;      /* hover 深一阶 */
+  --brand-300: #ff4f8a;      /* 浅一阶（边框/标签） */
+  --accent: #7A3CF6;         /* 次强调（小面积渐变或强调线） */
+
+  /* 基底（浅色） */
+  --bg: #ffffff;             /* 页面背景 */
+  --surface: #ffffff;        /* 卡片/容器背景 */
+  --muted: #F7F8FA;          /* 模块浅灰底 */
+  --border: #E6E8EF;         /* 细边框 */
+  --shadow: 0 6px 24px rgba(16,24,40,0.06); /* 轻阴影，避免浮夸 */
+
+  /* 文本 */
+  --text: #0B1220;           /* 标准正文（近黑） */
+  --text-dim: #57607A;       /* 次级说明文案 */
+  --link: var(--brand);      /* 链接/可点击强调 */
+
+  /* 轻量渐变（可用于已有按钮/条幅的背景，不强行覆盖） */
+  --grad-brand: linear-gradient(135deg, var(--brand) 0%, var(--brand-300) 55%, var(--accent) 100%);
+}
+
+/* ================== reela light theme : global polish ================== */
+html, body { background: var(--bg); color: var(--text); } /* reela light theme */
+
+/* 链接与可点击文字：不改 DOM，仅做颜色与 hover 态 */
+a, a:visited, [role="link"] { color: var(--link); text-decoration: none; } /* reela light theme */
+a:hover, [role="link"]:hover { opacity: .9; } /* reela light theme */
+
+/* 通用卡片容器：通过常见类名与语义容器选择器增强外观（不依赖特定结构） */
+.card, .panel, .box, .tile, .feature, section.card, article.card, div[role="group"].card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+} /* reela light theme */
+.card:hover, .panel:hover, .box:hover, .tile:hover, .feature:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(16,24,40,0.10);
+  border-color: var(--brand-300);
+} /* reela light theme */
+
+/* 按钮（不改类名，仅用通配/候选类友好覆盖） */
+button, .button, .btn, .cta, [role="button"] {
+  -webkit-font-smoothing: antialiased;
+  font-weight: 700;
+  border-radius: 9999px;
+  transition: background .2s ease, color .2s ease, box-shadow .2s ease, border-color .2s ease, transform .2s ease;
+} /* reela light theme */
+
+/* 实心主按钮：匹配现有“主按钮”的常见语义与可访问属性 */
+button.primary, .btn-primary, .cta.primary, .button.primary,
+button[type="submit"], .btn[type="submit"], [data-variant="primary"] {
+  background: var(--brand);
+  color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 6px 18px rgba(255,0,88,0.25);
+} /* reela light theme */
+button.primary:hover, .btn-primary:hover, .cta.primary:hover, .button.primary:hover,
+button[type="submit"]:hover, .btn[type="submit"]:hover, [data-variant="primary"]:hover {
+  background: var(--brand-600);
+  transform: translateY(-1px);
+} /* reela light theme */
+
+/* 线框/幽灵按钮（不改变原有 variant 结构，仅视觉统一） */
+button.ghost, .btn-ghost, .button.ghost, .cta.ghost, [data-variant="ghost"] {
+  background: #fff;
+  color: var(--text);
+  border: 1px solid var(--border);
+} /* reela light theme */
+button.ghost:hover, .btn-ghost:hover, .button.ghost:hover, .cta.ghost:hover, [data-variant="ghost"]:hover {
+  border-color: var(--brand-300);
+  color: var(--brand);
+} /* reela light theme */
+
+/* 输入类（边框/焦点）——对常见 input/textarea/select 做轻量统一 */
+input, textarea, select {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+} /* reela light theme */
+input:focus, textarea:focus, select:focus {
+  border-color: var(--brand-300);
+  box-shadow: 0 0 0 3px rgba(255,0,88,0.15);
+} /* reela light theme */
+
+/* 常见分割区/条（例如品牌墙/信息条），只调整边与留白，不动结构 */
+.hr, .divider, section.divider, [data-divider="true"] {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+} /* reela light theme */
+
+/* 页眉/页脚背景与边（保持浅色简洁） */
+header, .site-header, [role="banner"] {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+} /* reela light theme */
+footer, .site-footer, [role="contentinfo"] {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+} /* reela light theme */
+
+/* 细节文本层级（不改 HTML 结构，仅视觉层次） */
+h1, h2, h3 { color: var(--text); letter-spacing: -0.02em; } /* reela light theme */
+p, .muted, .subtle, small { color: var(--text-dim); }        /* reela light theme */
+
+/* 可访问性：尊重系统减少动画设置 */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+} /* reela light theme */
+
