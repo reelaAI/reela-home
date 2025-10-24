@@ -6,7 +6,7 @@ import PricingCard from './pricing-card';
 const Section7 = () => {
   return (
     <>
-      <div class='container mx-auto mb-12 px-4 py-16 text-center'>
+      <div class='container mx-auto mb-12 px-4 py-16 text-center text-white'>
         <h2 class='font-inter text-[3rem] font-bold'>
           The right plans,
           <span class='text-brand'> for the right price</span>
@@ -14,8 +14,8 @@ const Section7 = () => {
       </div>
 
       <form action='/subscribe' method='post'>
-        <div class='relative mx-auto mb-20 flex max-w-[1200px] flex-wrap justify-center px-4'>
-          <label class='peer/y has-checked:bg-brand has-checked:text-white mb-4 rounded-full bg-gray-200 px-6 py-2 text-gray-800'>
+        <div class='relative mx-auto mb-20 flex max-w-[1200px] flex-wrap justify-center px-4 text-white'>
+          <label class='peer/y has-checked:bg-brand has-checked:text-white mb-4 rounded-full border border-white/10 bg-white/10 px-6 py-2 text-gray-300 transition-colors hover:border-white/20 hover:text-white'>
             <input type='radio' name='plan' value='year' class='peer hidden' checked />
             <div>Yearly</div>
           </label>
@@ -73,7 +73,7 @@ const Section7 = () => {
             />
           </div>
 
-          <label class='peer/m has-checked:bg-brand has-checked:text-white mb-4 ml-4 rounded-full bg-gray-200 px-6 py-2 text-gray-800'>
+          <label class='peer/m has-checked:bg-brand has-checked:text-white mb-4 ml-4 rounded-full border border-white/10 bg-white/10 px-6 py-2 text-gray-300 transition-colors hover:border-white/20 hover:text-white'>
             <input type='radio' name='plan' value='month' class='hidden' />
             <div>Monthly</div>
           </label>
@@ -136,30 +136,30 @@ const Section7 = () => {
         </div>
       </form>
 
-      <div class='mx-auto mb-20 max-w-[1200px] px-4'>
+      <div class='mx-auto mb-20 max-w-[1200px] px-4 text-white'>
         <div
-          class='relative overflow-hidden rounded-3xl p-12 text-white md:p-16'
-          style='background: linear-gradient(135deg, #f7265b 0%, #b01b43 100%)'
+          class='relative overflow-hidden rounded-3xl border border-white/10 p-12 text-white shadow-[0_40px_120px_rgba(255,0,88,0.35)] md:p-16'
+          style='background: radial-gradient(circle at top left, rgba(255,0,88,0.55), rgba(17,17,30,0.9)), linear-gradient(135deg, rgba(8,8,16,0.95) 0%, rgba(9,12,28,0.95) 100%)'
         >
           <div class='max-w-4xl'>
             <h2 class='mb-6 text-[3rem] font-bold'>
               Enterprise-Ready AI Video Solutions
             </h2>
-            <p class='mb-4 text-base opacity-90 md:text-lg'>
+            <p class='mb-4 text-base text-gray-200 md:text-lg'>
               Whether you're scaling creative production, localizing content across regions, or
               generating hundreds of videos via API — Reela's enterprise solutions are built to
               adapt.
             </p>
-            <p class='mb-8 text-base opacity-90 md:text-lg'>
+            <p class='mb-8 text-base text-gray-200 md:text-lg'>
               Get custom avatars, private model training, API access, workflow integration, and
               white-glove support — all designed to fit your business.
             </p>
             <a href='mailto:contact@reela.ai'>
-              <button class='text-brand inline-flex items-center rounded-full bg-white px-6 py-3 text-lg font-medium transition-transform hover:scale-105'>
+              <button class='inline-flex items-center rounded-full bg-white/10 px-6 py-3 text-lg font-medium text-white transition-transform hover:scale-105 hover:bg-white/20'>
                 Contact Sales
                 <Icon
                   name='external'
-                  className='lucide ml-2 h-5 w-5'
+                  className='lucide ml-2 h-5 w-5 text-brand'
                 />
               </button>
             </a>

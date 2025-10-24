@@ -21,11 +21,11 @@ export const products = [
 export default function header({ avatarUrl }: { avatarUrl?: string }) {
   let user = (
     <Fragment>
-      <a class='hidden text-gray-700 hover:text-gray-900 md:block' href='/workspace'>
+      <a class='hidden text-gray-300 transition-colors hover:text-white md:block' href='/workspace'>
         Login
       </a>
       <a href='/workspace'>
-        <button class='ring-offset-background focus-visible:ring-ring [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-gray-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50'>
+        <button class='ring-offset-background focus-visible:ring-ring [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-brand px-4 py-2 text-sm font-medium text-white shadow-[0_0_25px_rgba(255,0,88,0.35)] transition-all hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050507] disabled:pointer-events-none disabled:opacity-50'>
           Sign Up
         </button>
       </a>
@@ -37,14 +37,14 @@ export default function header({ avatarUrl }: { avatarUrl?: string }) {
       <img
         src={avatarUrl}
         alt='Avatar'
-        class='hidden h-10 w-10 rounded-full border border-gray-200 shadow-sm md:block'
+        class='hidden h-10 w-10 rounded-full border border-white/20 shadow-sm md:block'
       />
     );
   }
 
   return (
-    <header class='container mx-auto px-4 py-4'>
-      <nav class='flex items-center justify-between'>
+    <header class='container relative z-10 mx-auto px-4 py-4'>
+      <nav class='flex items-center justify-between rounded-full border border-white/10 bg-white/5 px-5 py-3 backdrop-blur'>
         <div class='flex items-end gap-8'>
           <a class='flex items-center' href='/'>
             <img
@@ -59,10 +59,10 @@ export default function header({ avatarUrl }: { avatarUrl?: string }) {
               src='/logo.svg'
             />
           </a>
-          <div class='hidden items-center gap-6 md:flex'>
+          <div class='hidden items-center gap-6 text-sm font-medium text-gray-300 md:flex'>
             <DropDown title='Reela AI' id='reela-dropdown' items={products} />
             <a
-              class='text-gray-700 hover:text-gray-900'
+              class='transition-colors hover:text-white'
               target='_blank'
               rel='noopener noreferrer'
               href='/benchmark'
@@ -92,7 +92,7 @@ export default function header({ avatarUrl }: { avatarUrl?: string }) {
               ]}
             />
             <a
-              class='text-gray-700 hover:text-gray-900'
+              class='transition-colors hover:text-white'
               target='_blank'
               rel='noopener noreferrer'
               href='/pricing'
@@ -120,7 +120,7 @@ function DropDown({
   return (
     <details
       id={id}
-      class='dropdown cursor-pointer text-gray-700 hover:text-gray-900 focus:outline-none'
+      class='dropdown group cursor-pointer text-gray-300 transition-colors hover:text-white focus:outline-none'
       aria-expanded='false'
       aria-haspopup='true'
     >
@@ -128,13 +128,13 @@ function DropDown({
         <div>{title}</div>
         <Icon
           name='chevronDown'
-          className='lucide lucide-chevron-down h-4 w-4 transition-transform'
+          className='lucide lucide-chevron-down h-4 w-4 text-gray-400 transition-transform group-open:rotate-180'
         />
       </summary>
-      <ul class='menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm'>
+      <ul class='menu dropdown-content rounded-2xl border border-white/10 bg-[#0b0b12] p-2 text-gray-200 shadow-[0_12px_40px_rgba(0,0,0,0.45)]'>
         {items.map((item) => (
           <li onclick={`document.getElementById('${id}').removeAttribute('open')`} key={item.href}>
-            <a target='_blank' href={item.href}>
+            <a class='rounded-lg px-2 py-1 transition-colors hover:bg-white/5 hover:text-white' target='_blank' href={item.href}>
               {item.name}
             </a>
           </li>

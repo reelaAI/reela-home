@@ -25,9 +25,9 @@ const PricingCard: FC<Props> = ({
   return (
     <div
       className={cn(
-        'relative space-y-4 overflow-hidden rounded-xl bg-white p-4 dark:border-transparent dark:bg-gray-50',
+        'relative space-y-4 overflow-hidden rounded-xl border border-white/10 bg-white/5 p-4 text-white shadow-[0_24px_80px_rgba(5,6,14,0.6)] backdrop-blur',
         {
-          'border border-neutral-300': !isPopular,
+          'hover:border-white/25 hover:shadow-[0_36px_120px_rgba(255,0,88,0.35)] transition-all duration-300': true,
           'gradient-border': isPopular,
         },
       )}
@@ -43,12 +43,12 @@ const PricingCard: FC<Props> = ({
       <div className='h-28 lg:h-32 xl:h-28'>
         <div className='mt-3'>
           <h5 className='text-2xl font-semibold capitalize'>{title}</h5>
-          <p className='text-base text-gray-800'>{description}</p>
+          <p className='text-base text-gray-300'>{description}</p>
         </div>
 
         <div className='my-auto mt-4 flex gap-2'>
-          <div className='text-3xl font-medium'>${price}</div>
-          <div className='text-xs'>
+          <div className='text-3xl font-medium text-white'>${price}</div>
+          <div className='text-xs text-gray-400'>
             <div> per user per month </div>
             <div>
               {period === 'month' ? 'billed monthly' : `billed annually as \$${price * 12} / year`}
@@ -64,10 +64,10 @@ const PricingCard: FC<Props> = ({
       <a
         href='/pricing'
         className={cn(
-          'block w-full rounded-full py-2 text-sm text-white text-center',
+          'block w-full rounded-full py-2 text-sm text-white text-center shadow-[0_12px_40px_rgba(255,0,88,0.25)]',
           {
-            'bg-black': !isPopular,
-            'bg-[#ff0058] text-white': isPopular,
+            'bg-white/10 hover:bg-white/20': !isPopular,
+            'bg-[#ff0058] text-white hover:bg-[#ff1f6d]': isPopular,
           },
           'disabled:cursor-wait disabled:opacity-50',
         )}
@@ -79,7 +79,7 @@ const PricingCard: FC<Props> = ({
       </a>
 
       {/* features */}
-      <div className='space-y-3 text-sm text-gray-800'>
+      <div className='space-y-3 text-sm text-gray-300'>
         {features.map((feature, index) => {
           const [title, desc] = feature.split('_');
           return (

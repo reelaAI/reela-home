@@ -70,8 +70,11 @@ export default function layout({
         {Gtag}
         {Tailwind}
       </head>
-      <body style="font-family: 'Inter', sans-serif;">
-        <div class='min-h-screen bg-gray-50'>
+      <body style="font-family: 'Inter', sans-serif;" class='bg-[#050507] text-gray-100'>
+        <div class='relative min-h-screen overflow-hidden bg-[#050507]'>
+          <div class='pointer-events-none absolute inset-x-0 top-[-20%] h-[420px] bg-[radial-gradient(circle_at_top,_rgba(255,0,88,0.35),_transparent_60%)] blur-3xl opacity-90'></div>
+          <div class='pointer-events-none absolute inset-y-0 left-[-40%] hidden h-full w-[520px] bg-[radial-gradient(circle,_rgba(120,98,255,0.25),_transparent_65%)] blur-3xl sm:block'></div>
+          <div class='pointer-events-none absolute inset-y-0 right-[-30%] hidden h-full w-[420px] bg-[radial-gradient(circle,_rgba(255,0,88,0.22),_transparent_70%)] blur-3xl lg:block'></div>
           <Header avatarUrl={avatarUrl} />
           {children}
           <Footer />

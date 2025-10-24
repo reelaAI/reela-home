@@ -31,13 +31,13 @@ const monetizationPaths: Array<{
 
 const WhereCreators = () => {
   return (
-    <section class='bg-white py-20'>
+    <section class='bg-gradient-to-b from-[#08080c] via-[#0a0a12] to-[#101020] py-20 text-white'>
       <div class='container mx-auto px-4'>
         <div class='mx-auto mb-12 max-w-3xl text-center'>
           <h2 class='font-inter text-[3rem] font-bold'>
             Where Creators Monetize with <span class='text-brand'>Reela</span>
           </h2>
-          <p class='mt-4 text-base text-gray-600 md:text-lg'>
+          <p class='mt-4 text-base text-gray-300 md:text-lg'>
             Reela turns your videos into income — from personal brands to e-commerce stores and marketing campaigns.
           </p>
         </div>
@@ -45,13 +45,13 @@ const WhereCreators = () => {
           {monetizationPaths.map((path) => (
             <div
               key={path.title}
-              class='flex h-full flex-col rounded-3xl border border-gray-100 bg-gray-50 p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg'
+              class='flex h-full flex-col rounded-3xl border border-white/10 bg-white/5 p-6 text-left shadow-[0_20px_70px_rgba(5,6,14,0.55)] transition-all duration-300 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_35px_120px_rgba(255,0,88,0.25)]'
             >
-              <div class='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFE3EA]'>
-                <Icon name={path.icon} className='text-brand h-7 w-7' />
+              <div class='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/20 text-brand'>
+                <Icon name={path.icon} className='h-7 w-7' />
               </div>
-              <h3 class='text-xl font-semibold text-gray-900'>{path.title}</h3>
-              <p class='mt-3 text-base text-gray-600'>{path.description}</p>
+              <h3 class='text-xl font-semibold text-white'>{path.title}</h3>
+              <p class='mt-3 text-base text-gray-300'>{path.description}</p>
             </div>
           ))}
         </div>
