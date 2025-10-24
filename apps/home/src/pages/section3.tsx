@@ -3,7 +3,7 @@ import { Icon } from '../components/Icon';
 const Section3 = () => {
   return (
     <>
-      <section class='bg-[#101828] text-white'>
+      <section class='hidden bg-[#101828] text-white'>
         <div class='container mx-auto px-4 py-14'>
           <div class='mx-auto max-w-5xl space-y-5 text-white'>
             <span class='inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-pink-100'>
