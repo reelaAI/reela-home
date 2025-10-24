@@ -31,7 +31,7 @@ const Section4 = () => {
   return (
     <Fragment>
       <div class='container mx-auto px-4 text-center py-16 mb-12'>
-        <h2 class='text-4xl md:text-6xl font-bold font-inter'>
+        <h2 class='text-[3rem] font-bold font-inter'>
           Unified <span class='text-brand'>Multimodal </span>
           Video Creation
           <p class='mt-6 text-xl text-gray-600 max-w-3xl mx-auto font-bold font-inter'>

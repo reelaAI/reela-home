@@ -9,7 +9,7 @@ const Section3 = () => {
             <span class='inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-pink-100'>
               New · Sora Model Integration
             </span>
-            <h2 class='font-inter text-[28px] font-bold md:text-[36px] lg:text-[44px]'>
+            <h2 class='font-inter text-[3rem] font-bold'>
               Generate Long-Form Videos with Sora via Reela
             </h2>
             <p class='text-base text-white/80 md:text-lg'>

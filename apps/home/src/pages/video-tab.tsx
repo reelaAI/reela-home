@@ -24,7 +24,7 @@ const VideoTab = ({ videos, tabTitle, tabButton, tabButtonSrc }: Props) => {
   return (
     <>
       <div class='p-6 md:p-12'>
-        <h2 class='mb-12 text-4xl font-bold'>{tabTitle}</h2>
+        <h2 class='mb-12 text-[3rem] font-bold'>{tabTitle}</h2>
         <div class='grid gap-8 md:grid-cols-2'>
           <div class='flex flex-col'>
             <div class='space-y-6'>

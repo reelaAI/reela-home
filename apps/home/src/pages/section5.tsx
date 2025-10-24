@@ -4,13 +4,13 @@ const Section5 = () => {
   return (
     <>
       <div class='container mx-auto mb-12 px-4 py-16 text-center'>
-        <h2 class='font-inter text-4xl font-bold md:text-6xl'>Universal Video Capabilities</h2>
+        <h2 class='font-inter text-[3rem] font-bold'>Universal Video Capabilities</h2>
       </div>
       <div class='mx-auto mb-16 max-w-[1200px] px-4'>
         <div class='overflow-hidden rounded-3xl bg-white shadow-lg'>
           <div class='flex flex-col lg:flex-row'>
             <div class='flex flex-col justify-center p-6 lg:w-1/2 lg:p-12'>
-              <h2 class='mb-6 text-3xl font-bold md:text-4xl'>
+              <h2 class='mb-6 text-[3rem] font-bold'>
                 Reela Editor - Smart, Flexible, Ready to Export
               </h2>
               <p class='mb-4 text-lg text-gray-600'>
