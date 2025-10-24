@@ -71,7 +71,7 @@ export default function layout({
         {Tailwind}
       </head>
       <body style="font-family: 'Inter', sans-serif;">
-        <div class='min-h-screen bg-gray-50'>
+        <div class='min-h-screen bg-[#05030d]/95 text-slate-100'>
           <Header avatarUrl={avatarUrl} />
           {children}
           <Footer />

@@ -31,10 +31,10 @@ const Section4 = () => {
   return (
     <Fragment>
       <div class='container mx-auto px-4 text-center py-16 mb-12'>
-        <h2 class='text-[3rem] font-bold font-inter'>
+        <h2 class='text-[3rem] font-bold font-inter text-white'>
           Unified <span class='text-brand'>Multimodal </span>
           Video Creation
-          <p class='mt-6 max-w-3xl mx-auto text-base text-gray-600 font-bold font-inter md:text-lg'>
+          <p class='mt-6 max-w-3xl mx-auto text-base text-slate-300 font-bold font-inter md:text-lg'>
             Create seamless videos by combining avatars, AI scenes, video clips, illustrations, and
             B-roll — all in one unified workflow.
           </p>
@@ -43,11 +43,11 @@ const Section4 = () => {
 
       <section class='container mx-auto px-4 mb-8'>
         <div class='max-w-[1200px] mx-auto'>
-          <div class='rounded-3xl overflow-hidden bg-white shadow-lg mb-8 grid lg:grid-cols-[minmax(100px,250px)_1fr] gird-cols-1 gap-4 p-6 md:p-12'>
+          <div class='rounded-3xl overflow-hidden border border-white/10 bg-[#090b18]/80 shadow-[0_35px_120px_-70px_rgba(0,0,0,0.95)] backdrop-blur-lg mb-8 grid lg:grid-cols-[minmax(100px,250px)_1fr] gird-cols-1 gap-4 p-6 md:p-12'>
             {config.map((item, index) => (
               <div key={String(index)} class='contents group'>
-                <label class='w-full transition-all duration-200 bg-white hover:bg-gray-50 border border-gray-200 rounded-lg overflow-hidden p-4 label-sm col-start-1 max-h-max'>
-                  <span class='text-sm font-medium text-gray-700 has-checked:text-brand'>
+                <label class='w-full transition-all duration-200 bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl overflow-hidden p-4 label-sm col-start-1 max-h-max text-left text-slate-200'>
+                  <span class='text-sm font-medium text-slate-200 has-checked:text-brand'>
                     {item.name}
                   </span>
                   <input
@@ -58,7 +58,7 @@ const Section4 = () => {
                     onchange='pauseAllVideos()'
                   />
                 </label>
-                <div class='relative rounded-xl overflow-hidden shadow-lg bg-black w-full h-full lg:col-start-2 hidden group-has-checked:block row-span-10 lg:row-start-1 row-start-6'>
+                <div class='relative rounded-3xl overflow-hidden shadow-[0_45px_120px_-80px_rgba(255,0,88,0.6)] bg-black/80 w-full h-full lg:col-start-2 hidden group-has-checked:block row-span-10 lg:row-start-1 row-start-6'>
                   <div class='aspect-video w-full'>
                     <video
                       src={item.url}
@@ -73,12 +73,12 @@ const Section4 = () => {
             ))}
           </div>
           <div class='flex flex-wrap items-center justify-center gap-2 text-center'>
-            <h3 class='text-2xl font-bold'>
+            <h3 class='text-2xl font-bold text-white'>
               More <span class='text-brand'>multimodal </span>
               AI video combinations
             </h3>
             <a href='/workspace'>
-              <button class='bg-brand text-white px-6 py-3 rounded-full font-medium hover:scale-105 transition-transform inline-flex items-center'>
+              <button class='bg-brand text-white px-6 py-3 rounded-full font-medium hover:scale-105 transition-transform inline-flex items-center shadow-[0_20px_70px_-45px_rgba(255,0,88,0.9)]'>
                 are waiting for you
                 <Icon name='arrowRight' className='ml-2 h-5 w-5' />
               </button>

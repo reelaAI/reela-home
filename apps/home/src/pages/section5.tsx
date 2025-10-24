@@ -4,20 +4,20 @@ const Section5 = () => {
   return (
     <>
       <div class='container mx-auto mb-12 px-4 py-16 text-center'>
-        <h2 class='font-inter text-[3rem] font-bold'>Universal Video Capabilities</h2>
+        <h2 class='font-inter text-[3rem] font-bold text-white'>Universal Video Capabilities</h2>
       </div>
       <div class='mx-auto mb-16 max-w-[1200px] px-4'>
-        <div class='overflow-hidden rounded-3xl bg-white shadow-lg'>
+        <div class='overflow-hidden rounded-3xl border border-white/10 bg-[#090b18]/80 shadow-[0_35px_120px_-70px_rgba(0,0,0,0.95)] backdrop-blur-xl'>
           <div class='flex flex-col lg:flex-row'>
-            <div class='flex flex-col justify-center p-6 lg:w-1/2 lg:p-12'>
-              <h2 class='mb-6 text-[3rem] font-bold'>
+            <div class='flex flex-col justify-center p-6 lg:w-1/2 lg:p-12 text-left'>
+              <h2 class='mb-6 text-[3rem] font-bold text-white'>
                 Reela Editor - Smart, Flexible, Ready to Export
               </h2>
-              <p class='mb-4 text-base text-gray-600 md:text-lg'>
+              <p class='mb-4 text-base text-slate-300 md:text-lg'>
                 Edit scenes, subtitles, voiceovers and music with Reela's intuitive timeline editor
                 — no editing experience required.
               </p>
-              <p class='mb-6 text-base text-gray-600 md:text-lg'>
+              <p class='mb-6 text-base text-slate-300 md:text-lg'>
                 Export your project directly as a full video or as editable files for Premiere Pro
                 and CapCut for advanced editing.
               </p>
@@ -25,22 +25,20 @@ const Section5 = () => {
                 <img
                   src='/pr.svg'
                   alt='Adobe Premiere Pro'
-                  class='h-8 w-auto opacity-80 grayscale'
+                  class='h-8 w-auto opacity-80'
                 />
                 <img
                   src='/capcut.png'
                   alt='CapCut'
                   class='h-6 w-auto'
                   style='
-                    filter: brightness(0) saturate(100%) invert(22%) sepia(0%)
-                      saturate(0%) hue-rotate(0deg) brightness(95%)
-                      contrast(89%);
+                    filter: brightness(95%) contrast(110%);
                   '
                 />
               </div>
             </div>
             <div class='p-6 lg:w-1/2 lg:p-12 lg:pl-0'>
-              <div class='relative overflow-hidden rounded-xl shadow-lg'>
+              <div class='relative overflow-hidden rounded-2xl border border-white/5 shadow-[0_35px_120px_-70px_rgba(0,0,0,0.9)]'>
                 <img
                   src='https://files.reela.com/assets/images/edit.png'
                   alt='Reela Editor interface showing video editing timeline and preview'
@@ -54,84 +52,84 @@ const Section5 = () => {
       </div>
       <div class='mx-auto mb-16 max-w-[1200px] px-4'>
         <div class='grid grid-cols-1 gap-6 md:grid-cols-3'>
-          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+          <div class='rounded-2xl border border-white/10 bg-[#0c0f1d]/80 p-6 shadow-[0_25px_90px_-70px_rgba(0,0,0,0.9)] transition-shadow duration-300 hover:border-[rgba(255,0,88,0.4)] hover:shadow-[0_35px_120px_-70px_rgba(255,0,88,0.5)]'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-xl border border-[rgba(255,0,88,0.2)] bg-[rgba(255,0,88,0.08)] p-3 text-brand shadow-[0_18px_60px_-50px_rgba(255,0,88,0.9)]'>
                 <Icon
                   name='api'
                   className='lucide text-brand h-8 w-8'
                 />
               </div>
-              <h3 class='mb-2 text-xl font-bold'>Multilingual Video Support</h3>
-              <p class='text-gray-600'>
+              <h3 class='mb-2 text-xl font-bold text-white'>Multilingual Video Support</h3>
+              <p class='text-slate-300'>
                 Create videos in over 140 languages to reach global audiences.
               </p>
             </div>
           </div>
-          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+          <div class='rounded-2xl border border-white/10 bg-[#0c0f1d]/80 p-6 shadow-[0_25px_90px_-70px_rgba(0,0,0,0.9)] transition-shadow duration-300 hover:border-[rgba(255,0,88,0.4)] hover:shadow-[0_35px_120px_-70px_rgba(255,0,88,0.5)]'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-xl border border-[rgba(255,0,88,0.2)] bg-[rgba(255,0,88,0.08)] p-3 text-brand shadow-[0_18px_60px_-50px_rgba(255,0,88,0.9)]'>
                 <Icon
                   name='template'
                   className='lucide text-brand h-8 w-8'
                 />
               </div>
-              <h3 class='mb-2 text-xl font-bold'>Flexible Aspect Ratios</h3>
-              <p class='text-gray-600'>Support 16:9, 9:16, and 1:1 formats for any platform.</p>
+              <h3 class='mb-2 text-xl font-bold text-white'>Flexible Aspect Ratios</h3>
+              <p class='text-slate-300'>Support 16:9, 9:16, and 1:1 formats for any platform.</p>
             </div>
           </div>
-          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+          <div class='rounded-2xl border border-white/10 bg-[#0c0f1d]/80 p-6 shadow-[0_25px_90px_-70px_rgba(0,0,0,0.9)] transition-shadow duration-300 hover:border-[rgba(255,0,88,0.4)] hover:shadow-[0_35px_120px_-70px_rgba(255,0,88,0.5)]'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-xl border border-[rgba(255,0,88,0.2)] bg-[rgba(255,0,88,0.08)] p-3 text-brand shadow-[0_18px_60px_-50px_rgba(255,0,88,0.9)]'>
                 <Icon
                   name='remix'
                   className='lucide text-brand h-8 w-8'
                 />
               </div>
-              <h3 class='mb-2 text-xl font-bold'>Multilingual Subtitles</h3>
-              <p class='text-gray-600'>
+              <h3 class='mb-2 text-xl font-bold text-white'>Multilingual Subtitles</h3>
+              <p class='text-slate-300'>
                 Add single-language or bilingual subtitles with one click.
               </p>
             </div>
           </div>
-          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+          <div class='rounded-2xl border border-white/10 bg-[#0c0f1d]/80 p-6 shadow-[0_25px_90px_-70px_rgba(0,0,0,0.9)] transition-shadow duration-300 hover:border-[rgba(255,0,88,0.4)] hover:shadow-[0_35px_120px_-70px_rgba(255,0,88,0.5)]'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-xl border border-[rgba(255,0,88,0.2)] bg-[rgba(255,0,88,0.08)] p-3 text-brand shadow-[0_18px_60px_-50px_rgba(255,0,88,0.9)]'>
                 <Icon
                   name='play'
                   className='lucide text-brand h-8 w-8'
                 />
               </div>
-              <h3 class='mb-2 text-xl font-bold'>AI Background Music</h3>
-              <p class='text-gray-600'>
+              <h3 class='mb-2 text-xl font-bold text-white'>AI Background Music</h3>
+              <p class='text-slate-300'>
                 Generate and sync background music tailored to your video scenes.
               </p>
             </div>
           </div>
-          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+          <div class='rounded-2xl border border-white/10 bg-[#0c0f1d]/80 p-6 shadow-[0_25px_90px_-70px_rgba(0,0,0,0.9)] transition-shadow duration-300 hover:border-[rgba(255,0,88,0.4)] hover:shadow-[0_35px_120px_-70px_rgba(255,0,88,0.5)]'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-xl border border-[rgba(255,0,88,0.2)] bg-[rgba(255,0,88,0.08)] p-3 text-brand shadow-[0_18px_60px_-50px_rgba(255,0,88,0.9)]'>
                 <Icon
                   name='star'
                   className='lucide text-brand h-8 w-8'
                 />
               </div>
-              <h3 class='mb-2 text-xl font-bold'>Style Variations</h3>
-              <p class='text-gray-600'>
+              <h3 class='mb-2 text-xl font-bold text-white'>Style Variations</h3>
+              <p class='text-slate-300'>
                 Choose from a variety of video styles to match your brand tone.
               </p>
             </div>
           </div>
-          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+          <div class='rounded-2xl border border-white/10 bg-[#0c0f1d]/80 p-6 shadow-[0_25px_90px_-70px_rgba(0,0,0,0.9)] transition-shadow duration-300 hover:border-[rgba(255,0,88,0.4)] hover:shadow-[0_35px_120px_-70px_rgba(255,0,88,0.5)]'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-xl border border-[rgba(255,0,88,0.2)] bg-[rgba(255,0,88,0.08)] p-3 text-brand shadow-[0_18px_60px_-50px_rgba(255,0,88,0.9)]'>
                 <Icon
                   name='volume'
                   className='lucide text-brand h-8 w-8'
                 />
               </div>
-              <h3 class='mb-2 text-xl font-bold'>AI Sound Effects</h3>
-              <p class='text-gray-600'>
+              <h3 class='mb-2 text-xl font-bold text-white'>AI Sound Effects</h3>
+              <p class='text-slate-300'>
                 Auto-generate sound effects that match scenes and actions.
               </p>
             </div>

@@ -124,15 +124,15 @@ const getCardPosition = (index: number, activeIndex: number, total: number): Car
 };
 
 const baseCardClasses =
-  'testimonial-card group relative flex w-full max-w-[960px] flex-col gap-4 overflow-hidden rounded-3xl bg-white/95 p-5 shadow-md transition-[transform,box-shadow,opacity,margin] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:flex-row lg:items-start lg:gap-6 lg:p-5';
+  'testimonial-card group relative flex w-full max-w-[960px] flex-col gap-4 overflow-hidden rounded-3xl border border-white/10 bg-[#0c0f1d]/85 p-5 text-slate-200 shadow-[0_35px_120px_-70px_rgba(0,0,0,0.9)] backdrop-blur-lg transition-[transform,box-shadow,opacity,margin] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:flex-row lg:items-start lg:gap-6 lg:p-5';
 
 const positionClassMap: Record<CardPosition, string> = {
   active:
-    'z-30 gap-6 p-6 shadow-2xl ring-2 ring-brand/10 lg:-mx-16 lg:flex lg:items-center lg:gap-8 lg:p-8',
+    'z-30 gap-6 p-6 shadow-[0_45px_140px_-80px_rgba(255,0,88,0.55)] ring-1 ring-[rgba(255,0,88,0.2)] lg:-mx-16 lg:flex lg:items-center lg:gap-8 lg:p-8',
   prev:
-    'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-sm lg:items-center lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
+    'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-sm lg:items-center lg:opacity-70 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
   next:
-    'hidden opacity-0 lg:pointer-events-auto lg:-ml-10 lg:flex lg:max-w-sm lg:items-center lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
+    'hidden opacity-0 lg:pointer-events-auto lg:-ml-10 lg:flex lg:max-w-sm lg:items-center lg:opacity-70 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
   inactive: 'hidden opacity-0 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
 };
 
@@ -149,7 +149,7 @@ const textPanelStateClassMap: Record<CardPosition, string> = {
   inactive: '!gap-2 lg:!gap-2.5',
 };
 
-const quoteBaseClasses = 'text-[11px] leading-relaxed text-slate-700';
+const quoteBaseClasses = 'text-[11px] leading-relaxed text-slate-200';
 
 const quoteStateClassMap: Record<CardPosition, string> = {
   active: 'sm:text-sm md:text-[15px]',
@@ -175,7 +175,7 @@ const videoPositionClassMap: Record<CardPosition, string> = {
 };
 
 const avatarBaseClasses =
-  'border-brand relative shrink-0 overflow-hidden rounded-full border-2 shadow-md transition-[width,height] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:ml-auto';
+  'relative shrink-0 overflow-hidden rounded-full border-2 border-[rgba(255,0,88,0.6)] shadow-md transition-[width,height] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:ml-auto';
 
 const avatarStateClassMap: Record<CardPosition, string> = {
   active: 'h-16 w-16 sm:h-20 sm:w-20',
@@ -190,10 +190,10 @@ const Section6 = () => {
   return (
     <>
       <div class='container mx-auto mb-6 px-4 py-8 text-center'>
-        <h2 class='font-inter text-[3rem] font-bold'>
+        <h2 class='font-inter text-[3rem] font-bold text-white'>
           See What <span class='text-brand'>Creators</span> Made with <span class='text-brand'>Reela</span>
         </h2>
-        <p class='mx-auto mt-2 max-w-2xl text-base text-slate-600 md:text-lg'>
+        <p class='mx-auto mt-2 max-w-2xl text-base text-slate-300 md:text-lg'>
           Real creators, real results — all made in minutes with Reela’s AI studio.
         </p>
       </div>
@@ -276,7 +276,7 @@ const Section6 = () => {
                     data-text-panel-class-inactive={textPanelStateClassMap.inactive}
                   >
                     <div class='flex flex-col items-start gap-4 lg:flex-row lg:items-center lg:justify-between'>
-                      <span class='inline-block rounded-full bg-black px-3 py-1 text-xs font-semibold text-white lg:text-[11px]'>
+                      <span class='inline-block rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white lg:text-[11px]'>
                         {testimonial.category}
                       </span>
                       <div
@@ -333,14 +333,14 @@ const Section6 = () => {
                       </p>
                     </div>
                     <div class='flex justify-start pt-1'>
-                      <p class='inline-block rounded-full bg-slate-900/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-white'>
+                      <p class='inline-block rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-white'>
                         {testimonial.role}
                       </p>
                     </div>
                   </div>
                   <button
                     type='button'
-                    class='absolute inset-0 z-30 hidden rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/60'
+                    class='absolute inset-0 z-30 hidden rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(255,0,88,0.4)]'
                     data-carousel-activate=''
                     aria-label={`Show testimonial from ${testimonial.role}`}
                   />
@@ -350,7 +350,7 @@ const Section6 = () => {
           </div>
           <button
             type='button'
-            class='absolute left-0 top-1/2 hidden -translate-y-1/2 rounded-full border border-black/10 bg-white/90 p-3 text-black shadow-lg transition hover:bg-white sm:flex sm:z-30'
+            class='absolute left-0 top-1/2 hidden -translate-y-1/2 rounded-full border border-white/15 bg-white/5 p-3 text-white shadow-[0_18px_60px_-45px_rgba(0,0,0,0.8)] backdrop-blur-lg transition hover:border-[rgba(255,0,88,0.5)] hover:text-brand sm:flex sm:z-30'
             data-carousel-prev=''
             aria-label='Show previous testimonial'
           >
@@ -358,7 +358,7 @@ const Section6 = () => {
           </button>
           <button
             type='button'
-            class='absolute right-0 top-1/2 hidden -translate-y-1/2 rounded-full border border-black/10 bg-white/90 p-3 text-black shadow-lg transition hover:bg-white sm:flex sm:z-30'
+            class='absolute right-0 top-1/2 hidden -translate-y-1/2 rounded-full border border-white/15 bg-white/5 p-3 text-white shadow-[0_18px_60px_-45px_rgba(0,0,0,0.8)] backdrop-blur-lg transition hover:border-[rgba(255,0,88,0.5)] hover:text-brand sm:flex sm:z-30'
             data-carousel-next=''
             aria-label='Show next testimonial'
           >

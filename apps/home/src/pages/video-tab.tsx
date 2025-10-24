@@ -24,25 +24,26 @@ const VideoTab = ({ videos, tabTitle, tabButton, tabButtonSrc }: Props) => {
   return (
     <>
       <div class='p-6 md:p-12'>
-        <h2 class='mb-12 text-[3rem] font-bold'>{tabTitle}</h2>
+        <h2 class='mb-12 text-[3rem] font-bold text-white'>{tabTitle}</h2>
         <div class='grid gap-8 md:grid-cols-2'>
           <div class='flex flex-col'>
             <div class='space-y-6'>
               {videoWithId.map((video, index) => (
                 <label
                   key={video.id}
-                  class={`${tabName} ${index === 0 ? 'border-brand bg-white border-l-4' : 'bg-white/50'} block w-full rounded-xl p-5 text-left shadow-md transition-all duration-200 hover:bg-white hover:shadow-sm`}
+                  class={`${tabName} video-tab-label block w-full rounded-2xl border border-white/10 bg-white/5 p-5 text-left shadow-[0_25px_80px_-70px_rgba(0,0,0,0.9)] transition-all duration-200 hover:-translate-y-1 hover:border-[rgba(255,0,88,0.4)] hover:bg-white/10 hover:shadow-[0_35px_110px_-80px_rgba(255,0,88,0.45)] ${index === 0 ? 'is-active border-l-4 border-[#ff0058] bg-white/10' : ''}`}
                   for={video.id}
+                  data-active={index === 0}
                   onclick={`videoTabClick(this, '${tabName}')`}
                 >
                   <h3
                     class={
-                      'mb-2 text-xl font-bold text-gray-800 ' + (index === 0 ? 'text-brand' : '')
+                      'video-tab-title mb-2 text-xl font-bold ' + (index === 0 ? 'text-brand' : 'text-slate-200')
                     }
                   >
                     {video.title}
                   </h3>
-                  <p class='text-sm text-gray-600'>{video.description}</p>
+                  <p class='text-sm text-slate-300'>{video.description}</p>
                 </label>
               ))}
             </div>
@@ -52,7 +53,7 @@ const VideoTab = ({ videos, tabTitle, tabButton, tabButtonSrc }: Props) => {
             {videoWithId.map((video, index) => (
               <div
                 key={video.id}
-                class='has-checked:block relative hidden overflow-hidden rounded-xl bg-black'
+                class='has-checked:block relative hidden overflow-hidden rounded-3xl border border-white/5 bg-black/70 shadow-[0_35px_120px_-80px_rgba(255,0,88,0.55)]'
               >
                 <input
                   type='radio'
@@ -75,7 +76,7 @@ const VideoTab = ({ videos, tabTitle, tabButton, tabButtonSrc }: Props) => {
             <div class='mt-6 flex justify-end'>
               <a href='/workspace'>
                 <a
-                  class='bg-brand rounded-full px-8 py-3 font-medium text-white transition-transform hover:scale-110'
+                  class='bg-brand rounded-full px-8 py-3 font-medium text-white shadow-[0_25px_90px_-60px_rgba(255,0,88,0.6)] transition-transform hover:scale-110'
                   href={tabButtonSrc}
                 >
                   {tabButton}
