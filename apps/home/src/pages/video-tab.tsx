@@ -24,25 +24,25 @@ const VideoTab = ({ videos, tabTitle, tabButton, tabButtonSrc }: Props) => {
   return (
     <>
       <div class='p-6 md:p-12'>
-        <h2 class='mb-12 text-[3rem] font-bold'>{tabTitle}</h2>
+        <h2 class='mb-12 text-[3rem] font-bold text-neutral-950'>{tabTitle}</h2>
         <div class='grid gap-8 md:grid-cols-2'>
           <div class='flex flex-col'>
             <div class='space-y-6'>
               {videoWithId.map((video, index) => (
                 <label
                   key={video.id}
-                  class={`${tabName} ${index === 0 ? 'border-brand bg-white border-l-4' : 'bg-white/50'} block w-full rounded-xl p-5 text-left shadow-md transition-all duration-200 hover:bg-white hover:shadow-sm`}
+                  class={`${tabName} ${index === 0 ? 'border-black bg-white border-l-4' : 'bg-white/60'} block w-full rounded-xl p-5 text-left shadow-md transition-all duration-200 hover:bg-white hover:shadow-lg`}
                   for={video.id}
                   onclick={`videoTabClick(this, '${tabName}')`}
                 >
                   <h3
                     class={
-                      'mb-2 text-xl font-bold text-gray-800 ' + (index === 0 ? 'text-brand' : '')
+                      'mb-2 text-xl font-bold text-neutral-900 ' + (index === 0 ? 'text-black' : '')
                     }
                   >
                     {video.title}
                   </h3>
-                  <p class='text-sm text-gray-600'>{video.description}</p>
+                  <p class='text-sm text-neutral-600'>{video.description}</p>
                 </label>
               ))}
             </div>
@@ -75,7 +75,7 @@ const VideoTab = ({ videos, tabTitle, tabButton, tabButtonSrc }: Props) => {
             <div class='mt-6 flex justify-end'>
               <a href='/workspace'>
                 <a
-                  class='bg-brand rounded-full px-8 py-3 font-medium text-white transition-transform hover:scale-110'
+                  class='bg-black rounded-full px-8 py-3 font-medium text-white transition-transform hover:scale-110'
                   href={tabButtonSrc}
                 >
                   {tabButton}

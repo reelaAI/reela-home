@@ -26,13 +26,14 @@ const cards = [
 
 const WhyCreators = () => {
   return (
-    <section class='bg-[#FFF6F8] py-20'>
+    <section class='bg-white py-20'>
       <div class='container mx-auto px-4'>
         <div class='mx-auto mb-14 max-w-3xl text-center'>
-          <h2 class='font-inter text-[3rem] font-bold md:whitespace-nowrap'>
-            Why Creators Choose <span class='text-brand'>Reela</span>
+          <h2 class='font-inter text-[3rem] font-bold md:whitespace-nowrap text-neutral-950'>
+            Why Creators Choose{' '}
+            <span class='bg-gradient-to-r from-black via-neutral-800 to-black bg-clip-text text-transparent'>Reela</span>
           </h2>
-          <p class='mt-4 text-base text-gray-600 md:text-lg'>
+          <p class='mt-4 text-base text-neutral-600 md:text-lg'>
             Reela helps creators, brands, and professionals turn ideas into high-impact videos that grow influence and drive results.
           </p>
         </div>
@@ -40,15 +41,15 @@ const WhyCreators = () => {
           {cards.map((card) => (
             <div
               key={card.title}
-              class='grid gap-8 overflow-hidden rounded-3xl bg-white p-6 shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl md:grid-cols-[1fr_1fr] md:p-8 lg:p-10'
+              class='grid gap-8 overflow-hidden rounded-3xl bg-white p-6 shadow-xl transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl md:grid-cols-[1fr_1fr] md:p-8 lg:p-10'
             >
               <div class='space-y-4 self-center'>
-                <h3 class='text-2xl font-bold text-gray-900 md:text-3xl'>{card.title}</h3>
-                <p class='text-lg text-gray-600'>{card.description}</p>
+                <h3 class='text-2xl font-bold text-neutral-900 md:text-3xl'>{card.title}</h3>
+                <p class='text-lg text-neutral-600'>{card.description}</p>
                 <a href='https://app.reela.com/workspace' target='_blank' rel='noopener noreferrer'>
-                  <button class='inline-flex items-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-105'>
+                  <button class='inline-flex items-center rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-105'>
                     {card.cta}
-                    <Icon name='arrowRight' className='ml-2 h-5 w-5' />
+                    <Icon name='arrowRight' className='ml-2 h-5 w-5 text-white' />
                   </button>
                 </a>
               </div>

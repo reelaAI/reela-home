@@ -128,7 +128,7 @@ const baseCardClasses =
 
 const positionClassMap: Record<CardPosition, string> = {
   active:
-    'z-30 gap-6 p-6 shadow-2xl ring-2 ring-brand/10 lg:-mx-16 lg:flex lg:items-center lg:gap-8 lg:p-8',
+    'z-30 gap-6 p-6 shadow-2xl ring-2 ring-black/10 lg:-mx-16 lg:flex lg:items-center lg:gap-8 lg:p-8',
   prev:
     'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-sm lg:items-center lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
   next:
@@ -158,7 +158,7 @@ const quoteStateClassMap: Record<CardPosition, string> = {
   inactive: '',
 };
 
-const highlightBaseClasses = 'text-[10px] text-brand font-medium';
+const highlightBaseClasses = 'text-[10px] text-neutral-900 font-medium';
 
 const highlightStateClassMap: Record<CardPosition, string> = {
   active: 'sm:text-xs md:text-sm',
@@ -175,7 +175,7 @@ const videoPositionClassMap: Record<CardPosition, string> = {
 };
 
 const avatarBaseClasses =
-  'border-brand relative shrink-0 overflow-hidden rounded-full border-2 shadow-md transition-[width,height] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:ml-auto';
+  'border-black relative shrink-0 overflow-hidden rounded-full border-2 shadow-md transition-[width,height] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:ml-auto';
 
 const avatarStateClassMap: Record<CardPosition, string> = {
   active: 'h-16 w-16 sm:h-20 sm:w-20',
@@ -190,8 +190,11 @@ const Section6 = () => {
   return (
     <>
       <div class='container mx-auto mb-6 px-4 py-8 text-center'>
-        <h2 class='font-inter text-[3rem] font-bold'>
-          See What <span class='text-brand'>Creators</span> Made with <span class='text-brand'>Reela</span>
+        <h2 class='font-inter text-[3rem] font-bold text-neutral-950'>
+          See What{' '}
+          <span class='bg-gradient-to-r from-black via-neutral-800 to-black bg-clip-text text-transparent'>Creators</span> Made
+          with{' '}
+          <span class='bg-gradient-to-r from-black via-neutral-800 to-black bg-clip-text text-transparent'>Reela</span>
         </h2>
         <p class='mx-auto mt-2 max-w-2xl text-base text-slate-600 md:text-lg'>
           Real creators, real results — all made in minutes with Reela’s AI studio.
@@ -340,7 +343,7 @@ const Section6 = () => {
                   </div>
                   <button
                     type='button'
-                    class='absolute inset-0 z-30 hidden rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/60'
+                    class='absolute inset-0 z-30 hidden rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/40'
                     data-carousel-activate=''
                     aria-label={`Show testimonial from ${testimonial.role}`}
                   />

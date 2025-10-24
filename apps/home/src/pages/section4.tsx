@@ -31,10 +31,13 @@ const Section4 = () => {
   return (
     <Fragment>
       <div class='container mx-auto px-4 text-center py-16 mb-12'>
-        <h2 class='text-[3rem] font-bold font-inter'>
-          Unified <span class='text-brand'>Multimodal </span>
+        <h2 class='text-[3rem] font-bold font-inter text-neutral-950'>
+          Unified{' '}
+          <span class='bg-gradient-to-r from-black via-neutral-800 to-black bg-clip-text text-transparent'>
+            Multimodal
+          </span>{' '}
           Video Creation
-          <p class='mt-6 max-w-3xl mx-auto text-base text-gray-600 font-bold font-inter md:text-lg'>
+          <p class='mt-6 max-w-3xl mx-auto text-base text-neutral-600 font-bold font-inter md:text-lg'>
             Create seamless videos by combining avatars, AI scenes, video clips, illustrations, and
             B-roll — all in one unified workflow.
           </p>
@@ -43,11 +46,11 @@ const Section4 = () => {
 
       <section class='container mx-auto px-4 mb-8'>
         <div class='max-w-[1200px] mx-auto'>
-          <div class='rounded-3xl overflow-hidden bg-white shadow-lg mb-8 grid lg:grid-cols-[minmax(100px,250px)_1fr] gird-cols-1 gap-4 p-6 md:p-12'>
+          <div class='rounded-3xl overflow-hidden bg-white shadow-xl mb-8 grid lg:grid-cols-[minmax(100px,250px)_1fr] gird-cols-1 gap-4 p-6 md:p-12'>
             {config.map((item, index) => (
               <div key={String(index)} class='contents group'>
                 <label class='w-full transition-all duration-200 bg-white hover:bg-gray-50 border border-gray-200 rounded-lg overflow-hidden p-4 label-sm col-start-1 max-h-max'>
-                  <span class='text-sm font-medium text-gray-700 has-checked:text-brand'>
+                  <span class='text-sm font-medium text-gray-700 has-checked:text-black'>
                     {item.name}
                   </span>
                   <input
@@ -73,14 +76,15 @@ const Section4 = () => {
             ))}
           </div>
           <div class='flex flex-wrap items-center justify-center gap-2 text-center'>
-            <h3 class='text-2xl font-bold'>
-              More <span class='text-brand'>multimodal </span>
+            <h3 class='text-2xl font-bold text-neutral-950'>
+              More{' '}
+              <span class='bg-gradient-to-r from-black via-neutral-800 to-black bg-clip-text text-transparent'>multimodal</span>{' '}
               AI video combinations
             </h3>
             <a href='/workspace'>
-              <button class='bg-brand text-white px-6 py-3 rounded-full font-medium hover:scale-105 transition-transform inline-flex items-center'>
+              <button class='bg-black text-white px-6 py-3 rounded-full font-medium hover:scale-105 transition-transform inline-flex items-center'>
                 are waiting for you
-                <Icon name='arrowRight' className='ml-2 h-5 w-5' />
+                <Icon name='arrowRight' className='ml-2 h-5 w-5 text-white' />
               </button>
             </a>
           </div>

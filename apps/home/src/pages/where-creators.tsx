@@ -34,10 +34,11 @@ const WhereCreators = () => {
     <section class='bg-white py-20'>
       <div class='container mx-auto px-4'>
         <div class='mx-auto mb-12 max-w-3xl text-center'>
-          <h2 class='font-inter text-[3rem] font-bold'>
-            Where Creators Monetize with <span class='text-brand'>Reela</span>
+          <h2 class='font-inter text-[3rem] font-bold text-neutral-950'>
+            Where Creators Monetize with{' '}
+            <span class='bg-gradient-to-r from-black via-neutral-800 to-black bg-clip-text text-transparent'>Reela</span>
           </h2>
-          <p class='mt-4 text-base text-gray-600 md:text-lg'>
+          <p class='mt-4 text-base text-neutral-600 md:text-lg'>
             Reela turns your videos into income — from personal brands to e-commerce stores and marketing campaigns.
           </p>
         </div>
@@ -45,13 +46,13 @@ const WhereCreators = () => {
           {monetizationPaths.map((path) => (
             <div
               key={path.title}
-              class='flex h-full flex-col rounded-3xl border border-gray-100 bg-gray-50 p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg'
+              class='flex h-full flex-col rounded-3xl border border-gray-100 bg-white p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl'
             >
-              <div class='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFE3EA]'>
-                <Icon name={path.icon} className='text-brand h-7 w-7' />
+              <div class='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-black/5'>
+                <Icon name={path.icon} className='text-black h-7 w-7' />
               </div>
-              <h3 class='text-xl font-semibold text-gray-900'>{path.title}</h3>
-              <p class='mt-3 text-base text-gray-600'>{path.description}</p>
+              <h3 class='text-xl font-semibold text-neutral-900'>{path.title}</h3>
+              <p class='mt-3 text-base text-neutral-600'>{path.description}</p>
             </div>
           ))}
         </div>
