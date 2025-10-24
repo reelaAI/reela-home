@@ -26,11 +26,12 @@ const cards = [
 
 const WhyCreators = () => {
   return (
-    <section class='bg-[#FFF6F8] py-20'>
+    <section class='bg-gray-50 py-20'>
       <div class='container mx-auto px-4'>
         <div class='mx-auto mb-14 max-w-3xl text-center'>
-          <h2 class='font-inter text-[3rem] font-bold md:whitespace-nowrap'>
-            Why Creators Choose <span class='text-brand'>Reela</span>
+          <h2 class='font-inter text-[3rem] font-bold md:whitespace-nowrap text-gray-900'>
+            Why Creators Choose{' '}
+            <span class='inline-flex items-center rounded-full bg-gray-900 px-3 py-1 text-white'>Reela</span>
           </h2>
           <p class='mt-4 text-base text-gray-600 md:text-lg'>
             Reela helps creators, brands, and professionals turn ideas into high-impact videos that grow influence and drive results.
@@ -46,7 +47,7 @@ const WhyCreators = () => {
                 <h3 class='text-2xl font-bold text-gray-900 md:text-3xl'>{card.title}</h3>
                 <p class='text-lg text-gray-600'>{card.description}</p>
                 <a href='https://app.reela.com/workspace' target='_blank' rel='noopener noreferrer'>
-                  <button class='inline-flex items-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-105'>
+                  <button class='inline-flex items-center rounded-full bg-gray-900 px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-105'>
                     {card.cta}
                     <Icon name='arrowRight' className='ml-2 h-5 w-5' />
                   </button>
@@ -81,12 +82,12 @@ const WhyCreators = () => {
                     <Icon name='play' className='ml-1 h-8 w-8' />
                     </button>
                   </div>
-                  <button
-                    type='button'
-                    class='pointer-events-auto absolute right-3 top-3 rounded-full bg-black/65 p-2 text-white shadow-lg transition hover:bg-black/80'
-                    aria-label='Toggle sound'
-                    onclick='toggleVideoSound(this)'
-                  >
+                    <button
+                      type='button'
+                      class='pointer-events-auto absolute right-3 top-3 rounded-full bg-black/60 p-2 text-white shadow-lg transition hover:bg-black/80'
+                      aria-label='Toggle sound'
+                      onclick='toggleVideoSound(this)'
+                    >
                     <Icon name='volume' className='icon-sound-on hidden h-4 w-4' />
                     <Icon name='mute' className='icon-sound-off h-4 w-4' />
                   </button>

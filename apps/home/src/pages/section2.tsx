@@ -7,10 +7,11 @@ import { cn } from '../utils/cn';
 
 const Section2 = () => {
   return (
-    <section className='w-full bg-gradient-to-b from-gray-50 to-white px-4 py-12 md:py-16'>
+    <section className='w-full bg-gradient-to-b from-white via-gray-50 to-white px-4 py-12 md:py-16'>
       <div className='max-w-7xl mx-auto'>
-        <h2 className='font-inter text-[3rem] font-bold text-center mb-4'>
-          Reela is Built for <span className='text-brand'>Speed &amp; Results</span>
+        <h2 className='font-inter text-[3rem] font-bold text-center mb-4 text-gray-900'>
+          Reela is Built for{' '}
+          <span className='inline-flex items-center rounded-full bg-gray-900 px-4 py-1 text-white'>Speed &amp; Results</span>
         </h2>
         <p className='mx-auto mb-10 md:mb-12 max-w-4xl text-center text-base text-gray-600 md:text-lg'>
           Reela turns your ideas, avatars, and products into consistent, studio-quality videos in minutes — with perfect visual
@@ -59,18 +60,18 @@ function FeatureCard({
     <div
       className={cn(
         'rounded-lg text-slate-950',
-        'p-10 shadow-xl bg-white group relative overflow-hidden h-full shadow-rose-500/10',
+        'p-10 shadow-xl bg-white group relative overflow-hidden h-full shadow-gray-900/10',
         'hover:shadow-2xl transition-all duration-500 hover:-translate-y-3'
       )}
     >
       {/* Background decoration */}
       <div className='absolute top-0 right-0 w-40 h-40 opacity-5'>
-        <div className='w-full h-full bg-brand rounded-full transform translate-x-20 -translate-y-20'></div>
+        <div className='w-full h-full bg-gray-900 rounded-full transform translate-x-20 -translate-y-20'></div>
       </div>
 
       <div className='relative z-10'>
         <div className='flex flex-col items-center text-center space-y-8'>
-          <div className='w-24 h-24 bg-brand rounded-3xl flex items-center justify-center text-white group-hover:scale-105 transition-all duration-500 shadow-xl'>
+          <div className='w-24 h-24 rounded-3xl bg-gray-900 flex items-center justify-center text-white group-hover:scale-105 transition-all duration-500 shadow-xl'>
             <Icon name={icon} className='size-12 text-white' />
           </div>
 

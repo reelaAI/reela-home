@@ -31,7 +31,7 @@ export default function layout({
   const Tailwind = html`
     <style type="text/tailwindcss">
       @theme {
-        --color-brand: #ff0058;
+        --color-brand: #0f0f0f;
       }
     </style>
   `;
@@ -70,8 +70,8 @@ export default function layout({
         {Gtag}
         {Tailwind}
       </head>
-      <body style="font-family: 'Inter', sans-serif;">
-        <div class='min-h-screen bg-gray-50'>
+      <body style="font-family: 'Inter', sans-serif; background-color: #ffffff; color: #0f0f0f;">
+        <div class='min-h-screen bg-white'>
           <Header avatarUrl={avatarUrl} />
           {children}
           <Footer />

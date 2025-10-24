@@ -34,7 +34,7 @@ const PricingCard: FC<Props> = ({
     >
       {/* chips */}
       {isPopular && (
-        <div className='absolute left-0 top-0 rounded-br-xl bg-[#ff0058] px-2 py-1 text-xs text-white'>
+        <div className='absolute left-0 top-0 rounded-br-xl bg-gray-900 px-2 py-1 text-xs text-white'>
           Popular
         </div>
       )}
@@ -67,7 +67,7 @@ const PricingCard: FC<Props> = ({
           'block w-full rounded-full py-2 text-sm text-white text-center',
           {
             'bg-black': !isPopular,
-            'bg-[#ff0058] text-white': isPopular,
+            'bg-gray-900 text-white': isPopular,
           },
           'disabled:cursor-wait disabled:opacity-50',
         )}
@@ -84,7 +84,7 @@ const PricingCard: FC<Props> = ({
           const [title, desc] = feature.split('_');
           return (
             <div key={index} className='my-2 flex items-center gap-2'>
-              <Icon name='check' className='h-4 w-4 shrink-0 text-brand' />
+              <Icon name='check' className='h-4 w-4 shrink-0 text-gray-900' />
               <span key={index} className='flex-1'>
                 {title}
               </span>

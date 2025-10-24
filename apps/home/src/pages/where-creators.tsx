@@ -34,8 +34,9 @@ const WhereCreators = () => {
     <section class='bg-white py-20'>
       <div class='container mx-auto px-4'>
         <div class='mx-auto mb-12 max-w-3xl text-center'>
-          <h2 class='font-inter text-[3rem] font-bold'>
-            Where Creators Monetize with <span class='text-brand'>Reela</span>
+          <h2 class='font-inter text-[3rem] font-bold text-gray-900'>
+            Where Creators Monetize with{' '}
+            <span class='inline-flex items-center rounded-full bg-gray-900 px-3 py-1 text-white'>Reela</span>
           </h2>
           <p class='mt-4 text-base text-gray-600 md:text-lg'>
             Reela turns your videos into income — from personal brands to e-commerce stores and marketing campaigns.
@@ -47,8 +48,8 @@ const WhereCreators = () => {
               key={path.title}
               class='flex h-full flex-col rounded-3xl border border-gray-100 bg-gray-50 p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg'
             >
-              <div class='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFE3EA]'>
-                <Icon name={path.icon} className='text-brand h-7 w-7' />
+              <div class='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gray-900/10'>
+                <Icon name={path.icon} className='text-gray-900 h-7 w-7' />
               </div>
               <h3 class='text-xl font-semibold text-gray-900'>{path.title}</h3>
               <p class='mt-3 text-base text-gray-600'>{path.description}</p>

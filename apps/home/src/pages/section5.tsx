@@ -56,10 +56,10 @@ const Section5 = () => {
         <div class='grid grid-cols-1 gap-6 md:grid-cols-3'>
           <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-lg bg-gray-100 p-3'>
                 <Icon
                   name='api'
-                  className='lucide text-brand h-8 w-8'
+                  className='lucide text-gray-900 h-8 w-8'
                 />
               </div>
               <h3 class='mb-2 text-xl font-bold'>Multilingual Video Support</h3>
@@ -70,10 +70,10 @@ const Section5 = () => {
           </div>
           <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-lg bg-gray-100 p-3'>
                 <Icon
                   name='template'
-                  className='lucide text-brand h-8 w-8'
+                  className='lucide text-gray-900 h-8 w-8'
                 />
               </div>
               <h3 class='mb-2 text-xl font-bold'>Flexible Aspect Ratios</h3>
@@ -82,10 +82,10 @@ const Section5 = () => {
           </div>
           <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-lg bg-gray-100 p-3'>
                 <Icon
                   name='remix'
-                  className='lucide text-brand h-8 w-8'
+                  className='lucide text-gray-900 h-8 w-8'
                 />
               </div>
               <h3 class='mb-2 text-xl font-bold'>Multilingual Subtitles</h3>
@@ -96,10 +96,10 @@ const Section5 = () => {
           </div>
           <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-lg bg-gray-100 p-3'>
                 <Icon
                   name='play'
-                  className='lucide text-brand h-8 w-8'
+                  className='lucide text-gray-900 h-8 w-8'
                 />
               </div>
               <h3 class='mb-2 text-xl font-bold'>AI Background Music</h3>
@@ -110,10 +110,10 @@ const Section5 = () => {
           </div>
           <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-lg bg-gray-100 p-3'>
                 <Icon
                   name='star'
-                  className='lucide text-brand h-8 w-8'
+                  className='lucide text-gray-900 h-8 w-8'
                 />
               </div>
               <h3 class='mb-2 text-xl font-bold'>Style Variations</h3>
@@ -124,10 +124,10 @@ const Section5 = () => {
           </div>
           <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
+              <div class='mb-4 rounded-lg bg-gray-100 p-3'>
                 <Icon
                   name='volume'
-                  className='lucide text-brand h-8 w-8'
+                  className='lucide text-gray-900 h-8 w-8'
                 />
               </div>
               <h3 class='mb-2 text-xl font-bold'>AI Sound Effects</h3>
