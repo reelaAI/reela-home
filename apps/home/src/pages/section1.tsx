@@ -46,7 +46,7 @@ const Section1 = () => {
         <h1 class='font-inter font-bold leading-tight tracking-tight text-[44px] md:text-[70px]'>
           Video Creation, <span class='text-[#F7265B]'>Automated.</span>
         </h1>
-        <p class='font-inter mt-6 max-w-4xl text-[18px] text-gray-600 md:text-[24px]'>
+        <p class='font-inter mt-6 max-w-4xl text-base text-gray-600 md:text-lg'>
           The first autonomous AI agent that turns any idea into publish-ready videos with AI visuals,
           avatars, dubbing, and smart editing.
         </p>

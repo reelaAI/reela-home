@@ -145,12 +145,12 @@ const Section7 = () => {
             <h2 class='mb-6 text-3xl font-bold md:text-4xl lg:text-5xl'>
               Enterprise-Ready AI Video Solutions
             </h2>
-            <p class='mb-4 text-lg opacity-90 md:text-xl'>
+            <p class='mb-4 text-base opacity-90 md:text-lg'>
               Whether you're scaling creative production, localizing content across regions, or
               generating hundreds of videos via API — Reela's enterprise solutions are built to
               adapt.
             </p>
-            <p class='mb-8 text-lg opacity-90 md:text-xl'>
+            <p class='mb-8 text-base opacity-90 md:text-lg'>
               Get custom avatars, private model training, API access, workflow integration, and
               white-glove support — all designed to fit your business.
             </p>

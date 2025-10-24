@@ -37,7 +37,7 @@ const WhereCreators = () => {
           <h2 class='font-inter text-4xl font-bold md:text-6xl'>
             Where Creators Monetize with <span class='text-brand'>Reela</span>
           </h2>
-          <p class='mt-4 text-lg text-gray-600'>
+          <p class='mt-4 text-base text-gray-600 md:text-lg'>
             Reela turns your videos into income — from personal brands to e-commerce stores and marketing campaigns.
           </p>
         </div>
