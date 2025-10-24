@@ -25,16 +25,16 @@ const PricingCard: FC<Props> = ({
   return (
     <div
       className={cn(
-        'relative space-y-4 overflow-hidden rounded-xl bg-white p-4 dark:border-transparent dark:bg-gray-50',
+        'relative space-y-4 overflow-hidden rounded-xl bg-white p-4 shadow-sm dark:border-transparent dark:bg-gray-50',
         {
-          'border border-neutral-300': !isPopular,
+          'border border-black/10': !isPopular,
           'gradient-border': isPopular,
         },
       )}
     >
       {/* chips */}
       {isPopular && (
-        <div className='absolute left-0 top-0 rounded-br-xl bg-[#ff0058] px-2 py-1 text-xs text-white'>
+        <div className='absolute left-0 top-0 rounded-br-xl bg-brand px-2 py-1 text-xs text-white'>
           Popular
         </div>
       )}
@@ -67,7 +67,7 @@ const PricingCard: FC<Props> = ({
           'block w-full rounded-full py-2 text-sm text-white text-center',
           {
             'bg-black': !isPopular,
-            'bg-[#ff0058] text-white': isPopular,
+            'bg-brand text-white': isPopular,
           },
           'disabled:cursor-wait disabled:opacity-50',
         )}

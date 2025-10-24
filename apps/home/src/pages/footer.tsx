@@ -3,7 +3,7 @@ import { products } from './header';
 
 const Footer = () => {
   return (
-    <footer class='bg-gray-900 text-white pt-16 pb-8'>
+    <footer class='bg-white pt-16 pb-8 text-gray-900'>
       <div class='max-w-[1200px] mx-auto px-4'>
         <div class='flex flex-col md:flex-row justify-between items-start md:items-center mb-12'>
           <div class='mb-6 md:mb-0'>
@@ -17,17 +17,17 @@ const Footer = () => {
                 data-nimg='1'
                 class='h-12 w-auto'
                 style='color: transparent'
-                src='/logo-white.svg'
+                src='/logo.svg'
               />
             </a>
-            <p class='mt-4 text-gray-400 max-w-md'>
+            <p class='mt-4 max-w-md text-gray-600'>
               AI-powered video creation platform for teams. Create professional videos from text in
               minutes.
             </p>
           </div>
           <div class='flex flex-wrap gap-4'>
             <a
-              class='bg-gray-800 hover:bg-[#F7265B] p-3 rounded-full transition-colors duration-300'
+              class='rounded-full bg-black p-3 text-white transition-colors duration-300 hover:bg-brand'
               aria-label='Twitter'
               target='_blank'
               rel='noopener noreferrer'
@@ -39,7 +39,7 @@ const Footer = () => {
               />
             </a>
             <a
-              class='bg-gray-800 hover:bg-[#F7265B] p-3 rounded-full transition-colors duration-300'
+              class='rounded-full bg-black p-3 text-white transition-colors duration-300 hover:bg-brand'
               aria-label='YouTube'
               target='_blank'
               rel='noopener noreferrer'
@@ -52,14 +52,14 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div class='grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-b border-gray-800'>
+        <div class='grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-y border-black/10'>
           <div>
             <div>Product</div>
-            <ul class='mt-4 space-y-2 text-gray-400'>
+            <ul class='mt-4 space-y-2 text-gray-600'>
               {products.map(item => (
                 <li
                   key={item.href}
-                  class='hover:underline hover:text-gray-300 transition-colors duration-200 max-w-max'
+                  class='max-w-max transition-colors duration-200 hover:text-brand hover:underline'
                 >
                   <a target='_blank' href={item.href}>
                     {item.name}
@@ -73,128 +73,128 @@ const Footer = () => {
           <h4 class='text-sm font-semibold text-gray-500 mb-4'>Popular Topics</h4>
           <div class='flex flex-wrap gap-2'>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               AI Video Creation
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               Video Generator
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               AI Avatar
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               Text to Video
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               Video Editing
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               Subtitle Generator
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               Video Marketing
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               Content Creation
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               Social Media Videos
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               Video Templates
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               AI B-Roll
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               Video Remix
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               Video Transcription
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               Video Translation
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               Video Dubbing
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               Video Hosting
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               Video Analytics
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               Video API
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               Enterprise Video
             </a>
             <a
-              class='text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 px-3 py-1 rounded-full transition-colors duration-200'
+              class='rounded-full bg-black/5 px-3 py-1 text-xs text-gray-600 transition-colors duration-200 hover:bg-black/10 hover:text-black'
               href='#'
             >
               Video Collaboration
             </a>
           </div>
         </div>
-        <div class='pt-8 text-center text-gray-500 text-sm'>
+        <div class='pt-8 text-center text-sm text-gray-500'>
           <a target='_blank' href='/legal/terms-of-service'>
             Terms of Service
           </a>

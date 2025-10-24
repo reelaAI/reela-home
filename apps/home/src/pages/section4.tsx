@@ -43,10 +43,10 @@ const Section4 = () => {
 
       <section class='container mx-auto px-4 mb-8'>
         <div class='max-w-[1200px] mx-auto'>
-          <div class='rounded-3xl overflow-hidden bg-white shadow-lg mb-8 grid lg:grid-cols-[minmax(100px,250px)_1fr] gird-cols-1 gap-4 p-6 md:p-12'>
+          <div class='rounded-3xl overflow-hidden border border-black/5 bg-white shadow-lg mb-8 grid lg:grid-cols-[minmax(100px,250px)_1fr] gird-cols-1 gap-4 p-6 md:p-12'>
             {config.map((item, index) => (
               <div key={String(index)} class='contents group'>
-                <label class='w-full transition-all duration-200 bg-white hover:bg-gray-50 border border-gray-200 rounded-lg overflow-hidden p-4 label-sm col-start-1 max-h-max'>
+                <label class='w-full transition-all duration-200 bg-white hover:bg-gray-50 border border-black/10 rounded-lg overflow-hidden p-4 label-sm col-start-1 max-h-max'>
                   <span class='text-sm font-medium text-gray-700 has-checked:text-brand'>
                     {item.name}
                   </span>
@@ -78,7 +78,7 @@ const Section4 = () => {
               AI video combinations
             </h3>
             <a href='/workspace'>
-              <button class='bg-brand text-white px-6 py-3 rounded-full font-medium hover:scale-105 transition-transform inline-flex items-center'>
+              <button class='inline-flex items-center rounded-full bg-brand px-6 py-3 font-medium text-white transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg'>
                 are waiting for you
                 <Icon name='arrowRight' className='ml-2 h-5 w-5' />
               </button>

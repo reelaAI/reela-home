@@ -150,23 +150,31 @@ function syncSoundIcon(button, muted) {
 function activateLabel(element) {
   const labels = document.querySelectorAll('.video-category-label');
   labels.forEach((label) => {
-    label.classList.remove('text-[#F7265B]');
+    label.classList.remove('text-brand');
   });
   element.classList.remove('text-gray-700', 'hover:text-gray-900');
-  element.classList.add('text-[#F7265B]');
+  element.classList.add('text-brand');
 }
 
 function videoTabClick(element, tabName) {
   const labels = document.querySelectorAll('.' + tabName);
   labels.forEach((label) => {
-    label.classList.remove('bg-white', 'shadow-md', 'border-l-4', 'border-[#F7265B]');
-    label.classList.add('bg-white/50');
-    label.querySelector('h3').classList.remove('text-[#F7265B]');
+    label.classList.remove('border-l-4', 'border-brand', 'shadow-lg');
+    label.classList.add('shadow-md');
+    const heading = label.querySelector('h3');
+    if (heading) {
+      heading.classList.remove('text-brand');
+      heading.classList.add('text-gray-800');
+    }
   });
 
-  element.classList.add('bg-white', 'shadow-md', 'border-l-4', 'border-[#F7265B]');
-  element.classList.remove('bg-white/50');
-  element.querySelector('h3').classList.add('text-[#F7265B]');
+  element.classList.add('border-l-4', 'border-brand', 'shadow-lg');
+  element.classList.remove('shadow-md');
+  const activeHeading = element.querySelector('h3');
+  if (activeHeading) {
+    activeHeading.classList.add('text-brand');
+    activeHeading.classList.remove('text-gray-800');
+  }
 
   // pause all videos
   pauseAllVideos();

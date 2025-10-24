@@ -26,7 +26,7 @@ const cards = [
 
 const WhyCreators = () => {
   return (
-    <section class='bg-[#FFF6F8] py-20'>
+    <section class='py-20' style='background-color: rgba(255, 0, 88, 0.02);'>
       <div class='container mx-auto px-4'>
         <div class='mx-auto mb-14 max-w-3xl text-center'>
           <h2 class='font-inter text-[3rem] font-bold md:whitespace-nowrap'>

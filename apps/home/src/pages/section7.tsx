@@ -15,7 +15,7 @@ const Section7 = () => {
 
       <form action='/subscribe' method='post'>
         <div class='relative mx-auto mb-20 flex max-w-[1200px] flex-wrap justify-center px-4'>
-          <label class='peer/y has-checked:bg-brand has-checked:text-white mb-4 rounded-full bg-gray-200 px-6 py-2 text-gray-800'>
+          <label class='peer/y has-checked:bg-brand has-checked:text-white mb-4 rounded-full bg-gray-100 px-6 py-2 text-gray-800 shadow-sm'>
             <input type='radio' name='plan' value='year' class='peer hidden' checked />
             <div>Yearly</div>
           </label>
@@ -73,7 +73,7 @@ const Section7 = () => {
             />
           </div>
 
-          <label class='peer/m has-checked:bg-brand has-checked:text-white mb-4 ml-4 rounded-full bg-gray-200 px-6 py-2 text-gray-800'>
+          <label class='peer/m has-checked:bg-brand has-checked:text-white mb-4 ml-4 rounded-full bg-gray-100 px-6 py-2 text-gray-800 shadow-sm'>
             <input type='radio' name='plan' value='month' class='hidden' />
             <div>Monthly</div>
           </label>
@@ -139,7 +139,7 @@ const Section7 = () => {
       <div class='mx-auto mb-20 max-w-[1200px] px-4'>
         <div
           class='relative overflow-hidden rounded-3xl p-12 text-white md:p-16'
-          style='background: linear-gradient(135deg, #f7265b 0%, #b01b43 100%)'
+          style='background: linear-gradient(135deg, rgba(255, 0, 88, 0.92) 0%, rgba(0, 0, 0, 0.88) 100%)'
         >
           <div class='max-w-4xl'>
             <h2 class='mb-6 text-[3rem] font-bold'>
