@@ -34,7 +34,7 @@ const Section4 = () => {
         <h2 class='text-[3rem] font-bold font-inter'>
           Unified <span class='text-brand'>Multimodal </span>
           Video Creation
-          <p class='mt-6 text-xl text-gray-600 max-w-3xl mx-auto font-bold font-inter'>
+          <p class='mt-6 max-w-3xl mx-auto text-base text-gray-600 font-bold font-inter md:text-lg'>
             Create seamless videos by combining avatars, AI scenes, video clips, illustrations, and
             B-roll — all in one unified workflow.
           </p>

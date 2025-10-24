@@ -13,11 +13,11 @@ const Section5 = () => {
               <h2 class='mb-6 text-[3rem] font-bold'>
                 Reela Editor - Smart, Flexible, Ready to Export
               </h2>
-              <p class='mb-4 text-lg text-gray-600'>
+              <p class='mb-4 text-base text-gray-600 md:text-lg'>
                 Edit scenes, subtitles, voiceovers and music with Reela's intuitive timeline editor
                 — no editing experience required.
               </p>
-              <p class='mb-6 text-lg text-gray-600'>
+              <p class='mb-6 text-base text-gray-600 md:text-lg'>
                 Export your project directly as a full video or as editable files for Premiere Pro
                 and CapCut for advanced editing.
               </p>

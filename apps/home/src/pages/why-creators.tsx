@@ -32,7 +32,7 @@ const WhyCreators = () => {
           <h2 class='font-inter text-[3rem] font-bold md:whitespace-nowrap'>
             Why Creators Choose <span class='text-brand'>Reela</span>
           </h2>
-          <p class='mt-4 text-lg text-gray-600'>
+          <p class='mt-4 text-base text-gray-600 md:text-lg'>
             Reela helps creators, brands, and professionals turn ideas into high-impact videos that grow influence and drive results.
           </p>
         </div>

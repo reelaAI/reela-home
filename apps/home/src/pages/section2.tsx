@@ -12,7 +12,7 @@ const Section2 = () => {
         <h2 className='font-inter text-[3rem] font-bold text-center mb-4'>
           Reela is Built for <span className='text-brand'>Speed &amp; Results</span>
         </h2>
-        <p className='mx-auto mb-10 md:mb-12 max-w-4xl text-center text-xl text-gray-600'>
+        <p className='mx-auto mb-10 md:mb-12 max-w-4xl text-center text-base text-gray-600 md:text-lg'>
           Reela turns your ideas, avatars, and products into consistent, studio-quality videos in minutes — with perfect visual
           and character continuity throughout.
         </p>
