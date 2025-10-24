@@ -27,14 +27,14 @@ const PricingCard: FC<Props> = ({
       className={cn(
         'relative space-y-4 overflow-hidden rounded-xl bg-white p-4 dark:border-transparent dark:bg-gray-50',
         {
-          'border border-neutral-300': !isPopular,
+          'border border-gray-200': !isPopular,
           'gradient-border': isPopular,
         },
       )}
     >
       {/* chips */}
       {isPopular && (
-        <div className='absolute left-0 top-0 rounded-br-xl bg-[#ff0058] px-2 py-1 text-xs text-white'>
+        <div className='absolute left-0 top-0 rounded-br-xl bg-[#ff0058] px-2 py-1 text-xs font-medium tracking-wide text-white'>
           Popular
         </div>
       )}
@@ -43,11 +43,11 @@ const PricingCard: FC<Props> = ({
       <div className='h-28 lg:h-32 xl:h-28'>
         <div className='mt-3'>
           <h5 className='text-2xl font-semibold capitalize'>{title}</h5>
-          <p className='text-base text-gray-800'>{description}</p>
+          <p className='text-base text-gray-600'>{description}</p>
         </div>
 
         <div className='my-auto mt-4 flex gap-2'>
-          <div className='text-3xl font-medium'>${price}</div>
+          <div className='text-3xl font-semibold text-black'>${price}</div>
           <div className='text-xs'>
             <div> per user per month </div>
             <div>
@@ -79,7 +79,7 @@ const PricingCard: FC<Props> = ({
       </a>
 
       {/* features */}
-      <div className='space-y-3 text-sm text-gray-800'>
+      <div className='space-y-3 text-sm text-gray-700'>
         {features.map((feature, index) => {
           const [title, desc] = feature.split('_');
           return (

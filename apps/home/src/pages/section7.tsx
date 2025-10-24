@@ -7,7 +7,7 @@ const Section7 = () => {
   return (
     <>
       <div class='container mx-auto mb-12 px-4 py-16 text-center'>
-        <h2 class='font-inter text-[3rem] font-bold'>
+        <h2 class='font-inter text-[3rem] font-bold text-black'>
           The right plans,
           <span class='text-brand'> for the right price</span>
         </h2>
@@ -15,7 +15,7 @@ const Section7 = () => {
 
       <form action='/subscribe' method='post'>
         <div class='relative mx-auto mb-20 flex max-w-[1200px] flex-wrap justify-center px-4'>
-          <label class='peer/y has-checked:bg-brand has-checked:text-white mb-4 rounded-full bg-gray-200 px-6 py-2 text-gray-800'>
+          <label class='peer/y has-checked:bg-brand has-checked:text-white mb-4 rounded-full border border-gray-200 bg-white px-6 py-2 text-gray-700 transition-colors duration-200 hover:border-gray-300'>
             <input type='radio' name='plan' value='year' class='peer hidden' checked />
             <div>Yearly</div>
           </label>
@@ -73,7 +73,7 @@ const Section7 = () => {
             />
           </div>
 
-          <label class='peer/m has-checked:bg-brand has-checked:text-white mb-4 ml-4 rounded-full bg-gray-200 px-6 py-2 text-gray-800'>
+          <label class='peer/m has-checked:bg-brand has-checked:text-white mb-4 ml-4 rounded-full border border-gray-200 bg-white px-6 py-2 text-gray-700 transition-colors duration-200 hover:border-gray-300'>
             <input type='radio' name='plan' value='month' class='hidden' />
             <div>Monthly</div>
           </label>
@@ -138,8 +138,7 @@ const Section7 = () => {
 
       <div class='mx-auto mb-20 max-w-[1200px] px-4'>
         <div
-          class='relative overflow-hidden rounded-3xl p-12 text-white md:p-16'
-          style='background: linear-gradient(135deg, #f7265b 0%, #b01b43 100%)'
+          class='relative overflow-hidden rounded-3xl border border-brand/20 bg-gradient-to-br from-[#ff0058] via-[#ff4f87] to-[#ff7aa2] p-12 text-white shadow-[0_35px_80px_-60px_rgba(255,0,88,0.65)] md:p-16'
         >
           <div class='max-w-4xl'>
             <h2 class='mb-6 text-[3rem] font-bold'>
@@ -155,7 +154,7 @@ const Section7 = () => {
               white-glove support — all designed to fit your business.
             </p>
             <a href='mailto:contact@reela.ai'>
-              <button class='text-brand inline-flex items-center rounded-full bg-white px-6 py-3 text-lg font-medium transition-transform hover:scale-105'>
+              <button class='inline-flex items-center rounded-full bg-white px-6 py-3 text-lg font-medium text-brand transition-transform hover:scale-105'>
                 Contact Sales
                 <Icon
                   name='external'

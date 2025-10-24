@@ -21,11 +21,11 @@ export const products = [
 export default function header({ avatarUrl }: { avatarUrl?: string }) {
   let user = (
     <Fragment>
-      <a class='hidden text-gray-700 hover:text-gray-900 md:block' href='/workspace'>
+      <a class='hidden text-gray-700 hover:text-black md:block' href='/workspace'>
         Login
       </a>
       <a href='/workspace'>
-        <button class='ring-offset-background focus-visible:ring-ring [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-gray-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50'>
+        <button class='ring-offset-background focus-visible:ring-ring [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-brand px-4 py-2 text-sm font-medium text-white transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50'>
           Sign Up
         </button>
       </a>
@@ -62,7 +62,7 @@ export default function header({ avatarUrl }: { avatarUrl?: string }) {
           <div class='hidden items-center gap-6 md:flex'>
             <DropDown title='Reela AI' id='reela-dropdown' items={products} />
             <a
-              class='text-gray-700 hover:text-gray-900'
+              class='text-gray-700 hover:text-brand'
               target='_blank'
               rel='noopener noreferrer'
               href='/benchmark'
@@ -92,7 +92,7 @@ export default function header({ avatarUrl }: { avatarUrl?: string }) {
               ]}
             />
             <a
-              class='text-gray-700 hover:text-gray-900'
+              class='text-gray-700 hover:text-brand'
               target='_blank'
               rel='noopener noreferrer'
               href='/pricing'
@@ -120,7 +120,7 @@ function DropDown({
   return (
     <details
       id={id}
-      class='dropdown cursor-pointer text-gray-700 hover:text-gray-900 focus:outline-none'
+      class='dropdown cursor-pointer text-gray-700 hover:text-black focus:outline-none'
       aria-expanded='false'
       aria-haspopup='true'
     >
@@ -131,10 +131,10 @@ function DropDown({
           className='lucide lucide-chevron-down h-4 w-4 transition-transform'
         />
       </summary>
-      <ul class='menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm'>
+      <ul class='menu dropdown-content bg-white text-gray-700 rounded-box z-1 w-52 border border-gray-100 p-2 shadow-[0_20px_45px_-30px_rgba(15,23,42,0.35)]'>
         {items.map((item) => (
           <li onclick={`document.getElementById('${id}').removeAttribute('open')`} key={item.href}>
-            <a target='_blank' href={item.href}>
+            <a class='hover:text-brand' target='_blank' href={item.href}>
               {item.name}
             </a>
           </li>

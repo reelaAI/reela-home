@@ -190,7 +190,7 @@ const Section6 = () => {
   return (
     <>
       <div class='container mx-auto mb-6 px-4 py-8 text-center'>
-        <h2 class='font-inter text-[3rem] font-bold'>
+        <h2 class='font-inter text-[3rem] font-bold text-black'>
           See What <span class='text-brand'>Creators</span> Made with <span class='text-brand'>Reela</span>
         </h2>
         <p class='mx-auto mt-2 max-w-2xl text-base text-slate-600 md:text-lg'>

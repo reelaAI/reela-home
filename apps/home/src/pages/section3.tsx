@@ -3,20 +3,20 @@ import { Icon } from '../components/Icon';
 const Section3 = () => {
   return (
     <>
-      <section class='hidden bg-[#101828] text-white'>
+      <section class='hidden bg-white text-gray-900'>
         <div class='container mx-auto px-4 py-14'>
-          <div class='mx-auto max-w-5xl space-y-5 text-white'>
-            <span class='inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-pink-100'>
+          <div class='mx-auto max-w-5xl space-y-5 text-gray-900'>
+            <span class='inline-flex items-center rounded-full border border-brand/20 bg-brand/10 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-brand'>
               New · Sora Model Integration
             </span>
-            <h2 class='font-inter text-[3rem] font-bold'>
+            <h2 class='font-inter text-[3rem] font-bold text-black'>
               Generate Long-Form Videos with Sora via Reela
             </h2>
-            <p class='text-base text-white/80 md:text-lg'>
+            <p class='text-base text-gray-600 md:text-lg'>
               Access Sora’s long-form generation directly inside Reela — no complex setup or API needed. Just type your prompt,
               and Reela handles the full workflow.
             </p>
-            <ul class='space-y-3 text-base text-white/80'>
+            <ul class='space-y-3 text-base text-gray-600'>
               <li class='flex items-start gap-3'>
                 <span class='mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand text-sm font-semibold text-white'>
                   1

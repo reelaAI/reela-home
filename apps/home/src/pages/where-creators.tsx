@@ -34,7 +34,7 @@ const WhereCreators = () => {
     <section class='bg-white py-20'>
       <div class='container mx-auto px-4'>
         <div class='mx-auto mb-12 max-w-3xl text-center'>
-          <h2 class='font-inter text-[3rem] font-bold'>
+          <h2 class='font-inter text-[3rem] font-bold text-black'>
             Where Creators Monetize with <span class='text-brand'>Reela</span>
           </h2>
           <p class='mt-4 text-base text-gray-600 md:text-lg'>
@@ -45,10 +45,10 @@ const WhereCreators = () => {
           {monetizationPaths.map((path) => (
             <div
               key={path.title}
-              class='flex h-full flex-col rounded-3xl border border-gray-100 bg-gray-50 p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg'
+              class='flex h-full flex-col rounded-3xl border border-gray-100 bg-white p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_60px_-45px_rgba(255,0,88,0.6)]'
             >
-              <div class='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFE3EA]'>
-                <Icon name={path.icon} className='text-brand h-7 w-7' />
+              <div class='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10 text-brand'>
+                <Icon name={path.icon} className='h-7 w-7' />
               </div>
               <h3 class='text-xl font-semibold text-gray-900'>{path.title}</h3>
               <p class='mt-3 text-base text-gray-600'>{path.description}</p>
