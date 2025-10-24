@@ -44,12 +44,11 @@ const Section1 = () => {
     <section class='fade-in-up container mx-auto px-4 py-20 text-center'>
       <div class='mx-auto flex max-w-6xl flex-col items-center text-center'>
         <h1 class='font-inter font-bold leading-tight tracking-tight text-[44px] md:text-[70px]'>
-          Turn <span class='text-[#F7265B]'>Products, Ideas &amp; Avatars</span> into
-          <span class='text-[#F7265B]'> Profitable Videos</span>
+          Video Creation, <span class='text-[#F7265B]'>Automated.</span>
         </h1>
         <p class='font-inter mt-6 max-w-4xl text-[18px] text-gray-600 md:text-[24px]'>
-          Create viral-ready videos for TikTok, YouTube, and ads — all powered by Reela’s AI studio.
-          From your idea to a finished video in minutes.
+          The first autonomous AI agent that turns any idea into publish-ready videos with AI visuals,
+          avatars, dubbing, and smart editing.
         </p>
         <div class='mt-12 grid w-full max-w-5xl gap-4 text-left md:grid-cols-3'>
           {heroHighlights.map((highlight) => (
@@ -72,7 +71,7 @@ const Section1 = () => {
             class='w-full rounded-full bg-[#F7265B] px-8 py-4 text-base font-semibold text-white shadow-sm transition-all duration-200 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F7265B] focus-visible:ring-offset-2'
             href='https://app.reela.com/workspace'
           >
-            Try Reela for Free
+            Create with Reela AI
           </a>
         </div>
         <div class='mt-14 flex w-full items-center justify-center px-4'>
