@@ -31,13 +31,13 @@ const monetizationPaths: Array<{
 
 const WhereCreators = () => {
   return (
-    <section class='bg-white py-20'>
+    <section class='bg-gradient-to-b from-[#08080f] via-[#0e0e18] to-[#151525] py-20 text-slate-200'>
       <div class='container mx-auto px-4'>
-        <div class='mx-auto mb-12 max-w-3xl text-center'>
+        <div class='mx-auto mb-12 max-w-3xl text-center text-white'>
           <h2 class='font-inter text-[3rem] font-bold'>
             Where Creators Monetize with <span class='text-brand'>Reela</span>
           </h2>
-          <p class='mt-4 text-base text-gray-600 md:text-lg'>
+          <p class='mt-4 text-base text-slate-300 md:text-lg'>
             Reela turns your videos into income — from personal brands to e-commerce stores and marketing campaigns.
           </p>
         </div>
@@ -45,13 +45,13 @@ const WhereCreators = () => {
           {monetizationPaths.map((path) => (
             <div
               key={path.title}
-              class='flex h-full flex-col rounded-3xl border border-gray-100 bg-gray-50 p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg'
+              class='group flex h-full flex-col rounded-3xl border border-white/10 bg-white/5 p-6 text-left text-slate-200 shadow-[0_20px_70px_rgba(0,0,0,0.45)] backdrop-blur-lg transition-all duration-300 hover:-translate-y-2 hover:border-brand/40 hover:shadow-[0_35px_110px_rgba(255,0,88,0.25)]'
             >
-              <div class='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFE3EA]'>
-                <Icon name={path.icon} className='text-brand h-7 w-7' />
+              <div class='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/15 text-brand ring-1 ring-brand/20 transition-colors duration-300 group-hover:bg-brand group-hover:text-white'>
+                <Icon name={path.icon} className='h-7 w-7' />
               </div>
-              <h3 class='text-xl font-semibold text-gray-900'>{path.title}</h3>
-              <p class='mt-3 text-base text-gray-600'>{path.description}</p>
+              <h3 class='text-xl font-semibold text-white'>{path.title}</h3>
+              <p class='mt-3 text-base text-slate-300'>{path.description}</p>
             </div>
           ))}
         </div>

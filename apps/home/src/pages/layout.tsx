@@ -70,8 +70,8 @@ export default function layout({
         {Gtag}
         {Tailwind}
       </head>
-      <body style="font-family: 'Inter', sans-serif;">
-        <div class='min-h-screen bg-gray-50'>
+      <body class='min-h-screen bg-[#050505] text-slate-100 antialiased' style="font-family: 'Inter', sans-serif;">
+        <div class='min-h-screen bg-gradient-to-b from-[#050505] via-[#0a0a0f] to-[#12121b] text-slate-100'>
           <Header avatarUrl={avatarUrl} />
           {children}
           <Footer />
