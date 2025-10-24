@@ -37,7 +37,7 @@ const WhereCreators = () => {
           <h2 class='font-inter text-[3rem] font-bold'>
             Where Creators Monetize with <span class='text-brand'>Reela</span>
           </h2>
-          <p class='mt-4 text-base text-gray-600 md:text-lg'>
+          <p class='mt-4 text-base text-gray-700 md:text-lg'>
             Reela turns your videos into income — from personal brands to e-commerce stores and marketing campaigns.
           </p>
         </div>
@@ -45,13 +45,13 @@ const WhereCreators = () => {
           {monetizationPaths.map((path) => (
             <div
               key={path.title}
-              class='flex h-full flex-col rounded-3xl border border-gray-100 bg-gray-50 p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg'
+              class='flex h-full flex-col rounded-3xl border border-gray-100 bg-white p-6 text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg'
             >
-              <div class='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFE3EA]'>
+              <div class='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#ff0058]/10'>
                 <Icon name={path.icon} className='text-brand h-7 w-7' />
               </div>
               <h3 class='text-xl font-semibold text-gray-900'>{path.title}</h3>
-              <p class='mt-3 text-base text-gray-600'>{path.description}</p>
+              <p class='mt-3 text-base text-gray-700'>{path.description}</p>
             </div>
           ))}
         </div>
