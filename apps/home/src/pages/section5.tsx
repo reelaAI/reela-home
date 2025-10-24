@@ -3,7 +3,7 @@ import { Icon } from '../components/Icon';
 const Section5 = () => {
   return (
     <>
-      <div class='container mx-auto mb-12 px-4 py-16 text-center'>
+      <div class='container mx-auto mb-12 px-4 py-16 text-center text-gray-900'>
         <h2 class='font-inter text-[3rem] font-bold'>Universal Video Capabilities</h2>
       </div>
       <div class='mx-auto mb-16 max-w-[1200px] px-4'>
@@ -13,11 +13,11 @@ const Section5 = () => {
               <h2 class='mb-6 text-[3rem] font-bold'>
                 Reela Editor - Smart, Flexible, Ready to Export
               </h2>
-              <p class='mb-4 text-base text-gray-600 md:text-lg'>
+              <p class='mb-4 text-base text-gray-700 md:text-lg'>
                 Edit scenes, subtitles, voiceovers and music with Reela's intuitive timeline editor
                 — no editing experience required.
               </p>
-              <p class='mb-6 text-base text-gray-600 md:text-lg'>
+              <p class='mb-6 text-base text-gray-700 md:text-lg'>
                 Export your project directly as a full video or as editable files for Premiere Pro
                 and CapCut for advanced editing.
               </p>
@@ -30,12 +30,7 @@ const Section5 = () => {
                 <img
                   src='/capcut.png'
                   alt='CapCut'
-                  class='h-6 w-auto'
-                  style='
-                    filter: brightness(0) saturate(100%) invert(22%) sepia(0%)
-                      saturate(0%) hue-rotate(0deg) brightness(95%)
-                      contrast(89%);
-                  '
+                  class='h-6 w-auto opacity-80 grayscale'
                 />
               </div>
             </div>
@@ -54,84 +49,66 @@ const Section5 = () => {
       </div>
       <div class='mx-auto mb-16 max-w-[1200px] px-4'>
         <div class='grid grid-cols-1 gap-6 md:grid-cols-3'>
-          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
-                <Icon
-                  name='api'
-                  className='lucide text-brand h-8 w-8'
-                />
+              <div class='mb-4 rounded-lg bg-black/5 p-3'>
+                <Icon name='api' className='lucide h-8 w-8 text-black' />
               </div>
               <h3 class='mb-2 text-xl font-bold'>Multilingual Video Support</h3>
-              <p class='text-gray-600'>
+              <p class='text-gray-700'>
                 Create videos in over 140 languages to reach global audiences.
               </p>
             </div>
           </div>
-          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
-                <Icon
-                  name='template'
-                  className='lucide text-brand h-8 w-8'
-                />
+              <div class='mb-4 rounded-lg bg-black/5 p-3'>
+                <Icon name='template' className='lucide h-8 w-8 text-black' />
               </div>
               <h3 class='mb-2 text-xl font-bold'>Flexible Aspect Ratios</h3>
-              <p class='text-gray-600'>Support 16:9, 9:16, and 1:1 formats for any platform.</p>
+              <p class='text-gray-700'>Support 16:9, 9:16, and 1:1 formats for any platform.</p>
             </div>
           </div>
-          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
-                <Icon
-                  name='remix'
-                  className='lucide text-brand h-8 w-8'
-                />
+              <div class='mb-4 rounded-lg bg-black/5 p-3'>
+                <Icon name='remix' className='lucide h-8 w-8 text-black' />
               </div>
               <h3 class='mb-2 text-xl font-bold'>Multilingual Subtitles</h3>
-              <p class='text-gray-600'>
+              <p class='text-gray-700'>
                 Add single-language or bilingual subtitles with one click.
               </p>
             </div>
           </div>
-          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
-                <Icon
-                  name='play'
-                  className='lucide text-brand h-8 w-8'
-                />
+              <div class='mb-4 rounded-lg bg-black/5 p-3'>
+                <Icon name='play' className='lucide h-8 w-8 text-black' />
               </div>
               <h3 class='mb-2 text-xl font-bold'>AI Background Music</h3>
-              <p class='text-gray-600'>
+              <p class='text-gray-700'>
                 Generate and sync background music tailored to your video scenes.
               </p>
             </div>
           </div>
-          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
-                <Icon
-                  name='star'
-                  className='lucide text-brand h-8 w-8'
-                />
+              <div class='mb-4 rounded-lg bg-black/5 p-3'>
+                <Icon name='star' className='lucide h-8 w-8 text-black' />
               </div>
               <h3 class='mb-2 text-xl font-bold'>Style Variations</h3>
-              <p class='text-gray-600'>
+              <p class='text-gray-700'>
                 Choose from a variety of video styles to match your brand tone.
               </p>
             </div>
           </div>
-          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md'>
+          <div class='rounded-xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg'>
             <div class='flex flex-col items-start'>
-              <div class='mb-4 rounded-lg bg-[#FFF0F3] p-3'>
-                <Icon
-                  name='volume'
-                  className='lucide text-brand h-8 w-8'
-                />
+              <div class='mb-4 rounded-lg bg-black/5 p-3'>
+                <Icon name='volume' className='lucide h-8 w-8 text-black' />
               </div>
               <h3 class='mb-2 text-xl font-bold'>AI Sound Effects</h3>
-              <p class='text-gray-600'>
+              <p class='text-gray-700'>
                 Auto-generate sound effects that match scenes and actions.
               </p>
             </div>

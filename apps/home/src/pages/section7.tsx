@@ -6,16 +6,18 @@ import PricingCard from './pricing-card';
 const Section7 = () => {
   return (
     <>
-      <div class='container mx-auto mb-12 px-4 py-16 text-center'>
+      <div class='container mx-auto mb-12 px-4 py-16 text-center text-gray-900'>
         <h2 class='font-inter text-[3rem] font-bold'>
           The right plans,
-          <span class='text-brand'> for the right price</span>
+          <span class='ml-2 inline-flex items-center rounded-full bg-black px-4 py-2 text-[0.65em] font-semibold uppercase tracking-[0.35em] text-white'>
+            for the right price
+          </span>
         </h2>
       </div>
 
       <form action='/subscribe' method='post'>
         <div class='relative mx-auto mb-20 flex max-w-[1200px] flex-wrap justify-center px-4'>
-          <label class='peer/y has-checked:bg-brand has-checked:text-white mb-4 rounded-full bg-gray-200 px-6 py-2 text-gray-800'>
+          <label class='peer/y has-checked:bg-black has-checked:text-white mb-4 rounded-full bg-gray-200 px-6 py-2 text-gray-800'>
             <input type='radio' name='plan' value='year' class='peer hidden' checked />
             <div>Yearly</div>
           </label>
@@ -73,7 +75,7 @@ const Section7 = () => {
             />
           </div>
 
-          <label class='peer/m has-checked:bg-brand has-checked:text-white mb-4 ml-4 rounded-full bg-gray-200 px-6 py-2 text-gray-800'>
+          <label class='peer/m has-checked:bg-black has-checked:text-white mb-4 ml-4 rounded-full bg-gray-200 px-6 py-2 text-gray-800'>
             <input type='radio' name='plan' value='month' class='hidden' />
             <div>Monthly</div>
           </label>
@@ -139,7 +141,7 @@ const Section7 = () => {
       <div class='mx-auto mb-20 max-w-[1200px] px-4'>
         <div
           class='relative overflow-hidden rounded-3xl p-12 text-white md:p-16'
-          style='background: linear-gradient(135deg, #f7265b 0%, #b01b43 100%)'
+          style='background: linear-gradient(135deg, #111111 0%, #2b2b2b 100%)'
         >
           <div class='max-w-4xl'>
             <h2 class='mb-6 text-[3rem] font-bold'>
@@ -155,7 +157,7 @@ const Section7 = () => {
               white-glove support — all designed to fit your business.
             </p>
             <a href='mailto:contact@reela.ai'>
-              <button class='text-brand inline-flex items-center rounded-full bg-white px-6 py-3 text-lg font-medium transition-transform hover:scale-105'>
+              <button class='inline-flex items-center rounded-full bg-white px-6 py-3 text-lg font-medium text-gray-900 transition-transform hover:-translate-y-1'>
                 Contact Sales
                 <Icon
                   name='external'

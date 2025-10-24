@@ -31,13 +31,13 @@ const VideoTab = ({ videos, tabTitle, tabButton, tabButtonSrc }: Props) => {
               {videoWithId.map((video, index) => (
                 <label
                   key={video.id}
-                  class={`${tabName} ${index === 0 ? 'border-brand bg-white border-l-4' : 'bg-white/50'} block w-full rounded-xl p-5 text-left shadow-md transition-all duration-200 hover:bg-white hover:shadow-sm`}
+                  class={`${tabName} ${index === 0 ? 'border-black bg-white border-l-4' : 'bg-white/50'} block w-full rounded-xl p-5 text-left shadow-md transition-all duration-200 hover:bg-white hover:shadow-sm`}
                   for={video.id}
                   onclick={`videoTabClick(this, '${tabName}')`}
                 >
                   <h3
                     class={
-                      'mb-2 text-xl font-bold text-gray-800 ' + (index === 0 ? 'text-brand' : '')
+                      'mb-2 text-xl font-bold text-gray-800 ' + (index === 0 ? 'text-black' : '')
                     }
                   >
                     {video.title}
@@ -75,7 +75,7 @@ const VideoTab = ({ videos, tabTitle, tabButton, tabButtonSrc }: Props) => {
             <div class='mt-6 flex justify-end'>
               <a href='/workspace'>
                 <a
-                  class='bg-brand rounded-full px-8 py-3 font-medium text-white transition-transform hover:scale-110'
+                  class='bg-black rounded-full px-8 py-3 font-medium text-white transition-transform hover:-translate-y-1'
                   href={tabButtonSrc}
                 >
                   {tabButton}

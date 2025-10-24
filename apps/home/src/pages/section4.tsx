@@ -31,10 +31,13 @@ const Section4 = () => {
   return (
     <Fragment>
       <div class='container mx-auto px-4 text-center py-16 mb-12'>
-        <h2 class='text-[3rem] font-bold font-inter'>
-          Unified <span class='text-brand'>Multimodal </span>
+        <h2 class='text-[3rem] font-bold font-inter text-gray-900'>
+          Unified
+          <span class='ml-3 inline-flex items-center rounded-full bg-black px-5 py-2 text-[0.65em] font-semibold uppercase tracking-[0.35em] text-white md:ml-4'>
+            Multimodal
+          </span>
           Video Creation
-          <p class='mt-6 max-w-3xl mx-auto text-base text-gray-600 font-bold font-inter md:text-lg'>
+          <p class='mt-6 max-w-3xl mx-auto text-base text-gray-700 font-medium font-inter md:text-lg'>
             Create seamless videos by combining avatars, AI scenes, video clips, illustrations, and
             B-roll — all in one unified workflow.
           </p>
@@ -47,7 +50,7 @@ const Section4 = () => {
             {config.map((item, index) => (
               <div key={String(index)} class='contents group'>
                 <label class='w-full transition-all duration-200 bg-white hover:bg-gray-50 border border-gray-200 rounded-lg overflow-hidden p-4 label-sm col-start-1 max-h-max'>
-                  <span class='text-sm font-medium text-gray-700 has-checked:text-brand'>
+                  <span class='text-sm font-medium text-gray-700 has-checked:text-black'>
                     {item.name}
                   </span>
                   <input
@@ -72,13 +75,16 @@ const Section4 = () => {
               </div>
             ))}
           </div>
-          <div class='flex flex-wrap items-center justify-center gap-2 text-center'>
+          <div class='flex flex-wrap items-center justify-center gap-2 text-center text-gray-900'>
             <h3 class='text-2xl font-bold'>
-              More <span class='text-brand'>multimodal </span>
+              More
+              <span class='ml-2 inline-flex items-center rounded-full bg-black px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-white'>
+                multimodal
+              </span>
               AI video combinations
             </h3>
             <a href='/workspace'>
-              <button class='bg-brand text-white px-6 py-3 rounded-full font-medium hover:scale-105 transition-transform inline-flex items-center'>
+              <button class='bg-black text-white px-6 py-3 rounded-full font-medium hover:-translate-y-1 transition-transform inline-flex items-center'>
                 are waiting for you
                 <Icon name='arrowRight' className='ml-2 h-5 w-5' />
               </button>

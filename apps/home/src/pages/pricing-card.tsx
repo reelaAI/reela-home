@@ -34,7 +34,7 @@ const PricingCard: FC<Props> = ({
     >
       {/* chips */}
       {isPopular && (
-        <div className='absolute left-0 top-0 rounded-br-xl bg-[#ff0058] px-2 py-1 text-xs text-white'>
+        <div className='absolute left-0 top-0 rounded-br-xl bg-black px-2 py-1 text-xs font-medium tracking-wide text-white uppercase'>
           Popular
         </div>
       )}
@@ -67,7 +67,7 @@ const PricingCard: FC<Props> = ({
           'block w-full rounded-full py-2 text-sm text-white text-center',
           {
             'bg-black': !isPopular,
-            'bg-[#ff0058] text-white': isPopular,
+            'bg-black text-white': isPopular,
           },
           'disabled:cursor-wait disabled:opacity-50',
         )}

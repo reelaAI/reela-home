@@ -150,23 +150,23 @@ function syncSoundIcon(button, muted) {
 function activateLabel(element) {
   const labels = document.querySelectorAll('.video-category-label');
   labels.forEach((label) => {
-    label.classList.remove('text-[#F7265B]');
+    label.classList.remove('text-black');
   });
   element.classList.remove('text-gray-700', 'hover:text-gray-900');
-  element.classList.add('text-[#F7265B]');
+  element.classList.add('text-black');
 }
 
 function videoTabClick(element, tabName) {
   const labels = document.querySelectorAll('.' + tabName);
   labels.forEach((label) => {
-    label.classList.remove('bg-white', 'shadow-md', 'border-l-4', 'border-[#F7265B]');
+    label.classList.remove('bg-white', 'shadow-md', 'border-l-4', 'border-black');
     label.classList.add('bg-white/50');
-    label.querySelector('h3').classList.remove('text-[#F7265B]');
+    label.querySelector('h3').classList.remove('text-black');
   });
 
-  element.classList.add('bg-white', 'shadow-md', 'border-l-4', 'border-[#F7265B]');
+  element.classList.add('bg-white', 'shadow-md', 'border-l-4', 'border-black');
   element.classList.remove('bg-white/50');
-  element.querySelector('h3').classList.add('text-[#F7265B]');
+  element.querySelector('h3').classList.add('text-black');
 
   // pause all videos
   pauseAllVideos();

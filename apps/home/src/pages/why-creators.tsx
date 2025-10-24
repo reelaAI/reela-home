@@ -26,13 +26,16 @@ const cards = [
 
 const WhyCreators = () => {
   return (
-    <section class='bg-[#FFF6F8] py-20'>
+    <section class='bg-gray-100 py-20'>
       <div class='container mx-auto px-4'>
         <div class='mx-auto mb-14 max-w-3xl text-center'>
-          <h2 class='font-inter text-[3rem] font-bold md:whitespace-nowrap'>
-            Why Creators Choose <span class='text-brand'>Reela</span>
+          <h2 class='font-inter text-[3rem] font-bold md:whitespace-nowrap text-gray-900'>
+            Why Creators Choose{' '}
+            <span class='inline-flex items-center rounded-full bg-black px-4 py-2 text-[0.65em] font-semibold uppercase tracking-[0.35em] text-white'>
+              Reela
+            </span>
           </h2>
-          <p class='mt-4 text-base text-gray-600 md:text-lg'>
+          <p class='mt-4 text-base text-gray-700 md:text-lg'>
             Reela helps creators, brands, and professionals turn ideas into high-impact videos that grow influence and drive results.
           </p>
         </div>
@@ -44,9 +47,9 @@ const WhyCreators = () => {
             >
               <div class='space-y-4 self-center'>
                 <h3 class='text-2xl font-bold text-gray-900 md:text-3xl'>{card.title}</h3>
-                <p class='text-lg text-gray-600'>{card.description}</p>
+                <p class='text-lg text-gray-700'>{card.description}</p>
                 <a href='https://app.reela.com/workspace' target='_blank' rel='noopener noreferrer'>
-                  <button class='inline-flex items-center rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-105'>
+                  <button class='inline-flex items-center rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-1'>
                     {card.cta}
                     <Icon name='arrowRight' className='ml-2 h-5 w-5' />
                   </button>

@@ -128,7 +128,7 @@ const baseCardClasses =
 
 const positionClassMap: Record<CardPosition, string> = {
   active:
-    'z-30 gap-6 p-6 shadow-2xl ring-2 ring-brand/10 lg:-mx-16 lg:flex lg:items-center lg:gap-8 lg:p-8',
+    'z-30 gap-6 p-6 shadow-2xl ring-2 ring-black/10 lg:-mx-16 lg:flex lg:items-center lg:gap-8 lg:p-8',
   prev:
     'hidden opacity-0 lg:pointer-events-auto lg:-mr-10 lg:flex lg:max-w-sm lg:items-center lg:opacity-60 lg:z-10 lg:!gap-3 lg:!p-4 lg:!pb-1.5',
   next:
@@ -149,7 +149,7 @@ const textPanelStateClassMap: Record<CardPosition, string> = {
   inactive: '!gap-2 lg:!gap-2.5',
 };
 
-const quoteBaseClasses = 'text-[11px] leading-relaxed text-slate-700';
+const quoteBaseClasses = 'text-[11px] leading-relaxed text-gray-700';
 
 const quoteStateClassMap: Record<CardPosition, string> = {
   active: 'sm:text-sm md:text-[15px]',
@@ -158,7 +158,7 @@ const quoteStateClassMap: Record<CardPosition, string> = {
   inactive: '',
 };
 
-const highlightBaseClasses = 'text-[10px] text-brand font-medium';
+const highlightBaseClasses = 'text-[10px] font-medium text-gray-900';
 
 const highlightStateClassMap: Record<CardPosition, string> = {
   active: 'sm:text-xs md:text-sm',
@@ -175,7 +175,7 @@ const videoPositionClassMap: Record<CardPosition, string> = {
 };
 
 const avatarBaseClasses =
-  'border-brand relative shrink-0 overflow-hidden rounded-full border-2 shadow-md transition-[width,height] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:ml-auto';
+  'border-black relative shrink-0 overflow-hidden rounded-full border-2 shadow-md transition-[width,height] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:ml-auto';
 
 const avatarStateClassMap: Record<CardPosition, string> = {
   active: 'h-16 w-16 sm:h-20 sm:w-20',
@@ -189,11 +189,18 @@ const Section6 = () => {
 
   return (
     <>
-      <div class='container mx-auto mb-6 px-4 py-8 text-center'>
+      <div class='container mx-auto mb-6 px-4 py-8 text-center text-gray-900'>
         <h2 class='font-inter text-[3rem] font-bold'>
-          See What <span class='text-brand'>Creators</span> Made with <span class='text-brand'>Reela</span>
+          See What
+          <span class='ml-3 inline-flex items-center rounded-full bg-black px-4 py-2 text-[0.65em] font-semibold uppercase tracking-[0.35em] text-white md:ml-4'>
+            Creators
+          </span>
+          Made with
+          <span class='ml-3 inline-flex items-center rounded-full bg-black px-4 py-2 text-[0.65em] font-semibold uppercase tracking-[0.35em] text-white md:ml-4'>
+            Reela
+          </span>
         </h2>
-        <p class='mx-auto mt-2 max-w-2xl text-base text-slate-600 md:text-lg'>
+        <p class='mx-auto mt-2 max-w-2xl text-base text-gray-700 md:text-lg'>
           Real creators, real results — all made in minutes with Reela’s AI studio.
         </p>
       </div>
@@ -340,7 +347,7 @@ const Section6 = () => {
                   </div>
                   <button
                     type='button'
-                    class='absolute inset-0 z-30 hidden rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/60'
+                    class='absolute inset-0 z-30 hidden rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/50'
                     data-carousel-activate=''
                     aria-label={`Show testimonial from ${testimonial.role}`}
                   />
