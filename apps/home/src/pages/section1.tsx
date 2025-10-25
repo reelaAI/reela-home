@@ -92,7 +92,7 @@ const Section1 = () => {
                       height='32'
                       loading='lazy'
                       src={brand.src}
-                      style='color: transparent; filter: brightness(0) saturate(100%) invert(67%) sepia(0%) saturate(0%) hue-rotate(179deg) brightness(94%) contrast(86%);'
+                      style='color: transparent; filter: brightness(0) saturate(100%) invert(67%) sepia(0%) saturate(0%) hue-rotate(179deg) brightness(85%) contrast(95%);'
                       width='80'
                     />
                     <span class='text-xs font-medium'>{brand.name}</span>
