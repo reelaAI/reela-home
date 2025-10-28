@@ -50,19 +50,23 @@ const Section1 = () => {
           The first autonomous AI agent that turns any idea into publish-ready videos with AI visuals,
           avatars, dubbing, and smart editing.
         </p>
-        <div class='mt-12 grid w-full max-w-5xl gap-4 text-left md:grid-cols-3'>
+        <div class='mt-12 grid w-full max-w-5xl gap-6 text-left md:grid-cols-3'>
           {heroHighlights.map((highlight) => (
-            <div
-              key={highlight.title}
-              class='flex h-full items-center gap-4 rounded-3xl border border-gray-200/70 bg-white/90 p-4 shadow-sm backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg md:p-5'
-            >
-              <div class='flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F7265B]/8'>
-                <Icon
-                  name={highlight.icon}
-                  className='h-8 w-8 text-[#F7265B]'
-                />
+            <div class='group relative' key={highlight.title}>
+              <div class='absolute inset-0 rounded-[28px] bg-gradient-to-br from-[#F7265B]/35 via-[#FF6EA9]/25 to-[#7C3AED]/35 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-100'></div>
+              <div class='relative flex h-full flex-col justify-between gap-6 rounded-[28px] border border-white/40 bg-white/80 p-6 shadow-[0_24px_60px_-35px_rgba(15,23,42,0.45)] backdrop-blur-xl transition-all duration-300 group-hover:-translate-y-1 group-hover:border-transparent group-hover:bg-white'>
+                <div class='flex items-center justify-between'>
+                  <div class='flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#F7265B] via-[#FF8E6E] to-[#7C3AED] text-white shadow-lg shadow-[#F7265B]/20'>
+                    <Icon
+                      name={highlight.icon}
+                      className='h-7 w-7 text-white'
+                    />
+                  </div>
+                  <div class='h-10 w-10 rounded-full bg-gradient-to-br from-[#F7265B]/10 via-transparent to-[#7C3AED]/20 opacity-0 transition-all duration-300 group-hover:opacity-100'></div>
+                </div>
+                <p class='text-lg font-semibold text-gray-900'>{highlight.title}</p>
+                <div class='h-px w-full bg-gradient-to-r from-transparent via-[#F7265B]/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100'></div>
               </div>
-              <p class='text-base font-semibold text-gray-900 md:text-lg'>{highlight.title}</p>
             </div>
           ))}
         </div>
