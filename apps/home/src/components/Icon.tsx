@@ -5,7 +5,7 @@ import { ComponentType } from "react";
 
 const AvatarLineIcon = ({
   className,
-  strokeWidth = 5,
+  strokeWidth = 15,
   color = "currentColor",
   ...props
 }: LucideProps) => (
@@ -28,7 +28,7 @@ const AvatarLineIcon = ({
 
 const AnalyticsLineIcon = ({
   className,
-  strokeWidth = 5,
+  strokeWidth = 15,
   color = "currentColor",
   ...props
 }: LucideProps) => (
@@ -54,7 +54,7 @@ const AnalyticsLineIcon = ({
 
 const DollarLineIcon = ({
   className,
-  strokeWidth = 5,
+  strokeWidth = 15,
   color = "currentColor",
   ...props
 }: LucideProps) => (
