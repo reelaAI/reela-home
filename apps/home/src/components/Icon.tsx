@@ -21,6 +21,7 @@ const AvatarLineIcon = ({
     width="1em"
     {...props}
   >
+    <rect width="100" height="100" fill="white" />
     <circle cx="50" cy="34" r="18" />
     <path d="M20 82c0-16 13-30 30-30s30 14 30 30" />
   </svg>
@@ -44,6 +45,7 @@ const AnalyticsLineIcon = ({
     width="1em"
     {...props}
   >
+    <rect width="100" height="100" fill="white" />
     <path d="M20 80h60" />
     <path d="M32 80V48" />
     <path d="M50 80V32" />
@@ -70,6 +72,7 @@ const DollarLineIcon = ({
     width="1em"
     {...props}
   >
+    <rect width="100" height="100" fill="white" />
     <path d="M50 18v12" />
     <path d="M50 70v12" />
     <path d="M64 30c0-9-7-16-16-16s-16 7-16 16 7 16 16 16h12c9 0 16 7 16 16s-7 16-16 16H38c-9 0-16-7-16-16" />
