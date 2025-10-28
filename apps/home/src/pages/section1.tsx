@@ -50,19 +50,19 @@ const Section1 = () => {
           The first autonomous AI agent that turns any idea into publish-ready videos with AI visuals,
           avatars, dubbing, and smart editing.
         </p>
-        <div class='mt-12 grid w-full max-w-5xl gap-4 text-left md:grid-cols-3'>
+        <div class='mt-12 grid w-full max-w-5xl gap-5 text-left md:grid-cols-3'>
           {heroHighlights.map((highlight) => (
             <div
               key={highlight.title}
-              class='flex h-full items-center gap-4 rounded-3xl border border-gray-200/70 bg-white/90 p-4 shadow-sm backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg md:p-5'
+              class='group flex h-full items-center gap-5 rounded-3xl bg-gradient-to-r from-white/95 via-white/70 to-white/10 p-6 shadow-[0_15px_45px_rgba(15,23,42,0.12)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_25px_55px_rgba(15,23,42,0.18)]'
             >
-              <div class='flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F7265B]/8'>
+              <div class='flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#F7265B] to-[#9F1E3A] text-white shadow-[0_12px_24px_rgba(247,38,91,0.35)] transition-transform duration-300 group-hover:scale-105'>
                 <Icon
                   name={highlight.icon}
-                  className='h-8 w-8 text-[#F7265B]'
+                  className='h-7 w-7 text-white'
                 />
               </div>
-              <p class='text-base font-semibold text-gray-900 md:text-lg'>{highlight.title}</p>
+              <p class='whitespace-nowrap text-base font-semibold tracking-tight text-gray-900 md:text-lg'>{highlight.title}</p>
             </div>
           ))}
         </div>
