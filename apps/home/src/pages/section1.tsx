@@ -4,19 +4,34 @@ type IconName = Parameters<typeof Icon>[0]['name'];
 
 const heroHighlights: Array<{
   title: string;
+  description: string;
   icon: IconName;
+  accent: string;
+  tag: string;
 }> = [
   {
     title: 'Build Your Avatar IP',
+    description:
+      'Design signature digital personas with cinematic fidelity and keep their look consistent across every storyline.',
     icon: 'avatar',
+    accent: 'from-[#F7265B] via-[#FF7A99] to-[#FFE5EC]',
+    tag: 'Avatar Studio',
   },
   {
     title: 'Promote Your Products',
+    description:
+      'Generate on-brand launch videos, social teasers, and explainers in minutes with automated scripts and scene layouts.',
     icon: 'analytics',
+    accent: 'from-[#7C3AED] via-[#A855F7] to-[#E9D5FF]',
+    tag: 'Growth Engine',
   },
   {
     title: 'Monetize Your Channels',
+    description:
+      'Optimize every upload with AI-driven pacing, subtitles, and CTA experiments tailored to your audience analytics.',
     icon: 'dollar',
+    accent: 'from-[#0EA5E9] via-[#38BDF8] to-[#E0F2FE]',
+    tag: 'Revenue Lab',
   },
 ];
 
@@ -50,19 +65,31 @@ const Section1 = () => {
           The first autonomous AI agent that turns any idea into publish-ready videos with AI visuals,
           avatars, dubbing, and smart editing.
         </p>
-        <div class='mt-12 grid w-full max-w-5xl gap-4 text-left md:grid-cols-3'>
+        <div class='mt-12 grid w-full max-w-5xl gap-6 text-left md:grid-cols-3'>
           {heroHighlights.map((highlight) => (
             <div
               key={highlight.title}
-              class='flex h-full items-center gap-4 rounded-3xl border border-gray-200/70 bg-white/90 p-4 shadow-sm backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg md:p-5'
+              class='group relative flex h-full flex-col overflow-hidden rounded-[32px] border border-white/60 bg-white/80 p-6 shadow-[0_20px_80px_rgba(15,23,42,0.08)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white hover:shadow-[0_24px_100px_rgba(247,38,91,0.18)] md:p-7'
             >
-              <div class='flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F7265B]/8'>
-                <Icon
-                  name={highlight.icon}
-                  className='h-8 w-8 text-[#F7265B]'
+              <div class='pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
+                <div
+                  class={`absolute -left-20 top-1/2 h-44 w-44 -translate-y-1/2 rounded-full bg-gradient-to-br ${highlight.accent} opacity-50 blur-3xl`}
+                />
+                <div
+                  class={`absolute -right-16 -top-12 h-40 w-40 rounded-full bg-gradient-to-br ${highlight.accent} opacity-40 blur-3xl`}
                 />
               </div>
-              <p class='text-base font-semibold text-gray-900 md:text-lg'>{highlight.title}</p>
+              <div class='relative flex items-center gap-4'>
+                <div class={`flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${highlight.accent} text-white shadow-[0_12px_30px_rgba(15,23,42,0.16)]`}>
+                  <Icon
+                    name={highlight.icon}
+                    className='h-7 w-7'
+                  />
+                </div>
+                <p class='text-sm font-semibold uppercase tracking-[0.2em] text-gray-500'>{highlight.tag}</p>
+              </div>
+              <p class='relative mt-5 text-lg font-semibold text-gray-900 md:text-2xl'>{highlight.title}</p>
+              <p class='relative mt-3 text-sm text-gray-600 md:text-base'>{highlight.description}</p>
             </div>
           ))}
         </div>
