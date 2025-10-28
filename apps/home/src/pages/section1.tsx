@@ -50,21 +50,27 @@ const Section1 = () => {
           The first autonomous AI agent that turns any idea into publish-ready videos with AI visuals,
           avatars, dubbing, and smart editing.
         </p>
-        <div class='mt-12 grid w-full max-w-5xl gap-4 text-left md:grid-cols-3'>
-          {heroHighlights.map((highlight) => (
-            <div
-              key={highlight.title}
-              class='flex h-full items-center gap-4 rounded-3xl border border-gray-200/70 bg-white/90 p-4 shadow-sm backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg md:p-5'
-            >
-              <div class='flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F7265B]/8'>
-                <Icon
-                  name={highlight.icon}
-                  className='h-8 w-8 text-[#F7265B]'
-                />
+        <div class='relative mt-12 w-full max-w-5xl'>
+          <div class='pointer-events-none absolute inset-0 -z-10 rounded-[3rem] bg-gradient-to-br from-[#F7265B]/15 via-white/60 to-white/10 blur-3xl'></div>
+          <div class='relative grid gap-5 text-left md:grid-cols-3'>
+            {heroHighlights.map((highlight) => (
+              <div
+                key={highlight.title}
+                class='group relative overflow-hidden rounded-[2.25rem] border border-white/40 bg-white/30 p-[1px] shadow-xl shadow-[#F7265B]/10 backdrop-blur-2xl transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#F7265B]/30'
+              >
+                <div class='relative flex h-full flex-col gap-5 rounded-[2.1rem] bg-gradient-to-br from-white/95 via-white/80 to-white/60 p-6 md:p-8'>
+                  <div class='absolute -top-20 right-[-60px] h-40 w-40 rounded-full bg-[#F7265B]/10 blur-2xl transition-opacity duration-300 group-hover:opacity-80'></div>
+                  <div class='relative flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#F7265B] to-[#F990AD] text-white shadow-lg shadow-[#F7265B]/40'>
+                    <Icon
+                      name={highlight.icon}
+                      className='h-7 w-7'
+                    />
+                  </div>
+                  <p class='relative text-lg font-semibold leading-snug text-gray-900 md:text-xl'>{highlight.title}</p>
+                </div>
               </div>
-              <p class='text-base font-semibold text-gray-900 md:text-lg'>{highlight.title}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         <div class='mt-10 flex flex-col items-center gap-6'>
           <a
