@@ -4,19 +4,42 @@ type IconName = Parameters<typeof Icon>[0]['name'];
 
 const heroHighlights: Array<{
   title: string;
+  description: string;
+  badge: string;
   icon: IconName;
+  accentColor: string;
+  accentLight: string;
+  accentBorder: string;
 }> = [
   {
     title: 'Build Your Avatar IP',
+    description:
+      'Craft photorealistic digital hosts with adaptive voices, emotive gestures, and cinematic lighting tuned to your story.',
+    badge: 'Signature Avatars',
     icon: 'avatar',
+    accentColor: '#F7265B',
+    accentLight: 'rgba(247, 38, 91, 0.14)',
+    accentBorder: 'rgba(247, 38, 91, 0.32)',
   },
   {
     title: 'Promote Your Products',
+    description:
+      'Launch dynamic product spots in minutes with layered motion graphics, brand kits, and multi-language localization.',
+    badge: 'Campaign Studio',
     icon: 'analytics',
+    accentColor: '#4B14F7',
+    accentLight: 'rgba(75, 20, 247, 0.12)',
+    accentBorder: 'rgba(75, 20, 247, 0.28)',
   },
   {
     title: 'Monetize Your Channels',
+    description:
+      'Automate shorts, livestream highlights, and membership content with predictive scheduling and performance insights.',
+    badge: 'Revenue Engine',
     icon: 'dollar',
+    accentColor: '#0EA5E9',
+    accentLight: 'rgba(14, 165, 233, 0.14)',
+    accentBorder: 'rgba(14, 165, 233, 0.3)',
   },
 ];
 
@@ -50,19 +73,54 @@ const Section1 = () => {
           The first autonomous AI agent that turns any idea into publish-ready videos with AI visuals,
           avatars, dubbing, and smart editing.
         </p>
-        <div class='mt-12 grid w-full max-w-5xl gap-4 text-left md:grid-cols-3'>
+        <div class='mt-12 grid w-full max-w-5xl gap-6 text-left md:grid-cols-3'>
           {heroHighlights.map((highlight) => (
             <div
               key={highlight.title}
-              class='flex h-full items-center gap-4 rounded-3xl border border-gray-200/70 bg-white/90 p-4 shadow-sm backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg md:p-5'
+              class='group relative flex h-full'
+              style={`--accent-color:${highlight.accentColor}; --accent-light:${highlight.accentLight}; --accent-border:${highlight.accentBorder};`}
             >
-              <div class='flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F7265B]/8'>
-                <Icon
-                  name={highlight.icon}
-                  className='h-8 w-8 text-[#F7265B]'
-                />
+              <div
+                class='pointer-events-none absolute inset-0 rounded-[28px] opacity-0 transition duration-300 group-hover:opacity-100'
+                style='background: radial-gradient(120% 120% at 100% 0%, var(--accent-color) 0%, transparent 65%); filter: blur(0px);'
+              ></div>
+              <div class='relative flex h-full flex-col gap-5 rounded-[28px] border border-white/70 bg-white/95 p-6 shadow-[0_18px_50px_-28px_rgba(15,23,42,0.6)] backdrop-blur-xl transition duration-300 group-hover:-translate-y-1 group-hover:border-white group-hover:shadow-[0_28px_65px_-18px_rgba(15,23,42,0.55)]'>
+                <span
+                  class='inline-flex w-fit items-center rounded-full px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-gray-600 transition duration-300 group-hover:text-gray-700'
+                  style='color: var(--accent-color); background-color: var(--accent-light); border: 1px solid var(--accent-border); letter-spacing: 0.24em;'
+                >
+                  {highlight.badge}
+                </span>
+                <div class='flex items-start gap-4'>
+                  <div
+                    class='flex h-14 w-14 items-center justify-center rounded-2xl border transition duration-300'
+                    style='
+                      border-color: var(--accent-border);
+                      background: var(--accent-light);
+                      color: var(--accent-color);
+                      box-shadow: 0 18px 40px -24px var(--accent-color);
+                    '
+                  >
+                    <Icon
+                      name={highlight.icon}
+                      className='h-7 w-7'
+                    />
+                  </div>
+                  <div class='flex flex-col gap-3'>
+                    <h3 class='text-lg font-semibold text-gray-900 md:text-xl'>{highlight.title}</h3>
+                    <p class='text-sm leading-relaxed text-gray-600 md:text-base'>
+                      {highlight.description}
+                    </p>
+                  </div>
+                </div>
+                <div class='mt-auto flex items-center gap-2 text-xs font-medium text-gray-500'>
+                  <span
+                    class='h-px flex-1 rounded-full'
+                    style='background: linear-gradient(90deg, var(--accent-light) 0%, #E5E7EB 55%, rgba(229, 231, 235, 0) 100%);'
+                  ></span>
+                  <span>Tap into intelligent automation</span>
+                </div>
               </div>
-              <p class='text-base font-semibold text-gray-900 md:text-lg'>{highlight.title}</p>
             </div>
           ))}
         </div>
