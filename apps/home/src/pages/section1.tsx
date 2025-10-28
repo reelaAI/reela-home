@@ -50,19 +50,27 @@ const Section1 = () => {
           The first autonomous AI agent that turns any idea into publish-ready videos with AI visuals,
           avatars, dubbing, and smart editing.
         </p>
-        <div class='mt-12 grid w-full max-w-5xl gap-4 text-left md:grid-cols-3'>
+        <div class='mt-12 grid w-full max-w-5xl auto-rows-fr gap-6 text-left md:grid-cols-3'>
           {heroHighlights.map((highlight) => (
             <div
               key={highlight.title}
-              class='flex h-full items-center gap-4 rounded-3xl border border-gray-200/70 bg-white/90 p-4 shadow-sm backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg md:p-5'
+              class='group relative flex h-full items-stretch'
             >
-              <div class='flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F7265B]/8'>
-                <Icon
-                  name={highlight.icon}
-                  className='h-8 w-8 text-[#F7265B]'
-                />
+              <div class='pointer-events-none absolute inset-0 rounded-[30px] border border-white/40 bg-gradient-to-br from-white/40 via-white/20 to-white/5 opacity-80 shadow-[0_25px_60px_-35px_rgba(15,23,42,0.6)] transition duration-500 group-hover:translate-y-[-6px] group-hover:opacity-100'></div>
+              <div class='relative flex h-full w-full flex-col justify-between overflow-hidden rounded-[28px] bg-white/90 p-6 backdrop-blur-xl transition duration-500 group-hover:-translate-y-1 group-hover:shadow-[0_35px_80px_-40px_rgba(247,38,91,0.55)]'>
+                <div class='flex items-center gap-4'>
+                  <div class='flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#F7265B]/25 via-[#ff8aa5]/15 to-white/40 shadow-inner shadow-[inset_0_1px_0_rgba(255,255,255,0.6)] backdrop-blur'>
+                    <Icon
+                      name={highlight.icon}
+                      className='h-8 w-8 text-[#F7265B]'
+                    />
+                  </div>
+                  <div class='h-10 w-px bg-gradient-to-b from-[#F7265B]/40 via-[#F7265B]/10 to-transparent'></div>
+                </div>
+                <p class='mt-6 text-lg font-semibold leading-snug text-gray-900 md:text-xl'>
+                  {highlight.title}
+                </p>
               </div>
-              <p class='text-base font-semibold text-gray-900 md:text-lg'>{highlight.title}</p>
             </div>
           ))}
         </div>
