@@ -4,19 +4,34 @@ type IconName = Parameters<typeof Icon>[0]['name'];
 
 const heroHighlights: Array<{
   title: string;
+  description: string;
   icon: IconName;
+  gradient: string;
+  glow: string;
 }> = [
   {
     title: 'Build Your Avatar IP',
+    description:
+      'Craft cinematic, on-brand digital personas that feel alive with studio lighting, motion direction, and expressive AI performances.',
     icon: 'avatar',
+    gradient: 'linear-gradient(135deg, #F7265B 0%, #FF8A3D 100%)',
+    glow: 'rgba(247, 38, 91, 0.45)',
   },
   {
     title: 'Promote Your Products',
+    description:
+      'Spin up launch-ready campaigns with multi-scene storyboards, dynamic product spotlights, and instant localization in 30+ languages.',
     icon: 'analytics',
+    gradient: 'linear-gradient(135deg, #5D5FEF 0%, #8B5CF6 100%)',
+    glow: 'rgba(93, 95, 239, 0.45)',
   },
   {
     title: 'Monetize Your Channels',
+    description:
+      'Deploy revenue-first content engines that learn audience signals, optimize hooks, and deliver finished edits across every platform.',
     icon: 'dollar',
+    gradient: 'linear-gradient(135deg, #00B59C 0%, #4ADE80 100%)',
+    glow: 'rgba(0, 181, 156, 0.45)',
   },
 ];
 
@@ -50,19 +65,46 @@ const Section1 = () => {
           The first autonomous AI agent that turns any idea into publish-ready videos with AI visuals,
           avatars, dubbing, and smart editing.
         </p>
-        <div class='mt-12 grid w-full max-w-5xl gap-4 text-left md:grid-cols-3'>
+        <div class='mt-12 grid w-full max-w-5xl gap-6 text-left md:grid-cols-3'>
           {heroHighlights.map((highlight) => (
             <div
               key={highlight.title}
-              class='flex h-full items-center gap-4 rounded-3xl border border-gray-200/70 bg-white/90 p-4 shadow-sm backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg md:p-5'
+              class='group relative flex h-full flex-col overflow-hidden rounded-3xl p-[1px] transition-all duration-300 hover:-translate-y-2'
+              style={`background-image: ${highlight.gradient}; box-shadow: 0 40px 85px -55px ${highlight.glow};`}
             >
-              <div class='flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F7265B]/8'>
-                <Icon
-                  name={highlight.icon}
-                  className='h-8 w-8 text-[#F7265B]'
-                />
+              <div class='relative flex h-full flex-col justify-between gap-6 rounded-[calc(1.5rem-1px)] bg-white/95 p-6 shadow-[0_28px_60px_-45px_rgba(15,23,42,0.38)] backdrop-blur-xl transition-colors duration-300 group-hover:bg-white/75 md:p-7'>
+                <div class='flex items-start justify-between gap-4'>
+                  <div
+                    class='flex h-14 w-14 items-center justify-center rounded-2xl text-white shadow-[0_22px_45px_-28px_rgba(15,23,42,0.55)] transition-transform duration-300 group-hover:scale-110'
+                    style={`background: ${highlight.gradient};`}
+                  >
+                    <Icon
+                      name={highlight.icon}
+                      className='h-7 w-7 text-white'
+                    />
+                  </div>
+                  <span class='rounded-full border border-white/60 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-gray-500 transition-colors duration-300 group-hover:text-gray-700'>
+                    Signature Flow
+                  </span>
+                </div>
+                <div class='space-y-3'>
+                  <h3 class='text-xl font-semibold leading-tight text-gray-900 md:text-2xl'>
+                    {highlight.title}
+                  </h3>
+                  <p class='text-sm leading-relaxed text-gray-600 md:text-base'>
+                    {highlight.description}
+                  </p>
+                </div>
+                <div class='flex items-center gap-3 pt-4'>
+                  <div
+                    class='h-[2px] w-14 rounded-full transition-all duration-300 group-hover:w-20'
+                    style={`background: ${highlight.gradient}; box-shadow: 0 10px 25px -18px ${highlight.glow};`}
+                  ></div>
+                  <span class='text-[0.65rem] font-semibold uppercase tracking-[0.35em] text-gray-400'>
+                    Elevate
+                  </span>
+                </div>
               </div>
-              <p class='text-base font-semibold text-gray-900 md:text-lg'>{highlight.title}</p>
             </div>
           ))}
         </div>
