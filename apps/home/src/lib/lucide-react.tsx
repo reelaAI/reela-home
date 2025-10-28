@@ -11,15 +11,20 @@ type IconFactoryOptions = {
   strokeLinejoin?: "round" | "arcs" | "bevel" | "miter" | "miter-clip";
 };
 
+const DEFAULT_STROKE_WIDTH = 4 / 3;
+
 function createIcon(children: any[], options: IconFactoryOptions = {}) {
   return function Icon({ className, ...rest }: IconProps) {
+    const strokeWidth =
+      options.strokeWidth ??
+      (options.fill && options.fill !== "none" ? undefined : DEFAULT_STROKE_WIDTH);
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox={options.viewBox ?? "0 0 24 24"}
         fill={options.fill ?? "none"}
         stroke={options.stroke ?? "currentColor"}
-        stroke-width={options.strokeWidth ?? (options.fill && options.fill !== "none" ? undefined : 2)}
+        stroke-width={strokeWidth}
         stroke-linecap={options.strokeLinecap ?? "round"}
         stroke-linejoin={options.strokeLinejoin ?? "round"}
         class={className}
