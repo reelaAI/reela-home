@@ -54,15 +54,15 @@ const Section1 = () => {
           {heroHighlights.map((highlight) => (
             <div
               key={highlight.title}
-              class='flex h-full items-center gap-4 rounded-3xl border border-gray-200/70 bg-white/90 p-4 shadow-sm backdrop-blur-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg md:p-5'
+              class='group flex h-full items-center gap-5 rounded-full bg-white/30 p-4 pl-5 pr-6 backdrop-blur-xl transition-all duration-200 hover:-translate-y-1 hover:bg-white/70 hover:shadow-[0_18px_50px_rgba(15,23,42,0.14)] md:p-5'
             >
-              <div class='flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F7265B]/8'>
+              <div class='flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#F7265B]/20 via-[#F7265B]/10 to-transparent shadow-[0_12px_30px_rgba(247,38,91,0.25)] transition-all duration-200 group-hover:shadow-[0_18px_40px_rgba(247,38,91,0.35)]'>
                 <Icon
                   name={highlight.icon}
                   className='h-8 w-8 text-[#F7265B]'
                 />
               </div>
-              <p class='text-base font-semibold text-gray-900 md:text-lg'>{highlight.title}</p>
+              <p class='whitespace-nowrap text-base font-semibold text-gray-900 md:text-lg'>{highlight.title}</p>
             </div>
           ))}
         </div>
