@@ -96,7 +96,7 @@ const PricingCard: FC<Props> = ({
           const [title] = feature.split('_');
           return (
             <div key={index} className='my-1 flex items-start gap-2'>
-              <span className='mt-1 h-2 w-2 shrink-0 rounded-full bg-brand' />
+              <span className='mt-[3px] h-[15px] w-[15px] shrink-0 rounded-full bg-brand' />
               <span key={index} className='flex-1'>
                 {title}
               </span>
