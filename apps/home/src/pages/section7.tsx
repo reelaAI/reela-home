@@ -19,7 +19,7 @@ const Section7 = () => {
             <input type='radio' name='plan' value='year' class='peer hidden' checked />
             <div>Yearly</div>
           </label>
-          <div class='peer-has-checked/y:grid order-1 hidden auto-cols-[minmax(260px,1fr)] grid-flow-col gap-8 overflow-x-auto pb-4'>
+          <div class='peer-has-checked/y:grid order-1 hidden auto-cols-[minmax(260px,1fr)] grid-flow-col gap-4 overflow-x-auto pb-4'>
             <PricingCard
               title='free'
               description='Create your first AI video — free in minutes'
@@ -96,7 +96,7 @@ const Section7 = () => {
             <input type='radio' name='plan' value='month' class='hidden' />
             <div>Monthly</div>
           </label>
-          <div class='peer-has-checked/m:grid order-1 hidden auto-cols-[minmax(260px,1fr)] grid-flow-col gap-8 overflow-x-auto pb-4'>
+          <div class='peer-has-checked/m:grid order-1 hidden auto-cols-[minmax(260px,1fr)] grid-flow-col gap-4 overflow-x-auto pb-4'>
             <PricingCard
               period='trial'
               title='free'

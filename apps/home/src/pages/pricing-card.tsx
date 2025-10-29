@@ -1,6 +1,5 @@
 import type { FC } from 'hono/jsx';
 
-import { Icon } from '../components/Icon';
 import { cn } from '../utils/cn';
 
 interface Props {
@@ -92,12 +91,12 @@ const PricingCard: FC<Props> = ({
       </a>
 
       {/* features */}
-      <div className='space-y-3 text-sm text-gray-800'>
+      <div className='space-y-2 text-sm text-gray-800'>
         {features.map((feature, index) => {
-          const [title, desc] = feature.split('_');
+          const [title] = feature.split('_');
           return (
-            <div key={index} className='my-2 flex items-center gap-2'>
-              <Icon name='check' className='h-4 w-4 shrink-0 text-brand' />
+            <div key={index} className='my-1 flex items-start gap-2'>
+              <span className='mt-1 h-2 w-2 shrink-0 rounded-full bg-brand' />
               <span key={index} className='flex-1'>
                 {title}
               </span>
