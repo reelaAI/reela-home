@@ -10,7 +10,8 @@ interface Props {
   price: number;
   features: string[];
   isPopular?: boolean;
-  period?: 'year' | 'month';
+  period?: 'year' | 'month' | 'trial';
+  cta?: string;
 }
 
 const PricingCard: FC<Props> = ({
@@ -21,6 +22,7 @@ const PricingCard: FC<Props> = ({
   features,
   isPopular = false,
   period = 'year',
+  cta = 'Subscribe',
 }) => {
   return (
     <div
@@ -48,11 +50,22 @@ const PricingCard: FC<Props> = ({
 
         <div className='my-auto mt-4 flex gap-2'>
           <div className='text-3xl font-medium'>${price}</div>
-          <div className='text-xs'>
-            <div> per user per month </div>
-            <div>
-              {period === 'month' ? 'billed monthly' : `billed annually as \$${price * 12} / year`}
-            </div>
+          <div className='text-xs leading-snug'>
+            {period === 'trial' ? (
+              <>
+                <div>Trial access</div>
+                <div>No billing required</div>
+              </>
+            ) : (
+              <>
+                <div>per user per month</div>
+                <div>
+                  {period === 'month'
+                    ? 'billed monthly'
+                    : `billed annually as \$${price * 12} / year`}
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -64,7 +77,7 @@ const PricingCard: FC<Props> = ({
       <a
         href='/pricing'
         className={cn(
-          'block w-full rounded-full py-2 text-sm text-white text-center',
+          'block w-full rounded-full py-2 text-center text-sm text-white',
           {
             'bg-black': !isPopular,
             'bg-[#ff0058] text-white': isPopular,
@@ -75,7 +88,7 @@ const PricingCard: FC<Props> = ({
         name='id'
         type='submit'
       >
-        Subscribe
+        {cta}
       </a>
 
       {/* features */}
