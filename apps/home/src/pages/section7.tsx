@@ -14,12 +14,31 @@ const Section7 = () => {
       </div>
 
       <form action='/subscribe' method='post'>
-        <div class='relative mx-auto mb-20 flex max-w-[1200px] flex-wrap justify-center px-4'>
+        <div class='relative mx-auto mb-20 flex max-w-[1200px] flex-wrap justify-center gap-4 px-4'>
           <label class='peer/y has-checked:bg-brand has-checked:text-white mb-4 rounded-full bg-gray-200 px-6 py-2 text-gray-800'>
             <input type='radio' name='plan' value='year' class='peer hidden' checked />
             <div>Yearly</div>
           </label>
-          <div class='peer-has-checked/y:grid order-1 hidden grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
+          <div class='peer-has-checked/y:grid order-1 hidden auto-cols-[minmax(260px,1fr)] grid-flow-col gap-4 overflow-x-auto pb-4'>
+            <PricingCard
+              title='free'
+              description='Create your first AI video — free in minutes'
+              features={[
+                '300 free credits for trial use',
+                'Access to Reela 2.5 Lite Model',
+                'AI Remixing – Upload and edit your videos',
+                'Default Avatar access (no custom creation)',
+                'AI Voiceover – Multi-character narration',
+                'Max video length: 1 minute',
+                '1 active job at a time',
+                'AI Background Music',
+                'Multi-aspect ratios (16:9, 9:16, 1:1)',
+              ]}
+              price={0}
+              period='trial'
+              cta='Create for Free'
+              id='free-year'
+            />
             <PricingCard
               title='starter'
               description='Perfect for Individual Creators'
@@ -77,7 +96,26 @@ const Section7 = () => {
             <input type='radio' name='plan' value='month' class='hidden' />
             <div>Monthly</div>
           </label>
-          <div class='peer-has-checked/m:grid order-1 hidden grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
+          <div class='peer-has-checked/m:grid order-1 hidden auto-cols-[minmax(260px,1fr)] grid-flow-col gap-4 overflow-x-auto pb-4'>
+            <PricingCard
+              period='trial'
+              title='free'
+              description='Create your first AI video — free in minutes'
+              features={[
+                '300 free credits for trial use',
+                'Access to Reela 2.5 Lite Model',
+                'AI Remixing – Upload and edit your videos',
+                'Default Avatar access (no custom creation)',
+                'AI Voiceover – Multi-character narration',
+                'Max video length: 1 minute',
+                '1 active job at a time',
+                'AI Background Music',
+                'Multi-aspect ratios (16:9, 9:16, 1:1)',
+              ]}
+              price={0}
+              cta='Create for Free'
+              id='free-month'
+            />
             <PricingCard
               period='month'
               title='starter'
