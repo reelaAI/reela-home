@@ -3,7 +3,7 @@ import { products } from './header';
 
 const Footer = () => {
   return (
-    <footer class='bg-gray-900 text-white pt-16 pb-8'>
+    <footer class='bg-black text-white pt-16 pb-8'>
       <div class='max-w-[1200px] mx-auto px-4'>
         <div class='flex flex-col md:flex-row justify-between items-start md:items-center mb-12'>
           <div class='mb-6 md:mb-0'>
